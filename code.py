@@ -99,6 +99,41 @@ plt.savefig("graph.png", dpi=150)
 
 
 
+#Question 11
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+x = np.linspace(-np.pi/20, np.pi/20, 400)
+
+
+y = 25*(np.sin(200*x+np.pi/6)+np.sin(np.pi/6))
+
+plt.figure(figsize=(8, 6))
+plt.plot(x, y, color="blue", linewidth=2)
+j=y[0]
+
+k=0
+for i in y:
+    if i==j and k!=0:
+        print(k)
+    k+=1
+
+plt.xlabel("X axis")
+plt.ylabel("Y axis")
+plt.axhline(12.5,color="red",linewidth=1)
+
+plt.axhline(0, color="black", linewidth=1)
+plt.axvline(0, color="black", linewidth=1)
+plt.grid(True, linestyle="--", alpha=0.7)
+
+
+
+plt.savefig("SoN.png", dpi=300)
+
+
+
 #Question 12
 import numpy as np
 import matplotlib.pyplot as plt
