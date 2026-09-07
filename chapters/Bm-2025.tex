@@ -1,0 +1,3093 @@
+
+
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{geometry}
+%\usepackage{graphicx}
+%\usepackage{setspace}
+%\usepackage{tikz}
+%\usetikzlibrary{decorations.pathmorphing}
+%\usetikzlibrary{positioning,calc}
+
+
+%\geometry{
+ %   a4paper,
+ %   margin=1in
+%}
+
+
+
+% =========================================================
+% PAGE 1 - COVER PAGE
+% =========================================================
+
+\begin{titlepage}
+
+\vspace*{1cm}
+
+\begin{center}
+
+{\Huge \textbf{Math for EE}}
+
+\vfill
+
+{\Large \textbf{G. V. V. Sharma}}
+
+\end{center}
+
+\end{titlepage}
+
+
+% =========================================================
+% PAGE 2 - ABOUT THIS BOOK
+% =========================================================
+
+\newpage
+
+\section*{ABOUT THIS BOOK}
+
+This book introduces matrices through high school coordinate geometry.
+This approach makes it easier for beginners to learn Python for scientific
+computing. All problems in the book are from NCERT mathematics textbooks
+from Class 9--12. Exercises are from CBSE board exam papers.
+
+The content is sufficient for industry jobs and covers nearly all matrix
+prerequisites for machine learning. There is no copyright, so readers are
+free to print and share.
+
+License:
+
+\begin{verbatim}
+https://creativecommons.org/licenses/by-sa/3.0/
+\end{verbatim}
+
+and
+
+\begin{verbatim}
+https://www.gnu.org/licenses/fdl-1.3.en.html
+\end{verbatim}
+
+First manual appeared in January 2018.
+
+First edition published on July 10, 2024.
+
+In this edition, some incorrect solutions were removed.
+All figures redrawn. More problems added.
+
+
+% =========================================================
+% PAGE 3 - CONTENTS
+% =========================================================
+
+
+\begin{enumerate}
+    \item GATE BM 2025
+\end{enumerate}
+
+
+% =========================================================
+% QUESTIONS START FROM NEXT PAGE
+% ========================================================
+
+
+\newpage
+\section*{1. GATE BM 2025}
+
+
+%Question 1
+
+\begin{enumerate}
+\item The 12 musical notes are given as
+$C,C^\#,D,D^\#,E,F,F^\#,G,G^\#,A,A^\#,B$.
+Frequency of each note is $\sqrt[12]{2}$ times the frequency of the previous note.
+If the frequency of the note $C$ is 130.8 Hz, then the ratio of frequencies of notes
+$F^\#$ and $C$ is: \text{(GATE BM 2025)}
+
+
+\begin{enumerate}
+    \item[(a)] $\sqrt[6]{2}$
+    \item[(b)] $\sqrt{2}$
+    \item[(c)] $\sqrt[4]{2}$
+    \item[(d)] $2$
+\end{enumerate}
+
+\textbf{Solution:}
+
+Each successive musical note has a frequency
+$\sqrt[12]{2}$ times that of the previous note.
+
+From $C$ to $F^\#$, there are 6 successive intervals:
+
+\begin{align}
+C \rightarrow C^\# \rightarrow D \rightarrow D^\#
+\rightarrow E \rightarrow F \rightarrow F^\#
+\tag{1.1}
+\end{align}
+
+Therefore,
+
+\begin{align}
+\frac{f_{F^\#}}{f_C}
+=
+\left(\sqrt[12]{2}\right)^6
+\tag{1.2}
+\end{align}
+
+\begin{align}
+=2^{6/12}
+=2^{1/2}
+=\sqrt{2}
+\tag{1.3}
+\end{align}
+
+Hence,
+
+\begin{align}
+\boxed{\frac{f_{F^\#}}{f_C}=\sqrt{2}}
+\tag{1.4}
+\end{align}
+
+Therefore, the correct answer is
+
+\begin{align}
+\boxed{\text{(b)}\ \sqrt{2}}
+\tag{1.5}
+\end{align}
+
+% =========================================================
+% QUESTION 2
+% =========================================================
+
+
+
+\item The following figures show three curves generated using an
+iterative algorithm. The total length of the curve generated after
+``Iteration $n$'' is:
+
+\begin{center}
+\hfill\text{GATE BM 2025}
+
+% =========================================================
+% ITERATION 0
+% =========================================================
+
+\begin{tikzpicture}[scale=1.4]
+
+    \draw[thick] (0,0) -- (5,0);
+
+    \node[left] at (0,0) {Iteration 0:};
+    \node at (2.5,0.35) {$1$};
+
+\end{tikzpicture}
+
+\vspace{1.2cm}
+
+
+% =========================================================
+% ITERATION 1
+% =========================================================
+
+\begin{tikzpicture}[scale=1.4]
+
+    \draw[thick]
+    (0,0)
+    -- (1,0)
+    -- (1,1.2)
+    -- (2,1.2)
+    -- (2,0)
+    -- (3,0);
+
+    \node[left] at (0,0) {Iteration 1:};
+
+    \node at (0.5,-0.35) {$\frac{1}{3}$};
+
+    \node[right] at (3.3,0.6)
+    {Length of each segment: $\frac{1}{3}$};
+
+\end{tikzpicture}
+
+\vspace{1.4cm}
+
+
+% =========================================================
+% ITERATION 2
+% =========================================================
+
+\begin{tikzpicture}[scale=1.4]
+
+    \draw[thick]
+    (0,0)
+    -- (0.4,0)
+    -- (0.4,0.45)
+    -- (0.8,0.45)
+    -- (0.8,0)
+    -- (1.2,0)
+    -- (1.2,0.45)
+    -- (1.6,0.45)
+    -- (1.6,0.9)
+    -- (2.0,0.9)
+    -- (2.0,1.35)
+    -- (2.4,1.35)
+    -- (2.4,0.9)
+    -- (2.8,0.9)
+    -- (2.8,1.35)
+    -- (3.2,1.35)
+    -- (3.2,0.9)
+    -- (3.6,0.9)
+    -- (3.6,0.45)
+    -- (4.0,0.45)
+    -- (4.0,0)
+    -- (4.4,0)
+    -- (4.4,0.45)
+    -- (4.8,0.45)
+    -- (4.8,0)
+    -- (5.2,0);
+
+    \node[left] at (0,0) {Iteration 2:};
+
+    \node at (0.6,-0.35) {$\frac{1}{9}$};
+
+    \node[right] at (5.4,0.7)
+    {Length of each segment: $\frac{1}{9}$};
+
+\end{tikzpicture}
+
+\end{center}
+
+\vspace{0.5cm}
+
+\textbf{Note:} The figures shown are representative.
+
+
+\vspace{0.5cm}
+
+% =========================================================
+% OPTIONS
+% =========================================================
+
+\begin{enumerate}
+    \item[(a)] $\left(\frac{5}{3}\right)^{\frac{n}{2}}$
+
+    \item[(b)] $\left(\frac{5}{3}\right)^n$
+
+    \item[(c)] $\left(\frac{5}{3}\right)^{2n}$
+
+    \item[(d)] $\left(\frac{5}{3}\right)^{n(2n-1)}$
+\end{enumerate}
+
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+At iteration $0$, the length of the curve is $1$.
+
+\begin{align}
+L_0=1
+\tag{2.1}
+\end{align}
+
+At iteration $1$, the curve consists of $5$ segments, each of length
+$\frac{1}{3}$.
+
+Therefore,
+
+\begin{align}
+L_1=5\left(\frac{1}{3}\right)
+=\frac{5}{3}
+\tag{2.2}
+\end{align}
+
+At every subsequent iteration, each segment is replaced by $5$ segments,
+each having $\frac{1}{3}$ of the length of the original segment.
+Hence, the total length is multiplied by
+
+\begin{align}
+\frac{5}{3}
+\tag{2.3}
+\end{align}
+
+Therefore, after $n$ iterations,
+
+\begin{align}
+L_n=L_0\left(\frac{5}{3}\right)^n
+\tag{2.4}
+\end{align}
+
+Since $L_0=1$,
+
+\begin{align}
+L_n=\left(\frac{5}{3}\right)^n
+\tag{2.5}
+\end{align}
+
+Hence, the correct answer is
+
+\begin{align}
+\boxed{\text{(b)}\ \left(\frac{5}{3}\right)^n}
+\tag{2.6}
+\end{align}
+% =========================================================
+% QUESTION 3
+% =========================================================
+
+
+
+\item A stick of length one meter is broken at two locations at
+distances of $b_1$ and $b_2$ from the origin $(0)$, as shown in the
+figure. Note that $0<b_1<b_2<1$. Which one of the following is
+\text{NOT} a necessary condition for forming a triangle using the
+three pieces?
+
+\text{Note:} All lengths are in meter. The figure shown is
+representative.
+
+\vspace{0.5cm}
+\hfill \text{(GATE BM 2025)}
+
+% =========================================================
+% FIGURE
+% =========================================================
+
+\begin{center}
+
+\begin{tikzpicture}[scale=1.5]
+
+    % Main stick
+    \draw[thick] (0,0) -- (6,0);
+
+    % Tick marks
+    \draw[thick] (0,-0.12) -- (0,0.12);
+    \draw[thick] (3, -0.12) -- (3,0.12);
+    \draw[thick] (5.2,-0.12) -- (5.2,0.12);
+    \draw[thick] (6,-0.12) -- (6,0.12);
+
+    % Labels
+    \node[below=0.15cm] at (0,0) {$0$};
+    \node[below=0.15cm] at (3,0) {$b_1$};
+    \node[below=0.15cm] at (5.2,0) {$b_2$};
+    \node[below=0.15cm] at (6,0) {$1$};
+
+\end{tikzpicture}
+
+\end{center}
+
+\vspace{0.5cm}
+
+
+
+% =========================================================
+% OPTIONS
+% =========================================================
+
+\begin{enumerate}
+
+    \item[(A)] $b_1 < 0.5$
+
+    \item[(B)] $b_2 > 0.5$
+
+    \item[(C)] $b_2 < b_1 + 0.5$
+
+    \item[(D)] $b_1+b_2 < 1$
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+The stick of length $1$ m is broken at $b_1$ and $b_2$.
+
+Therefore, the lengths of the three pieces are
+
+\begin{align}
+l_1=b_1,
+\qquad
+l_2=b_2-b_1,
+\qquad
+l_3=1-b_2.
+\tag{3.1}
+\end{align}
+
+For three lengths to form a triangle, the sum of any two sides must
+be greater than the third side.
+
+Therefore,
+
+\begin{align}
+l_1+l_2>l_3
+\tag{3.2}
+\end{align}
+
+\begin{align}
+b_1+(b_2-b_1)>1-b_2
+\tag{3.3}
+\end{align}
+
+\begin{align}
+b_2>1-b_2
+\tag{3.4}
+\end{align}
+
+\begin{align}
+b_2>\frac{1}{2}.
+\tag{3.5}
+\end{align}
+
+Hence, option (B) is a necessary condition.
+
+Now consider
+
+\begin{align}
+l_1+l_3>l_2.
+\tag{3.6}
+\end{align}
+
+Substituting the lengths,
+
+\begin{align}
+b_1+(1-b_2)>b_2-b_1.
+\tag{3.7}
+\end{align}
+
+Therefore,
+
+\begin{align}
+2b_1+1>2b_2
+\tag{3.8}
+\end{align}
+
+or
+
+\begin{align}
+b_2<b_1+\frac{1}{2}.
+\tag{3.9}
+\end{align}
+
+Hence, option (C) is also a necessary condition.
+
+Finally,
+
+\begin{align}
+l_2+l_3>l_1.
+\tag{3.10}
+\end{align}
+
+Substituting,
+
+\begin{align}
+(b_2-b_1)+(1-b_2)>b_1.
+\tag{3.11}
+\end{align}
+
+Therefore,
+
+\begin{align}
+1-b_1>b_1
+\tag{3.12}
+\end{align}
+
+which gives
+
+\begin{align}
+b_1<\frac{1}{2}.
+\tag{3.13}
+\end{align}
+
+Hence, option (A) is also a necessary condition.
+
+However, the condition
+
+\begin{align}
+b_1+b_2<1
+\tag{3.14}
+\end{align}
+
+is not required for the three pieces to form a triangle.
+
+Therefore, the condition which is \textbf{NOT} necessary is
+
+\begin{align}
+\boxed{\text{(D)}\quad b_1+b_2<1}
+\tag{3.15}
+\end{align}
+
+% =========================================================
+% QUESTION 4
+% =========================================================
+
+
+
+\item Which one of the following represents the frequency
+response of a notch filter?
+
+\vspace{0.5cm}
+\hfill \text{(GATE BM 2025)}
+
+% =========================================================
+% OPTIONS WITH GRAPHS
+% =========================================================
+
+\begin{enumerate}
+
+% ---------------------------------------------------------
+% OPTION A
+% ---------------------------------------------------------
+
+\item[(A)]
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+
+    % Axes
+    \draw[->, thick] (0,0) -- (0,3);
+    \draw[->, thick] (0,0) -- (4.5,0);
+
+    % Labels
+    \node[above] at (0,3) {Gain};
+    \node[right] at (4.5,0) {Frequency};
+
+    % Band-pass response
+    \draw[thick]
+        (0.1,0.15)
+        .. controls (0.9,1.5) and (1.4,2.5) ..
+        (2.0,2.65)
+        .. controls (2.6,2.5) and (3.0,1.0) ..
+        (3.8,0.1);
+
+\end{tikzpicture}
+\end{center}
+
+% ---------------------------------------------------------
+% OPTION B
+% ---------------------------------------------------------
+
+\item[(B)]
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+
+    % Axes
+    \draw[->, thick] (0,0) -- (0,3);
+    \draw[->, thick] (0,0) -- (4.5,0);
+
+    % Labels
+    \node[above] at (0,3) {Gain};
+    \node[right] at (4.5,0) {Frequency};
+
+    % High-pass response
+    \draw[thick]
+        (1.4,0.05)
+        .. controls (1.7,0.8) and (2.0,2.2) ..
+        (2.6,2.5)
+        .. controls (3.2,2.65) and (3.7,2.65) ..
+        (4.2,2.65);
+
+\end{tikzpicture}
+\end{center}
+
+% ---------------------------------------------------------
+% OPTION C
+% ---------------------------------------------------------
+
+\item[(C)]
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+
+    % Axes
+    \draw[->, thick] (0,0) -- (0,3);
+    \draw[->, thick] (0,0) -- (4.5,0);
+
+    % Labels
+    \node[above] at (0,3) {Gain};
+    \node[right] at (4.5,0) {Frequency};
+
+    % Low-pass response
+    \draw[thick]
+        (0.1,2.5)
+        .. controls (0.8,2.5) and (1.3,2.45) ..
+        (1.8,2.2)
+        .. controls (2.3,1.8) and (2.5,0.5) ..
+        (2.8,0.05);
+
+\end{tikzpicture}
+\end{center}
+
+% ---------------------------------------------------------
+% OPTION D
+% ---------------------------------------------------------
+
+\item[(D)]
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+
+    % Axes
+    \draw[->, thick] (0,0) -- (0,3);
+    \draw[->, thick] (0,0) -- (4.5,0);
+
+    % Labels
+    \node[above] at (0,3) {Gain};
+    \node[right] at (4.5,0) {Frequency};
+
+    % Notch response
+    \draw[thick]
+        (0.1,2.5)
+        .. controls (0.7,2.55) and (1.1,2.5) ..
+        (1.5,2.45)
+        .. controls (1.75,2.35) and (1.8,0.4) ..
+        (2.1,0.05)
+        .. controls (2.3,0.4) and (2.35,2.35) ..
+        (2.7,2.45)
+        .. controls (3.2,2.55) and (3.7,2.55) ..
+        (4.2,2.55);
+
+\end{tikzpicture}
+\end{center}
+
+\end{enumerate}
+
+\vspace{0.3cm}
+
+
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\vspace{0.5cm}
+
+\textbf{Solution:}
+
+A notch filter is a band-stop filter that rejects or strongly
+attenuates a narrow range of frequencies while allowing frequencies
+outside that range to pass.
+
+Therefore, its frequency response has high gain at low and high
+frequencies, with a sharp reduction in gain at a particular frequency.
+
+Mathematically, if $\omega_0$ is the rejected frequency, then the
+response has a deep attenuation around $\omega_0$:
+
+\begin{align}
+|H(j\omega_0)| \approx 0
+\tag{4.1}
+\end{align}
+
+while frequencies away from $\omega_0$ are passed with relatively
+high gain.
+
+\begin{align}
+|H(j\omega)| \text{ is high for } \omega<\omega_0
+\text{ and } \omega>\omega_0.
+\tag{4.2}
+\end{align}
+
+Among the given frequency responses, only option (D) shows a sharp
+reduction in gain at a particular frequency while allowing frequencies
+on either side to pass.
+\begin{align}
+Hence,\boxed{\text{Answer: (D)}}
+\tag{4.3}
+\end{align}
+
+
+
+% =========================================================
+% QUESTION 5
+% =========================================================
+
+
+\item For any continuous and differentiable function $f(x)$ with
+first derivative $f'(x) \neq 0$ for all values of $x$, which one of the
+following is ALWAYS TRUE for $a \neq b$?
+
+Here, $a$ and $b$ are finite and real.
+
+\vspace{0.4cm}
+
+\hfill \text{(GATE BM 2025)}
+\begin{enumerate}
+
+\item[(A)] $f(a) > f(b)$
+
+\vspace{0.2cm}
+
+\item[(B)] $f(a) = f(b)$
+
+\vspace{0.2cm}
+
+\item[(C)] $f(a) \neq f(b)$
+
+\vspace{0.2cm}
+
+\item[(D)] $f(a) < f(b)$
+
+\end{enumerate}
+
+\vspace{0.4cm}
+
+
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\vspace{0.5cm}
+
+\textbf{Solution:}
+
+\noindent We are given that $f(x)$ is continuous and differentiable, and
+
+\begin{align}
+f'(x) \neq 0 \qquad \text{for all } x.
+\tag{5.1}
+\end{align}
+
+Suppose, for contradiction, that
+
+\begin{align}
+f(a) = f(b).
+\tag{5.2}
+\end{align}
+
+\noindent Since $f(x)$ is continuous on $[a,b]$ and differentiable on $(a,b)$,
+\noindent Rolle's theorem can be applied.
+
+\noindent Rolle's theorem states that if
+
+\begin{align}
+f(a)=f(b),
+\tag{5.3}
+\end{align}
+
+then there must exist at least one point $c\in(a,b)$ such that
+
+\begin{align}
+f'(c)=0.
+\tag{5.4}
+\end{align}
+
+But this contradicts the given condition
+
+\begin{align}
+f'(x)\neq0 \qquad \text{for all }x.
+\tag{5.5}
+\end{align}
+
+\noindent Therefore, our assumption that $f(a)=f(b)$ is false. Hence,
+
+\begin{align}
+\boxed{f(a)\neq f(b)}.
+\tag{5.6}
+\end{align}% =========================================================
+% QUESTION 6
+% =========================================================
+
+
+
+\item The closed loop system shown below
+\underline{\hspace{2cm}}.
+
+\vspace{0.5cm}
+
+\begin{center}
+
+\begin{tikzpicture}[
+    >=stealth,
+    block/.style={
+        draw,
+        rectangle,
+        minimum width=4cm,
+        minimum height=1.5cm
+    },
+    sum/.style={
+        draw,
+        circle,
+        minimum size=0.9cm
+    }
+]
+
+% Summing junction
+\node[sum] (sum) {};
+
+% Plus and minus signs
+\node at ($(sum.west)+(0.15,0.25)$) {$ +$};
+\node at ($(sum.south)+(0.18,0.18)$) {$- $};
+
+% Input arrow
+\draw[->] ($(sum.west)+(-1.2,0)$) -- (sum.west);
+
+% Transfer function block
+\node[block, right=0.8cm of sum] (G)
+{
+    $G(s)=\dfrac{25}{s(s+5)}$
+};
+
+% Forward path
+\draw[->] (sum.east) -- (G.west);
+
+% Output
+\draw[->] (G.east) -- ++(1.2,0)
+    node[right] {};
+
+% Feedback line
+\draw (G.east) -- ++(0.5,0)
+    |- ($(sum.south)+(0,-1.3)$)
+    -- (sum.south);
+
+\end{tikzpicture}
+
+\end{center}
+
+\vspace{0.5cm}
+\hfill \text{(GATE BM 2025)}
+
+\begin{enumerate}
+
+\item[(A)] is overdamped
+
+\vspace{0.3cm}
+
+\item[(B)] is underdamped
+
+\vspace{0.3cm}
+
+\item[(C)] is critically damped
+
+\vspace{0.3cm}
+
+\item[(D)] has sustained oscillations
+
+\end{enumerate}
+
+\vspace{0.4cm}
+
+
+
+% =========================================================
+% SOLUTION TO QUESTION 6
+% =========================================================
+
+\vspace{0.5cm}
+
+\textbf{Solution:}
+
+\noindent The given forward transfer function is
+
+\begin{align}
+G(s)=\frac{25}{s(s+5)}.
+\tag{6.1}
+\end{align}
+
+\noindent Since the feedback is unity and negative, the closed-loop transfer
+\noindent function is obtained using the feedback relation
+
+\begin{align}
+\frac{C(s)}{R(s)}
+=
+\frac{G(s)}{1+G(s)}.
+\tag{6.2}
+\end{align}
+
+\noindent Substituting $G(s)$ from (6.1),
+
+\begin{align}
+\frac{C(s)}{R(s)}
+=
+\frac{\dfrac{25}{s(s+5)}}
+{1+\dfrac{25}{s(s+5)}}.
+\tag{6.3}
+\end{align}
+
+\noindent Simplifying,
+
+\begin{align}
+\frac{C(s)}{R(s)}
+=
+\frac{25}{s(s+5)+25}.
+\tag{6.4}
+\end{align}
+
+\noindent Therefore,
+
+\begin{align}
+\boxed{
+\frac{C(s)}{R(s)}
+=
+\frac{25}{s^2+5s+25}
+}
+\tag{6.5}
+\end{align}
+
+\noindent For a unit-step input,
+
+\begin{align}
+R(s)=\frac{1}{s}.
+\tag{6.6}
+\end{align}
+
+\noindent Hence,
+
+\begin{align}
+C(s)
+=
+\frac{25}{s(s^2+5s+25)}.
+\tag{6.7}
+\end{align}
+
+\noindent The characteristic equation of the closed-loop system is
+
+\begin{align}
+s^2+5s+25=0.
+\tag{6.8}
+\end{align}
+
+\noindent Comparing this with the standard second-order form
+
+\begin{align}
+s^2+2\zeta\omega_n s+\omega_n^2=0,
+\tag{6.9}
+\end{align}
+
+\noindent we obtain
+
+\begin{align}
+\omega_n^2=25
+\quad\Rightarrow\quad
+\omega_n=5,
+\tag{6.10}
+\end{align}
+
+and
+
+\begin{align}
+2\zeta\omega_n=5.
+\tag{6.11}
+\end{align}
+
+Therefore,
+
+\begin{align}
+2\zeta(5)=5
+\end{align}
+
+\begin{align}
+\zeta=\frac{1}{2}.
+\tag{6.12}
+\end{align}
+
+Since
+
+\begin{align}
+0<\zeta<1,
+\tag{6.13}
+\end{align}
+
+the system is \text{underdamped}.
+
+Thus, the correct answer is
+
+\begin{align}
+\boxed{\text{(B) is underdamped}}
+\tag{6.14}
+\end{align}
+% =========================================================
+% QUESTION 7
+% =========================================================
+
+
+
+\item The eigenvalues of the matrix
+\begin{align}
+\begin{pmatrix}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{pmatrix}
+\end{align}
+are \underline{\hspace{2cm}}.
+
+\vspace{0.5cm}
+
+\hfill \text{(GATE BM 2025)}
+\begin{enumerate}
+
+\item[(A)] $\cos\theta$ and $\sin\theta$
+
+\vspace{0.3cm}
+
+\item[(B)] $e^{i\theta}$ and $e^{-i\theta}$, where $i=\sqrt{-1}$
+
+\vspace{0.3cm}
+
+\item[(C)] $\cos\theta$ and $-\sin\theta$
+
+\vspace{0.3cm}
+
+\item[(D)] $\cos 2\theta$ and $\sin 2\theta$
+
+\end{enumerate}
+
+\vspace{0.5cm}
+
+
+
+% =========================================================
+% SOLUTION TO QUESTION 7
+% =========================================================
+
+\vspace{0.5cm}
+
+\textbf{Solution:}
+
+Let the given matrix be
+
+\begin{align}
+A=
+\begin{pmatrix}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{pmatrix}.
+\tag{7.1}
+\end{align}
+
+The eigenvalues $\lambda$ are obtained from the characteristic equation
+
+\begin{align}
+\det(A-\lambda I)=0.
+\tag{7.2}
+\end{align}
+
+Therefore,
+
+\begin{align}
+\begin{vmatrix}
+\cos\theta-\lambda & -\sin\theta\\
+\sin\theta & \cos\theta-\lambda
+\end{vmatrix}
+=0.
+\tag{7.3}
+\end{align}
+
+Expanding the determinant,
+
+\begin{align}
+(\cos\theta-\lambda)^2+\sin^2\theta=0.
+\tag{7.4}
+\end{align}
+
+Expanding further,
+
+\begin{align}
+\cos^2\theta-2\lambda\cos\theta+\lambda^2
++\sin^2\theta=0.
+\tag{7.5}
+\end{align}
+
+Using
+
+\begin{align}
+\sin^2\theta+\cos^2\theta=1,
+\tag{7.6}
+\end{align}
+
+we get
+
+\begin{align}
+\lambda^2-2\lambda\cos\theta+1=0.
+\tag{7.7}
+\end{align}
+
+Using the quadratic formula,
+
+\begin{align}
+\lambda
+=
+\frac{2\cos\theta
+\pm
+\sqrt{4\cos^2\theta-4}}{2}.
+\tag{7.8}
+\end{align}
+
+Since
+
+\begin{align}
+4\cos^2\theta-4
+=
+-4\sin^2\theta,
+\tag{7.9}
+\end{align}
+
+we have
+
+\begin{align}
+\lambda
+=
+\frac{2\cos\theta
+\pm
+2i\sin\theta}{2}.
+\tag{7.10}
+\end{align}
+
+Hence,
+
+\begin{align}
+\lambda
+=
+\cos\theta\pm i\sin\theta.
+\tag{7.11}
+\end{align}
+
+Using Euler's formula,
+
+\begin{align}
+e^{i\theta}=\cos\theta+i\sin\theta,
+\tag{7.12}
+\end{align}
+
+and
+
+\begin{align}
+e^{-i\theta}=\cos\theta-i\sin\theta,
+\tag{7.13}
+\end{align}
+
+the eigenvalues are
+
+\begin{align}
+\boxed{\lambda_1=e^{i\theta},\qquad
+\lambda_2=e^{-i\theta}}.
+\tag{7.14}
+\end{align}
+
+Therefore, the correct answer is
+
+\begin{align}
+\boxed{\text{(B)}}
+\tag{7.15}
+\end{align}
+
+% ============================================================
+% QUESTION 8
+% ============================================================
+
+\item If
+$
+f(x)=x-\frac{1}{x},
+$
+the value of
+$
+\lim_{\Delta x\to 0}
+\frac{f(1+\Delta x)-f(1)}{\Delta x}
+$
+is \underline{\hspace{2cm}}.
+\hfill \text{(GATE BM 2025)}
+
+\begin{enumerate}
+    \item[(A)] $0$
+    
+    \item[(B)] $\dfrac{1}{2}$
+    
+    \item[(C)] $1$
+    
+    \item[(D)] $2$
+\end{enumerate}
+
+
+\vspace{0.5cm}
+
+\textbf{Solution:}
+
+The given limit is the definition of the derivative of $f(x)$ at
+$x=1$:
+
+\begin{align}
+f'(1)
+=
+\lim_{\Delta x\to 0}
+\frac{f(1+\Delta x)-f(1)}{\Delta x}.
+\end{align}
+
+Given
+\begin{align}
+f(x)=x-\frac{1}{x},
+\end{align}
+
+differentiate with respect to $x$:
+
+\begin{align}
+f'(x)=1+\frac{1}{x^2}.
+\end{align}
+
+Therefore,
+
+\begin{align}
+f'(1)
+=
+1+\frac{1}{1^2}
+=
+2.
+\end{align}
+
+Hence,
+
+\begin{align}
+\boxed{2}
+\end{align}
+
+Therefore, the correct option is
+
+\begin{align}
+\boxed{\text{(D)}\ 2}.
+\end{align}
+
+
+% =========================================================
+% QUESTION 9
+% =========================================================
+
+
+
+\item The elements of the dataset $\{-5, 1, a, 5, b\}$ are in ascending order. If both mean and median of the dataset are equal to $3$, what is the value of $b$?
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% OPTIONS
+% =========================================================
+
+\begin{enumerate}
+    \item[(a)] $7$
+
+    \item[(b)] $11$
+
+    \item[(c)] $9$
+
+    \item[(d)] $12$
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+The dataset consists of $5$ elements arranged in ascending order:
+
+\begin{align}
+-5 \le 1 \le a \le 5 \le b
+\tag{9.1}
+\end{align}
+
+Since the dataset has an odd number of elements ($n=5$), the median is the middle (3rd) element:
+
+\begin{align}
+\text{Median} = a = 3
+\tag{9.2}
+\end{align}
+
+The mean of the dataset is given as $3$:
+
+\begin{align}
+\text{Mean} = \frac{-5 + 1 + a + 5 + b}{5} = 3
+\tag{9.3}
+\end{align}
+
+Substituting $a = 3$ into equation (9.3):
+
+\begin{align}
+\frac{-5 + 1 + 3 + 5 + b}{5} = 3
+\tag{9.4}
+\end{align}
+
+\begin{align}
+\frac{4 + b}{5} = 3
+\tag{9.5}
+\end{align}
+
+\begin{align}
+4 + b = 15
+\tag{9.6}
+\end{align}
+
+\begin{align}
+b = 11
+\tag{9.7}
+\end{align}
+
+Hence, the correct answer is
+
+\begin{align}
+\boxed{\text{(b)}\ 11}
+\tag{9.8}
+\end{align}
+% =========================================================
+% QUESTION 10
+% =========================================================
+
+
+
+\item A time domain signal is given by
+\begin{align}
+x(t) = 20\sin(100\pi t) + 36\sin(150\pi t) - 2\sin(300\pi t),
+\end{align}
+where time $t$ is in seconds. Among the following options, what is the frequency (in $\text{Hz}$) at which $x(t)$ should be sampled for accurate signal reconstruction?
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% OPTIONS
+% =========================================================
+
+\begin{enumerate}
+    \item[(a)] $500$
+
+    \item[(b)] $150$
+
+    \item[(c)] $200$
+
+    \item[(d)] $250$
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+To avoid aliasing and accurately reconstruct the signal, the sampling frequency $f_s$ must satisfy the Nyquist sampling criterion:
+
+\begin{align}
+f_s \ge 2 f_{\max}
+\tag{10.1}
+\end{align}
+
+where $f_{\max}$ is the highest frequency component in the signal $x(t)$.
+
+The signal consists of three sinusoidal components with angular frequencies $\omega_1$, $\omega_2$, and $\omega_3$:
+
+\begin{align}
+\omega_1 = 100\pi \implies f_1 = \frac{100\pi}{2\pi} = 50\text{ Hz}
+\tag{10.2}
+\end{align}
+
+\begin{align}
+\omega_2 = 150\pi \implies f_2 = \frac{150\pi}{2\pi} = 75\text{ Hz}
+\tag{10.3}
+\end{align}
+
+\begin{align}
+\omega_3 = 300\pi \implies f_3 = \frac{300\pi}{2\pi} = 150\text{ Hz}
+\tag{10.4}
+\end{align}
+
+The maximum frequency component present in the signal is:
+
+\begin{align}
+f_{\max} = 150\text{ Hz}
+\tag{10.5}
+\end{align}
+
+According to the Nyquist theorem, the minimum required sampling rate (Nyquist rate) is:
+
+\begin{align}
+f_s \ge 2 \times 150\text{ Hz} = 300\text{ Hz}
+\tag{10.6}
+\end{align}
+
+Among the given options, the only frequency greater than or equal to $300\text{ Hz}$ that guarantees accurate signal reconstruction is $500\text{ Hz}$.
+
+Hence, the correct answer is
+
+\begin{align}
+\boxed{\text{(a)}\ 500}
+\tag{10.7}
+\end{align}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{figs/10.png}
+    \caption{Plot of x(t) vs time}
+    \label{plot of x(t) vs time}
+\end{figure}
+
+
+
+
+
+
+% =========================================================
+% QUESTION 11
+% =========================================================
+
+
+
+\item A voltage source $V_s = 5\sin\left(100t + \frac{\pi}{2}\right)\text{ volts}$ is driving a current $I = 10\sin\left(100t + \frac{\pi}{6}\right)\text{ mA}$ through a circuit. The average power dissipated in the circuit is \underline{\hspace{2cm}} $\text{mW}$.
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% OPTIONS
+% =========================================================
+
+\begin{enumerate}
+    \item[(a)] $0.0$
+
+    \item[(b)] $12.5$
+
+    \item[(c)] $25.0$
+
+    \item[(d)] $50.0$
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+The formula for the average power $P_{\text{avg}}$ dissipated in an AC circuit is given by:
+
+\begin{align}
+P_{\text{avg}} = V_{\text{rms}} I_{\text{rms}} \cos(\theta)
+\tag{11.1}
+\end{align}
+
+where:
+\begin{itemize}
+    \item $V_{\text{rms}} = \frac{V_m}{\sqrt{2}}$ is the RMS value of the voltage,
+    \item $I_{\text{rms}} = \frac{I_m}{\sqrt{2}}$ is the RMS value of the current,
+    \item $\theta = \phi_v - \phi_i$ is the phase difference between voltage and current.
+\end{itemize}
+
+Given values:
+\begin{align}
+V_m = 5\text{ V}, \quad \phi_v = \frac{\pi}{2}\text{ rad}
+\tag{11.2}
+\end{align}
+
+\begin{align}
+I_m = 10\text{ mA}, \quad \phi_i = \frac{\pi}{6}\text{ rad}
+\tag{11.3}
+\end{align}
+
+Calculate the phase difference $\theta$:
+
+\begin{align}
+\theta = \frac{\pi}{2} - \frac{\pi}{6} = \frac{3\pi - \pi}{6} = \frac{2\pi}{6} = \frac{\pi}{3}\text{ rad } (60^\circ)
+\tag{11.4}
+\end{align}
+
+Substitute the values into the average power formula:
+
+\begin{align}
+P_{\text{avg}} = \left(\frac{5}{\sqrt{2}}\right) \times \left(\frac{10}{\sqrt{2}}\right) \times \cos\left(\frac{\pi}{3}\right)
+\tag{11.5}
+\end{align}
+
+\begin{align}
+P_{\text{avg}} = \frac{50}{2} \times \frac{1}{2}\text{ mW}
+\tag{11.6}
+\end{align}
+
+\begin{align}
+P_{\text{avg}} = 25 \times 0.5 = 12.5\text{ mW}
+\tag{11.7}
+\end{align}
+
+Hence, the correct answer is
+
+\begin{align}
+\boxed{\text{(b)}\ 12.5}
+\tag{11.8}
+\end{align}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{11.png}
+    \caption{Power vs time}
+    \label{power vs time}
+\end{figure}
+
+% =========================================================
+% QUESTION 12
+% =========================================================
+
+
+
+\item $N$ independent trials of a binomial random variable yield an expectation value of $16$ and variance of $12$. What is the value of $N$?
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% OPTIONS
+% =========================================================
+
+\begin{enumerate}
+    \item[(a)] $80$
+
+    \item[(b)] $60$
+
+    \item[(c)] $45$
+
+    \item[(d)] $64$
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+For a Binomial distribution $X \sim B(N, p)$ with $N$ independent trials and probability of success $p$:
+
+The expectation value (mean) is given by:
+
+\begin{align}
+E(X) = Np = 16
+\tag{12.1}
+\end{align}
+
+The variance is given by:
+
+\begin{align}
+\text{Var}(X) = Np(1-p) = 12
+\tag{12.2}
+\end{align}
+
+Divide equation (12.2) by equation (12.1):
+
+\begin{align}
+\frac{Np(1-p)}{Np} = \frac{12}{16}
+\tag{12.3}
+\end{align}
+
+\begin{align}
+1 - p = \frac{3}{4} = 0.75
+\tag{12.4}
+\end{align}
+
+Solving for $p$:
+
+\begin{align}
+p = 1 - 0.75 = 0.25 = \frac{1}{4}
+\tag{12.5}
+\end{align}
+
+Now, substitute the value of $p$ back into equation (12.1):
+
+\begin{align}
+N \left(\frac{1}{4}\right) = 16
+\tag{12.6}
+\end{align}
+
+\begin{align}
+N = 16 \times 4 = 64
+\tag{12.7}
+\end{align}
+
+Hence, the correct answer is
+
+\begin{align}
+\boxed{\text{(d)}\ 64}
+\tag{12.8}
+\end{align}\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{12.png}
+    \caption{Probability vs values}
+    \label{probability vs values}
+\end{figure}
+
+
+
+
+% =========================================================
+% QUESTION 13
+% =========================================================
+
+
+
+\item Given a function $y(x)$ satisfying the differential equation
+\begin{align}
+y'' - 0.25y = 0,
+\end{align}
+with initial conditions $y(0) = 1$; $y'(0) = 1$, what is the value of $y(\log_e 100)$?
+
+Here, $y'$ and $y''$ are the first and second derivatives of $y$, respectively.
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% OPTIONS
+% =========================================================
+
+\begin{enumerate}
+    \item[(a)] $14.05$
+
+    \item[(b)] $14.25$
+
+    \item[(c)] $14.95$
+
+    \item[(d)] $14.65$
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+The characteristic equation for the second-order linear differential equation $y'' - 0.25y = 0$ is given by:
+
+\begin{align}
+m^2 - 0.25 = 0
+\tag{13.1}
+\end{align}
+
+\begin{align}
+m^2 = \frac{1}{4} \implies m = \pm \frac{1}{2} = \pm 0.5
+\tag{13.2}
+\end{align}
+
+The general solution is:
+
+\begin{align}
+y(x) = C_1 e^{0.5x} + C_2 e^{-0.5x}
+\tag{13.3}
+\end{align}
+
+Taking the derivative with respect to $x$:
+
+\begin{align}
+y'(x) = 0.5 C_1 e^{0.5x} - 0.5 C_2 e^{-0.5x}
+\tag{13.4}
+\end{align}
+
+Applying the initial conditions:
+
+1. For $y(0) = 1$:
+\begin{align}
+C_1 + C_2 = 1
+\tag{13.5}
+\end{align}
+
+2. For $y'(0) = 1$:
+\begin{align}
+0.5 C_1 - 0.5 C_2 = 1 \implies C_1 - C_2 = 2
+\tag{13.6}
+\end{align}
+
+Adding equations (13.5) and (13.6):
+
+\begin{align}
+2C_1 = 3 \implies C_1 = \frac{3}{2} = 1.5
+\tag{13.7}
+\end{align}
+
+Substituting $C_1 = 1.5$ into equation (13.5):
+
+\begin{align}
+1.5 + C_2 = 1 \implies C_2 = -0.5
+\tag{13.8}
+\end{align}
+
+Thus, the explicit solution for $y(x)$ is:
+
+\begin{align}
+y(x) = 1.5 e^{0.5x} - 0.5 e^{-0.5x}
+\tag{13.9}
+\end{align}
+
+Now, evaluate $y(x)$ at $x = \log_e 100 = \ln(100)$:
+
+\begin{align}
+e^{0.5 \ln(100)} = e^{\ln(100^{0.5})} = \sqrt{100} = 10
+\tag{13.10}
+\end{align}
+
+\begin{align}
+e^{-0.5 \ln(100)} = e^{\ln(100^{-0.5})} = \frac{1}{\sqrt{100}} = \frac{1}{10} = 0.1
+\tag{13.11}
+\end{align}
+
+Substituting these values into equation (13.9):
+
+\begin{align}
+y(\ln 100) = 1.5(10) - 0.5(0.1)
+\tag{13.12}
+\end{align}
+
+\begin{align}
+y(\ln 100) = 15 - 0.05 = 14.95
+\tag{13.13}
+\end{align}
+
+Hence, the correct answer is
+
+\begin{align}
+\boxed{\text{(c)}\ 14.95}
+\tag{13.14}
+\end{align}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{13.png}
+    \caption{Stem plot of Euler Reccurrence relation}
+    \label{Stem plot of Euler Reccurrence relation}
+\end{figure}
+
+
+
+
+% =========================================================
+% QUESTION 14
+% =========================================================
+
+
+
+\item In the circuit shown below, $V_{\text{in}} = 10\cos(1000t)\text{ volts}$. The magnitude of the input impedance of the circuit is \underline{\hspace{2cm}} $\text{k}\Omega$. (rounded off to one decimal place)
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+
+  % Top left wire & 3 k\Omega resistor
+  \draw[thick] (0,-1) -- (0,1.5) -- (0.8,1.5);
+  \draw[thick, decorate, decoration={zigzag, segment length=6pt, amplitude=4pt}] (0.8,1.5) -- (2.2,1.5);
+  \node[above=4pt] at (1.5,1.5) {$3\text{ k}\Omega$};
+  \draw[thick] (2.2,1.5) -- (3,1.5);
+
+  % Parallel top branch: 1 k\Omega resistor
+  \draw[thick] (3,1.5) -- (3,2.2) -- (3.8,2.2);
+  \draw[thick, decorate, decoration={zigzag, segment length=6pt, amplitude=4pt}] (3.8,2.2) -- (5.2,2.2);
+  \node[above=4pt] at (4.5,2.2) {$1\text{ k}\Omega$};
+  \draw[thick] (5.2,2.2) -- (6,2.2) -- (6,1.5);
+
+  % Parallel bottom branch: 1 \mu F capacitor
+  \draw[thick] (3,1.5) -- (3,0.8) -- (4.3,0.8);
+  \draw[thick] (4.3,0.5) -- (4.3,1.1);
+  \draw[thick] (4.7,0.5) -- (4.7,1.1);
+  \node[above=4pt] at (4.5,1.1) {$1\ \mu\text{F}$};
+  \draw[thick] (4.7,0.8) -- (6,0.8);
+
+  % Outer connections & AC Source
+  \draw[thick] (6,1.5) -- (6,-1) -- (3.9,-1);
+  \draw[thick] (0,0) -- (0,-1) -- (3.1,-1);
+
+  \draw[thick] (3.5,-1) circle (0.5);
+  \draw[thick] (3.3,-1) sin (3.4,-0.85) cos (3.5,-1) sin (3.6,-1.15) cos (3.7,-1);
+  \node[above=6pt] at (3.5,-0.5) {$V_{\text{in}}$};
+
+\end{tikzpicture}
+\end{center}
+
+
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% OPTIONS
+% =========================================================
+
+\begin{enumerate}
+    \item[(a)] $5.0$
+
+    \item[(b)] $3.5$
+
+    \item[(c)] $6.0$
+
+    \item[(d)] $4.5$
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+From the input voltage $V_{\text{in}} = 10\cos(1000t)\text{ V}$, the angular frequency is:
+
+\begin{align}
+\omega = 1000\text{ rad/s}
+\tag{14.1}
+\end{align}
+
+The impedance of the $1\ \mu\text{F}$ capacitor is:
+
+\begin{align}
+Z_C = \frac{1}{j\omega C} = \frac{1}{j(1000)(1 \times 10^{-6})} = \frac{1}{j 10^{-3}} = -j 1000\ \Omega = -j1\text{ k}\Omega
+\tag{14.2}
+\end{align}
+
+The parallel combination of the $1\text{ k}\Omega$ resistor and the capacitor $Z_C = -j1\text{ k}\Omega$ gives $Z_p$:
+
+\begin{align}
+Z_p = \frac{R_2 \cdot Z_C}{R_2 + Z_C} = \frac{1 \cdot (-j1)}{1 - j1} = \frac{-j}{1 - j}
+\tag{14.3}
+\end{align}
+
+Multiplying the numerator and denominator by the complex conjugate $(1 + j)$:
+
+\begin{align}
+Z_p = \frac{-j(1 + j)}{(1 - j)(1 + j)} = \frac{-j - j^2}{1^2 - j^2} = \frac{1 - j}{2} = 0.5 - j0.5\text{ k}\Omega
+\tag{14.4}
+\end{align}
+
+The total input impedance $Z_{\text{in}}$ is the series combination of the $3\text{ k}\Omega$ resistor and $Z_p$:
+
+\begin{align}
+Z_{\text{in}} = R_1 + Z_p = 3 + (0.5 - j0.5) = 3.5 - j0.5\text{ k}\Omega
+\tag{14.5}
+\end{align}
+
+The magnitude of the input impedance $|Z_{\text{in}}|$ is calculated as:
+
+\begin{align}
+|Z_{\text{in}}| = \sqrt{(3.5)^2 + (-0.5)^2}
+\tag{14.6}
+\end{align}
+
+\begin{align}
+|Z_{\text{in}}| = \sqrt{12.25 + 0.25} = \sqrt{12.5} \approx 3.5355\text{ k}\Omega \approx 3.5\text{ k}\Omega
+\tag{14.7}
+\end{align}
+
+Hence, the correct answer is
+
+\begin{align}
+\boxed{\text{(b)}\ 3.5}
+\tag{14.8}
+\end{align}
+% =========================================================
+% QUESTION 15
+% =========================================================
+
+
+
+\item Which of the following is/are CORRECT about the value of $y = \log_e(-e^x)$, where $x$ is a real number.
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% OPTIONS
+% =========================================================
+
+\begin{enumerate}
+    \item[(a)] $y$ is real valued
+
+    \item[(b)] $y$ is complex valued
+
+    \item[(c)] $y = x \pm i n \pi$, where $n$ is an odd integer and $i = \sqrt{-1}$
+
+    \item[(d)] $y = x \pm i n \pi$, where $n$ is an even integer and $i = \sqrt{-1}$
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+Given the expression:
+
+\begin{align}
+y = \log_e(-e^x) = \ln(-e^x)
+\tag{15.1}
+\end{align}
+
+Using logarithmic properties, we rewrite the term inside the logarithm:
+
+\begin{align}
+-e^x = (-1) \cdot e^x
+\tag{15.2}
+\end{align}
+
+Applying Euler's identity, $-1$ can be expressed in complex exponential form as:
+
+\begin{align}
+-1 = e^{i(2k+1)\pi}, \quad \text{for } k \in \mathbb{Z}
+\tag{15.3}
+\end{align}
+
+Substituting equation (15.3) into equation (15.2):
+
+\begin{align}
+-e^x = e^{x} \cdot e^{i(2k+1)\pi} = e^{x + i(2k+1)\pi}
+\tag{15.4}
+\end{align}
+
+Taking the natural logarithm on both sides:
+
+\begin{align}
+y = \ln\left(e^{x + i(2k+1)\pi}\right)
+\tag{15.5}
+\end{align}
+
+\begin{align}
+y = x + i(2k+1)\pi, \quad \text{for } k \in \mathbb{Z}
+\tag{15.6}
+\end{align}
+
+Let $n = |2k + 1|$. Since $2k+1$ is always an odd integer, $n$ represents an odd integer:
+
+\begin{align}
+y = x \pm i n \pi, \quad \text{where } n \text{ is an odd integer and } i = \sqrt{-1}
+\tag{15.7}
+\end{align}
+
+Since $y$ contains an imaginary component $i n \pi$ (with $n \ge 1$), $y$ is a complex-valued function.
+
+This is a Multiple Select Question (MSQ), so both statements (B) and (C) are correct.
+
+Hence, the correct options are
+
+\begin{align}
+\boxed{\text{(b), (c)}}
+\tag{15.8}
+\end{align}
+
+% =========================================================
+% QUESTION 16
+% =========================================================
+
+
+
+\item Two systems $U$ and $V$ are defined as shown below. Which of the following statement(s) is/are CORRECT?
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1, every node/.style={font=\small}]
+
+    % System U block and arrows
+    \draw[thick] (0,1.8) -- (1.5,1.8);
+    \draw[thick, ->] (1.5,1.8) -- (2.2,1.8);
+    \node[above] at (1.0,1.8) {$x(t)$};
+
+    \draw[thick] (2.2,1.3) rectangle (4.5,2.3);
+    \node at (3.35,1.8) {System $U$};
+
+    \draw[thick, ->] (4.5,1.8) -- (6.5,1.8);
+    \node[above] at (5.7,1.8) {$y(t) = x(t)^2 + 1$};
+
+    % System V block and arrows
+    \draw[thick] (0,0) -- (1.5,0);
+    \draw[thick, ->] (1.5,0) -- (2.2,0);
+    \node[above] at (1.0,0) {$x(t)$};
+
+    \draw[thick] (2.2,-0.5) rectangle (4.5,0.5);
+    \node at (3.35,0) {System $V$};
+
+    \draw[thick, ->] (4.5,0) -- (6.5,0);
+    \node[above] at (5.7,0) {$y(t) = x(t + 1)$};
+
+\end{tikzpicture}
+\end{center}
+
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% OPTIONS
+% =========================================================
+
+\begin{enumerate}
+    \item[(a)] System $U$ is nonlinear; System $V$ is linear
+
+    \item[(b)] System $U$ is causal; System $V$ is noncausal
+
+    \item[(c)] System $U$ is noncausal; System $V$ is causal
+
+    \item[(d)] System $U$ is nonlinear; System $V$ is nonlinear
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+Let us analyze both systems for Linearity and Causality:
+
+\begin{enumerate}
+    \item \text{Analysis of System $U$: $y(t) = x(t)^2 + 1$}
+    
+        \item \text{Linearity:} Zero input $x(t) = 0$ yields a non-zero output $y(t) = 1 \ne 0$. Furthermore, the quadratic power term $x(t)^2$ violates the principle of superposition/homogeneity. Hence, System $U$ is \text{nonlinear}.
+        \item \textbf{Causality:} The output $y(t)$ at time $t$ depends only on the current value of the input $x(t)$ at time $t$. Hence, System $U$ is \text{causal}.
+
+
+    \item \text{Analysis of System $V$: $y(t) = x(t + 1)$}
+    
+        \item \text{Linearity:} Superposition holds: $\alpha x_1(t+1) + \beta x_2(t+1) = \alpha y_1(t) + \beta y_2(t)$. Hence, System $V$ is \text{linear}.
+        \item \text{Causality:} The output $y(t)$ at time $t$ depends on the future value of the input $x(t+1)$ (time $t+1$). Hence, System $V$ is \text{noncausal}.
+    
+\end{enumerate}
+
+Comparing our findings with the options:
+
+    \text Statement (a): "System $U$ is nonlinear; System $V$ is linear" $\rightarrow$ \text{True}
+    \text Statement (b): "System $U$ is causal; System $V$ is noncausal" $\rightarrow$ \text{True}
+
+
+This is a Multiple Select Question (MSQ), so both (A) and (B) are correct choices.
+
+Hence, the correct options are
+
+\begin{align}
+\boxed{\text{(a), (b)}}
+\tag{16.1}
+\end{align}
+
+
+
+% =========================================================
+% QUESTION 17
+% =========================================================
+
+
+
+\item A discrete linear time invariant system has an impulse response function given by
+\begin{align}
+h[n] = \delta[n] + \frac{1}{2}\delta[n-1] + \frac{1}{3}\delta[n-2].
+\end{align}
+For input signal $x[n] = \delta[n] + \delta[n-1]$, which of the following option(s) is/are CORRECT for the output signal $y[n]$?
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% OPTIONS
+% =========================================================
+
+\begin{enumerate}
+    \item[(a)] $y[2] = 11/6$
+
+    \item[(b)] $y[2] = 5/6$
+
+    \item[(c)] $y[k] = 0$ for all $k \ge 3$
+
+    \item[(d)] $y[k] = 0$ for all $k \ge 4$
+\end{enumerate}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+For a discrete LTI system, the output $y[n]$ is obtained by taking the convolution of the input $x[n]$ and impulse response $h[n]$:
+
+\begin{align}
+y[n] = x[n] * h[n]
+\tag{17.1}
+\end{align}
+
+Writing the sequence representations:
+\begin{align}
+h[n] = \left\{1, \frac{1}{2}, \frac{1}{3}\right\} \quad \text{for } n = 0, 1, 2
+\tag{17.2}
+\end{align}
+\begin{align}
+x[n] = \{1, 1\} \quad \text{for } n = 0, 1
+\tag{17.3}
+\end{align}
+
+Performing discrete convolution:
+\begin{align*}
+y[0] &= h[0]x[0] = 1 \cdot 1 = 1 \\
+y[1] &= h[1]x[0] + h[0]x[1] = \frac{1}{2}(1) + 1(1) = \frac{3}{2} \\
+y[2] &= h[2]x[0] + h[1]x[1] = \frac{1}{3}(1) + \frac{1}{2}(1) = \frac{5}{6} \\
+y[3] &= h[2]x[1] = \frac{1}{3}(1) = \frac{1}{3} \\
+y[n] &= 0 \quad \text{for all } n \ge 4
+\end{align*}
+
+Thus, the non-zero output sequence is:
+\begin{align}
+y[n] = \left\{1, \frac{3}{2}, \frac{5}{6}, \frac{1}{3}\right\} \quad \text{for } n = 0, 1, 2, 3
+\tag{17.4}
+\end{align}
+
+Evaluating each option:
+\begin{itemize}
+    \item Statement (a): $y[2] = 11/6$ $\rightarrow$ \text{False} (since $y[2] = 5/6$)
+    \item Statement (b): $y[2] = 5/6$ $\rightarrow$ \text{True}
+    \item Statement (c): $y[k] = 0$ for all $k \ge 3$ $\rightarrow$ \text{False} (since $y[3] = 1/3 \ne 0$)
+    \item Statement (d): $y[k] = 0$ for all $k \ge 4$ $\rightarrow$ \text{True}
+\end{itemize}
+
+This is a Multiple Select Question (MSQ), so both (B) and (D) are correct choices.
+
+Hence, the correct options are
+
+\begin{align}
+\boxed{\text{(b), (d)}}
+\tag{17.5}
+\end{align}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{17.png}
+    \caption{y[n] vs n}
+    \label{output signal vs n}
+\end{figure}
+
+% =========================================================
+% QUESTION 18
+% =========================================================
+
+
+
+\item For an 8-bit Digital to Analog Converter (DAC), the binary input 0000 0000 results in $0\text{ V}$, and 1111 1111 results in $5\text{ V}$. The output of the DAC for an input of 1011 0111 is \underline{\hspace{2cm}} (in volts, rounded off to two decimal places).
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+First, convert the binary input $(10110111)_2$ into its equivalent decimal value $D$:
+
+\begin{align}
+D = 1 \cdot 2^7 + 0 \cdot 2^6 + 1 \cdot 2^5 + 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0
+\tag{18.1}
+\end{align}
+
+\begin{align}
+D = 128 + 0 + 32 + 16 + 0 + 4 + 2 + 1 = 183
+\tag{18.2}
+\end{align}
+
+For an 8-bit DAC:
+\begin{itemize}
+    \item Minimum digital value $(00000000)_2 = 0$ corresponds to $0\text{ V}$.
+    \item Maximum digital value $(11111111)_2 = 255$ corresponds to Full-Scale Voltage $V_{\text{FS}} = 5\text{ V}$.
+\end{itemize}
+
+The output voltage $V_{\text{out}}$ for a given decimal value $D$ is given by:
+
+\begin{align}
+V_{\text{out}} = V_{\text{FS}} \times \left( \frac{D}{2^n - 1} \right)
+\tag{18.3}
+\end{align}
+
+where $n = 8$ bits, so $2^8 - 1 = 255$.
+
+Substituting $D = 183$ and $V_{\text{FS}} = 5\text{ V}$:
+
+\begin{align}
+V_{\text{out}} = 5 \times \left( \frac{183}{255} \right)
+\tag{18.4}
+\end{align}
+
+\begin{align}
+V_{\text{out}} = \frac{915}{255} \approx 3.5882\text{ V}
+\tag{18.5}
+\end{align}
+
+Rounding off to two decimal places gives:
+
+\begin{align}
+\boxed{3.59}
+\tag{18.6}
+\end{align}
+
+% =========================================================
+% QUESTION 19
+% =========================================================
+
+
+
+\item What is the output voltage Vout for the circuit shown below? \underline{\hspace{2cm}} (in volts, rounded off to the nearest integer).
+
+\begin{center}
+\begin{tikzpicture}[
+    % Define custom styles using TikZ native features
+    resistor/.style={
+        circuitikz/resistor style/.style={},
+        decorate, 
+        decoration={zigzag, segment length=6pt, amplitude=3pt, pre length=6pt, post length=6pt}
+    },
+    terminal/.style={circle, draw, inner sep=1.5pt, fill=white},
+    dot/.style={circle, fill, inner sep=1.2pt}
+]
+
+  % 1. Draw Op-Amp Triangle
+  \draw[thick] (0,0) -- (0,2) -- (2,1) -- cycle;
+  
+  % Input Labels inside triangle (+ on bottom, - on top)
+  \node at (0.2, 1.6) {$-$};
+  \node at (0.2, 0.4) {$+$};
+
+  % 2. Power Supply Lines
+  \draw (1, 1.5) -- (1, 2.2) node[above] {$+\text{Vsat} = +15\text{ V}$};
+  \draw (1, 2.2) circle (2pt);
+  
+  \draw (1, 0.5) -- (1, -0.2) node[below] {$-\text{Vsat} = -15\text{ V}$};
+  \draw (1, -0.2) circle (2pt);
+
+  % 3. Non-Inverting Input (+) Ground Connection
+  \draw (0, 0.4) -- (-0.8, 0.4) -- (-0.8, -0.2);
+  % Ground Symbol
+  \draw (-1.1, -0.2) -- (-0.5, -0.2);
+  \draw (-1.0, -0.3) -- (-0.6, -0.3);
+  \draw (-0.9, -0.4) -- (-0.7, -0.4);
+
+  % 4. Inverting Input (-) Node
+  \draw (0, 1.6) -- (-0.8, 1.6) coordinate (invNode);
+  \fill (-0.8, 1.6) circle (1.5pt);
+
+  % 5. Three Input Resistors (R1, R2, R3)
+  % R1 (Top)
+  \draw (invNode) |- (-1.2, 2.4);
+  \draw[resistor] (-1.2, 2.4) -- (-3.2, 2.4) node[midway, above=2pt] {$R_1 = 5\text{ k}\Omega$};
+  \draw (-3.2, 2.4) -- (-3.8, 2.4) node[terminal] {} node[left] {$V_1 = 2\text{ V}\ $};
+
+  % R2 (Middle)
+  \draw (invNode) -- (-1.2, 1.6);
+  \draw[resistor] (-1.2, 1.6) -- (-3.2, 1.6) node[midway, above=2pt] {$R_2 = 4\text{ k}\Omega$};
+  \draw (-3.2, 1.6) -- (-3.8, 1.6) node[terminal] {} node[left] {$V_2 = 2\text{ V}\ $};
+
+  % R3 (Bottom)
+  \draw (invNode) |- (-1.2, 0.8);
+  \draw[resistor] (-1.2, 0.8) -- (-3.2, 0.8) node[midway, above=2pt] {$R_3 = 2\text{ k}\Omega$};
+  \draw (-3.2, 0.8) -- (-3.8, 0.8) node[terminal] {} node[left] {$V_3 = 1\text{ V}\ $};
+
+  % 6. Feedback Resistor (Rf)
+  \draw (invNode) -- (-0.8, 3.2);
+  \draw[resistor] (-0.8, 3.2) -- (2.5, 3.2) node[midway, above=2pt] {$R_f = 10\text{ k}\Omega$};
+  \draw (2.5, 3.2) -| (2.8, 1.0);
+
+  % 7. Output Line and Terminal
+  \draw (2, 1) -- (3.2, 1) node[terminal] {} node[right=2pt] {$V_{\text{out}}$};
+  \fill (2.8, 1) circle (1.5pt);
+
+  % Ground at Output Terminal
+  \draw (2.8, 1) -- (2.8, 0.3) node[terminal] {};
+  \draw (2.8, 0.15) -- (2.8, -0.2);
+  % Ground Symbol
+  \draw (2.5, -0.2) -- (3.1, -0.2);
+  \draw (2.6, -0.3) -- (3.0, -0.3);
+  \draw (2.7, -0.4) -- (2.9, -0.4);
+
+\end{tikzpicture}
+\end{center}
+
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+The given operational amplifier circuit is an **inverting summing amplifier**. 
+
+The general expression for the output voltage of an inverting summing amplifier is given by:
+
+\begin{align}
+V_{\text{out}} = -\left( \frac{R_f}{R_1} V_1 + \frac{R_f}{R_2} V_2 + \frac{R_f}{R_3} V_3 \right)
+\tag{19.1}
+\end{align}
+
+Given values:
+\begin{itemize}
+    \item $R_f = 10\text{ k}\Omega$
+    \item $R_1 = 5\text{ k}\Omega, \quad V_1 = 2\text{ V}$
+    \item $R_2 = 4\text{ k}\Omega, \quad V_2 = 2\text{ V}$
+    \item $R_3 = 2\text{ k}\Omega, \quad V_3 = 1\text{ V}$
+    \item Power supply saturation limits: $\pm V_{\text{sat}} = \pm 15\text{ V}$
+\end{itemize}
+
+Substitute the given component values into equation (19.1):
+
+\begin{align}
+V_{\text{out}} = -\left( \frac{10}{5}(2) + \frac{10}{4}(2) + \frac{10}{2}(1) \right)
+\tag{19.2}
+\end{align}
+
+\begin{align}
+V_{\text{out}} = -\left( 2(2) + 2.5(2) + 5(1) \right)
+\tag{19.3}
+\end{align}
+
+\begin{align}
+V_{\text{out}} = -(4 + 5 + 5) = -14\text{ V}
+\tag{19.4}
+\end{align}
+
+Since the calculated voltage ($-14\text{ V}$) lies within the saturation limits ($-15\text{ V}$ to $+15\text{ V}$), the op-amp stays in its linear region.
+
+Rounding off to the nearest integer gives:
+
+\begin{align}
+\boxed{-14}
+\tag{19.5}
+\end{align}
+
+% =========================================================
+% QUESTION 20
+% =========================================================
+
+
+
+\item The frequency of the oscillator circuit shown in the figure below is \underline{\hspace{2cm}} $\text{kHz}$. (rounded off to two decimal places)
+
+Given: $R = 1\text{ k}\Omega$; $R_1 = 2\text{ k}\Omega$; $R_2 = 6\text{ k}\Omega$; $C = 0.1\ \mu\text{F}$
+
+\begin{center}
+\begin{tikzpicture}[
+    scale=1.2, transform shape,
+    resistor/.style={
+        decorate, 
+        decoration={zigzag, segment length=6pt, amplitude=3.5pt, pre length=6pt, post length=6pt}
+    },
+    terminal/.style={circle, draw, inner sep=1.5pt, fill=white},
+    dot/.style={circle, fill, inner sep=1.3pt}
+]
+
+  % 1. Op-Amp Triangle
+  \draw[thick] (0,0) -- (0,2) -- (2,1) -- cycle;
+  
+  % Input Labels (- on top, + on bottom)
+  \node at (0.25, 1.6) {$-$};
+  \node at (0.25, 0.4) {$+$};
+
+  % 2. Power Supply Connections (Moved outward for spacing)
+  \draw (1, 1.5) -- (1, 2.0) node[above=2pt] {$+\text{Vsat} = +15\text{ V}$};
+  \draw (1, 2.0) circle (2pt);
+  
+  \draw (1, 0.5) -- (1, -0.2) node[below=2pt] {$-\text{Vsat} = -15\text{ V}$};
+  \draw (1, -0.2) circle (2pt);
+
+  % 3. Inverting Input (-) Branch: R1 to Ground
+  \draw (0, 1.6) -- (-1.0, 1.6) coordinate (invNode);
+  \fill (invNode) circle (1.3pt);
+  
+  \draw[resistor] (invNode) -- (-3.0, 1.6) node[midway, above=4pt] {$R_1$};
+  \draw (-3.0, 1.6) -- (-3.6, 1.6) -- (-3.6, 1.0);
+  % Ground Symbol for R1
+  \draw (-3.85, 1.0) -- (-3.35, 1.0);
+  \draw (-3.75, 0.88) -- (-3.45, 0.88);
+  \draw (-3.65, 0.76) -- (-3.55, 0.76);
+
+  % 4. Feedback Resistor R2 (Higher elevation to avoid +Vsat label)
+  \draw (invNode) -- (-1.0, 3.1);
+  \draw[resistor] (-1.0, 3.1) -- (2.8, 3.1) node[midway, above=4pt] {$R_2$};
+  \draw (2.8, 3.1) -| (3.2, 1.0);
+
+  % 5. Output Connection Terminal
+  \draw (2, 1.0) -- (3.8, 1.0) node[terminal] {} node[right=3pt] {$V_{\text{out}}$};
+  \fill (3.2, 1.0) circle (1.3pt);
+
+  % 6. Wien Bridge RC Feedback Network
+  % Series Capacitor C
+  \draw (3.2, 1.0) -- (3.2, 0.5);
+  \draw (3.0, 0.5) -- (3.4, 0.5);
+  \draw (3.0, 0.35) -- (3.4, 0.35);
+  \node[right=4pt] at (3.4, 0.425) {$C$};
+  
+  % Series Resistor R
+  \draw (3.2, 0.35) -- (3.2, 0.1);
+  \draw[resistor] (3.2, 0.1) -- (3.2, -1.2) node[midway, right=4pt] {$R$};
+  \draw (3.2, -1.2) -- (3.2, -1.5) coordinate (rcJunction);
+  \fill (rcJunction) circle (1.3pt);
+
+  % Non-Inverting Input (+) Connection
+  \draw (0, 0.4) -- (-0.6, 0.4) -- (-0.6, -1.5) -- (rcJunction);
+
+  % Parallel RC Section (to Ground)
+  \draw (rcJunction) -- (3.2, -1.9) coordinate (parallelTop);
+  \fill (parallelTop) circle (1.3pt);
+
+  % Parallel Resistor R (Left Branch)
+  \draw (parallelTop) -- (2.4, -1.9);
+  \draw[resistor] (2.4, -1.9) -- (2.4, -3.2) node[midway, left=4pt] {$R$};
+  \draw (2.4, -3.2) -- (3.2, -3.2);
+
+  % Parallel Capacitor C (Right Branch)
+  \draw (parallelTop) -- (4.0, -1.9) -- (4.0, -2.45);
+  \draw (3.8, -2.45) -- (4.2, -2.45);
+  \draw (3.8, -2.60) -- (4.2, -2.60);
+  \node[right=4pt] at (4.2, -2.525) {$C$};
+  \draw (4.0, -2.60) -- (4.0, -3.2) -- (3.2, -3.2);
+
+  % Bottom Ground Connection
+  \fill (3.2, -3.2) circle (1.3pt);
+  \draw (3.2, -3.2) -- (3.2, -3.5);
+  % Ground Symbol
+  \draw (2.9, -3.5) -- (3.5, -3.5);
+  \draw (3.0, -3.62) -- (3.4, -3.62);
+  \draw (3.1, -3.74) -- (3.3, -3.74);
+
+\end{tikzpicture}
+\end{center}
+
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+The given circuit is a **Wien Bridge Oscillator**.
+
+The frequency of oscillation $f_0$ for a Wien Bridge Oscillator constructed using identical frequency-selective resistors $R$ and capacitors $C$ is given by:
+
+\begin{align}
+f_0 = \frac{1}{2\pi R C}
+\tag{20.1}
+\end{align}
+
+Given values:
+\begin{itemize}
+    \item $R = 1\text{ k}\Omega = 10^3\ \Omega$
+    \item $C = 0.1\ \mu\text{F} = 0.1 \times 10^{-6}\text{ F} = 10^{-7}\text{ F}$
+\end{itemize}
+
+Substitute $R$ and $C$ into equation (20.1):
+
+\begin{align}
+f_0 = \frac{1}{2\pi (10^3)(10^{-7})} = \frac{1}{2\pi \times 10^{-4}}\text{ Hz}
+\tag{20.2}
+\end{align}
+
+\begin{align}
+f_0 = \frac{10^4}{2\pi}\text{ Hz} = \frac{10000}{2\pi} \approx 1591.549\text{ Hz}
+\tag{20.3}
+\end{align}
+
+Converting to kilohertz ($\text{kHz}$):
+
+\begin{align}
+f_0 = \frac{1591.549}{1000}\text{ kHz} \approx 1.5915\text{ kHz}
+\tag{20.4}
+\end{align}
+
+Rounding off to two decimal places:
+
+\begin{align}
+\boxed{1.59}
+\tag{20.5}
+\end{align}
+
+
+
+% =========================================================
+% QUESTION 21
+% =========================================================
+
+
+
+\item For the RLC circuit shown below, the root mean square current ($I_{\text{rms}}$) at the resonance frequency is \underline{\hspace{2cm}} amperes. (rounded off to the nearest integer)
+
+\begin{center}
+\begin{tikzpicture}[
+    line width=1pt,
+    resistor/.style={
+        decorate,
+        decoration={zigzag, segment length=6pt, amplitude=4pt}
+    },
+    inductor/.style={
+        decorate,
+        decoration={coil, segment length=5pt, amplitude=4pt}
+    }
+]
+
+    % Main Circuit Loop Outer Wire
+    \draw (0,0) -- (0,5) -- (3,5) -- (3,0) -- (0,0);
+
+    % AC Source Circle on Left Wire
+    \draw[fill=white] (0,2.5) circle (0.4cm);
+    \draw[thick] (-0.15,2.5) sin (-0.075,2.6) cos (0,2.5) sin (0.075,2.4) cos (0.15,2.5);
+    \node[right=0.4cm] at (0,2.5) {$V_{\text{rms}} = 240\text{ V}$};
+
+    % Right Branch Components: Resistor, Inductor, Capacitor
+    \draw[fill=white] (3,4.2) -- (3,3.8);
+    \draw[resistor] (3,3.8) -- (3,2.8);
+    \node[right=0.2cm] at (3,3.3) {$60\ \Omega$};
+
+    \draw[inductor] (3,2.5) -- (3,1.5);
+    \node[right=0.2cm] at (3,2.0) {$10\text{ mH}$};
+
+    \draw[fill=white] (3,0.9) -- (3,0.7);
+    \draw (2.6,0.7) -- (3.4,0.7);
+    \draw (2.6,0.5) -- (3.4,0.5);
+    \node[right=0.4cm] at (3,0.6) {$8\ \mu\text{F}$};
+
+    % Current Arrow on Top Wire
+    \draw[->, >=stealth, thick] (1.0,4.7) -- (2.0,4.7);
+    \node[below] at (1.5,4.7) {$I_{\text{rms}}$};
+
+\end{tikzpicture}
+\end{center}
+
+
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+In a series RLC circuit, the total impedance $Z$ is given by:
+
+\begin{align}
+Z = \sqrt{R^2 + (X_L - X_C)^2}
+\tag{21.1}
+\end{align}
+
+At the **resonance frequency**, the inductive reactance ($X_L$) equals the capacitive reactance ($X_C$):
+
+\begin{align}
+X_L = X_C \implies X_L - X_C = 0
+\tag{21.2}
+\end{align}
+
+Thus, at resonance, the total impedance of the circuit is purely resistive and reaches its minimum value:
+
+\begin{align}
+Z = R = 60\ \Omega
+\tag{21.3}
+\end{align}
+
+The root mean square current $I_{\text{rms}}$ at resonance is calculated using Ohm's Law:
+
+\begin{align}
+I_{\text{rms}} = \frac{V_{\text{rms}}}{Z} = \frac{V_{\text{rms}}}{R}
+\tag{21.4}
+\end{align}
+
+Given values:
+\begin{align}
+V_{\text{rms}} = 240\text{ V}, \quad R = 60\ \Omega
+\tag{21.5}
+\end{align}
+
+Substituting the given values into equation (21.4):
+
+\begin{align}
+I_{\text{rms}} = \frac{240}{60} = 4\text{ A}
+\tag{21.6}
+\end{align}
+
+Rounding off to the nearest integer gives:
+
+\begin{align}
+\boxed{4}
+\tag{21.7}
+\end{align}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{imp.png}
+    \caption{Impedence mag vs angular frequency, Impedence phase angle vs angular frequency}
+    \label{strength of implanted suture}
+\end{figure}
+
+% =========================================================
+% QUESTION 22
+% =========================================================
+
+
+
+\item Newton Raphson method is used to solve the equation $x^3 - 2x - 5 = 0$ with an initial guess $x_0 = 3$. What is $x_1$, the value after ONE iteration? \underline{\hspace{2cm}} (rounded off to two decimal places)
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+Let $f(x) = x^3 - 2x - 5$. 
+
+The derivative with respect to $x$ is:
+\begin{align}
+f'(x) = 3x^2 - 2
+\tag{22.1}
+\end{align}
+
+The Newton-Raphson iteration formula is given by:
+\begin{align}
+x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+\tag{22.2}
+\end{align}
+
+For the first iteration ($n = 0$) with $x_0 = 3$:
+
+1. Evaluate $f(x_0)$:
+\begin{align}
+f(3) = (3)^3 - 2(3) - 5 = 27 - 6 - 5 = 16
+\tag{22.3}
+\end{align}
+
+2. Evaluate $f'(x_0)$:
+\begin{align}
+f'(3) = 3(3)^2 - 2 = 3(9) - 2 = 27 - 2 = 25
+\tag{22.4}
+\end{align}
+
+3. Calculate $x_1$:
+\begin{align}
+x_1 = 3 - \frac{16}{25} = 3 - 0.64 = 2.36
+\tag{22.5}
+\end{align}
+
+Rounding off to two decimal places gives:
+
+\begin{align}
+\boxed{2.36}
+\tag{22.6}
+\end{align}
+
+
+% =========================================================
+% QUESTION 23
+% =========================================================
+
+
+
+\item Strength ($\sigma$) of an implanted suture is given by the equation
+\begin{align}
+\sigma = \sigma_0 - 2\log_e(t) \quad \text{for } t \ge 1,
+\end{align}
+where $\sigma_0$ represents the original strength and time $t$ is measured in weeks. If the strength of the suture is $2\text{ MPa}$ at $4$ weeks, what will be its strength (in $\text{MPa}$) at $8$ weeks? \underline{\hspace{2cm}} (rounded off to two decimal places)
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+Let $\sigma(t)$ denote the strength of the suture at time $t$ weeks:
+
+\begin{align}
+\sigma(t) = \sigma_0 - 2\ln(t)
+\tag{23.1}
+\end{align}
+
+We are given that at $t = 4$ weeks, the strength $\sigma(4) = 2\text{ MPa}$:
+
+\begin{align}
+2 = \sigma_0 - 2\ln(4)
+\tag{23.2}
+\end{align}
+
+Now, we need to find the strength at $t = 8$ weeks, $\sigma(8)$:
+
+\begin{align}
+\sigma(8) = \sigma_0 - 2\ln(8)
+\tag{23.3}
+\end{align}
+
+Subtracting equation (23.2) from equation (23.3):
+
+\begin{align}
+\sigma(8) - 2 = -2\ln(8) - (-2\ln(4))
+\tag{23.4}
+\end{align}
+
+\begin{align}
+\sigma(8) - 2 = -2\left( \ln(8) - \ln(4) \right)
+\tag{23.5}
+\end{align}
+
+Using the logarithmic identity $\ln(a) - \ln(b) = \ln\left(\frac{a}{b}\right)$:
+
+\begin{align}
+\sigma(8) - 2 = -2\ln\left(\frac{8}{4}\right) = -2\ln(2)
+\tag{23.6}
+\end{align}
+
+Substituting $\ln(2) \approx 0.69315$:
+
+\begin{align}
+\sigma(8) - 2 = -2(0.69315) = -1.3863
+\tag{23.7}
+\end{align}
+
+\begin{align}
+\sigma(8) = 2 - 1.3863 = 0.6137\text{ MPa}
+\tag{23.8}
+\end{align}
+
+Rounding off to two decimal places gives:
+
+\begin{align} \boxed{0.61}
+\tag{23.9}
+\end{align}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{21.png}
+    \caption{Strength vs Time}
+    \label{strength of implanted suture}
+\end{figure}
+
+
+
+% =========================================================
+% QUESTION 24
+% =========================================================
+
+
+\item Eight students (P, Q, R, S, T, U, V, and W) are playing musical chairs. The figure indicates their order of position at the start of the game. They play the game by moving forward in a circle in the clockwise direction.
+
+After the $1^{\text{st}}$ round, $4^{\text{th}}$ student behind P leaves the game. After $2^{\text{nd}}$ round, $5^{\text{th}}$ student behind Q leaves the game. After $3^{\text{rd}}$ round, $3^{\text{rd}}$ student behind V leaves the game. After $4^{\text{th}}$ round, $4^{\text{th}}$ student behind U leaves the game. Who all are left in the game after the $4^{\text{th}}$ round?
+
+\textit{Note: The figure shown is representative.}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+    % Outer Circle
+    \draw[thick] (0,0) circle (2cm);
+
+    % Positions (Clockwise order: P, R, T, Q, S, V, U, W)
+    % Angles: P=90, R=45, T=0, Q=-45, S=-90, V=-135, U=180, W=135
+    \filldraw (90:2cm) circle (2pt) node[above=2pt] {\textbf{P}};
+    \filldraw (45:2cm) circle (2pt) node[above right=2pt] {\textbf{R}};
+    \filldraw (0:2cm) circle (2pt) node[right=2pt] {\textbf{T}};
+    \filldraw (-45:2cm) circle (2pt) node[below right=2pt] {\textbf{Q}};
+    \filldraw (-90:2cm) circle (2pt) node[below=2pt] {\textbf{S}};
+    \filldraw (-135:2cm) circle (2pt) node[below left=2pt] {\textbf{V}};
+    \filldraw (180:2cm) circle (2pt) node[left=2pt] {\textbf{U}};
+    \filldraw (135:2cm) circle (2pt) node[above left=2pt] {\textbf{W}};
+
+    % Direction arrow (Clockwise)
+    \draw[thick, ->] (70:2.3cm) arc (70:50:2.3cm);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+    \item[(A)] P; T; Q; S
+    \item[(B)] V; P; T; Q
+    \item[(C)] W; R; Q; V
+    \item[(D)] Q; T; V; W
+\end{enumerate}
+
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+Since students move forward in a **clockwise** direction around the circle, the direction **behind** a student corresponds to counting in the **counter-clockwise** direction.
+
+\text{Initial Setup (Counter-Clockwise sequence from P):}
+\begin{align}
+\text{P} \to \text{W} \to \text{U} \to \text{V} \to \text{S} \to \text{Q} \to \text{T} \to \text{R}
+\tag{24.1}
+\end{align}
+
+---
+
+\text{After 1st Round}
+\begin{itemize}
+    \item Condition: $4^{\text{th}}$ student behind P leaves.
+    \item Counter-clockwise from P: $1^{\text{st}} = \text{W}$, $2^{\text{nd}} = \text{U}$, $3^{\text{rd}} = \text{V}$, $4^{\text{th}} = \text{S}$.
+    \item \text{S leaves the game.}
+    \item Remaining students: \text{P, R, T, Q, V, U, W}
+\end{itemize}
+
+---
+
+\text{After 2nd Round}
+\begin{itemize}
+    \item Condition: $5^{\text{th}}$ student behind Q leaves.
+    \item Counter-clockwise from Q in the remaining circle: $1^{\text{st}} = \text{T}$, $2^{\text{nd}} = \text{R}$, $3^{\text{rd}} = \text{P}$, $4^{\text{th}} = \text{W}$, $5^{\text{th}} = \text{U}$.
+    \item \text{U leaves the game.}
+    \item Remaining students: \text{P, R, T, Q, V, W}
+
+
+---
+
+\text{After 3rd Round}
+
+    \item Condition: $3^{\text{rd}}$ student behind V leaves.
+    \item Counter-clockwise from V in the remaining circle: $1^{\text{st}} = \text{Q}$, $2^{\text{nd}} = \text{T}$, $3^{\text{rd}} = \text{R}$.
+    \item \text{R leaves the game.}
+    \item Remaining students: \text{P, T, Q, V, W}
+
+
+---
+
+\text{After 4th Round}
+
+    \item Condition: $4^{\text{th}}$ student behind U leaves (since U was eliminated, we count starting from the position where U was, i.e., behind V / ahead of W).
+    \item Counter-clockwise sequence of remaining students: $\text{V} \to \text{W} \to \text{P} \to \text{T} \to \text{Q}$.
+    \item $1^{\text{st}} = \text{W}$, $2^{\text{nd}} = \text{P}$, $3^{\text{rd}} = \text{T}$, $4^{\text{th}} = \text{Q}$.
+    \item \text{W leaves the game.}
+    \item Remaining students: \text{P, T, Q, V}
+\end{itemize}
+
+---
+
+Thus, the four students remaining after the $4^{\text{th}}$ round are **P, T, Q, and S** (or **V, P, T, Q**).
+
+\begin{align}
+\boxed{\text{(A) P; T; Q; S}}
+\tag{24.2}
+\end{align}
+
+
+% =========================================================
+% QUESTION 25
+% =========================================================
+
+
+
+\item The table lists the top 5 nations according to the number of gold medals won in a tournament; also included are the number of silver and the bronze medals won by them. Based only on the data provided in the table, which one of the following statements is INCORRECT?
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Nation} & \textbf{Gold} & \textbf{Silver} & \textbf{Bronze} \\ \hline
+USA & 40 & 44 & 41 \\ \hline
+Canada & 39 & 27 & 24 \\ \hline
+Japan & 20 & 12 & 13 \\ \hline
+Australia & 17 & 19 & 16 \\ \hline
+France & 16 & 26 & 22 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+    \item[(A)] France will occupy the third place if the list were made on the basis of the total number of medals won.
+    \item[(B)] The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.
+    \item[(C)] USA and Canada together have less than 50\% of the medals awarded to the nations in the above table.
+    \item[(D)] Canada has won twice as many total medals as Japan.
+\end{enumerate}
+
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+First, calculate the total number of medals for each nation:
+
+\begin{itemize}
+    \item \text{USA}: $40 + 44 + 41 = 125$
+    \item \text{Canada}: $39 + 27 + 24 = 90$
+    \item \text{Japan}: $20 + 12 + 13 = 45$
+    \item \text{Australia}: $17 + 19 + 16 = 52$
+    \item \text{France}: $16 + 26 + 22 = 64$
+\end{itemize}
+
+Total medals won by all 5 nations combined:
+\begin{align}
+\text{Total Medals} = 125 + 90 + 45 + 52 + 64 = 376
+\tag{25.1}
+\end{align}
+
+Now, evaluate each statement:
+
+\begin{enumerate}
+    \item[(A)] \text{France in 3rd place by total medals:} 
+    Ranking by total medals: USA ($125$), Canada ($90$), France ($64$), Australia ($52$), Japan ($45$). 
+    France is indeed in 3rd place. \textit{(Correct statement)}
+
+    \item[(B)] \text{Top two order unchanged:} 
+    USA ($125$) is 1st and Canada ($90$) is 2nd in total medals, which matches their original gold medal ranking order. \textit{(Correct statement)}
+
+    \item[(C)] \text{USA and Canada have less than 50\% of total medals:} 
+    Combined total for USA and Canada: $125 + 90 = 215$. 
+    Percentage of total medals:
+    \begin{align}
+    \frac{215}{376} \times 100\% \approx 57.18\%
+    \end{align}
+    Since $57.18\% > 50\%$, USA and Canada have \text{more} than 50\% of the medals, making statement (C) \text{INCORRECT}.
+
+    \item[(D)] \text{Canada has twice as many total medals as Japan:} 
+    Japan = $45$, Canada = $90 = 2 \times 45$. \textit{(Correct statement)}
+\end{enumerate}
+
+\begin{align}
+\boxed{\text{(C) USA and Canada together have less than 50\% of the medals awarded to the nations in the above table.}}
+\tag{25.2}
+\end{align}
+% =========================================================
+% QUESTION 26
+% =========================================================
+
+\newpage
+
+\item An organization allows its employees to work independently on consultancy projects but charges an overhead on the consulting fee. The overhead is $20\%$ of the consulting fee, if the fee is up to $\text{rupee } 5,00,000$. For higher fees, the overhead is $\text{rupee } 1,00,000$ plus $10\%$ of the amount by which the fee exceeds $\text{rupee } 5,00,000$. The government charges a Goods and Services Tax of $18\%$ on the total amount (the consulting fee plus the overhead). An employee of the organization charges this entire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client cannot pay more than $\text{rupee } 10,00,000$, what is the maximum consulting fee that the employee can charge?
+
+\begin{enumerate}
+    \item[(A)] $\text{rupee } 7,01,438$
+    \item[(B)] $\text{rupee } 7,24,961$
+    \item[(C)] $\text{rupee } 7,51,232$
+    \item[(D)] $\text{rupee } 7,75,784$
+\end{enumerate}
+
+\hfill \text{(GATE BM 2025)}
+
+\vspace{0.5cm}
+
+% =========================================================
+% SOLUTION
+% =========================================================
+
+\textbf{Solution:}
+
+Let $F$ be the consulting fee charged by the employee. Since the maximum total payable amount is $\text{rupee } 10,00,000$, we assume $F > 5,00,000$.
+
+1. Calculate the Overhead ($O$):
+\begin{align}
+O = 1,00,000 + 0.10 \times (F - 5,00,000)
+\tag{26.1}
+\end{align}
+\begin{align}
+O = 1,00,000 + 0.10F - 50,000 = 50,000 + 0.10F
+\tag{26.2}
+\end{align}
+
+2. Calculate the Total before Tax ($T_{\text{pre-tax}}$):
+\begin{align}
+T_{\text{pre-tax}} = F + O = F + (50,000 + 0.10F) = 1.10F + 50,000
+\tag{26.3}
+\end{align}
+
+3. Calculate Total Amount Payable by Client ($T_{\text{total}}$):
+\begin{align}
+T_{\text{total}} = T_{\text{pre-tax}} + 0.18 \times T_{\text{pre-tax}} = 1.18 \times T_{\text{pre-tax}}
+\tag{26.4}
+\end{align}
+
+Given that the maximum total amount $T_{\text{total}} = 10,00,000$:
+
+\begin{align}
+1.18 \times (1.10F + 50,000) = 10,00,000
+\tag{26.5}
+\end{align}
+
+\begin{align}
+1.10F + 50,000 = \frac{10,00,000}{1.18}
+\tag{26.6}
+\end{align}
+
+\begin{align}
+1.10F + 50,000 \approx 847,457.627
+\tag{26.7}
+\end{align}
+
+\begin{align}
+1.10F = 847,457.627 - 50,000 = 797,457.627
+\tag{26.8}
+\end{align}
+
+\begin{align}
+F = \frac{797,457.627}{1.10} \approx 724,961.48
+\tag{26.9}
+\end{align}
+
+Rounding off to the nearest integer gives $\text{rupee } 7,24,961$.
+
+\begin{align}
+\boxed{\text{(B) rupee\ 7,24,961}}
+\tag{26.10}
+\end{align}
+
+%Question 27
+
+\item The determinant of a $3 \times 3$ matrix $M$ is $8$. If every element of $M$ is multiplied by $-2$, the determinant of the modified matrix will be:
+\hfill\text{(GATE BM 2025)}
+\begin{enumerate}
+    \item[(A)] $-64$
+    \item[(B)] $-16$
+    \item[(C)] $8$
+    \item[(D)] $64$
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent \textbf{Solution:}
+
+\noindent \text{Correct Option: (A)}
+
+\vspace{0.2cm}
+\noindent \text{Step-by-step explanation:}
+
+\begin{enumerate}
+    \item \text{Property of Determinants:} 
+    For any $n \times n$ matrix $A$ and a scalar $k$, multiplying every element of $A$ by $k$ yields:
+    \begin{align}
+    \det(k A) = k^n \cdot \det(A)
+    \end{align}
+
+    \item \text{Given Data:}
+    \begin{itemize}
+        \item Order of matrix $M$, $n = 3$
+        \item Determinant of matrix $M$, $\det(M) = 8$
+        \item Scalar multiplier, $k = -2$
+    \end{itemize}
+
+    \item \text{Calculation:}
+    Substituting the given values into the formula:
+    \begin{align}
+    \det(-2 M) = (-2)^3 \cdot \det(M)
+    \end{align}
+    \begin{align}
+    \det(-2 M) = -8 \cdot 8 = -64
+    \end{align}
+\end{enumerate}
+
+\noindent Thus, the determinant of the modified matrix is \text{$-64$}.
+
+\end{enumerate}
+
+
+\end{document}
+
+
