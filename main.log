@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.9.7)  7 SEP 2026 16:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.9.7)  8 SEP 2026 11:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -145,13 +145,21 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 Package: tfrupee 2010/12/15 LaTeX Support for the TechFat Rupee symbols by Tech
 Fat (http://techfat.blogspot.com/2010/07/new-open-source-india-rupee-font.html)
 . Adapted for use with TeX by Palle Jorgensen, hamselv(a)pallej.dk
-) (./gvv-book.sty
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks20
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (./gvv-book.sty (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count293
-\float@exts=\toks20
+\float@exts=\toks21
 \float@box=\box55
-\@float@everytoks=\toks21
+\@float@everytoks=\toks22
 \@floatcapt=\box56
 )
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
@@ -170,7 +178,7 @@ Package: amstext 2024/11/17 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks22
+\@emptytoks=\toks23
 \ex@=\dimen180
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -210,21 +218,21 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \dotsspace@=\muskip17
 \c@parentequation=\count301
 \dspbrk@lvl=\count302
-\tag@help=\toks23
+\tag@help=\toks24
 \row@=\count303
 \column@=\count304
 \maxfields@=\count305
-\andhelp@=\toks24
+\andhelp@=\toks25
 \eqnshift@=\dimen183
 \alignsep@=\dimen184
 \tagshift@=\dimen185
 \tagwidth@=\dimen186
 \totwidth@=\dimen187
 \lineht@=\dimen188
-\@envbody=\toks25
+\@envbody=\toks26
 \multlinegap=\skip53
 \multlinetaggap=\skip54
-\mathdisplay@stack=\toks26
+\mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
@@ -286,26 +294,26 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen194
 \ar@mcellbox=\box67
 \extrarowheight=\dimen195
-\NC@list=\toks27
+\NC@list=\toks28
 \extratabsurround=\skip55
 \backup@length=\skip56
 \ar@cellbox=\box68
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks28
-\thm@bodyfont=\toks29
-\thm@headfont=\toks30
-\thm@notefont=\toks31
-\thm@headpunct=\toks32
+\thm@style=\toks29
+\thm@bodyfont=\toks30
+\thm@headfont=\toks31
+\thm@notefont=\toks32
+\thm@headpunct=\toks33
 \thm@preskip=\skip57
 \thm@postskip=\skip58
 \thm@headsep=\skip59
-\dth@everypar=\toks33
+\dth@everypar=\toks34
 )
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
-\symrsfs=\mathgroup4
+\symrsfs=\mathgroup6
 )
 (/usr/share/texlive/texmf-dist/tex/latex/sttools/stfloats.sty
 Package: stfloats 2025/06/18 v3.4 Improve float mechanism and baselineskip sett
@@ -335,7 +343,7 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-\pIIe@GRAPH=\toks34
+\pIIe@GRAPH=\toks35
 \@arclen=\dimen196
 \@arcrad=\dimen197
 \pIIe@tempdima=\dimen198
@@ -353,10 +361,12 @@ Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
-\symboldoperators=\mathgroup5
-\symboldletters=\mathgroup6
-\symboldsymbols=\mathgroup7
+\symboldoperators=\mathgroup7
+\symboldletters=\mathgroup8
+\symboldsymbols=\mathgroup9
 Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
 Package bm Info: No bold for \U/rsfs/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 )
@@ -386,7 +396,7 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LT@rows=\count325
 \c@LT@tables=\count326
 \c@LT@chunks=\count327
-\LT@p@ftn=\toks35
+\LT@p@ftn=\toks36
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
@@ -396,7 +406,7 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@target=\dimen265
 \TX@delta=\dimen266
 \TX@cols=\count328
-\TX@ftn=\toks36
+\TX@ftn=\toks37
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
@@ -409,7 +419,7 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip70
 \enit@outerparindent=\dimen268
-\enit@toks=\toks37
+\enit@toks=\toks38
 \enit@inbox=\box75
 \enit@count@id=\count330
 \enitdp@description=\count331
@@ -449,7 +459,7 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks38
+\pgfutil@everybye=\toks39
 \pgfutil@tempdima=\dimen279
 \pgfutil@tempdimb=\dimen280
 )
@@ -482,12 +492,12 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks39
-\pgfkeys@temptoks=\toks40
+\pgfkeys@pathtoks=\toks40
+\pgfkeys@temptoks=\toks41
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
 .code.tex
-\pgfkeys@tmptoks=\toks41
+\pgfkeys@tmptoks=\toks42
 ))
 \pgf@x=\dimen283
 \pgf@y=\dimen284
@@ -505,9 +515,9 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 \c@pgf@countb=\count337
 \c@pgf@countc=\count338
 \c@pgf@countd=\count339
-\t@pgf@toka=\toks42
-\t@pgf@tokb=\toks43
-\t@pgf@tokc=\toks44
+\t@pgf@toka=\toks43
+\t@pgf@tokb=\toks44
+\t@pgf@tokc=\toks45
 \pgf@sys@id@count=\count340
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
@@ -557,9 +567,9 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmath@dimen=\dimen293
 \pgfmath@count=\count343
 \pgfmath@box=\box78
-\pgfmath@toks=\toks45
-\pgfmath@stack@operand=\toks46
-\pgfmath@stack@operation=\toks47
+\pgfmath@toks=\toks46
+\pgfmath@stack@operand=\toks47
+\pgfmath@stack@operation=\toks48
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -702,8 +712,8 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen320
 \pgffor@skip=\dimen321
-\pgffor@stack=\toks48
-\pgffor@toks=\toks49
+\pgffor@stack=\toks49
+\pgffor@toks=\toks50
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
@@ -822,8 +832,8 @@ zlibraryfpu.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks50
-\verbatim@line=\toks51
+\every@verbatim=\toks51
+\verbatim@line=\toks52
 \verbatim@in@stream=\read3
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -1006,7 +1016,7 @@ s.code.tex
 zlibrarymath.code.tex
 \tikz@math@for@depth=\count374
 \tikz@math@dimen=\dimen366
-\tikz@math@toks=\toks52
+\tikz@math@toks=\toks53
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryplotmarks.code.tex
@@ -1155,7 +1165,7 @@ File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count377
 \lst@gtempboxa=\box94
-\lst@token=\toks53
+\lst@token=\toks54
 \lst@length=\count378
 \lst@currlwidth=\dimen378
 \lst@column=\count379
@@ -1287,7 +1297,7 @@ Package chngcntr Info: \counterwithout already defined.
 
 Writing index file main.idx
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 20.
+h' as default language. on input line 21.
 (./main.aux
 
 LaTeX Warning: Label `strength of implanted suture' multiply defined.
@@ -1295,24 +1305,24 @@ LaTeX Warning: Label `strength of implanted suture' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 -- Lines per column: 45 (approximate, difference = 0.60239pt).
 *geometry* driver: auto-detecting
@@ -1349,14 +1359,14 @@ LaTeX Font Info:    ... okay on input line 20.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \celsius on input line 20.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 20.
+LaTeX Info: Redefining \celsius on input line 21.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 21.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 20.
-Package gensymb Info: Using \Omega for \ohm on input line 20.
+LaTeX Info: Redefining \ohm on input line 21.
+Package gensymb Info: Using \Omega for \ohm on input line 21.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -1367,7 +1377,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 20.
+or `english'. on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1376,12 +1386,12 @@ or `english'. on input line 20.
 \scratchbox=\box142
 \nofMPsegments=\count405
 \nofMParguments=\count406
-\everyMPshowfont=\toks54
+\everyMPshowfont=\toks55
 \MPscratchCnt=\count407
 \MPscratchDim=\dimen392
 \MPnumerator=\count408
 \makeMPintoPDFobject=\count409
-\everyMPtoPDFconversion=\toks55
+\everyMPtoPDFconversion=\toks56
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1391,58 +1401,57 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 20.
+Package hyperref Info: Link coloring OFF on input line 21.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 \c@lstlisting=\count410
+<figs/logo.jpg, id=35, 2537.48pt x 2047.65pt>
+File: figs/logo.jpg Graphic file (type jpg)
+<use figs/logo.jpg>
+Package pdftex.def Info: figs/logo.jpg  used on input line 48.
+(pdftex.def)             Requested size: 72.83794pt x 58.77106pt.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf
+-dist/fonts/enc/dvips/base/8r.enc}
 
 
-LaTeX Warning: File `figs/logo.jpg' not found on input line 47.
-
-
-! Package pdftex.def Error: File `figs/logo.jpg' not found: using draft setting
-.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.47 
-     
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 4
-7.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texm
-f-dist/fonts/enc/dvips/base/8r.enc}
-
-
-] [2] (./main.toc)
+ <./figs/logo.jpg>]
+[2] (./main.toc)
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
  [3] (./chapters/Bm-2025.tex [4
 
 ] [0]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
+1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.93 \newpage
+l.94 \newpage
               [1]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 101.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 101.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 102
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 102
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
-1.
- (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1452,9 +1461,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.210 
+l.211 
        [2]
-Overfull \hbox (41.12308pt too wide) in paragraph at lines 253--254
+Overfull \hbox (41.12308pt too wide) in paragraph at lines 254--255
  [][] 
  []
 
@@ -1463,13 +1472,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.321 \begin{align}
+l.322 \begin{align}
                     [3]
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.441 \end{align}
+l.442 \end{align}
                   [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1492,7 +1501,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Underfull \hbox (badness 2005) in paragraph at lines 1181--1192
+Underfull \hbox (badness 2005) in paragraph at lines 1182--1193
 []\OT1/ptm/m/n/10 If $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1
 /cmr/m/n/10 ) = \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ []\OML/cmm/m/it/10 ;$ \
 OT1/ptm/m/n/10 the value of $[][] []$ is $[]$.
@@ -1508,58 +1517,39 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-<figs/10.png, id=225, 588.1975pt x 299.1175pt>
+<figs/10.png, id=226, 588.1975pt x 299.1175pt>
 File: figs/10.png Graphic file (type png)
 <use figs/10.png>
-Package pdftex.def Info: figs/10.png  used on input line 1421.
+Package pdftex.def Info: figs/10.png  used on input line 1422.
 (pdftex.def)             Requested size: 364.1953pt x 185.20445pt.
 
-Underfull \hbox (badness 1874) in paragraph at lines 1437--1439
+Underfull \hbox (badness 1874) in paragraph at lines 1438--1440
 []\OT1/ptm/m/n/10 A volt-age source $\OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 = 5 [
 ] [] []$ \OT1/ptm/m/n/10 is driv-ing a cur-rent $\OML/cmm/m/it/10 I \OT1/cmr/m/
 n/10 =
  []
 
 [15 <./figs/10.png>]
-
-LaTeX Warning: File `11.png' not found on input line 1521.
-
-
-! Package pdftex.def Error: File `11.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1521 ...cludegraphics[width=1\textwidth]{11.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<figs/12.png, id=236, 1284.8pt x 963.6pt>
+File: figs/12.png Graphic file (type png)
+<use figs/12.png>
+Package pdftex.def Info: figs/12.png  used on input line 1523.
+(pdftex.def)             Requested size: 364.1953pt x 273.14381pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
+[17 <./figs/12.png>]
+<figs/11.png, id=257, 1284.8pt x 900.36375pt>
+File: figs/11.png Graphic file (type png)
+<use figs/11.png>
+Package pdftex.def Info: figs/11.png  used on input line 1617.
+(pdftex.def)             Requested size: 364.1953pt x 255.21875pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
-
-LaTeX Warning: File `12.png' not found on input line 1613.
-
-
-! Package pdftex.def Error: File `12.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1613 ...cludegraphics[width=1\textwidth]{12.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 3058) in paragraph at lines 1633--1635
+ [18]
+Underfull \hbox (badness 3058) in paragraph at lines 1637--1639
 []\OT1/ptm/m/n/10 Here, $\OML/cmm/m/it/10 y[]$ \OT1/ptm/m/n/10 and $\OML/cmm/m/
 it/10 y[]$ \OT1/ptm/m/n/10 are the first and sec-ond deriva-tives of $\OML/cmm/
 m/it/10 y$\OT1/ptm/m/n/10 , re-spec-tively.
@@ -1568,170 +1558,85 @@ m/it/10 y$\OT1/ptm/m/n/10 , re-spec-tively.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
-
-LaTeX Warning: File `13.png' not found on input line 1753.
-
-
-! Package pdftex.def Error: File `13.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1753 ...cludegraphics[width=1\textwidth]{13.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
+ [19 <./figs/11.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 1775.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 1775.
+<figs/13.png, id=294, 1284.8pt x 713.66624pt>
+File: figs/13.png Graphic file (type png)
+<use figs/13.png>
+Package pdftex.def Info: figs/13.png  used on input line 1757.
+(pdftex.def)             Requested size: 364.1953pt x 202.29713pt.
 
+[21 <./figs/13.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
-[22]
-! Undefined control sequence.
-<argument> ...}, \quad \text {for } k \in \mathbb 
-                                                  {Z} \tag {15.3} 
-l.1934 \end{align}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...}, \quad \text {for } k \in \mathbb 
-                                                  {Z} \tag {15.3} 
-l.1934 \end{align}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... , \quad \text {for } k \in \mathbb 
-                                                  {Z} \tag {15.6} 
-l.1953 \end{align}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... , \quad \text {for } k \in \mathbb 
-                                                  {Z} \tag {15.6} 
-l.1953 \end{align}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
+ [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
-[24]
+Underfull \vbox (badness 6380) has occurred while \output is active []
+
+ [24]
+<figs/17.png, id=346, 642.4pt x 481.8pt>
+File: figs/17.png Graphic file (type png)
+<use figs/17.png>
+Package pdftex.def Info: figs/17.png  used on input line 2160.
+(pdftex.def)             Requested size: 364.1953pt x 273.15115pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: File `17.png' not found on input line 2156.
-
-
-! Package pdftex.def Error: File `17.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2156 ...cludegraphics[width=1\textwidth]{17.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[26]
-Underfull \vbox (badness 3019) has occurred while \output is active []
-
- [27]
+ [26 <./figs/17.png>] [27]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2529) has occurred while \output is active []
 
  [29]
+<figs/imp.png, id=395, 849.1725pt x 963.6pt>
+File: figs/imp.png Graphic file (type png)
+<use figs/imp.png>
+Package pdftex.def Info: figs/imp.png  used on input line 2624.
+(pdftex.def)             Requested size: 364.1953pt x 413.26659pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
-
-LaTeX Warning: File `imp.png' not found on input line 2620.
-
-
-! Package pdftex.def Error: File `imp.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2620 ...ludegraphics[width=1\textwidth]{imp.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
-[32]
+ [31 <./figs/imp.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: File `21.png' not found on input line 2765.
-
-
-! Package pdftex.def Error: File `21.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2765 ...cludegraphics[width=1\textwidth]{21.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+ [32]
+<figs/23.png, id=429, 939.51pt x 772.8875pt>
+File: figs/23.png Graphic file (type png)
+<use figs/23.png>
+Package pdftex.def Info: figs/23.png  used on input line 2769.
+(pdftex.def)             Requested size: 364.1953pt x 299.59694pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33]
-Overfull \vbox (28.92961pt too high) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-[34]
+ [34 <./figs/23.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [35]
-[36]
-Overfull \hbox (105.62233pt too wide) detected at line 2958
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+Overfull \hbox (105.62233pt too wide) detected at line 2962
 []
  []
 
-[37]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [38]
@@ -1748,13 +1653,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A6B72DDE9E618503443805EDF5A6EED8;103.
  ) ) 
 Here is how much of TeX's memory you used:
- 52761 strings out of 467533
- 1276102 string characters out of 5422139
- 1910457 words of memory out of 5000000
- 80633 multiletter control sequences out of 15000+600000
- 671253 words of font info for 125 fonts, out of 8000000 for 9000
+ 52712 strings out of 467533
+ 1275100 string characters out of 5422139
+ 1910957 words of memory out of 5000000
+ 80567 multiletter control sequences out of 15000+600000
+ 673716 words of font info for 137 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,14n,118p,1194b,1302s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,14n,118p,1194b,1394s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/tex
@@ -1767,14 +1672,15 @@ sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmri8a.pfb>
-Output written on main.pdf (44 pages, 296446 bytes).
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
+utmri8a.pfb>
+Output written on main.pdf (44 pages, 1048726 bytes).
 PDF statistics:
- 623 PDF objects out of 1000 (max. 8388607)
- 520 compressed objects within 6 object streams
+ 635 PDF objects out of 1000 (max. 8388607)
+ 523 compressed objects within 6 object streams
  289 named destinations out of 1000 (max. 500000)
- 122 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
