@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.9.7)  8 SEP 2026 11:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.9.7)  16 SEP 2026 00:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1454,6 +1454,11 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+Overfull \hbox (20.0pt too wide) in paragraph at lines 155--157
+[] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1461,28 +1466,34 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.211 
-       [2]
-Overfull \hbox (41.12308pt too wide) in paragraph at lines 254--255
- [][] 
- []
+l.250 \end{tikzpicture}
+                        [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.322 \begin{align}
-                    [3]
+l.313 \end{align}
+                  [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.442 \end{align}
+l.429 \end{align}
                   [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 504--505
+[] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
@@ -1492,64 +1503,117 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
+<figs/bm6.png, id=144, 1078.0275pt x 676.5275pt>
+File: figs/bm6.png Graphic file (type png)
+<use figs/bm6.png>
+Package pdftex.def Info: figs/bm6.png  used on input line 929.
+(pdftex.def)             Requested size: 364.1953pt x 228.55043pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 934--935
+[] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
+ [10 <./figs/bm6.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Underfull \hbox (badness 2005) in paragraph at lines 1182--1193
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1105--1107
+[] 
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 1112--1123
 []\OT1/ptm/m/n/10 If $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1
 /cmr/m/n/10 ) = \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ []\OML/cmm/m/it/10 ;$ \
 OT1/ptm/m/n/10 the value of $[][] []$ is $[]$.
  []
 
+<figs/bm8a.png, id=172, 722.7pt x 722.7pt>
+File: figs/bm8a.png Graphic file (type png)
+<use figs/bm8a.png>
+Package pdftex.def Info: figs/bm8a.png  used on input line 1176.
+(pdftex.def)             Requested size: 364.1953pt x 364.1942pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1180--1181
+[] 
+ []
 
- [13]
+[13 <./figs/bm8a.png>]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1263--1264
+[] 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-<figs/10.png, id=226, 588.1975pt x 299.1175pt>
-File: figs/10.png Graphic file (type png)
-<use figs/10.png>
-Package pdftex.def Info: figs/10.png  used on input line 1422.
-(pdftex.def)             Requested size: 364.1953pt x 185.20445pt.
+<figs/bm10a.png, id=209, 650.43pt x 650.43pt>
+File: figs/bm10a.png Graphic file (type png)
+<use figs/bm10a.png>
+Package pdftex.def Info: figs/bm10a.png  used on input line 1314.
+(pdftex.def)             Requested size: 364.1953pt x 364.19861pt.
 
-Underfull \hbox (badness 1874) in paragraph at lines 1438--1440
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1318--1319
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./figs/bm10a.png>]
+<figs/bm10.png, id=217, 722.7pt x 361.35pt>
+File: figs/bm10.png Graphic file (type png)
+<use figs/bm10.png>
+Package pdftex.def Info: figs/bm10.png  used on input line 1359.
+(pdftex.def)             Requested size: 364.1953pt x 182.0971pt.
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1363--1364
+[] 
+ []
+
+
+Underfull \hbox (badness 1874) in paragraph at lines 1375--1377
 []\OT1/ptm/m/n/10 A volt-age source $\OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 = 5 [
 ] [] []$ \OT1/ptm/m/n/10 is driv-ing a cur-rent $\OML/cmm/m/it/10 I \OT1/cmr/m/
 n/10 =
  []
 
-[15 <./figs/10.png>]
-<figs/12.png, id=236, 1284.8pt x 963.6pt>
-File: figs/12.png Graphic file (type png)
-<use figs/12.png>
-Package pdftex.def Info: figs/12.png  used on input line 1523.
-(pdftex.def)             Requested size: 364.1953pt x 273.14381pt.
+[16 <./figs/bm10.png>]
+<figs/bm11.png, id=230, 650.43pt x 361.35pt>
+File: figs/bm11.png Graphic file (type png)
+<use figs/bm11.png>
+Package pdftex.def Info: figs/bm11.png  used on input line 1457.
+(pdftex.def)             Requested size: 364.1953pt x 202.33257pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
-[17 <./figs/12.png>]
-<figs/11.png, id=257, 1284.8pt x 900.36375pt>
+ [17]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1461--1462
+[] 
+ []
+
+[18 <./figs/bm11.png>]
+<figs/11.png, id=252, 1284.8pt x 900.36375pt>
 File: figs/11.png Graphic file (type png)
 <use figs/11.png>
-Package pdftex.def Info: figs/11.png  used on input line 1617.
+Package pdftex.def Info: figs/11.png  used on input line 1549.
 (pdftex.def)             Requested size: 364.1953pt x 255.21875pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1553--1554
+[] 
+ []
 
- [18]
-Underfull \hbox (badness 3058) in paragraph at lines 1637--1639
+[19 <./figs/11.png>]
+Underfull \hbox (badness 3058) in paragraph at lines 1569--1571
 []\OT1/ptm/m/n/10 Here, $\OML/cmm/m/it/10 y[]$ \OT1/ptm/m/n/10 and $\OML/cmm/m/
 it/10 y[]$ \OT1/ptm/m/n/10 are the first and sec-ond deriva-tives of $\OML/cmm/
 m/it/10 y$\OT1/ptm/m/n/10 , re-spec-tively.
@@ -1558,89 +1622,153 @@ m/it/10 y$\OT1/ptm/m/n/10 , re-spec-tively.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19 <./figs/11.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [20]
-<figs/13.png, id=294, 1284.8pt x 713.66624pt>
+<figs/13.png, id=270, 1284.8pt x 713.66624pt>
 File: figs/13.png Graphic file (type png)
 <use figs/13.png>
-Package pdftex.def Info: figs/13.png  used on input line 1757.
+Package pdftex.def Info: figs/13.png  used on input line 1683.
 (pdftex.def)             Requested size: 364.1953pt x 202.29713pt.
 
-[21 <./figs/13.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
-Underfull \vbox (badness 6380) has occurred while \output is active []
-
- [24]
-<figs/17.png, id=346, 642.4pt x 481.8pt>
-File: figs/17.png Graphic file (type png)
-<use figs/17.png>
-Package pdftex.def Info: figs/17.png  used on input line 2160.
-(pdftex.def)             Requested size: 364.1953pt x 273.15115pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26 <./figs/17.png>] [27]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
-Underfull \vbox (badness 2529) has occurred while \output is active []
-
- [29]
-<figs/imp.png, id=395, 849.1725pt x 963.6pt>
-File: figs/imp.png Graphic file (type png)
-<use figs/imp.png>
-Package pdftex.def Info: figs/imp.png  used on input line 2624.
-(pdftex.def)             Requested size: 364.1953pt x 413.26659pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31 <./figs/imp.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32]
-<figs/23.png, id=429, 939.51pt x 772.8875pt>
-File: figs/23.png Graphic file (type png)
-<use figs/23.png>
-Package pdftex.def Info: figs/23.png  used on input line 2769.
-(pdftex.def)             Requested size: 364.1953pt x 299.59694pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34 <./figs/23.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [35]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36]
-Overfull \hbox (105.62233pt too wide) detected at line 2962
-[]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1688--1689
+[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37]
+ [21 <./figs/13.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38]
-[39] (./main.aux)
+ [22]
+<figs/bm14.png, id=284, 722.7pt x 722.7pt>
+File: figs/bm14.png Graphic file (type png)
+<use figs/bm14.png>
+Package pdftex.def Info: figs/bm14.png  used on input line 1840.
+(pdftex.def)             Requested size: 364.1953pt x 364.1942pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1844--1845
+[] 
+ []
+
+[24 <./figs/bm14.png>] [25] [26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+<figs/17.png, id=326, 642.4pt x 481.8pt>
+File: figs/17.png Graphic file (type png)
+<use figs/17.png>
+Package pdftex.def Info: figs/17.png  used on input line 2211.
+(pdftex.def)             Requested size: 364.1953pt x 273.15115pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2216--2217
+[] 
+ []
+
+
+Underfull \vbox (badness 4144) has occurred while \output is active []
+
+ [29 <./figs/17.png>]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2277--2278
+[] 
+ []
+
+[30]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
+Underfull \vbox (badness 1014) has occurred while \output is active []
+
+ [32]
+Underfull \hbox (badness 2103) in paragraph at lines 2632--2633
+[]\OT1/ptm/m/n/10 Converting to com-plex pha-sor no-ta-tion $\OML/cmm/m/it/10 V
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 V[][]e[
+]$ \OT1/ptm/m/n/10 and $\OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\O
+T1/cmr/m/n/10 ) =
+ []
+
+<figs/imp.png, id=366, 849.1725pt x 963.6pt>
+File: figs/imp.png Graphic file (type png)
+<use figs/imp.png>
+Package pdftex.def Info: figs/imp.png  used on input line 2678.
+(pdftex.def)             Requested size: 364.1953pt x 413.26659pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2683--2684
+[] 
+ []
+
+[34 <./figs/imp.png>]
+<figs/bm22.png, id=377, 722.7pt x 433.62pt>
+File: figs/bm22.png Graphic file (type png)
+<use figs/bm22.png>
+Package pdftex.def Info: figs/bm22.png  used on input line 2761.
+(pdftex.def)             Requested size: 364.1953pt x 218.51653pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2765--2766
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36 <./figs/bm22.png>]
+<figs/bm23.png, id=393, 399.894pt x 314.3745pt>
+File: figs/bm23.png Graphic file (type png)
+<use figs/bm23.png>
+Package pdftex.def Info: figs/bm23.png  used on input line 2847.
+(pdftex.def)             Requested size: 364.1953pt x 286.32108pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2852--2853
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38 <./figs/bm23.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2960--2962
+[] 
+ []
+
+[40]
+Overfull \hbox (98.82234pt too wide) detected at line 3042
+[]
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3044--3045
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3177--3179
+[] 
+ []
+
+[43] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -1653,34 +1781,35 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A6B72DDE9E618503443805EDF5A6EED8;103.
  ) ) 
 Here is how much of TeX's memory you used:
- 52712 strings out of 467533
- 1275100 string characters out of 5422139
- 1910957 words of memory out of 5000000
- 80567 multiletter control sequences out of 15000+600000
+ 52698 strings out of 467533
+ 1275804 string characters out of 5422139
+ 1912253 words of memory out of 5000000
+ 80614 multiletter control sequences out of 15000+600000
  673716 words of font info for 137 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,14n,118p,1194b,1394s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sha
+ 109i,14n,118p,1194b,1404s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on main.pdf (44 pages, 1048726 bytes).
+Output written on main.pdf (48 pages, 2034266 bytes).
 PDF statistics:
- 635 PDF objects out of 1000 (max. 8388607)
- 523 compressed objects within 6 object streams
- 289 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 590 PDF objects out of 1000 (max. 8388607)
+ 461 compressed objects within 5 object streams
+ 228 named destinations out of 1000 (max. 500000)
+ 182 words of extra memory for PDF output out of 10000 (max. 10000000)
 

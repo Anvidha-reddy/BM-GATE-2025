@@ -14,7 +14,6 @@ sigma = sigma0 - 2*np.log(t)
 plt.plot(t, sigma)
 plt.xlabel("Time (weeks)")
 plt.ylabel("Strength (MPa)")
-plt.title("Strength of Implanted Suture")
 plt.grid(True)
 
 # Mark the given point (4, 2)
@@ -24,4 +23,4 @@ plt.plot(4, 2, 'o')
 sigma8 = sigma0 - 2*np.log(8)
 plt.plot(8, sigma8, 'o')
 
-plt.savefig("strength_graph.png", dpi=300, bbox_inches="tight")
+plt.savefig("bm23.png", dpi=300, bbox_inches="tight")

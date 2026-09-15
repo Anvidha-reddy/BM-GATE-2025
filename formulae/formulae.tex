@@ -1,0 +1,587 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{GATE BM 2025 --- Theory / Formulae Used}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent This document lists only the \textbf{general theory and formulae}
+used to solve each question (no numerical substitution).
+
+% =========================================================
+\section*{1. Geometric Progression of Frequencies}
+
+If each successive term is $r$ times the previous term, then after
+$k$ steps from a reference term $f_0$,
+
+\begin{align}
+\frac{f_k}{f_0}=r^{k}.
+\end{align}
+
+For notes separated by $k$ semitones, with $r=\sqrt[12]{2}$,
+
+\begin{align}
+\frac{f_k}{f_0}=\left(\sqrt[12]{2}\right)^{k}=2^{k/12}.
+\end{align}
+
+% =========================================================
+\section*{2. Self-Similar (Fractal) Curve Length}
+
+If, at every iteration, each segment is replaced by $m$ segments each
+of length $\dfrac{1}{p}$ of the original segment, the length scales as
+
+\begin{align}
+L_1=L_0\left(\frac{m}{p}\right),
+\qquad
+L_n=L_0\left(\frac{m}{p}\right)^{n}.
+\end{align}
+
+% =========================================================
+\section*{3. Triangle Inequality}
+
+A triangle can be formed from three lengths $l_1,l_2,l_3$ if and only if
+the sum of any two sides exceeds the third:
+
+\begin{align}
+l_1+l_2>l_3,\qquad
+l_2+l_3>l_1,\qquad
+l_3+l_1>l_2.
+\end{align}
+
+% =========================================================
+\section*{4. Notch (Band-Stop) Filter Response}
+
+A notch filter strongly attenuates a narrow band of frequencies around
+a rejected frequency $\omega_0$, while passing frequencies away from
+it:
+
+\begin{align}
+|H(j\omega_0)|\approx 0,
+\qquad
+|H(j\omega)|\ \text{high for}\ \omega<\omega_0\ \text{and}\ \omega>\omega_0.
+\end{align}
+
+% =========================================================
+\section*{5. Rolle's Theorem}
+
+If $f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and
+$f(a)=f(b)$, then
+
+\begin{align}
+\exists\, c\in(a,b)\ \text{such that}\ f'(c)=0.
+\end{align}
+
+Contrapositive form: if $f'(x)\neq 0$ for all $x$, then
+$f(a)\neq f(b)$ for $a\neq b$.
+
+% =========================================================
+\section*{6. Standard Second-Order System / Closed-Loop Transfer Function}
+
+For unity negative feedback with forward transfer function $G(s)$,
+
+\begin{align}
+\frac{C(s)}{R(s)}=\frac{G(s)}{1+G(s)}.
+\end{align}
+
+Comparing the characteristic equation with the standard second-order
+form,
+
+\begin{align}
+s^{2}+2\zeta\omega_n s+\omega_n^{2}=0,
+\end{align}
+
+gives the natural frequency $\omega_n$ and damping ratio $\zeta$.
+The system is:
+
+\begin{itemize}
+\item overdamped if $\zeta>1$,
+\item critically damped if $\zeta=1$,
+\item underdamped if $0<\zeta<1$,
+\item undamped (sustained oscillations) if $\zeta=0$.
+\end{itemize}
+
+For $0<\zeta<1$, the impulse response has the form
+
+\begin{align}
+c(t)=A\,e^{-\zeta\omega_n t}\sin\!\left(\omega_n\sqrt{1-\zeta^{2}}\;t\right),
+\qquad t\ge 0.
+\end{align}
+
+% =========================================================
+\section*{7. Eigenvalues via the Characteristic Equation}
+
+For a matrix $A$, the eigenvalues $\lambda$ satisfy
+
+\begin{align}
+\det(A-\lambda I)=0.
+\end{align}
+
+For a $2\times2$ rotation matrix
+
+\begin{align}
+A=
+\begin{pmatrix}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{pmatrix},
+\end{align}
+
+using $\sin^2\theta+\cos^2\theta=1$ and Euler's formula
+$e^{\pm i\theta}=\cos\theta\pm i\sin\theta$, the eigenvalues reduce to
+
+\begin{align}
+\lambda=\cos\theta\pm i\sin\theta=e^{\pm i\theta}.
+\end{align}
+
+% =========================================================
+\section*{8. Definition of the Derivative (First Principles)}
+
+\begin{align}
+f'(x_0)=\lim_{\Delta x\to 0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}.
+\end{align}
+
+% =========================================================
+\section*{9. Mean and Median of a Dataset}
+
+For $n$ ordered values $x_1\le x_2\le\dots\le x_n$:
+
+\begin{align}
+\text{Mean}=\frac{1}{n}\sum_{i=1}^{n}x_i.
+\end{align}
+
+If $n$ is odd, the median is the middle term,
+
+\begin{align}
+\text{Median}=x_{\frac{n+1}{2}}.
+\end{align}
+
+% =========================================================
+\section*{10. Nyquist Sampling Theorem}
+
+A band-limited signal with maximum frequency component $f_{\max}$
+must be sampled at a rate
+
+\begin{align}
+f_s\ge 2f_{\max}
+\end{align}
+
+to allow accurate (aliasing-free) reconstruction. For an angular
+frequency component $\omega$, the corresponding cyclic frequency is
+
+\begin{align}
+f=\frac{\omega}{2\pi}.
+\end{align}
+
+% =========================================================
+\section*{11. Average Power in an AC Circuit}
+
+\begin{align}
+P_{\text{avg}}=V_{\text{rms}}I_{\text{rms}}\cos\theta,
+\end{align}
+
+where
+
+\begin{align}
+V_{\text{rms}}=\frac{V_m}{\sqrt2},
+\qquad
+I_{\text{rms}}=\frac{I_m}{\sqrt2},
+\qquad
+\theta=\phi_v-\phi_i.
+\end{align}
+
+% =========================================================
+\section*{12. Mean and Variance of a Binomial Distribution}
+
+For $X\sim B(N,p)$,
+
+\begin{align}
+E(X)=Np,
+\qquad
+\operatorname{Var}(X)=Np(1-p).
+\end{align}
+
+% =========================================================
+\section*{13. Solving a Linear ODE via the Laplace Transform}
+
+For $y''(x)-k^2y(x)=0$ with initial conditions $y(0)$, $y'(0)$, take
+the Laplace transform using
+
+\begin{align}
+\mathcal{L}\{y''(x)\}=s^{2}Y(s)-s\,y(0)-y'(0).
+\end{align}
+
+This gives an algebraic equation for $Y(s)$, which is solved by
+partial fractions,
+
+\begin{align}
+Y(s)=\frac{A}{s-a}+\frac{B}{s+a},
+\end{align}
+
+and inverted using
+
+\begin{align}
+\mathcal{L}^{-1}\left\{\frac{1}{s-a}\right\}=e^{at}.
+\end{align}
+
+% =========================================================
+\section*{14. Impedance of R--C Networks (Phasor Domain)}
+
+Capacitor impedance:
+
+\begin{align}
+Z_C(\omega)=\frac{1}{j\omega C}.
+\end{align}
+
+Parallel combination of $R_2$ and $Z_C$:
+
+\begin{align}
+Z_p(\omega)=\frac{R_2\,Z_C(\omega)}{R_2+Z_C(\omega)}.
+\end{align}
+
+Series combination with $R_1$:
+
+\begin{align}
+Z_{\text{in}}(\omega)=R_1+Z_p(\omega).
+\end{align}
+
+Magnitude and phase of a complex impedance $Z=X+jY$:
+
+\begin{align}
+|Z|=\sqrt{X^{2}+Y^{2}},
+\qquad
+\angle Z=\tan^{-1}\!\left(\frac{Y}{X}\right).
+\end{align}
+
+% =========================================================
+\section*{15. Complex Logarithm}
+
+For real $x$, using Euler's identity for $-1$,
+
+\begin{align}
+-1=e^{i(2k+1)\pi},\qquad k\in\mathbb{Z},
+\end{align}
+
+so that
+
+\begin{align}
+\ln(-e^{x})=x+i(2k+1)\pi=x\pm in\pi,
+\end{align}
+
+where $n$ is an odd integer, showing the result is complex-valued.
+
+% =========================================================
+\section*{16. Linearity and Causality of a System}
+
+\textbf{Linearity} (superposition): a system is linear if, for inputs
+$x_1,x_2$ and scalars $a,b$,
+
+\begin{align}
+T\{a\,x_1(t)+b\,x_2(t)\}=a\,T\{x_1(t)\}+b\,T\{x_2(t)\}.
+\end{align}
+
+\textbf{Causality}: a system is causal if the output at time $t_0$
+depends only on input values for $t\le t_0$; if it depends on future
+input values ($t>t_0$), it is noncausal.
+
+% =========================================================
+\section*{17. Linear (Discrete) Convolution}
+
+For an LTI system with impulse response $h[n]$ of length $M$ and
+input $x[n]$ of length $N$,
+
+\begin{align}
+y[n]=h[n]*x[n]=\sum_{k}h[k]\,x[n-k],
+\end{align}
+
+with output length
+
+\begin{align}
+L=M+N-1.
+\end{align}
+
+This can be written as a matrix--vector product using a lower
+triangular Toeplitz matrix $\mathbf{H}$ built from shifted copies of
+$h[n]$:
+
+\begin{align}
+\mathbf{y}=\mathbf{H}\,\mathbf{x}.
+\end{align}
+
+% =========================================================
+\section*{18. $n$-bit DAC Output}
+
+For an $n$-bit DAC with full-scale output voltage $V_{\text{FS}}$ and
+digital input equivalent decimal value $D$,
+
+\begin{align}
+V_{\text{out}}=V_{\text{FS}}\left(\frac{D}{2^{n}-1}\right).
+\end{align}
+
+% =========================================================
+\section*{19. Inverting Summing Amplifier}
+
+For an op-amp inverting summing amplifier with feedback resistor
+$R_f$, input resistors $R_1,R_2,R_3,\dots$ and corresponding input
+voltages $V_1,V_2,V_3,\dots$, the output voltage is
+
+\begin{align}
+V_{\text{out}}=-\left(\frac{R_f}{R_1}V_1+\frac{R_f}{R_2}V_2+\frac{R_f}{R_3}V_3+\cdots\right),
+\end{align}
+
+valid provided $V_{\text{out}}$ stays within the saturation limits,
+
+\begin{align}
+-V_{\text{sat}}\le V_{\text{out}}\le +V_{\text{sat}}.
+\end{align}
+
+\subsection*{Derivation}
+
+Let the inverting input node (where $R_1,R_2,R_3,R_f$ meet) be node
+$A$, and let the non-inverting input be grounded.
+
+\textbf{Ideal op-amp assumptions:}
+
+\begin{align}
+\text{(i)}\quad &\text{No current flows into either input terminal.}\\
+\text{(ii)}\quad &\text{The open-loop gain is infinite, so the two
+inputs are forced to the same potential (virtual short).}
+\end{align}
+
+Since the non-inverting input is at $0\,\text{V}$ (grounded), the
+virtual short forces node $A$ to also be at $0\,\text{V}$:
+
+\begin{align}
+V_A=0
+\qquad(\text{virtual ground}).
+\end{align}
+
+Applying Kirchhoff's Current Law (KCL) at node $A$, the sum of
+currents flowing into the node through $R_1,R_2,R_3$ must equal the
+current flowing out through the feedback resistor $R_f$ (since no
+current enters the op-amp input):
+
+\begin{align}
+\frac{V_1-V_A}{R_1}+\frac{V_2-V_A}{R_2}+\frac{V_3-V_A}{R_3}
+=\frac{V_A-V_{\text{out}}}{R_f}.
+\end{align}
+
+Substituting $V_A=0$:
+
+\begin{align}
+\frac{V_1}{R_1}+\frac{V_2}{R_2}+\frac{V_3}{R_3}
+=\frac{-V_{\text{out}}}{R_f}.
+\end{align}
+
+Solving for $V_{\text{out}}$:
+
+\begin{align}
+V_{\text{out}}
+=-R_f\left(\frac{V_1}{R_1}+\frac{V_2}{R_2}+\frac{V_3}{R_3}\right)
+=-\left(\frac{R_f}{R_1}V_1+\frac{R_f}{R_2}V_2+\frac{R_f}{R_3}V_3\right),
+\end{align}
+
+which recovers equation (19.1). The same derivation extends to any
+number of input branches $R_i,V_i$:
+
+\begin{align}
+V_{\text{out}}=-\sum_{i}\frac{R_f}{R_i}V_i.
+\end{align}
+
+% =========================================================
+\section*{20. Wien Bridge Oscillator Frequency}
+
+For a Wien bridge oscillator with equal frequency-selective resistors
+$R$ and capacitors $C$, the oscillation frequency is
+
+\begin{align}
+f_0=\frac{1}{2\pi RC}.
+\end{align}
+
+% =========================================================
+\section*{21. Series RLC Circuit --- Resonance}
+
+Kirchhoff's Voltage Law for a series $RLC$ circuit driven by
+$v(t)=V_m\cos(\omega t)$:
+
+\begin{align}
+R\,i(t)+L\frac{di(t)}{dt}+\frac{1}{C}\int i(t)\,dt=v(t).
+\end{align}
+
+In the phasor domain, the impedance is
+
+\begin{align}
+Z(\omega)=R+j\left(\omega L-\frac{1}{\omega C}\right),
+\qquad
+|Z(\omega)|=\sqrt{R^{2}+\left(\omega L-\frac{1}{\omega C}\right)^{2}}.
+\end{align}
+
+Resonance occurs when the reactive part vanishes:
+
+\begin{align}
+\omega_0 L=\frac{1}{\omega_0 C}
+\;\Longrightarrow\;
+\omega_0=\frac{1}{\sqrt{LC}},
+\qquad
+f_0=\frac{\omega_0}{2\pi}.
+\end{align}
+
+At resonance, $Z(\omega_0)=R$, so
+
+\begin{align}
+I_{\text{rms}}(\omega_0)=\frac{V_{\text{rms}}}{R}.
+\end{align}
+
+% =========================================================
+\section*{22. Newton--Raphson Method}
+
+For a root of $f(x)=0$, the iterative update starting from $x_n$ is
+
+\begin{align}
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.
+\end{align}
+
+% =========================================================
+\section*{23. Logarithmic Decay Model}
+
+For a quantity that decays logarithmically with time,
+
+\begin{align}
+\sigma(t)=\sigma_0-k\ln(t),\qquad t\ge 1,
+\end{align}
+
+the difference between two times $t_1,t_2$ eliminates the unknown
+constant $\sigma_0$:
+
+\begin{align}
+\sigma(t_2)-\sigma(t_1)=-k\left[\ln(t_2)-\ln(t_1)\right]
+=-k\ln\!\left(\frac{t_2}{t_1}\right).
+\end{align}
+
+% =========================================================
+\section*{24. Circular Elimination (Josephus-type) Counting}
+
+Given $N$ people arranged in a circle and a fixed direction of
+counting, the $k^{\text{th}}$ person from a reference position $P$ in
+that direction is located by counting $k$ steps around the circle;
+eliminated members are removed from the circle before subsequent
+counts are made from the new reference position.
+
+% =========================================================
+\section*{25. Percentage / Proportion of a Total}
+
+For a subset with combined value $S$ out of a grand total $T$,
+
+\begin{align}
+\text{Percentage}=\frac{S}{T}\times 100\%.
+\end{align}
+
+% =========================================================
+\section*{26. Piecewise (Slab-Based) Fee Structure with Tax}
+
+For a fee $F$ exceeding a threshold $F_0$, with base overhead $O_0$
+and marginal overhead rate $r_1$ beyond the threshold, plus a Goods
+and Services Tax rate $r_2$ on the (fee + overhead):
+
+\begin{align}
+O=O_0+r_1\left(F-F_0\right),
+\end{align}
+
+\begin{align}
+T_{\text{pre-tax}}=F+O,
+\end{align}
+
+\begin{align}
+T_{\text{total}}=(1+r_2)\,T_{\text{pre-tax}}.
+\end{align}
+
+Given a maximum payable $T_{\text{total}}$, this is solved for the
+maximum permissible $F$.
+
+% =========================================================
+\section*{28. Gaussian (Normal) Function}
+
+A random variable $X$ is said to be Gaussian (normally distributed)
+with mean $\mu$ and variance $\sigma^{2}$, written
+$X\sim\mathcal{N}(\mu,\sigma^{2})$, if its probability density
+function is
+
+\begin{align}
+f(x)=\frac{1}{\sigma\sqrt{2\pi}}\,
+\exp\!\left(-\frac{(x-\mu)^{2}}{2\sigma^{2}}\right),
+\qquad -\infty<x<\infty.
+\end{align}
+
+The \textbf{standard normal} form, with $\mu=0,\ \sigma=1$, is
+
+\begin{align}
+\phi(z)=\frac{1}{\sqrt{2\pi}}\,e^{-z^{2}/2},
+\qquad z=\frac{x-\mu}{\sigma}.
+\end{align}
+
+The function is symmetric about $x=\mu$, and satisfies
+
+\begin{align}
+\int_{-\infty}^{\infty}f(x)\,dx=1,
+\qquad
+E[X]=\mu,
+\qquad
+\operatorname{Var}(X)=\sigma^{2}.
+\end{align}
+
+% =========================================================
+\section*{29. Central Limit Theorem (CLT)}
+
+Let $X_1,X_2,\dots,X_n$ be independent and identically distributed
+(i.i.d.) random variables, each with finite mean $\mu$ and finite
+variance $\sigma^{2}$ (the underlying distribution need not itself be
+Gaussian). Define the sample mean
+
+\begin{align}
+\bar{X}_n=\frac{1}{n}\sum_{i=1}^{n}X_i.
+\end{align}
+
+Then, as $n\to\infty$, the standardized sample mean converges in
+distribution to a standard normal random variable:
+
+\begin{align}
+Z_n=\frac{\bar{X}_n-\mu}{\sigma/\sqrt{n}}
+\;\xrightarrow{d}\;
+\mathcal{N}(0,1).
+\end{align}
+
+Equivalently, for large $n$,
+
+\begin{align}
+\bar{X}_n\ \approx\ \mathcal{N}\!\left(\mu,\ \frac{\sigma^{2}}{n}\right),
+\qquad
+\sum_{i=1}^{n}X_i\ \approx\ \mathcal{N}\!\left(n\mu,\ n\sigma^{2}\right).
+\end{align}
+
+\textbf{Relevance to Q12 (Binomial distribution):} a Binomial random
+variable $X\sim B(N,p)$ is the sum of $N$ i.i.d.\ Bernoulli trials, each
+with mean $p$ and variance $p(1-p)$. By the CLT, for large $N$,
+
+\begin{align}
+X\ \approx\ \mathcal{N}\!\left(Np,\ Np(1-p)\right),
+\end{align}
+
+which is why the Gaussian approximation to the Binomial distribution
+uses exactly the mean $E(X)=Np$ and variance
+$\operatorname{Var}(X)=Np(1-p)$ obtained in Section 12.
+
+% =========================================================
+\section*{27. Effect of Scalar Multiplication on a Determinant}
+
+For an $n\times n$ matrix $A$ and scalar $k$,
+
+\begin{align}
+\det(kA)=k^{n}\det(A).
+\end{align}
+
+\end{document}

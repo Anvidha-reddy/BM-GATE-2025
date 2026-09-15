@@ -13,10 +13,10 @@ x = (20 * np.sin(100 * np.pi * t)
 plt.figure(figsize=(10, 5))
 plt.plot(t, x)
 
-plt.xlabel("Time (seconds)")
+plt.xlabel("t(seconds)")
 plt.ylabel("x(t)")
-plt.title("x(t) = 20sin(100πt) + 36sin(150πt) - 2sin(300πt)")
+
 plt.grid(True)
 
 plt.tight_layout()
-plt.savefig("graph.png", dpi=150)
+plt.savefig("bm10.png", dpi=150)
