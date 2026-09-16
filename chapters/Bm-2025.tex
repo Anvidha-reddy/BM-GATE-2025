@@ -14,8 +14,6 @@
 %\geometry{
  %   a4paper,
  %   margin=1in
-%}
-
 
 
 % =========================================================
@@ -97,7 +95,7 @@ All figures redrawn. More problems added.
 
 %Question 1
 
-\begin{enumerate}
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
 \item The 12 musical notes are given as
 $C,C^\#,D,D^\#,E,F,F^\#,G,G^\#,A,A^\#,B$.
 Frequency of each note is $\sqrt[12]{2}$ times the frequency of the previous note.
@@ -122,7 +120,6 @@ From $C$ to $F^\#$, there are 6 successive intervals:
 \begin{align}
 C \rightarrow C^\# \rightarrow D \rightarrow D^\#
 \rightarrow E \rightarrow F \rightarrow F^\#
-\tag{1.1}
 \end{align}
 
 Therefore,
@@ -131,27 +128,23 @@ Therefore,
 \frac{f_{F^\#}}{f_C}
 =
 \left(\sqrt[12]{2}\right)^6
-\tag{1.2}
 \end{align}
 
 \begin{align}
 =2^{6/12}
 =2^{1/2}
 =\sqrt{2}
-\tag{1.3}
 \end{align}
 
 Hence,
 
 \begin{align}
 \boxed{\frac{f_{F^\#}}{f_C}=\sqrt{2}}
-\tag{1.4}
 \end{align}
 
 
 \begin{align}
 \text{(b)}\ \sqrt{2}
-\tag{1.5}
 \end{align}
 \noindent\framebox[\textwidth][c]{codes/bm1.py}
 
@@ -180,7 +173,7 @@ iterative algorithm. The total length of the curve generated after
 
     \node[below] at (0,0) {Iteration 0:};
     \node at (2.5,0.35) {$1$};
-
+    \node[below] at (1.5,-0.65) {Length of segment: 1};
 \end{tikzpicture}
 
 \vspace{1.2cm}
@@ -275,7 +268,6 @@ At iteration $0$, the length of the curve is $1$.
 
 \begin{align}
 L_0=1
-\tag{2.1}
 \end{align}
 
 At iteration $1$, the curve consists of $5$ segments, each of length
@@ -286,7 +278,6 @@ Therefore,
 \begin{align}
 L_1=5\left(\frac{1}{3}\right)
 =\frac{5}{3}
-\tag{2.2}
 \end{align}
 
 At every subsequent iteration, each segment is replaced by $5$ segments,
@@ -295,28 +286,24 @@ Hence, the total length is multiplied by
 
 \begin{align}
 \frac{5}{3}
-\tag{2.3}
 \end{align}
 
 Therefore, after $n$ iterations,
 
 \begin{align}
 L_n=L_0\left(\frac{5}{3}\right)^n
-\tag{2.4}
 \end{align}
 
 Since $L_0=1$,
 
 \begin{align}
 L_n=\left(\frac{5}{3}\right)^n
-\tag{2.5}
 \end{align}
 
 Hence, the correct answer is
 
 \begin{align}
 \text{(b)}\ \left(\frac{5}{3}\right)^n
-\tag{2.6}
 \end{align}
 % =========================================================
 % QUESTION 3
@@ -400,7 +387,6 @@ l_1=b_1,
 l_2=b_2-b_1,
 \qquad
 l_3=1-b_2.
-\tag{3.1}
 \end{align}
 
 For three lengths to form a triangle, the sum of any two sides must
@@ -410,22 +396,18 @@ Therefore,
 
 \begin{align}
 l_1+l_2>l_3
-\tag{3.2}
 \end{align}
 
 \begin{align}
 b_1+(b_2-b_1)>1-b_2
-\tag{3.3}
 \end{align}
 
 \begin{align}
 b_2>1-b_2
-\tag{3.4}
 \end{align}
 
 \begin{align}
 b_2>\frac{1}{2}.
-\tag{3.5}
 \end{align}
 
 Hence, option (B) is a necessary condition.
@@ -434,28 +416,24 @@ Now consider
 
 \begin{align}
 l_1+l_3>l_2.
-\tag{3.6}
 \end{align}
 
 Substituting the lengths,
 
 \begin{align}
 b_1+(1-b_2)>b_2-b_1.
-\tag{3.7}
 \end{align}
 
 Therefore,
 
 \begin{align}
 2b_1+1>2b_2
-\tag{3.8}
 \end{align}
 
 or
 
 \begin{align}
 b_2<b_1+\frac{1}{2}.
-\tag{3.9}
 \end{align}
 
 Hence, option (C) is also a necessary condition.
@@ -464,28 +442,24 @@ Finally,
 
 \begin{align}
 l_2+l_3>l_1.
-\tag{3.10}
 \end{align}
 
 Substituting,
 
 \begin{align}
 (b_2-b_1)+(1-b_2)>b_1.
-\tag{3.11}
 \end{align}
 
 Therefore,
 
 \begin{align}
 1-b_1>b_1
-\tag{3.12}
 \end{align}
 
 which gives
 
 \begin{align}
 b_1<\frac{1}{2}.
-\tag{3.13}
 \end{align}
 
 Hence, option (A) is also a necessary condition.
@@ -494,7 +468,6 @@ However, the condition
 
 \begin{align}
 b_1+b_2<1
-\tag{3.14}
 \end{align}
 
 is not required for the three pieces to form a triangle.
@@ -665,7 +638,6 @@ response has a deep attenuation around $\omega_0$:
 
 \begin{align}
 |H(j\omega_0)| \approx 0
-\tag{4.1}
 \end{align}
 
 while frequencies away from $\omega_0$ are passed with relatively
@@ -674,7 +646,6 @@ high gain.
 \begin{align}
 |H(j\omega)| \text{ is high for } \omega<\omega_0
 \text{ and } \omega>\omega_0.
-\tag{4.2}
 \end{align}
 
 Among the given frequency responses, only option (D) shows a sharp
@@ -733,14 +704,12 @@ Here, $a$ and $b$ are finite and real.
 
 \begin{align}
 f'(x) \neq 0 \qquad \text{for all } x.
-\tag{5.1}
 \end{align}
 
 Suppose, for contradiction, that
 
 \begin{align}
 f(a) = f(b).
-\tag{5.2}
 \end{align}
 
 \noindent Since $f(x)$ is continuous on $[a,b]$ and differentiable on $(a,b)$,
@@ -750,28 +719,24 @@ f(a) = f(b).
 
 \begin{align}
 f(a)=f(b),
-\tag{5.3}
 \end{align}
 
 then there must exist at least one point $c\in(a,b)$ such that
 
 \begin{align}
 f'(c)=0.
-\tag{5.4}
 \end{align}
 
 But this contradicts the given condition
 
 \begin{align}
 f'(x)\neq0 \qquad \text{for all }x.
-\tag{5.5}
 \end{align}
 
 \noindent Therefore, our assumption that $f(a)=f(b)$ is false. Hence,
 
 \begin{align}
 \boxed{f(a)\neq f(b)}.
-\tag{5.6}
 \end{align}% =========================================================
 % QUESTION 6
 % =========================================================
@@ -989,14 +954,12 @@ A=
 \cos\theta & -\sin\theta\\
 \sin\theta & \cos\theta
 \end{pmatrix}.
-\tag{7.1}
 \end{align}
 
 The eigenvalues $\lambda$ are obtained from the characteristic equation
 
 \begin{align}
 \det(A-\lambda I)=0.
-\tag{7.2}
 \end{align}
 
 Therefore,
@@ -1007,14 +970,12 @@ Therefore,
 \sin\theta & \cos\theta-\lambda
 \end{vmatrix}
 =0.
-\tag{7.3}
 \end{align}
 
 Expanding the determinant,
 
 \begin{align}
 (\cos\theta-\lambda)^2+\sin^2\theta=0.
-\tag{7.4}
 \end{align}
 
 Expanding further,
@@ -1022,21 +983,18 @@ Expanding further,
 \begin{align}
 \cos^2\theta-2\lambda\cos\theta+\lambda^2
 +\sin^2\theta=0.
-\tag{7.5}
 \end{align}
 
 Using
 
 \begin{align}
 \sin^2\theta+\cos^2\theta=1,
-\tag{7.6}
 \end{align}
 
 we get
 
 \begin{align}
 \lambda^2-2\lambda\cos\theta+1=0.
-\tag{7.7}
 \end{align}
 
 Using the quadratic formula,
@@ -1047,7 +1005,6 @@ Using the quadratic formula,
 \frac{2\cos\theta
 \pm
 \sqrt{4\cos^2\theta-4}}{2}.
-\tag{7.8}
 \end{align}
 
 Since
@@ -1056,7 +1013,6 @@ Since
 4\cos^2\theta-4
 =
 -4\sin^2\theta,
-\tag{7.9}
 \end{align}
 
 we have
@@ -1067,7 +1023,6 @@ we have
 \frac{2\cos\theta
 \pm
 2i\sin\theta}{2}.
-\tag{7.10}
 \end{align}
 
 Hence,
@@ -1076,21 +1031,18 @@ Hence,
 \lambda
 =
 \cos\theta\pm i\sin\theta.
-\tag{7.11}
 \end{align}
 
 Using Euler's formula,
 
 \begin{align}
 e^{i\theta}=\cos\theta+i\sin\theta,
-\tag{7.12}
 \end{align}
 
 and
 
 \begin{align}
 e^{-i\theta}=\cos\theta-i\sin\theta,
-\tag{7.13}
 \end{align}
 
 the eigenvalues are
@@ -1098,7 +1050,6 @@ the eigenvalues are
 \begin{align}
 \boxed{\lambda_1=e^{i\theta},\qquad
 \lambda_2=e^{-i\theta}}.
-\tag{7.14}
 \end{align}
 \begin{align}
 \text{Therefore, the correct answer is (B)}
@@ -1218,43 +1169,36 @@ The dataset consists of $5$ elements arranged in ascending order:
 
 \begin{align}
 -5 \le 1 \le a \le 5 \le b
-\tag{9.1}
 \end{align}
 
 Since the dataset has an odd number of elements ($n=5$), the median is the middle (3rd) element:
 
 \begin{align}
 \text{Median} = a = 3
-\tag{9.2}
 \end{align}
 
 The mean of the dataset is given as $3$:
 
 \begin{align}
 \text{Mean} = \frac{-5 + 1 + a + 5 + b}{5} = 3
-\tag{9.3}
 \end{align}
 
 Substituting $a = 3$ into equation (9.3):
 
 \begin{align}
 \frac{-5 + 1 + 3 + 5 + b}{5} = 3
-\tag{9.4}
 \end{align}
 
 \begin{align}
 \frac{4 + b}{5} = 3
-\tag{9.5}
 \end{align}
 
 \begin{align}
 4 + b = 15
-\tag{9.6}
 \end{align}
 
 \begin{align}
 b = 11
-\tag{9.7}
 \end{align}
 \begin{align}
 \text{Hence, the correct answer is (b) 11}
@@ -1304,7 +1248,6 @@ To avoid aliasing and accurately reconstruct the signal, the sampling frequency 
 
 \begin{align}
 f_s \ge 2 f_{\max}
-\tag{10.1}
 \end{align}
 
 where $f_{\max}$ is the highest frequency component in the signal $x(t)$.
@@ -1322,31 +1265,26 @@ The signal consists of three sinusoidal components with angular frequencies $\om
 
 \begin{align}
 \omega_1 = 100\pi \implies f_1 = \frac{100\pi}{2\pi} = 50\text{ Hz}
-\tag{10.2}
 \end{align}
 
 \begin{align}
 \omega_2 = 150\pi \implies f_2 = \frac{150\pi}{2\pi} = 75\text{ Hz}
-\tag{10.3}
 \end{align}
 
 \begin{align}
 \omega_3 = 300\pi \implies f_3 = \frac{300\pi}{2\pi} = 150\text{ Hz}
-\tag{10.4}
 \end{align}
 
 The maximum frequency component present in the signal is:
 
 \begin{align}
 f_{\max} = 150\text{ Hz}
-\tag{10.5}
 \end{align}
 
 According to the Nyquist theorem, the minimum required sampling rate (Nyquist rate) is:
 
 \begin{align}
 f_s \ge 2 \times 150\text{ Hz} = 300\text{ Hz}
-\tag{10.6}
 \end{align}
 
 Among the given options, the only frequency greater than or equal to $300\text{ Hz}$ that guarantees accurate signal reconstruction is $500\text{ Hz}$.
@@ -1397,59 +1335,42 @@ Hence, the correct answer is (a) 500
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
-The formula for the average power $P_{\text{avg}}$ dissipated in an AC circuit is given by:
+The average power $P_{\text{avg}}$ dissipated in an AC circuit in terms of peak voltage $V_0$ and peak current $I_0$ is given by:
 
-\begin{align}
-P_{\text{avg}} = V_{\text{rms}} I_{\text{rms}} \cos(\theta)
-\tag{11.1}
-\end{align}
+\begin{equation}
+P_{\text{avg}} = \frac{1}{2} V_0 I_0 \cos(\phi_v - \phi_i)
+\end{equation}
 
-where:
-\begin{itemize}
-    \item $V_{\text{rms}} = \frac{V_m}{\sqrt{2}}$ is the RMS value of the voltage,
-    \item $I_{\text{rms}} = \frac{I_m}{\sqrt{2}}$ is the RMS value of the current,
-    \item $\theta = \phi_v - \phi_i$ is the phase difference between voltage and current.
-\end{itemize}
+Given data from the problem:
+\begin{align*}
+V_s(t) &= 5 \sin\left(100t + \frac{\pi}{2}\right) \text{ V} \\
+I(t) &= 10 \sin\left(100t + \frac{\pi}{6}\right) \text{ mA}
+\end{align*}
 
-Given values:
-\begin{align}
-V_m = 5\text{ V}, \quad \phi_v = \frac{\pi}{2}\text{ rad}
-\tag{11.2}
-\end{align}
-
-\begin{align}
-I_m = 10\text{ mA}, \quad \phi_i = \frac{\pi}{6}\text{ rad}
-\tag{11.3}
-\end{align}
+Extracting the peak values and phase angles:
+\begin{align*}
+V_0 &= 5 \text{ V} \\
+I_0 &= 10 \text{ mA} \\
+\phi_v &= \frac{\pi}{2} \text{ rad} \\
+\phi_i &= \frac{\pi}{6} \text{ rad}
+\end{align*}
 
 Calculate the phase difference $\theta$:
+\begin{equation}
+\theta = \phi_v - \phi_i = \frac{\pi}{2} - \frac{\pi}{6} = \frac{3\pi - \pi}{6} = \frac{2\pi}{6} = \frac{\pi}{3} \text{ rad}
+\end{equation}
 
-\begin{align}
-\theta = \frac{\pi}{2} - \frac{\pi}{6} = \frac{3\pi - \pi}{6} = \frac{2\pi}{6} = \frac{\pi}{3}\text{ rad } (60^\circ)
-\tag{11.4}
-\end{align}
+Substituting these values into the average power formula:
+\begin{align*}
+P_{\text{avg}} &= \frac{1}{2} \times 5 \times 10 \times \cos\left(\frac{\pi}{3}\right) \text{ mW} \\
+P_{\text{avg}} &= \frac{1}{2} \times 50 \times \frac{1}{2} \text{ mW} \\
+P_{\text{avg}} &= \frac{50}{4} \text{ mW} \\
+P_{\text{avg}} &= 12.5 \text{ mW}
+\end{align*}
 
-Substitute the values into the average power formula:
-
-\begin{align}
-P_{\text{avg}} = \left(\frac{5}{\sqrt{2}}\right) \times \left(\frac{10}{\sqrt{2}}\right) \times \cos\left(\frac{\pi}{3}\right)
-\tag{11.5}
-\end{align}
-
-\begin{align}
-P_{\text{avg}} = \frac{50}{2} \times \frac{1}{2}\text{ mW}
-\tag{11.6}
-\end{align}
-
-\begin{align}
-P_{\text{avg}} = 25 \times 0.5 = 12.5\text{ mW}
-\tag{11.7}
-\end{align}
-
-Hence, the correct answer is (b) 12.5
-
+\text{Correct Option:} \textbf{(b) 12.5}
 
 
 \begin{figure}[H]
@@ -1493,56 +1414,49 @@ Hence, the correct answer is (b) 12.5
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
-For a Binomial distribution $X \sim B(N, p)$ with $N$ independent trials and probability of success $p$:
+For a Binomial distribution $X \sim \mathcal{B}(N, p)$ with $N$ independent trials and success probability $p$:
 
-The expectation value (mean) is given by:
-
+The expectation value (mean $\mu$) and variance ($\sigma^2$) are given by:
 \begin{align}
-E(X) = Np = 16
-\tag{12.1}
+\mu &= E(X) = Np = 16 \\
+\sigma^2 &= \text{Var}(X) = Np(1 - p) = 12
 \end{align}
 
-The variance is given by:
+To approximate this Binomial distribution using a Gaussian (Normal) distribution $Y \sim \mathcal{N}(\mu, \sigma^2)$ with the same mean and variance, the Probability Density Function (PDF) is defined as:
+\begin{equation}
+f_Y(x) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left( -\frac{(x - \mu)^2}{2\sigma^2} \right)
+\end{equation}
 
-\begin{align}
-\text{Var}(X) = Np(1-p) = 12
-\tag{12.2}
-\end{align}
+Substituting the given mean $\mu = 16$ and variance $\sigma^2 = 12$:
+\begin{equation}
+f_Y(x) = \frac{1}{\sqrt{24\pi}} \exp\left( -\frac{(x - 16)^2}{24} \right)
+\end{equation}
 
-Divide equation (12.2) by equation (12.1):
+To find $N$, divide the variance equation by the mean equation:
+\begin{equation}
+\frac{Np(1 - p)}{Np} = \frac{12}{16}
+\end{equation}
 
-\begin{align}
-\frac{Np(1-p)}{Np} = \frac{12}{16}
-\tag{12.3}
-\end{align}
-
-\begin{align}
+Simplifying:
+\begin{equation}
 1 - p = \frac{3}{4} = 0.75
-\tag{12.4}
-\end{align}
+\end{equation}
 
 Solving for $p$:
-
-\begin{align}
+\begin{equation}
 p = 1 - 0.75 = 0.25 = \frac{1}{4}
-\tag{12.5}
-\end{align}
+\end{equation}
 
-Now, substitute the value of $p$ back into equation (12.1):
-
+Substituting $p = \frac{1}{4}$ back into the expectation value equation:
 \begin{align}
-N \left(\frac{1}{4}\right) = 16
-\tag{12.6}
+N \left(\frac{1}{4}\right) &= 16 \\
+N &= 16 \times 4 \\
+N &= 64
 \end{align}
 
-\begin{align}
-N = 16 \times 4 = 64
-\tag{12.7}
-\end{align}
-
-Hence, the correct answer is (d) 64
+\text{Correct Option:} \text{(d) 64}
 
 \begin{figure}[H]
     \centering
@@ -1880,47 +1794,40 @@ Given the expression:
 
 \begin{align}
 y = \log_e(-e^x) = \ln(-e^x)
-\tag{15.1}
 \end{align}
 
 Using logarithmic properties, we rewrite the term inside the logarithm:
 
 \begin{align}
 -e^x = (-1) \cdot e^x
-\tag{15.2}
 \end{align}
 
 Applying Euler's identity, $-1$ can be expressed in complex exponential form as:
 
 \begin{align}
 -1 = e^{i(2k+1)\pi}, \quad \text{for } k \in \mathbb{Z}
-\tag{15.3}
 \end{align}
 
 Substituting equation (15.3) into equation (15.2):
 
 \begin{align}
 -e^x = e^{x} \cdot e^{i(2k+1)\pi} = e^{x + i(2k+1)\pi}
-\tag{15.4}
 \end{align}
 
 Taking the natural logarithm on both sides:
 
 \begin{align}
 y = \ln\left(e^{x + i(2k+1)\pi}\right)
-\tag{15.5}
 \end{align}
 
 \begin{align}
 y = x + i(2k+1)\pi, \quad \text{for } k \in \mathbb{Z}
-\tag{15.6}
 \end{align}
 
 Let $n = |2k + 1|$. Since $2k+1$ is always an odd integer, $n$ represents an odd integer:
 
 \begin{align}
 y = x \pm i n \pi, \quad \text{where } n \text{ is an odd integer and } i = \sqrt{-1}
-\tag{15.7}
 \end{align}
 
 Since $y$ contains an imaginary component $i n \pi$ (with $n \ge 1$), $y$ is a complex-valued function.
@@ -2237,12 +2144,10 @@ First, convert the binary input $(10110111)_2$ into its equivalent decimal value
 
 \begin{align}
 D = 1 \cdot 2^7 + 0 \cdot 2^6 + 1 \cdot 2^5 + 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0
-\tag{18.1}
 \end{align}
 
 \begin{align}
 D = 128 + 0 + 32 + 16 + 0 + 4 + 2 + 1 = 183
-\tag{18.2}
 \end{align}
 
 For an 8-bit DAC:
@@ -2255,7 +2160,6 @@ The output voltage $V_{\text{out}}$ for a given decimal value $D$ is given by:
 
 \begin{align}
 V_{\text{out}} = V_{\text{FS}} \times \left( \frac{D}{2^n - 1} \right)
-\tag{18.3}
 \end{align}
 
 where $n = 8$ bits, so $2^8 - 1 = 255$.
@@ -2264,12 +2168,10 @@ Substituting $D = 183$ and $V_{\text{FS}} = 5\text{ V}$:
 
 \begin{align}
 V_{\text{out}} = 5 \times \left( \frac{183}{255} \right)
-\tag{18.4}
 \end{align}
 
 \begin{align}
 V_{\text{out}} = \frac{915}{255} \approx 3.5882\text{ V}
-\tag{18.5}
 \end{align}
 
 Rounding off to two decimal places gives: 3.59
@@ -2374,7 +2276,6 @@ The general expression for the output voltage of an inverting summing amplifier 
 
 \begin{align}
 V_{\text{out}} = -\left( \frac{R_f}{R_1} V_1 + \frac{R_f}{R_2} V_2 + \frac{R_f}{R_3} V_3 \right)
-\tag{19.1}
 \end{align}
 
 Given values:
@@ -2390,17 +2291,14 @@ Substitute the given component values into equation (19.1):
 
 \begin{align}
 V_{\text{out}} = -\left( \frac{10}{5}(2) + \frac{10}{4}(2) + \frac{10}{2}(1) \right)
-\tag{19.2}
 \end{align}
 
 \begin{align}
 V_{\text{out}} = -\left( 2(2) + 2.5(2) + 5(1) \right)
-\tag{19.3}
 \end{align}
 
 \begin{align}
 V_{\text{out}} = -(4 + 5 + 5) = -14\text{ V}
-\tag{19.4}
 \end{align}
 
 Since the calculated voltage ($-14\text{ V}$) lies within the saturation limits ($-15\text{ V}$ to $+15\text{ V}$), the op-amp stays in its linear region.
@@ -2523,7 +2421,6 @@ The frequency of oscillation $f_0$ for a Wien Bridge Oscillator constructed usin
 
 \begin{align}
 f_0 = \frac{1}{2\pi R C}
-\tag{20.1}
 \end{align}
 
 Given values:
@@ -2536,19 +2433,16 @@ Substitute $R$ and $C$ into equation (20.1):
 
 \begin{align}
 f_0 = \frac{1}{2\pi (10^3)(10^{-7})} = \frac{1}{2\pi \times 10^{-4}}\text{ Hz}
-\tag{20.2}
 \end{align}
 
 \begin{align}
 f_0 = \frac{10^4}{2\pi}\text{ Hz} = \frac{10000}{2\pi} \approx 1591.549\text{ Hz}
-\tag{20.3}
 \end{align}
 
 Converting to kilohertz ($\text{kHz}$):
 
 \begin{align}
 f_0 = \frac{1591.549}{1000}\text{ kHz} \approx 1.5915\text{ kHz}
-\tag{20.4}
 \end{align}
 
 Rounding off to two decimal places: 1.59
@@ -2791,52 +2685,44 @@ Let $\sigma(t)$ denote the strength of the suture at time $t$ weeks:
 
 \begin{align}
 \sigma(t) = \sigma_0 - 2\ln(t)
-\tag{23.1}
 \end{align}
 
 We are given that at $t = 4$ weeks, the strength $\sigma(4) = 2\text{ MPa}$:
 
 \begin{align}
 2 = \sigma_0 - 2\ln(4)
-\tag{23.2}
 \end{align}
 
 Now, we need to find the strength at $t = 8$ weeks, $\sigma(8)$:
 
 \begin{align}
 \sigma(8) = \sigma_0 - 2\ln(8)
-\tag{23.3}
 \end{align}
 
 Subtracting equation (23.2) from equation (23.3):
 
 \begin{align}
 \sigma(8) - 2 = -2\ln(8) - (-2\ln(4))
-\tag{23.4}
 \end{align}
 
 \begin{align}
 \sigma(8) - 2 = -2\left( \ln(8) - \ln(4) \right)
-\tag{23.5}
 \end{align}
 
 Using the logarithmic identity $\ln(a) - \ln(b) = \ln\left(\frac{a}{b}\right)$:
 
 \begin{align}
 \sigma(8) - 2 = -2\ln\left(\frac{8}{4}\right) = -2\ln(2)
-\tag{23.6}
 \end{align}
 
 Substituting $\ln(2) \approx 0.69315$:
 
 \begin{align}
 \sigma(8) - 2 = -2(0.69315) = -1.3863
-\tag{23.7}
 \end{align}
 
 \begin{align}
 \sigma(8) = 2 - 1.3863 = 0.6137\text{ MPa}
-\tag{23.8}
 \end{align}
 
 Rounding off to two decimal places gives: 0.61
@@ -2906,7 +2792,6 @@ Since students move forward in a **clockwise** direction around the circle, the 
 \text{Initial Setup (Counter-Clockwise sequence from P):}
 \begin{align}
 \text{P} \to \text{W} \to \text{U} \to \text{V} \to \text{S} \to \text{Q} \to \text{T} \to \text{R}
-\tag{24.1}
 \end{align}
 
 ---
@@ -2956,7 +2841,6 @@ Thus, the four students remaining after the $4^{\text{th}}$ round are **P, T, Q,
 
 \begin{align}
 \text{(A) P; T; Q; S}
-\tag{24.2}
 \end{align}
 \noindent\framebox[\textwidth][c]{codes/bm24.py}
 
@@ -3011,7 +2895,6 @@ First, calculate the total number of medals for each nation:
 Total medals won by all 5 nations combined:
 \begin{align}
 \text{Total Medals} = 125 + 90 + 45 + 52 + 64 = 376
-\tag{25.1}
 \end{align}
 
 Now, evaluate each statement:
@@ -3038,7 +2921,6 @@ Now, evaluate each statement:
 
 \begin{align}
 \text{(C) USA and Canada together have less than 50\% of the medals awarded to the nations in the above table.}
-\tag{25.2}
 \end{align}
 
 \noindent\framebox[\textwidth][c]{codes/bm25.py}
@@ -3074,57 +2956,47 @@ Let $F$ be the consulting fee charged by the employee. Since the maximum total p
 1. Calculate the Overhead ($O$):
 \begin{align}
 O = 1,00,000 + 0.10 \times (F - 5,00,000)
-\tag{26.1}
 \end{align}
 \begin{align}
 O = 1,00,000 + 0.10F - 50,000 = 50,000 + 0.10F
-\tag{26.2}
 \end{align}
 
 2. Calculate the Total before Tax ($T_{\text{pre-tax}}$):
 \begin{align}
 T_{\text{pre-tax}} = F + O = F + (50,000 + 0.10F) = 1.10F + 50,000
-\tag{26.3}
 \end{align}
 
 3. Calculate Total Amount Payable by Client ($T_{\text{total}}$):
 \begin{align}
 T_{\text{total}} = T_{\text{pre-tax}} + 0.18 \times T_{\text{pre-tax}} = 1.18 \times T_{\text{pre-tax}}
-\tag{26.4}
 \end{align}
 
 Given that the maximum total amount $T_{\text{total}} = 10,00,000$:
 
 \begin{align}
 1.18 \times (1.10F + 50,000) = 10,00,000
-\tag{26.5}
 \end{align}
 
 \begin{align}
 1.10F + 50,000 = \frac{10,00,000}{1.18}
-\tag{26.6}
 \end{align}
 
 \begin{align}
 1.10F + 50,000 \approx 847,457.627
-\tag{26.7}
 \end{align}
 
 \begin{align}
 1.10F = 847,457.627 - 50,000 = 797,457.627
-\tag{26.8}
 \end{align}
 
 \begin{align}
 F = \frac{797,457.627}{1.10} \approx 724,961.48
-\tag{26.9}
 \end{align}
 
 Rounding off to the nearest integer gives $\text{rupee } 7,24,961$.
 
 \begin{align}
 \text{(B) rupee\ 7,24,961}
-\tag{26.10}
 \end{align}
 
 %Question 27
@@ -3173,7 +3045,6 @@ Rounding off to the nearest integer gives $\text{rupee } 7,24,961$.
 
 \begin{align}
 \text{(A) -64}
-\tag{27.4}
 \end{align}
 \noindent\framebox[\textwidth][c]{codes/bm26.py}
 
