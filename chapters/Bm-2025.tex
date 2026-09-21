@@ -1,96 +1,5 @@
 
 
-%\usepackage{amsmath}
-%\usepackage{amssymb}
-%\usepackage{geometry}
-%\usepackage{graphicx}
-%\usepackage{setspace}
-%\usepackage{tikz}
-%\usetikzlibrary{decorations.pathmorphing}
-%\usetikzlibrary{positioning,calc}
-
-
-
-%\geometry{
- %   a4paper,
- %   margin=1in
-
-
-% =========================================================
-% PAGE 1 - COVER PAGE
-% =========================================================
-
-\begin{titlepage}
-
-\vspace*{1cm}
-
-\begin{center}
-
-{\Huge \textbf{Math for EE}}
-
-\vfill
-
-{\Large \textbf{G. V. V. Sharma}}
-
-\end{center}
-
-\end{titlepage}
-
-
-% =========================================================
-% PAGE 2 - ABOUT THIS BOOK
-% =========================================================
-
-\newpage
-
-\section*{ABOUT THIS BOOK}
-
-This book introduces matrices through high school coordinate geometry.
-This approach makes it easier for beginners to learn Python for scientific
-computing. All problems in the book are from NCERT mathematics textbooks
-from Class 9--12. Exercises are from CBSE board exam papers.
-
-The content is sufficient for industry jobs and covers nearly all matrix
-prerequisites for machine learning. There is no copyright, so readers are
-free to print and share.
-
-License:
-
-\begin{verbatim}
-https://creativecommons.org/licenses/by-sa/3.0/
-\end{verbatim}
-
-and
-
-\begin{verbatim}
-https://www.gnu.org/licenses/fdl-1.3.en.html
-\end{verbatim}
-
-First manual appeared in January 2018.
-
-First edition published on July 10, 2024.
-
-In this edition, some incorrect solutions were removed.
-All figures redrawn. More problems added.
-
-
-% =========================================================
-% PAGE 3 - CONTENTS
-% =========================================================
-
-
-\begin{enumerate}
-    \item GATE BM 2025
-\end{enumerate}
-
-
-% =========================================================
-% QUESTIONS START FROM NEXT PAGE
-% ========================================================
-
-
-\newpage
-\section*{1. GATE BM 2025}
 
 
 %Question 1
@@ -110,7 +19,7 @@ $F^\#$ and $C$ is: \hfill\text{(GATE BM 2025)}
     \item[(d)] $2$
 \end{enumerate}
 
-\textbf{Solution:}
+\solution
 
 Each successive musical note has a frequency
 $\sqrt[12]{2}$ times that of the previous note.
@@ -122,7 +31,7 @@ C \rightarrow C^\# \rightarrow D \rightarrow D^\#
 \rightarrow E \rightarrow F \rightarrow F^\#
 \end{align}
 
-Therefore,
+From \eqref{GP}
 
 \begin{align}
 \frac{f_{F^\#}}{f_C}
@@ -146,7 +55,10 @@ Hence,
 \begin{align}
 \text{(b)}\ \sqrt{2}
 \end{align}
-\noindent\framebox[\textwidth][c]{codes/bm1.py}
+
+\begin{lstlisting}
+codes/bm1.py
+\end{lstlisting}
 
 % =========================================================
 % QUESTION 2
@@ -262,7 +174,7 @@ iterative algorithm. The total length of the curve generated after
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 At iteration $0$, the length of the curve is $1$.
 
@@ -289,12 +201,8 @@ Hence, the total length is multiplied by
 \end{align}
 
 Therefore, after $n$ iterations,
+from \eqref{iteration}
 
-\begin{align}
-L_n=L_0\left(\frac{5}{3}\right)^n
-\end{align}
-
-Since $L_0=1$,
 
 \begin{align}
 L_n=\left(\frac{5}{3}\right)^n
@@ -375,7 +283,7 @@ representative.
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 The stick of length $1$ m is broken at $b_1$ and $b_2$.
 
@@ -474,7 +382,9 @@ is not required for the three pieces to form a triangle.
 
 Therefore, the condition which is \textbf{NOT} necessary is (D)
 
-\noindent\framebox[\textwidth][c]{codes/bm3.py}
+\begin{lstlisting}
+Codes/bm3.py
+\end{lstlisting}
 
 
 
@@ -624,7 +534,7 @@ response of a notch filter?
 
 \vspace{0.5cm}
 
-\textbf{Solution:}
+\solution
 
 A notch filter is a band-stop filter that rejects or strongly
 attenuates a narrow range of frequencies while allowing frequencies
@@ -633,20 +543,10 @@ outside that range to pass.
 Therefore, its frequency response has high gain at low and high
 frequencies, with a sharp reduction in gain at a particular frequency.
 
-Mathematically, if $\omega_0$ is the rejected frequency, then the
-response has a deep attenuation around $\omega_0$:
+The response has a deep attenuation around rejected frequency.
 
-\begin{align}
-|H(j\omega_0)| \approx 0
-\end{align}
+From \eqref{freq}
 
-while frequencies away from $\omega_0$ are passed with relatively
-high gain.
-
-\begin{align}
-|H(j\omega)| \text{ is high for } \omega<\omega_0
-\text{ and } \omega>\omega_0.
-\end{align}
 
 Among the given frequency responses, only option (D) shows a sharp
 reduction in gain at a particular frequency while allowing frequencies
@@ -668,7 +568,6 @@ following is ALWAYS TRUE for $a \neq b$?
 Here, $a$ and $b$ are finite and real.
 
 \vspace{0.4cm}
-
 \hfill \text{(GATE BM 2025)}
 \begin{enumerate}
 
@@ -698,7 +597,7 @@ Here, $a$ and $b$ are finite and real.
 
 \vspace{0.5cm}
 
-\textbf{Solution:}
+\solution
 
 \noindent We are given that $f(x)$ is continuous and differentiable, and
 
@@ -715,17 +614,7 @@ f(a) = f(b).
 \noindent Since $f(x)$ is continuous on $[a,b]$ and differentiable on $(a,b)$,
 \noindent Rolle's theorem can be applied.
 
-\noindent Rolle's theorem states that if
-
-\begin{align}
-f(a)=f(b),
-\end{align}
-
-then there must exist at least one point $c\in(a,b)$ such that
-
-\begin{align}
-f'(c)=0.
-\end{align}
+From \eqref{rolle's}
 
 But this contradicts the given condition
 
@@ -828,61 +717,59 @@ f'(x)\neq0 \qquad \text{for all }x.
 
 \vspace{0.5cm}
 
-\textbf{Solution:}
+\solution
 
 
 The forward transfer function is:
-\[
+\begin{align}
 G(s) = \frac{25}{s(s+5)}
-\]
+\end{align}
 
-Using the Laplace transform feedback relation for a unity negative feedback system, the closed-loop transfer function is:
-\[
-\frac{C(s)}{R(s)} = \frac{G(s)}{1 + G(s)}
-\]
+From \eqref{neg}
 
 Substitute $G(s)$:
-\[
+\begin{align}
 \frac{C(s)}{R(s)} = \frac{\frac{25}{s(s+5)}}{1 + \frac{25}{s(s+5)}} = \frac{25}{s^2 + 5s + 25}
-\]
+\end{align}
 
 The characteristic equation in the Laplace domain is:
-\[
+\begin{align}
 s^2 + 5s + 25 = 0
-\]
+\end{align}
 
 Comparing this with the standard second-order system equation $s^2 + 2\zeta\omega_n s + \omega_n^2 = 0$:
-\[
+\begin{align}
 \omega_n^2 = 25 \implies \omega_n = 5
-\]
-\[
+\end{align}
+\begin{align}
 2\zeta\omega_n = 5 \implies 2\zeta(5) = 5 \implies \zeta = 0.5
-\]
+\end{align}
 
-Since $0 < \zeta < 1$, the system is underdamped.
+Since $0 < \zeta < 1$, From \eqref{compare} the system is underdamped.
 
 To find the impulse response in the time domain, we compute the Inverse Laplace Transform of $C(s)$ (for $R(s) = 1$):
-\[
+\begin{align}
 C(s) = \frac{25}{s^2 + 5s + 25}
-\]
+\end{align}
 
 Completing the square in the denominator:
-\[
+\begin{align}
 s^2 + 5s + 25 = \left(s + \frac{5}{2}\right)^2 + \frac{75}{4} = (s + 2.5)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2
-\]
+\end{align}
 
 Rewriting $C(s)$:
-\[
+\begin{align}
 C(s) = \frac{25}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2} = \frac{25}{\frac{5\sqrt{3}}{2}} \cdot \frac{\frac{5\sqrt{3}}{2}}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2}
-\]
-\[
+\end{align}
+\begin{align}
 C(s) = \frac{10}{\sqrt{3}} \cdot \frac{\frac{5\sqrt{3}}{2}}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2}
-\]
+\end{align}
 
+From \eqref{inverse}
 Taking the Inverse Laplace Transform $\mathcal{L}^{-1}\{C(s)\}$:
-\[
+\begin{align}
 c(t) = \frac{10}{\sqrt{3}} e^{-\frac{5}{2}t} \sin\left(\frac{5\sqrt{3}}{2}t\right) \quad \text{for } t \ge 0
-\]
+\end{align}
 
 The presence of the decaying exponential $e^{-\frac{5}{2}t}$ multiplied by the sine term confirms an underdamped oscillatory response.
 
@@ -891,12 +778,14 @@ Correct option: (B) is underdamped
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figs/bm6.png}
+    \includegraphics[width=0.75\textwidth]{figs/bm6.png}
     \caption{c(t) vs time}
     \label{c(t) vs time}
 \end{figure}
 
-\noindent\framebox[\textwidth][c]{codes/bm6.py}
+\begin{lstlisting}
+Codes/bm6.py
+\end{lstlisting}
 
 % =========================================================
 % QUESTION 7
@@ -944,7 +833,7 @@ are \underline{\hspace{2cm}}.
 
 \vspace{0.5cm}
 
-\textbf{Solution:}
+\solution
 
 Let the given matrix be
 
@@ -1054,7 +943,10 @@ the eigenvalues are
 \begin{align}
 \text{Therefore, the correct answer is (B)}
 \end{align}
-\noindent\framebox[\textwidth][c]{codes/bm7.py}
+
+\begin{lstlisting}
+Codes/bm7.py
+\end{lstlisting}
 
 % ============================================================
 % QUESTION 8
@@ -1084,12 +976,15 @@ is \underline{\hspace{2cm}}.
 
 
 \vspace{0.5cm}
+%==============================================
+%==============================================
 
-\textbf{Solution:}
+\solution
 
 The given limit is the definition of the derivative of $f(x)$ at
 $x=1$:
 
+From \eqref{derivative}
 \begin{align}
 f'(1)
 =
@@ -1124,11 +1019,14 @@ Therefore, the correct option is (D) 2
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figs/bm8a.png}
+    \includegraphics[width=0.75\textwidth]{figs/bm8a.png}
     \caption{Derivative vs x; function vs x with tangent}
     \label{Derivative vs x; function vs x with tangent}
 \end{figure}
-\noindent\framebox[\textwidth][c]{codes/bm8.py}
+
+\begin{lstlisting}
+Codes/bm8.py
+\end{lstlisting}
 
 
 
@@ -1163,14 +1061,14 @@ Therefore, the correct option is (D) 2
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 The dataset consists of $5$ elements arranged in ascending order:
 
 \begin{align}
 -5 \le 1 \le a \le 5 \le b
 \end{align}
-
+From \eqref{median}
 Since the dataset has an odd number of elements ($n=5$), the median is the middle (3rd) element:
 
 \begin{align}
@@ -1178,7 +1076,7 @@ Since the dataset has an odd number of elements ($n=5$), the median is the middl
 \end{align}
 
 The mean of the dataset is given as $3$:
-
+From \eqref{mean}
 \begin{align}
 \text{Mean} = \frac{-5 + 1 + a + 5 + b}{5} = 3
 \end{align}
@@ -1204,7 +1102,10 @@ b = 11
 \text{Hence, the correct answer is (b) 11}
 \end{align}
 
-\noindent\framebox[\textwidth][c]{codes/bm9.py}
+
+\begin{lstlisting}
+Codes/bm9.py
+\end{lstlisting}
 
 
 % =========================================================
@@ -1242,15 +1143,8 @@ where time $t$ is in seconds. Among the following options, what is the frequency
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
-
-To avoid aliasing and accurately reconstruct the signal, the sampling frequency $f_s$ must satisfy the Nyquist sampling criterion:
-
-\begin{align}
-f_s \ge 2 f_{\max}
-\end{align}
-
-where $f_{\max}$ is the highest frequency component in the signal $x(t)$.
+\solution
+From \eqref{sampling}
 
 \begin{figure}[H]
     \centering
@@ -1258,7 +1152,10 @@ where $f_{\max}$ is the highest frequency component in the signal $x(t)$.
     \caption{Aliasing and Non-Aliasing}
     \label{Aliasing and Non-Aliasing}
 \end{figure}
-\noindent\framebox[\textwidth][c]{codes/bm10a.py}
+
+\begin{lstlisting}
+Codes/bm10a.py
+\end{lstlisting}
 
 
 The signal consists of three sinusoidal components with angular frequencies $\omega_1$, $\omega_2$, and $\omega_3$:
@@ -1298,7 +1195,10 @@ Hence, the correct answer is (a) 500
     \caption{Plot of x(t) vs time}
     \label{plot of x(t) vs time}
 \end{figure}
-\noindent\framebox[\textwidth][c]{codes/bm10.py}
+
+\begin{lstlisting}
+Codes/bm10.py
+\end{lstlisting}
 
 
 
@@ -1329,7 +1229,7 @@ Hence, the correct answer is (a) 500
     \item[(d)] $50.0$
 \end{enumerate}
 
-\vspace{0.5cm}
+
 
 % =========================================================
 % SOLUTION
@@ -1337,38 +1237,32 @@ Hence, the correct answer is (a) 500
 
 \solution
 
-The average power $P_{\text{avg}}$ dissipated in an AC circuit in terms of peak voltage $V_0$ and peak current $I_0$ is given by:
 
-\begin{equation}
-P_{\text{avg}} = \frac{1}{2} V_0 I_0 \cos(\phi_v - \phi_i)
-\end{equation}
 
 Given data from the problem:
-\begin{align*}
+\begin{align}
 V_s(t) &= 5 \sin\left(100t + \frac{\pi}{2}\right) \text{ V} \\
 I(t) &= 10 \sin\left(100t + \frac{\pi}{6}\right) \text{ mA}
-\end{align*}
+\end{align}
 
 Extracting the peak values and phase angles:
-\begin{align*}
-V_0 &= 5 \text{ V} \\
-I_0 &= 10 \text{ mA} \\
+\begin{align}
+V_0 &= 5 \text{ V}\\ I_0 &= 10 \text{ mA}\\
 \phi_v &= \frac{\pi}{2} \text{ rad} \\
 \phi_i &= \frac{\pi}{6} \text{ rad}
-\end{align*}
+\end{align}
 
 Calculate the phase difference $\theta$:
 \begin{equation}
 \theta = \phi_v - \phi_i = \frac{\pi}{2} - \frac{\pi}{6} = \frac{3\pi - \pi}{6} = \frac{2\pi}{6} = \frac{\pi}{3} \text{ rad}
 \end{equation}
+From \eqref{power}
 
 Substituting these values into the average power formula:
-\begin{align*}
+\begin{align}
 P_{\text{avg}} &= \frac{1}{2} \times 5 \times 10 \times \cos\left(\frac{\pi}{3}\right) \text{ mW} \\
-P_{\text{avg}} &= \frac{1}{2} \times 50 \times \frac{1}{2} \text{ mW} \\
-P_{\text{avg}} &= \frac{50}{4} \text{ mW} \\
 P_{\text{avg}} &= 12.5 \text{ mW}
-\end{align*}
+\end{align}
 
 \text{Correct Option:} \textbf{(b) 12.5}
 
@@ -1379,8 +1273,10 @@ P_{\text{avg}} &= 12.5 \text{ mW}
     \caption{Power vs time}
     \label{power vs time}
 \end{figure}
-\noindent\framebox[\textwidth][c]{codes/bm11.py}
 
+\begin{lstlisting}
+Codes/bm11.py
+\end{lstlisting}
 
 
 % =========================================================
@@ -1424,30 +1320,28 @@ The expectation value (mean $\mu$) and variance ($\sigma^2$) are given by:
 \sigma^2 &= \text{Var}(X) = Np(1 - p) = 12
 \end{align}
 
-To approximate this Binomial distribution using a Gaussian (Normal) distribution $Y \sim \mathcal{N}(\mu, \sigma^2)$ with the same mean and variance, the Probability Density Function (PDF) is defined as:
-\begin{equation}
-f_Y(x) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left( -\frac{(x - \mu)^2}{2\sigma^2} \right)
-\end{equation}
+From \eqref{gaussian}
 
 Substituting the given mean $\mu = 16$ and variance $\sigma^2 = 12$:
-\begin{equation}
+\begin{align}
 f_Y(x) = \frac{1}{\sqrt{24\pi}} \exp\left( -\frac{(x - 16)^2}{24} \right)
-\end{equation}
+\end{align}
 
 To find $N$, divide the variance equation by the mean equation:
-\begin{equation}
+\begin{align}
+From \eqref{variance}
 \frac{Np(1 - p)}{Np} = \frac{12}{16}
-\end{equation}
+\end{align}
 
 Simplifying:
-\begin{equation}
+\begin{align}
 1 - p = \frac{3}{4} = 0.75
-\end{equation}
+\end{align}
 
 Solving for $p$:
-\begin{equation}
+\begin{align}
 p = 1 - 0.75 = 0.25 = \frac{1}{4}
-\end{equation}
+\end{align}
 
 Substituting $p = \frac{1}{4}$ back into the expectation value equation:
 \begin{align}
@@ -1460,11 +1354,14 @@ N &= 64
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figs/11.png}
+    \includegraphics[width=0.75\textwidth]{figs/11.png}
     \caption{Probability vs values}
     \label{probability vs values}
 \end{figure}
-\noindent\framebox[\textwidth][c]{codes/bm12.py}
+
+\begin{lstlisting}
+Codes/bm12.py
+\end{lstlisting}
 
 
 
@@ -1505,7 +1402,7 @@ Here, $y'$ and $y''$ are the first and second derivatives of $y$, respectively.
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 Given the second-order linear differential equation:
 \begin{equation}
@@ -1514,80 +1411,80 @@ y''(x) - 0.25 y(x) = 0
 
 with initial conditions $y(0) = 1$ and $y'(0) = 1$.
 
-\vspace{0.5em}
+\vspace{0.5cm}
 \text{Take the Laplace Transform on both sides}
-
-Let $\mathcal{L}\{y(x)\} = Y(s)$. Applying the Laplace Transform derivative property:
-\[
-\mathcal{L}\{y''(x)\} = s^2 Y(s) - s y(0) - y'(0)
-\]
+Let $\mathcal{L}\{y(x)\} = Y(s)$. 
+From \eqref{la[lace}
 
 Substituting into the differential equation gives:
-\[
+
+\begin{align}
 \left[ s^2 Y(s) - s y(0) - y'(0) \right] - 0.25 Y(s) = 0
-\]
+\end{align}
 
 \vspace{0.5em}
 \text{Substitute the initial conditions}
-
+\
 Substitute $y(0) = 1$ and $y'(0) = 1$:
-\[
+
+\begin{align}
 s^2 Y(s) - s - 1 - 0.25 Y(s) = 0
-\]
+\end{align}
 
-Group $Y(s)$ terms together:
-\[
+Group $Y(s)$ terms together as \eqref{partial}
+\begin{align}
 (s^2 - 0.25) Y(s) = s + 1
-\]
+\end{align}
 
-\[
+\begin{align}
 Y(s) = \frac{s + 1}{s^2 - 0.25} = \frac{s + 1}{\left(s - \frac{1}{2}\right)\left(s + \frac{1}{2}\right)}
-\]
+\end{align}
 
 \vspace{0.5em}
 \text{Apply Partial Fraction Decomposition}
 
 Express $Y(s)$ as:
-\[
+\begin{align}
 Y(s) = \frac{A}{s - 0.5} + \frac{B}{s + 0.5}
-\]
+\end{align}
 
 Solving for constants $A$ and $B$:
-\[
+\begin{align}
 A = \lim_{s \to 0.5} (s - 0.5) Y(s) = \frac{0.5 + 1}{0.5 + 0.5} = 1.5 = \frac{3}{2}
-\]
-\[
+\end{align}
+\begin{align}
 B = \lim_{s \to -0.5} (s + 0.5) Y(s) = \frac{-0.5 + 1}{-0.5 - 0.5} = -0.5 = -\frac{1}{2}
-\]
+\end{align}
 
 So, the transform is:
-\[
+\begin{align}
 Y(s) = \frac{1.5}{s - 0.5} - \frac{0.5}{s + 0.5}
-\]
+\end{align}
 
 \vspace{0.5em}
 \text{Take the Inverse Laplace Transform}
 
 Using $\mathcal{L}^{-1}\left\{\frac{1}{s - a}\right\} = e^{at}$:
-\[
+\begin{align}
 y(x) = 1.5 e^{0.5x} - 0.5 e^{-0.5x}
-\]
+\end{align}
 
 \vspace{0.5em}
 \text{Evaluate $y(\log_e 100)$}
 
 Substitute $x = \log_e 100 = \ln(100)$:
-\[
+\begin{align}
 e^{0.5 \ln(100)} = e^{\ln(100^{0.5})} = \sqrt{100} = 10
-\]
-\[
+\end{align}
+\begin{align}
 e^{-0.5 \ln(100)} = \frac{1}{\sqrt{100}} = \frac{1}{10} = 0.1
-\]
+\end{align}
 
 Now, evaluate $y(\ln 100)$:
-\[
+\begin{align}
 y(\ln 100) = 1.5(10) - 0.5(0.1) = 15 - 0.05 = 14.95
-\]
+\end{align}
+ 
 
 \text{Correct Option: (c) 14.95}
 
@@ -1599,7 +1496,10 @@ y(\ln 100) = 1.5(10) - 0.5(0.1) = 15 - 0.05 = 14.95
     \label{Stem plot of Euler Reccurrence relation}
 \end{figure}
 
-\noindent\framebox[\textwidth][c]{codes/bm13.py}
+
+\begin{lstlisting}
+Codes/bm13.py
+\end{lstlisting}
 
 
 % =========================================================
@@ -1608,7 +1508,8 @@ y(\ln 100) = 1.5(10) - 0.5(0.1) = 15 - 0.05 = 14.95
 
 
 
-\item In the circuit shown below, $V_{\text{in}} = 10\cos(1000t)\text{ volts}$. The magnitude of the input impedance of the circuit is \underline{\hspace{2cm}} $\text{k}\Omega$. (rounded off to one decimal place)
+\item In the circuit shown below, $V_{\text{in}} = 10\cos(1000t)\text{ volts}$. The magnitude of the input impedance of the circuit is 
+\underline{\hspace{2cm}} $\text{k}\Omega$. (rounded off to one decimal place)
 
 \begin{center}
 \begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
@@ -1618,28 +1519,26 @@ y(\ln 100) = 1.5(10) - 0.5(0.1) = 15 - 0.05 = 14.95
   \draw[thick, decorate, decoration={zigzag, segment length=6pt, amplitude=4pt}] (0.8,1.5) -- (2.2,1.5);
   \node[above=4pt] at (1.5,1.5) {$3\text{ k}\Omega$};
   \draw[thick] (2.2,1.5) -- (3,1.5);
-
+  
   % Parallel top branch: 1 k\Omega resistor
   \draw[thick] (3,1.5) -- (3,2.2) -- (3.8,2.2);
   \draw[thick, decorate, decoration={zigzag, segment length=6pt, amplitude=4pt}] (3.8,2.2) -- (5.2,2.2);
   \node[above=4pt] at (4.5,2.2) {$1\text{ k}\Omega$};
   \draw[thick] (5.2,2.2) -- (6,2.2) -- (6,1.5);
-
+  
   % Parallel bottom branch: 1 \mu F capacitor
   \draw[thick] (3,1.5) -- (3,0.8) -- (4.3,0.8);
   \draw[thick] (4.3,0.5) -- (4.3,1.1);
   \draw[thick] (4.7,0.5) -- (4.7,1.1);
   \node[above=4pt] at (4.5,1.1) {$1\ \mu\text{F}$};
   \draw[thick] (4.7,0.8) -- (6,0.8);
-
+  
   % Outer connections & AC Source
   \draw[thick] (6,1.5) -- (6,-1) -- (3.9,-1);
   \draw[thick] (0,0) -- (0,-1) -- (3.1,-1);
-
   \draw[thick] (3.5,-1) circle (0.5);
   \draw[thick] (3.3,-1) sin (3.4,-0.85) cos (3.5,-1) sin (3.6,-1.15) cos (3.7,-1);
   \node[above=6pt] at (3.5,-0.5) {$V_{\text{in}}$};
-
 \end{tikzpicture}
 \end{center}
 
@@ -1669,7 +1568,7 @@ y(\ln 100) = 1.5(10) - 0.5(0.1) = 15 - 0.05 = 14.95
 % =========================================================
 
 
-\textbf{Solution:}
+\solution
 
 Given the input voltage $V_{\text{in}} = 10\cos(1000t)\text{ V}$, the circuit parameter values are:
 \[
@@ -1677,75 +1576,36 @@ R_1 = 3\text{ k}\Omega, \quad R_2 = 1\text{ k}\Omega, \quad C = 1\,\mu\text{F}, 
 \]
 
 \vspace{0.5em}
-\text{Symbolic Impedance Derivation}
-
-The impedance of the capacitor in terms of angular frequency $\omega$ is:
-\[
-Z_C(\omega) = \frac{1}{j\omega C} = -\frac{j}{\omega C}
-\]
-
-The parallel combination of resistor $R_2$ and capacitor $Z_C(\omega)$ gives $Z_p(\omega)$:
-\[
-Z_p(\omega) = \frac{R_2 \cdot Z_C(\omega)}{R_2 + Z_C(\omega)} = \frac{R_2 \left(-\frac{j}{\omega C}\right)}{R_2 - \frac{j}{\omega C}} = \frac{-j R_2}{\omega R_2 C - j}
-\]
-
-Multiplying numerator and denominator by the complex conjugate $(\omega R_2 C + j)$:
-\[
-Z_p(\omega) = \frac{-j R_2 (\omega R_2 C + j)}{(\omega R_2 C - j)(\omega R_2 C + j)} = \frac{R_2 - j \omega R_2^2 C}{1 + (\omega R_2 C)^2}
-\]
-
-The total input impedance $Z_{\text{in}}(\omega)$ in series with $R_1$ is:
-\[
-Z_{\text{in}}(\omega) = R_1 + Z_p(\omega) = \left( R_1 + \frac{R_2}{1 + (\omega R_2 C)^2} \right) - j \left( \frac{\omega R_2^2 C}{1 + (\omega R_2 C)^2} \right)
-\]
+Refer to \eqref{impedence deri}
 
 \vspace{0.5em}
-\text{Magnitude and Phase Expressions in terms of $\omega$}
 
-\text{1. Magnitude Spectrum $|Z_{\text{in}}(\omega)|$:}
-\[
-|Z_{\text{in}}(\omega)| = \sqrt{ \left[ R_1 + \frac{R_2}{1 + (\omega R_2 C)^2} \right]^2 + \left[ \frac{\omega R_2^2 C}{1 + (\omega R_2 C)^2} \right]^2 }
-\]
-
-Simplifying the algebraic expression:
-\[
-|Z_{\text{in}}(\omega)| = \sqrt{ R_1^2 + \frac{2 R_1 R_2 + R_2^2 + (\omega R_1 R_2 C)^2}{1 + (\omega R_2 C)^2} }
-\]
-
-\text{2. Phase Spectrum $\angle Z_{\text{in}}(\omega)$:}
-\[
-\angle Z_{\text{in}}(\omega) = -\tan^{-1}\left( \frac{\frac{\omega R_2^2 C}{1 + (\omega R_2 C)^2}}{R_1 + \frac{R_2}{1 + (\omega R_2 C)^2}} \right) = -\tan^{-1}\left( \frac{\omega R_2^2 C}{R_1(1 + (\omega R_2 C)^2) + R_2} \right)
-\]
-
-\vspace{0.5em}
-\text{Numerical Evaluation at $\omega = 1000\text{ rad/s}$}
-
-Substituting $R_1 = 3\text{ k}\Omega$, $R_2 = 1\text{ k}\Omega$, $C = 1\,\mu\text{F}$, and $\omega = 1000\text{ rad/s}$:
+Substituting $R_1$, $R_2$, $C$, and $\omega$: 
 
 First calculate the normalized frequency factor:
-\[
+\begin{align}
 \omega R_2 C = (1000)(1 \times 10^3)(1 \times 10^{-6}) = 1
-\]
+\end{align}
 
 Now, compute real and imaginary components of $Z_p$:
-\[
+\begin{align}
 Z_p = \frac{1 - j(1)}{1 + (1)^2} = 0.5 - j0.5\text{ k}\Omega
-\]
+\end{align}
 
 Total impedance:
-\[
+\begin{align}
 Z_{\text{in}} = 3 + (0.5 - j0.5) = 3.5 - j0.5\text{ k}\Omega
-\]
+\end{align}
 
 Evaluating Magnitude $|Z_{\text{in}}|$:
-\[
+\begin{align}
 |Z_{\text{in}}| = \sqrt{(3.5)^2 + (-0.5)^2} = \sqrt{12.25 + 0.25} = \sqrt{12.5} \approx 3.5355\text{ k}\Omega \approx 3.5\text{ k}\Omega
-\]
+\end{align}
 
 Evaluating Phase $\angle Z_{\text{in}}$:
-\[
+\begin{align}
 \angle Z_{\text{in}} = \tan^{-1}\left(\frac{-0.5}{3.5}\right) = -\tan^{-1}\left(\frac{1}{7}\right) \approx -8.13^\circ
-\]
+\end{align}
 
 \text{Correct Answer: (b) 3.5}
 
@@ -1755,7 +1615,10 @@ Evaluating Phase $\angle Z_{\text{in}}$:
     \caption{Impedance Magnitude VS Omega; Phase VS Omega}
     \label{Impedance Magnitude VS Omega; Phase VS Omega}
 \end{figure}
-\noindent\framebox[\textwidth][c]{codes/bm14.py}
+
+\begin{lstlisting}
+Codes/bm14.py
+\end{lstlisting}
 
 % =========================================================
 % QUESTION 15
@@ -1788,7 +1651,7 @@ Evaluating Phase $\angle Z_{\text{in}}$:
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 Given the expression:
 
@@ -1796,25 +1659,9 @@ Given the expression:
 y = \log_e(-e^x) = \ln(-e^x)
 \end{align}
 
-Using logarithmic properties, we rewrite the term inside the logarithm:
+Using \eqref{log}
 
-\begin{align}
--e^x = (-1) \cdot e^x
-\end{align}
-
-Applying Euler's identity, $-1$ can be expressed in complex exponential form as:
-
-\begin{align}
--1 = e^{i(2k+1)\pi}, \quad \text{for } k \in \mathbb{Z}
-\end{align}
-
-Substituting equation (15.3) into equation (15.2):
-
-\begin{align}
--e^x = e^{x} \cdot e^{i(2k+1)\pi} = e^{x + i(2k+1)\pi}
-\end{align}
-
-Taking the natural logarithm on both sides:
+Taking the natural logarithm on both sides of \eqref{e^x}
 
 \begin{align}
 y = \ln\left(e^{x + i(2k+1)\pi}\right)
@@ -1897,11 +1744,11 @@ Hence, the correct options are (b), (c)
 % =========================================================
 % SOLUTION
 % =========================================================
-
-\begin{align*}
+\solution
+\begin{align}
 \text{System } U: & \quad y(t) = x(t)^2 + 1 \\
 \text{System } V: & \quad y(t) = x(t + 1)
-\end{align*}
+\end{align}
 
 
 \subsection*{System $U$: $y(t) = x(t)^2 + 1$}
@@ -2013,13 +1860,13 @@ For input signal $x[n] = \delta[n] + \delta[n-1]$, which of the following option
 % =========================================================
 
 \begin{enumerate}
-    \item[(a)] $y[2] = 11/6$
+    \item[(a)] $y(2) = 11/6$
 
-    \item[(b)] $y[2] = 5/6$
+    \item[(b)] $y(2) = 5/6$
 
-    \item[(c)] $y[k] = 0$ for all $k \ge 3$
+    \item[(c)] $y(2) = 0$ for all $k \ge 3$
 
-    \item[(d)] $y[k] = 0$ for all $k \ge 4$
+    \item[(d)] $y(2) = 0$ for all $k \ge 4$
 \end{enumerate}
 
 \vspace{0.5cm}
@@ -2028,91 +1875,91 @@ For input signal $x[n] = \delta[n] + \delta[n-1]$, which of the following option
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 
 \vspace{0.5em}
 \text{Express sequences in vector form}
 
-The impulse response sequence $h[n]$ of length $M = 3$ is:
-\[
-h[n] = \left[ 1, \, \frac{1}{2}, \, \frac{1}{3} \right] \quad \text{for } n = 0, 1, 2
-\]
+The impulse response sequence $h(n)$ of length $M = 3$ is:
 
-The input signal sequence $x[n]$ of length $N = 2$ is:
-\[
-x[n] = [1, \, 1] \quad \text{for } n = 0, 1
-\]
+\begin{align}
+	\vec{h(n)}=\myvec{1 & 1/2 & 1/3}
+\end{align}
 
-The linear convolution $y[n] = h[n] * x[n]$ has a total length of $L = M + N - 1 = 3 + 2 - 1 = 4$ points (spanning $n = 0, 1, 2, 3$).
+The input signal sequence $x(n)$ of length $N = 2$ is:
 
+\begin{align}
+	\vec{x(n)}=\myvec{1 & 1}
+\end{align}
+The linear convolution $y(n) = h(n) * x(n)$ has a total length of $4$ points (spanning $n = 0, 1, 2, 3$). (From \eqref(convolution})
 \vspace{0.5em}
 \text{Construct the Convolution (Toeplitz) Matrix}
-
-Linear convolution can be represented as a matrix-vector product $\mathbf{y} = \mathbf{H} \mathbf{x}$, where $\mathbf{H}$ is a $(M + N - 1) \times N = 4 \times 2$ lower-triangular Toeplitz matrix formed by shifting $h[n]$ downwards:
-
-\[
-\mathbf{H} = \begin{bmatrix} 
-h[0] & 0 \\ 
-h[1] & h[0] \\ 
-h[2] & h[1] \\ 
-0 & h[2] 
-\end{bmatrix} 
-= \begin{bmatrix} 
-1 & 0 \\[4pt] 
-\frac{1}{2} & 1 \\[4pt] 
-\frac{1}{3} & \frac{1}{2} \\[4pt] 
-0 & \frac{1}{3} 
-\end{bmatrix}
-\]
-
-The input vector $\mathbf{x}$ is:
-\[
-\mathbf{x} = \begin{bmatrix} x[0] \\[4pt] x[1] \end{bmatrix} = \begin{bmatrix} 1 \\[4pt] 1 \end{bmatrix}
-\]
-
+Linear convolution can be represented as a matrix-vector product \myvec{y}=\myvec{H}\myvec{x}, where \myvec{H} is a (M+N-1)*N=8 lower-triangular Toeplitz matrix formed by shifting $h(n)$ downwards:
+\begin{align}
+ \vec{H}=\myvec{ 
+   h(0) & 0 \\ 
+   h(1) & h(0) \\ 
+   h(2) & h(1) \\ 
+   0 & h(2) 
+   }
+\end{align} 
+\begin{align}
+  =\myvec{ 
+    1 & 0 \\ 
+    1/2 & 1 \\
+    1/3 & 1/2 \\
+    0 & 1/3 
+    }
+    \end{align}
+The input vector \myvec{x} is:
+\begin{align}
+ \vec{x}=\myvec{
+          x(0) \\
+          x(1)
+          }
+          =\myvec{
+          1\\
+          1
+          }
+\end{align}
 \vspace{0.5em}
 \text{Matrix-Vector Multiplication}
-
-\[
-\begin{bmatrix} y[0] \\[4pt] y[1] \\[4pt] y[2] \\[4pt] y[3] \end{bmatrix} = 
-\begin{bmatrix} 
-1 & 0 \\[4pt] 
-\frac{1}{2} & 1 \\[4pt] 
-\frac{1}{3} & \frac{1}{2} \\[4pt] 
-0 & \frac{1}{3} 
-\end{bmatrix}
-\begin{bmatrix} 1 \\[4pt] 1 \end{bmatrix}
-\]
-
+\begin{align}
+	\myvec{
+	y(0) \\
+	y(1) \\
+	y(2) \\
+	y(3)
+	}=
+	\myvec{
+	1 & 0 \\
+	1/2 & 1 \\
+	1/3 & 1/2 \\
+	0 & 1/3 
+	}
+	\myvec{
+	1 \\
+	1
+	}
+\end{align}
 Computing each element:
-\[
-y[0] = 1(1) + 0(1) = 1
-\]
-\[
-y[1] = \frac{1}{2}(1) + 1(1) = \frac{3}{2}
-\]
-\[
-y[2] = \frac{1}{3}(1) + \frac{1}{2}(1) = \frac{5}{6}
-\]
-\[
-y[3] = 0(1) + \frac{1}{3}(1) = \frac{1}{3}
-\]
-
+\begin{align}
+y(0) = 1(1) + 0(1) = 1\\
+y(1) = \frac{1}{2}(1) + 1(1) = \frac{3}{2}\\
+y(2) = \frac{1}{3}(1) + \frac{1}{2}(1) = \frac{5}{6}\\
+y(3) = 0(1) + \frac{1}{3}(1) = \frac{1}{3}
+\end{align}
 For $k \ge 4$, $y[k] = 0$ since the signal duration ends at $n = 3$.
-
 \vspace{0.5em}
 \text{Verify the Options}
-
 \begin{itemize}
-    \item \text{Option (a):} $y[2] = \frac{11}{6} \quad \text{--- Incorrect}$
-    \item \text{Option (b):} $y[2] = \frac{5}{6} \quad \text{--- Correct}$
-    \item \text{Option (c):} $y[k] = 0 \text{ for all } k \ge 3 \quad \text{--- Incorrect (since } y[3] = \frac{1}{3} \neq 0\text{)}$
-    \item \text{Option (d):} $y[k] = 0 \text{ for all } k \ge 4 \quad \text{--- Correct}$
+  \item \text{Option (a):} $y(2) = \frac{11}{6}$ \quad (\text{Incorrect})
+  \item \text{Option (b):} $y(2) = \frac{5}{6}$ \quad (\text{Correct})
+  \item \text{Option (c):} $y(k) = 0$ for all $k \ge 3$ \quad (\text{Incorrect, since } $y(3) = \frac{1}{3} \neq 0$)
+  \item \text{Option (d):} $y(k) = 0$ for all $k \ge 4$ \quad (\text{Correct})
 \end{itemize}
-
 \text{Correct Options: (b) and (d)}
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figs/bm17a.png}
@@ -2120,7 +1967,9 @@ For $k \ge 4$, $y[k] = 0$ since the signal duration ends at $n = 3$.
     \label{signals vs n}
 \end{figure}
 
-\noindent\framebox[\textwidth][c]{codes/bm17a.py}
+\begin{lstlisting}
+Codes/bm17a.py
+\end{lstlisting}
 
 
 % =========================================================
@@ -2138,7 +1987,7 @@ For $k \ge 4$, $y[k] = 0$ since the signal duration ends at $n = 3$.
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 First, convert the binary input $(10110111)_2$ into its equivalent decimal value $D$:
 
@@ -2156,12 +2005,7 @@ For an 8-bit DAC:
     \item Maximum digital value $(11111111)_2 = 255$ corresponds to Full-Scale Voltage $V_{\text{FS}} = 5\text{ V}$.
 \end{itemize}
 
-The output voltage $V_{\text{out}}$ for a given decimal value $D$ is given by:
-
-\begin{align}
-V_{\text{out}} = V_{\text{FS}} \times \left( \frac{D}{2^n - 1} \right)
-\end{align}
-
+From \eqref{output}
 where $n = 8$ bits, so $2^8 - 1 = 255$.
 
 Substituting $D = 183$ and $V_{\text{FS}} = 5\text{ V}$:
@@ -2176,7 +2020,10 @@ V_{\text{out}} = \frac{915}{255} \approx 3.5882\text{ V}
 
 Rounding off to two decimal places gives: 3.59
 
-\noindent\framebox[\textwidth][c]{codes/bm18.py}
+
+\begin{lstlisting}
+Codes/bm18.py
+\end{lstlisting}
 
 
 % =========================================================
@@ -2268,17 +2115,11 @@ Rounding off to two decimal places gives: 3.59
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 The given operational amplifier circuit is an **inverting summing amplifier**. 
 
-The general expression for the output voltage of an inverting summing amplifier is given by:
-
-\begin{align}
-V_{\text{out}} = -\left( \frac{R_f}{R_1} V_1 + \frac{R_f}{R_2} V_2 + \frac{R_f}{R_3} V_3 \right)
-\end{align}
-
-Given values:
+\text Given:
 \begin{itemize}
     \item $R_f = 10\text{ k}\Omega$
     \item $R_1 = 5\text{ k}\Omega, \quad V_1 = 2\text{ V}$
@@ -2287,7 +2128,7 @@ Given values:
     \item Power supply saturation limits: $\pm V_{\text{sat}} = \pm 15\text{ V}$
 \end{itemize}
 
-Substitute the given component values into equation (19.1):
+Substitute the given component values into \eqref{amplifier}
 
 \begin{align}
 V_{\text{out}} = -\left( \frac{10}{5}(2) + \frac{10}{4}(2) + \frac{10}{2}(1) \right)
@@ -2413,23 +2254,18 @@ Given: $R = 1\text{ k}\Omega$; $R_1 = 2\text{ k}\Omega$; $R_2 = 6\text{ k}\Omega
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
-The given circuit is a **Wien Bridge Oscillator**.
+The given circuit is a Wien Bridge Oscillator.
 
-The frequency of oscillation $f_0$ for a Wien Bridge Oscillator constructed using identical frequency-selective resistors $R$ and capacitors $C$ is given by:
 
-\begin{align}
-f_0 = \frac{1}{2\pi R C}
-\end{align}
-
-Given values:
+\text Given values:
 \begin{itemize}
     \item $R = 1\text{ k}\Omega = 10^3\ \Omega$
     \item $C = 0.1\ \mu\text{F} = 0.1 \times 10^{-6}\text{ F} = 10^{-7}\text{ F}$
 \end{itemize}
 
-Substitute $R$ and $C$ into equation (20.1):
+Substitute $R$ and $C$ into equation \eqref{wien}
 
 \begin{align}
 f_0 = \frac{1}{2\pi (10^3)(10^{-7})} = \frac{1}{2\pi \times 10^{-4}}\text{ Hz}
@@ -2508,63 +2344,32 @@ Rounding off to two decimal places: 1.59
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 \vspace{0.5em}
-\text{Time-Domain Differential Equation}
 
-For the series RLC circuit driven by a sinusoidal voltage source $v(t) = V_m \cos(\omega t)$, Kirchhoff's Voltage Law (KVL) gives:
-\[
-R i(t) + L \frac{di(t)}{dt} + \frac{1}{C} \int i(t) dt = v(t)
-\]
-
-Assuming steady-state sinusoidal response $i(t) = I_m \cos(\omega t - \phi)$:
-
-\vspace{0.5em}
-\text{Phasor / Frequency-Domain Impedance}
-
-Converting to complex phasor notation $V(t) = V_{\text{rms}} \sqrt{2} e^{j\omega t}$ and $I(t) = I_{\text{rms}} \sqrt{2} e^{j(\omega t - \phi)}$:
-\[
-Z(\omega) = \frac{V(\omega)}{I(\omega)} = R + j\omega L + \frac{1}{j\omega C} = R + j\left(\omega L - \frac{1}{\omega C}\right)
-\]
-
-The magnitude of the circuit impedance as a function of angular frequency $\omega$ is:
-\[
-|Z(\omega)| = \sqrt{R^2 + \left(\omega L - \frac{1}{\omega C}\right)^2}
-\]
-
-\vspace{0.5em}
-\text{Resonance Condition}
-
-Resonance occurs at frequency $\omega_0$ where the reactive components cancel each other ($X_L = X_C$), minimizing $|Z(\omega)|$:
-\[
-\omega_0 L - \frac{1}{\omega_0 C} = 0 \implies \omega_0 = \frac{1}{\sqrt{LC}}
-\]
+\text From \eqref{resonance}
 
 Evaluating the resonance angular frequency and cyclic frequency:
-\[
+\begin{align}
 \omega_0 = \frac{1}{\sqrt{(10 \times 10^{-3} \text{ H})(8 \times 10^{-6} \text{ F})}} = \frac{1}{\sqrt{8 \times 10^{-8}}} = 3535.53 \text{ rad/s}
-\]
-\[
+\end{align}
+\begin{align}
 f_0 = \frac{\omega_0}{2\pi} \approx 562.7 \text{ Hz}
-\]
+\end{align}
 
 At $\omega = \omega_0$, the net reactance is zero ($Z(\omega_0) = R = 60\,\Omega$).
 
 \vspace{0.5em}
 \text{RMS Current Evaluation at Resonance}
-
-The root-mean-square (RMS) current $I_{\text{rms}}$ at resonance is:
-\[
-I_{\text{rms}}(\omega_0) = \frac{V_{\text{rms}}}{|Z(\omega_0)|} = \frac{V_{\text{rms}}}{R}
-\]
+From \eqref{res}
 
 Substituting the given numerical values ($V_{\text{rms}} = 240\text{ V}$, $R = 60\,\Omega$):
-\[
+\begin{align}
 I_{\text{rms}}(\omega_0) = \frac{240\text{ V}}{60\,\Omega} = 4\text{ A}
-\]
+\end{align}
 
-\text{Answer: 4}
+
 
 
 \begin{figure}[H]
@@ -2574,7 +2379,9 @@ I_{\text{rms}}(\omega_0) = \frac{240\text{ V}}{60\,\Omega} = 4\text{ A}
     \label{strength of implanted suture}
 \end{figure}
 
-\noindent\framebox[\textwidth][c]{codes/bm21.py}
+\begin{lstlisting}
+Codes/bm21.py
+\end{lstlisting}
 
 % =========================================================
 % QUESTION 22
@@ -2591,62 +2398,58 @@ I_{\text{rms}}(\omega_0) = \frac{240\text{ V}}{60\,\Omega} = 4\text{ A}
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 
 \vspace{0.5em}
 \text{Function Definition \& Derivative}
 
 Given the non-linear equation:
-\[
+\begin{align}
 f(x) = x^3 - 2x - 5 = 0
-\]
+\end{align}
 
 Taking the derivative with respect to $x$:
-\[
+\begin{align}
 f'(x) = 3x^2 - 2
-\]
+\end{align}
 
 \vspace{0.5em}
 \text{General Newton-Raphson Update Equation}
 
-The general iterative update formula is defined as:
-\[
-x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
-\]
-
+From \eqref{raphson}
 Substituting $f(x_n)$ and $f'(x_n)$ into the update equation gives the explicit recurrence relation:
-\[
+\begin{align}
 x_{n+1} = x_n - \frac{x_n^3 - 2x_n - 5}{3x_n^2 - 2} = \frac{2x_n^3 + 5}{3x_n^2 - 2}
-\]
+\end{align}
 
 \vspace{0.5em}
 \text{First Iteration Calculation ($n = 0$ with $x_0 = 3$)}
 
 Evaluating $f(x_0)$ and $f'(x_0)$:
-\[
+\begin{align}
 f(3) = (3)^3 - 2(3) - 5 = 27 - 6 - 5 = 16
-\]
-\[
+\end{align}
+\begin{align}
 f'(3) = 3(3)^2 - 2 = 27 - 2 = 25
-\]
+\end{align}
 
 Using the update equation to calculate $x_1$:
-\[
+\begin{align}
 x_1 = 3 - \frac{16}{25} = 3 - 0.64 = 2.36
-\]
+\end{align}
 
 \vspace{0.5em}
 \text{Subsequent Iterations (Finding the Actual Root)}
 
 Using the simplified update equation $x_{n+1} = \frac{2x_n^3 + 5}{3x_n^2 - 2}$:
-\begin{align*}
+\begin{align}
 x_0 &= 3.0000 \\
 x_1 &= 2.3600 \\
 x_2 &= \frac{2(2.36)^3 + 5}{3(2.36)^2 - 2} \approx 2.1272 \\
 x_3 &= \frac{2(2.1272)^3 + 5}{3(2.1272)^2 - 2} \approx 2.0951 \\
 x_4 &\approx 2.0946 \quad (\text{Converged Real Root } \alpha)
-\end{align*}
+\end{align}
 
 \text{Answer for $x_1$ after ONE iteration: 2.36}
 
@@ -2656,7 +2459,10 @@ x_4 &\approx 2.0946 \quad (\text{Converged Real Root } \alpha)
     \caption{Newton Raphson iteration for f(x)}
     \label{Newton Raphson iteration for f(x)}
 \end{figure}
-\noindent\framebox[\textwidth][c]{codes/bm22a.py}
+
+\begin{lstlisting}
+Codes/bm22a.py
+\end{lstlisting}
 
 
 
@@ -2678,11 +2484,10 @@ where $\sigma_0$ represents the original strength and time $t$ is measured in we
 % =========================================================
 % SOLUTION
 % =========================================================
-
-\textbf{Solution:}
+\solution
 
 Let $\sigma(t)$ denote the strength of the suture at time $t$ weeks:
-
+\text From \eqref{decay}
 \begin{align}
 \sigma(t) = \sigma_0 - 2\ln(t)
 \end{align}
@@ -2699,17 +2504,7 @@ Now, we need to find the strength at $t = 8$ weeks, $\sigma(8)$:
 \sigma(8) = \sigma_0 - 2\ln(8)
 \end{align}
 
-Subtracting equation (23.2) from equation (23.3):
-
-\begin{align}
-\sigma(8) - 2 = -2\ln(8) - (-2\ln(4))
-\end{align}
-
-\begin{align}
-\sigma(8) - 2 = -2\left( \ln(8) - \ln(4) \right)
-\end{align}
-
-Using the logarithmic identity $\ln(a) - \ln(b) = \ln\left(\frac{a}{b}\right)$:
+By solving:
 
 \begin{align}
 \sigma(8) - 2 = -2\ln\left(\frac{8}{4}\right) = -2\ln(2)
@@ -2730,12 +2525,15 @@ Rounding off to two decimal places gives: 0.61
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figs/bm23.png}
+    \includegraphics[width=0.75\textwidth]{figs/bm23.png}
     \caption{Strength vs Time}
     \label{strength of implanted suture}
 \end{figure}
 
-\noindent\framebox[\textwidth][c]{codes/bm23.py}
+
+\begin{lstlisting}
+Codes/bm23.py
+\end{lstlisting}
 
 
 % =========================================================
@@ -2785,7 +2583,7 @@ After the $1^{\text{st}}$ round, $4^{\text{th}}$ student behind P leaves the gam
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 Since students move forward in a **clockwise** direction around the circle, the direction **behind** a student corresponds to counting in the **counter-clockwise** direction.
 
@@ -2880,7 +2678,7 @@ France & 16 & 26 & 22 \\ \hline
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 First, calculate the total number of medals for each nation:
 
@@ -2923,7 +2721,10 @@ Now, evaluate each statement:
 \text{(C) USA and Canada together have less than 50\% of the medals awarded to the nations in the above table.}
 \end{align}
 
-\noindent\framebox[\textwidth][c]{codes/bm25.py}
+
+\begin{lstlisting}
+Codes/bm25.py
+\end{lstlisting}
 
 
 % =========================================================
@@ -2949,7 +2750,7 @@ Now, evaluate each statement:
 % SOLUTION
 % =========================================================
 
-\textbf{Solution:}
+\solution
 
 Let $F$ be the consulting fee charged by the employee. Since the maximum total payable amount is $\text{rupee } 10,00,000$, we assume $F > 5,00,000$.
 
@@ -3011,47 +2812,36 @@ Rounding off to the nearest integer gives $\text{rupee } 7,24,961$.
 \end{enumerate}
 
 \vspace{0.5cm}
-
-\noindent \textbf{Solution:}
-
-\noindent \text{Correct Option: (A)}
+\solution
 
 \vspace{0.2cm}
-\noindent \text{Step-by-step explanation:}
 
-\begin{enumerate}
-    \item \text{Property of Determinants:} 
-    For any $n \times n$ matrix $A$ and a scalar $k$, multiplying every element of $A$ by $k$ yields:
-    \begin{align}
-    \det(k A) = k^n \cdot \det(A)
-    \end{align}
-
-    \item \text{Given Data:}
-    \begin{itemize}
-        \item Order of matrix $M$, $n = 3$
-        \item Determinant of matrix $M$, $\det(M) = 8$
-        \item Scalar multiplier, $k = -2$
-    \end{itemize}
-
-    \item \text{Calculation:}
-    Substituting the given values into the formula:
+    
+\text{Given Data:}
+   
+Order of matrix $M$, $n = 3$
+Determinant of matrix $M$, $\det(M) = 8$
+Scalar multiplier, $k = -2$
+Substituting the given values into \eqref{det}
     \begin{align}
     \det(-2 M) = (-2)^3 \cdot \det(M)
     \end{align}
     \begin{align}
     \det(-2 M) = -8 \cdot 8 = -64
     \end{align}
-\end{enumerate}
 
 \begin{align}
 \text{(A) -64}
 \end{align}
-\noindent\framebox[\textwidth][c]{codes/bm26.py}
+
+\begin{lstlisting}
+Codes/bm26.py
+\end{lstlisting}
 
 
 \end{enumerate}
 
 
-\end{document}
+%\end{document}
 
 
