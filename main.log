@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.9.7)  21 SEP 2026 09:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex 2026.9.7)  22 SEP 2026 22:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -280,13 +280,84 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-(./gvv-book.sty (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count305
+\mult@box=\box55
+\multicol@leftmargin=\dimen184
+\c@unbalance=\count306
+\c@collectmore=\count307
+\doublecol@number=\count308
+\multicoltolerance=\count309
+\multicolpretolerance=\count310
+\full@width=\dimen185
+\page@free=\dimen186
+\premulticols=\dimen187
+\postmulticols=\dimen188
+\multicolsep=\skip53
+\multicolbaselineskip=\skip54
+\partial@page=\box56
+\last@line=\box57
+\mc@boxedresult=\box58
+\maxbalancingoverflow=\dimen189
+\mult@rightbox=\box59
+\mult@grightbox=\box60
+\mult@firstbox=\box61
+\mult@gfirstbox=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\c@minrows=\count311
+\c@columnbadness=\count312
+\c@finalcolumnbadness=\count313
+\last@try=\dimen190
+\multicolovershoot=\dimen191
+\multicolundershoot=\dimen192
+\mult@nat@firstbox=\box99
+\colbreak@box=\box100
+\mc@col@check@num=\count314
+\g__mc_curr_col_int=\count315
+) (./gvv-book.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count305
+\c@float@type=\count316
 \float@exts=\toks21
-\float@box=\box55
+\float@box=\box101
 \@float@everytoks=\toks22
-\@floatcapt=\box56
+\@floatcapt=\box102
 )
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
@@ -296,7 +367,7 @@ Package: gensymb 2022/10/17 v1.0.2 (KJH)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
-\@mathmargin=\skip53
+\@mathmargin=\skip55
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -305,107 +376,107 @@ Package: amstext 2024/11/17 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks23
-\ex@=\dimen184
+\ex@=\dimen193
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen185
+\pmbraise@=\dimen194
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count306
+\inf@bad=\count317
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count307
-\leftroot@=\count308
+\uproot@=\count318
+\leftroot@=\count319
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count309
-\DOTSCASE@=\count310
+\classnum@=\count320
+\DOTSCASE@=\count321
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box57
-\strutbox@=\box58
+\Mathstrutbox@=\box103
+\strutbox@=\box104
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen186
+\big@size=\dimen195
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count311
+\macc@depth=\count322
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count312
+\c@MaxMatrixCols=\count323
 \dotsspace@=\muskip18
-\c@parentequation=\count313
-\dspbrk@lvl=\count314
+\c@parentequation=\count324
+\dspbrk@lvl=\count325
 \tag@help=\toks24
-\row@=\count315
-\column@=\count316
-\maxfields@=\count317
+\row@=\count326
+\column@=\count327
+\maxfields@=\count328
 \andhelp@=\toks25
-\eqnshift@=\dimen187
-\alignsep@=\dimen188
-\tagshift@=\dimen189
-\tagwidth@=\dimen190
-\totwidth@=\dimen191
-\lineht@=\dimen192
+\eqnshift@=\dimen196
+\alignsep@=\dimen197
+\tagshift@=\dimen198
+\tagwidth@=\dimen199
+\totwidth@=\dimen256
+\lineht@=\dimen257
 \@envbody=\toks26
-\multlinegap=\skip54
-\multlinetaggap=\skip55
+\multlinegap=\skip56
+\multlinetaggap=\skip57
 \mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count318
-\l__siunitx_number_exponent_fixed_int=\count319
-\l__siunitx_number_min_decimal_int=\count320
-\l__siunitx_number_min_integer_int=\count321
-\l__siunitx_number_round_precision_int=\count322
-\l__siunitx_number_lower_threshold_int=\count323
-\l__siunitx_number_upper_threshold_int=\count324
-\l__siunitx_number_group_first_int=\count325
-\l__siunitx_number_group_size_int=\count326
-\l__siunitx_number_group_minimum_int=\count327
-\l__siunitx_angle_tmp_dim=\dimen193
-\l__siunitx_angle_marker_box=\box59
-\l__siunitx_angle_unit_box=\box60
-\l__siunitx_compound_count_int=\count328
+\l__siunitx_number_uncert_offset_int=\count329
+\l__siunitx_number_exponent_fixed_int=\count330
+\l__siunitx_number_min_decimal_int=\count331
+\l__siunitx_number_min_integer_int=\count332
+\l__siunitx_number_round_precision_int=\count333
+\l__siunitx_number_lower_threshold_int=\count334
+\l__siunitx_number_upper_threshold_int=\count335
+\l__siunitx_number_group_first_int=\count336
+\l__siunitx_number_group_size_int=\count337
+\l__siunitx_number_group_minimum_int=\count338
+\l__siunitx_angle_tmp_dim=\dimen258
+\l__siunitx_angle_marker_box=\box105
+\l__siunitx_angle_unit_box=\box106
+\l__siunitx_compound_count_int=\count339
 
 (/usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
 )
-\l__siunitx_table_tmp_box=\box61
-\l__siunitx_table_tmp_dim=\dimen194
-\l__siunitx_table_column_width_dim=\dimen195
-\l__siunitx_table_integer_box=\box62
-\l__siunitx_table_decimal_box=\box63
-\l__siunitx_table_uncert_box=\box64
-\l__siunitx_table_before_box=\box65
-\l__siunitx_table_after_box=\box66
-\l__siunitx_table_before_dim=\dimen196
-\l__siunitx_table_carry_dim=\dimen197
-\l__siunitx_unit_tmp_int=\count329
-\l__siunitx_unit_position_int=\count330
-\l__siunitx_unit_total_int=\count331
+\l__siunitx_table_tmp_box=\box107
+\l__siunitx_table_tmp_dim=\dimen259
+\l__siunitx_table_column_width_dim=\dimen260
+\l__siunitx_table_integer_box=\box108
+\l__siunitx_table_decimal_box=\box109
+\l__siunitx_table_uncert_box=\box110
+\l__siunitx_table_before_box=\box111
+\l__siunitx_table_after_box=\box112
+\l__siunitx_table_before_dim=\dimen261
+\l__siunitx_table_carry_dim=\dimen262
+\l__siunitx_unit_tmp_int=\count340
+\l__siunitx_unit_position_int=\count341
+\l__siunitx_unit_total_int=\count342
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen198
-\ar@mcellbox=\box67
-\extrarowheight=\dimen199
+\col@sep=\dimen263
+\ar@mcellbox=\box113
+\extrarowheight=\dimen264
 \NC@list=\toks28
-\extratabsurround=\skip56
-\backup@length=\skip57
-\ar@cellbox=\box68
+\extratabsurround=\skip58
+\backup@length=\skip59
+\ar@cellbox=\box114
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
@@ -414,9 +485,9 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headfont=\toks31
 \thm@notefont=\toks32
 \thm@headpunct=\toks33
-\thm@preskip=\skip58
-\thm@postskip=\skip59
-\thm@headsep=\skip60
+\thm@preskip=\skip60
+\thm@postskip=\skip61
+\thm@headsep=\skip62
 \dth@everypar=\toks34
 )
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
@@ -426,8 +497,8 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 (/usr/share/texlive/texmf-dist/tex/latex/sttools/stfloats.sty
 Package: stfloats 2025/06/18 v3.4 Improve float mechanism and baselineskip sett
 ings
-\@dblbotnum=\count332
-\c@dblbotnumber=\count333
+\@dblbotnum=\count343
+\c@dblbotnumber=\count344
 )
 (/usr/share/texlive/texmf-dist/tex/latex/steinmetz/steinmetz.sty
 Package: steinmetz 2009/06/14 v1.0 Steinmetz symbol for electrotechnics
@@ -452,20 +523,20 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
 \pIIe@GRAPH=\toks35
-\@arclen=\dimen256
-\@arcrad=\dimen257
-\pIIe@tempdima=\dimen258
-\pIIe@tempdimb=\dimen259
-\pIIe@tempdimc=\dimen260
-\pIIe@tempdimd=\dimen261
-\pIIe@tempdime=\dimen262
-\pIIe@tempdimf=\dimen263
+\@arclen=\dimen265
+\@arcrad=\dimen266
+\pIIe@tempdima=\dimen267
+\pIIe@tempdimb=\dimen268
+\pIIe@tempdimc=\dimen269
+\pIIe@tempdimd=\dimen270
+\pIIe@tempdime=\dimen271
+\pIIe@tempdimf=\dimen272
 )
-\stm@phasebox=\box69
-\stm@phasedp=\skip61
-\stm@phaseht=\skip62
-\stm@phasetot=\skip63
-\stm@phasewd=\skip64
+\stm@phasebox=\box115
+\stm@phasedp=\skip63
+\stm@phaseht=\skip64
+\stm@phasetot=\skip65
+\stm@phasewd=\skip66
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
@@ -485,94 +556,94 @@ Package: cite 2015/02/27  v 5.5
 )
 (/usr/share/texlive/texmf-dist/tex/latex/cases/cases.sty
 Package: cases 2020/03/29 ver 3.2
-\numc@numwid=\dimen264
+\numc@numwid=\dimen273
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
-\LTleft=\skip65
-\LTright=\skip66
-\LTpre=\skip67
-\LTpost=\skip68
-\LTchunksize=\count334
-\LTcapwidth=\dimen265
-\LT@head=\box70
-\LT@firsthead=\box71
-\LT@foot=\box72
-\LT@lastfoot=\box73
-\LT@gbox=\box74
-\LT@cols=\count335
-\LT@rows=\count336
-\c@LT@tables=\count337
-\c@LT@chunks=\count338
+\LTleft=\skip67
+\LTright=\skip68
+\LTpre=\skip69
+\LTpost=\skip70
+\LTchunksize=\count345
+\LTcapwidth=\dimen274
+\LT@head=\box116
+\LT@firsthead=\box117
+\LT@foot=\box118
+\LT@lastfoot=\box119
+\LT@gbox=\box120
+\LT@cols=\count346
+\LT@rows=\count347
+\c@LT@tables=\count348
+\c@LT@chunks=\count349
 \LT@p@ftn=\toks36
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen266
-\TX@old@table=\dimen267
-\TX@old@col=\dimen268
-\TX@target=\dimen269
-\TX@delta=\dimen270
-\TX@cols=\count339
+\TX@col@width=\dimen275
+\TX@old@table=\dimen276
+\TX@old@col=\dimen277
+\TX@target=\dimen278
+\TX@delta=\dimen279
+\TX@cols=\count350
 \TX@ftn=\toks37
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip69
-\multirow@cntb=\count340
-\multirow@dima=\skip70
-\bigstrutjot=\dimen271
+\multirow@colwidth=\skip71
+\multirow@cntb=\count351
+\multirow@dima=\skip72
+\bigstrutjot=\dimen280
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip71
-\enit@outerparindent=\dimen272
+\labelindent=\skip73
+\enit@outerparindent=\dimen281
 \enit@toks=\toks38
-\enit@inbox=\box75
-\enit@count@id=\count341
-\enitdp@description=\count342
+\enit@inbox=\box121
+\enit@count@id=\count352
+\enitdp@description=\count353
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count343
-\calc@Bcount=\count344
-\calc@Adimen=\dimen273
-\calc@Bdimen=\dimen274
-\calc@Askip=\skip72
-\calc@Bskip=\skip73
+\calc@Acount=\count354
+\calc@Bcount=\count355
+\calc@Adimen=\dimen282
+\calc@Bdimen=\dimen283
+\calc@Askip=\skip74
+\calc@Bskip=\skip75
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count345
-\calc@Cskip=\skip74
+\calc@Ccount=\count356
+\calc@Cskip=\skip76
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count346
-\l_MT_multwidth_dim=\dimen275
-\origjot=\skip75
-\l_MT_shortvdotswithinadjustabove_dim=\dimen276
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen277
-\l_MT_above_intertext_sep=\dimen278
-\l_MT_below_intertext_sep=\dimen279
-\l_MT_above_shortintertext_sep=\dimen280
-\l_MT_below_shortintertext_sep=\dimen281
-\xmathstrut@box=\box76
-\xmathstrut@dim=\dimen282
+\g_MT_multlinerow_int=\count357
+\l_MT_multwidth_dim=\dimen284
+\origjot=\skip77
+\l_MT_shortvdotswithinadjustabove_dim=\dimen285
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen286
+\l_MT_above_intertext_sep=\dimen287
+\l_MT_below_intertext_sep=\dimen288
+\l_MT_above_shortintertext_sep=\dimen289
+\l_MT_below_shortintertext_sep=\dimen290
+\xmathstrut@box=\box122
+\xmathstrut@dim=\dimen291
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks39
-\pgfutil@tempdima=\dimen283
-\pgfutil@tempdimb=\dimen284
+\pgfutil@tempdima=\dimen292
+\pgfutil@tempdimb=\dimen293
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box77
+\pgfutil@abb=\box123
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
@@ -592,8 +663,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen285
-\Gin@req@width=\dimen286
+\Gin@req@height=\dimen294
+\Gin@req@width=\dimen295
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
@@ -607,26 +678,26 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 .code.tex
 \pgfkeys@tmptoks=\toks42
 ))
-\pgf@x=\dimen287
-\pgf@y=\dimen288
-\pgf@xa=\dimen289
-\pgf@ya=\dimen290
-\pgf@xb=\dimen291
-\pgf@yb=\dimen292
-\pgf@xc=\dimen293
-\pgf@yc=\dimen294
-\pgf@xd=\dimen295
-\pgf@yd=\dimen296
+\pgf@x=\dimen296
+\pgf@y=\dimen297
+\pgf@xa=\dimen298
+\pgf@ya=\dimen299
+\pgf@xb=\dimen300
+\pgf@yb=\dimen301
+\pgf@xc=\dimen302
+\pgf@yc=\dimen303
+\pgf@xd=\dimen304
+\pgf@yd=\dimen305
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count347
-\c@pgf@countb=\count348
-\c@pgf@countc=\count349
-\c@pgf@countd=\count350
+\c@pgf@counta=\count358
+\c@pgf@countb=\count359
+\c@pgf@countc=\count360
+\c@pgf@countd=\count361
 \t@pgf@toka=\toks43
 \t@pgf@tokb=\toks44
 \t@pgf@tokc=\toks45
-\pgf@sys@id@count=\count351
+\pgf@sys@id@count=\count362
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -641,8 +712,8 @@ File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count352
-\pgfsyssoftpath@bigbuffer@items=\count353
+\pgfsyssoftpath@smallbuffer@items=\count363
+\pgfsyssoftpath@bigbuffer@items=\count364
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -672,9 +743,9 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen297
-\pgfmath@count=\count354
-\pgfmath@box=\box78
+\pgfmath@dimen=\dimen306
+\pgfmath@count=\count365
+\pgfmath@box=\box124
 \pgfmath@toks=\toks46
 \pgfmath@stack@operand=\toks47
 \pgfmath@stack@operation=\toks48
@@ -698,58 +769,58 @@ tex)
 thmetics.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count355
+\c@pgfmathroundto@lastzeros=\count366
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen298
-\pgf@picmaxx=\dimen299
-\pgf@picminy=\dimen300
-\pgf@picmaxy=\dimen301
-\pgf@pathminx=\dimen302
-\pgf@pathmaxx=\dimen303
-\pgf@pathminy=\dimen304
-\pgf@pathmaxy=\dimen305
-\pgf@xx=\dimen306
-\pgf@xy=\dimen307
-\pgf@yx=\dimen308
-\pgf@yy=\dimen309
-\pgf@zx=\dimen310
-\pgf@zy=\dimen311
+\pgf@picminx=\dimen307
+\pgf@picmaxx=\dimen308
+\pgf@picminy=\dimen309
+\pgf@picmaxy=\dimen310
+\pgf@pathminx=\dimen311
+\pgf@pathmaxx=\dimen312
+\pgf@pathminy=\dimen313
+\pgf@pathmaxy=\dimen314
+\pgf@xx=\dimen315
+\pgf@xy=\dimen316
+\pgf@yx=\dimen317
+\pgf@yy=\dimen318
+\pgf@zx=\dimen319
+\pgf@zy=\dimen320
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen312
-\pgf@path@lasty=\dimen313
+\pgf@path@lastx=\dimen321
+\pgf@path@lasty=\dimen322
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen314
-\pgf@shorten@start@additional=\dimen315
+\pgf@shorten@end@additional=\dimen323
+\pgf@shorten@start@additional=\dimen324
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box79
-\pgf@hbox=\box80
-\pgf@layerbox@main=\box81
-\pgf@picture@serial@count=\count356
+\pgfpic=\box125
+\pgf@hbox=\box126
+\pgf@layerbox@main=\box127
+\pgf@picture@serial@count=\count367
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen316
+\pgflinewidth=\dimen325
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen317
-\pgf@pt@y=\dimen318
-\pgf@pt@temp=\dimen319
+\pgf@pt@x=\dimen326
+\pgf@pt@y=\dimen327
+\pgf@pt@temp=\dimen328
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -765,13 +836,13 @@ File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen320
+\pgfarrowsep=\dimen329
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen321
-\pgf@sys@shading@range@num=\count357
-\pgf@shadingcount=\count358
+\pgf@max=\dimen330
+\pgf@sys@shading@range@num=\count368
+\pgf@shadingcount=\count369
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -779,7 +850,7 @@ File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box82
+\pgfexternal@startupbox=\box128
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -798,15 +869,15 @@ File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box83
+\pgfnodeparttextbox=\box129
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen322
-\pgf@nodesepend=\dimen323
+\pgf@nodesepstart=\dimen331
+\pgf@nodesepend=\dimen332
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -818,8 +889,8 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen324
-\pgffor@skip=\dimen325
+\pgffor@iter=\dimen333
+\pgffor@skip=\dimen334
 \pgffor@stack=\toks49
 \pgffor@toks=\toks50
 ))
@@ -829,33 +900,33 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count359
-\pgfplotmarksize=\dimen326
+\pgf@plot@mark@count=\count370
+\pgfplotmarksize=\dimen335
 )
-\tikz@lastx=\dimen327
-\tikz@lasty=\dimen328
-\tikz@lastxsaved=\dimen329
-\tikz@lastysaved=\dimen330
-\tikz@lastmovetox=\dimen331
-\tikz@lastmovetoy=\dimen332
-\tikzleveldistance=\dimen333
-\tikzsiblingdistance=\dimen334
-\tikz@figbox=\box84
-\tikz@figbox@bg=\box85
-\tikz@tempbox=\box86
-\tikz@tempbox@bg=\box87
-\tikztreelevel=\count360
-\tikznumberofchildren=\count361
-\tikznumberofcurrentchild=\count362
-\tikz@fig@count=\count363
+\tikz@lastx=\dimen336
+\tikz@lasty=\dimen337
+\tikz@lastxsaved=\dimen338
+\tikz@lastysaved=\dimen339
+\tikz@lastmovetox=\dimen340
+\tikz@lastmovetoy=\dimen341
+\tikzleveldistance=\dimen342
+\tikzsiblingdistance=\dimen343
+\tikz@figbox=\box130
+\tikz@figbox@bg=\box131
+\tikz@tempbox=\box132
+\tikz@tempbox@bg=\box133
+\tikztreelevel=\count371
+\tikznumberofchildren=\count372
+\tikznumberofcurrentchild=\count373
+\tikz@fig@count=\count374
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count364
-\pgfmatrixcurrentcolumn=\count365
-\pgf@matrix@numberofcolumns=\count366
+\pgfmatrixcurrentrow=\count375
+\pgfmatrixcurrentcolumn=\count376
+\pgf@matrix@numberofcolumns=\count377
 )
-\tikz@expandcount=\count367
+\tikz@expandcount=\count378
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -872,10 +943,10 @@ File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.
 code.tex
 File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowinset=\dimen335
-\pgfarrowlength=\dimen336
-\pgfarrowwidth=\dimen337
-\pgfarrowlinewidth=\dimen338
+\pgfarrowinset=\dimen344
+\pgfarrowlength=\dimen345
+\pgfarrowwidth=\dimen346
+\pgfarrowlinewidth=\dimen347
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarybending.code.tex
@@ -888,53 +959,53 @@ File: pgfmodulebending.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransf
 ormations.code.tex
 File: pgfmodulenonlineartransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgftransformnonlinearflatness=\dimen339
+\pgftransformnonlinearflatness=\dimen348
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.
 code.tex
 File: pgflibrarycurvilinear.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@curvilinear@time@a=\dimen340
-\pgf@curvilinear@length@a=\dimen341
-\pgf@curvilinear@length@b=\dimen342
-\pgf@curvilinear@length@c=\dimen343
-\pgf@curvilinear@length@d=\dimen344
+\pgf@curvilinear@time@a=\dimen349
+\pgf@curvilinear@length@a=\dimen350
+\pgf@curvilinear@length@b=\dimen351
+\pgf@curvilinear@length@c=\dimen352
+\pgf@curvilinear@length@d=\dimen353
 )
-\pgf@arrows@the@rigidity=\dimen345
+\pgf@arrows@the@rigidity=\dimen354
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryfpu.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
 )) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
-\pgf@circ@count@a=\count368
-\pgf@circ@count@b=\count369
-\pgf@circ@count@c=\count370
-\pgf@circ@res@up=\dimen346
-\pgf@circ@res@down=\dimen347
-\pgf@circ@res@zero=\dimen348
-\pgf@circ@res@left=\dimen349
-\pgf@circ@res@right=\dimen350
-\pgf@circ@res@other=\dimen351
-\pgf@circ@res@step=\dimen352
-\pgf@circ@res@temp=\dimen353
-\pgf@circ@Rlen=\dimen354
-\pgf@circ@scaled@Rlen=\dimen355
-\pgfstartlinewidth=\dimen356
+\pgf@circ@count@a=\count379
+\pgf@circ@count@b=\count380
+\pgf@circ@count@c=\count381
+\pgf@circ@res@up=\dimen355
+\pgf@circ@res@down=\dimen356
+\pgf@circ@res@zero=\dimen357
+\pgf@circ@res@left=\dimen358
+\pgf@circ@res@right=\dimen359
+\pgf@circ@res@other=\dimen360
+\pgf@circ@res@step=\dimen361
+\pgf@circ@res@temp=\dimen362
+\pgf@circ@Rlen=\dimen363
+\pgf@circ@scaled@Rlen=\dimen364
+\pgfstartlinewidth=\dimen365
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
-\ctikz@scratchbox=\box88
+\ctikz@scratchbox=\box134
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
-\pgf@circ@res@count=\count371
+\pgf@circ@res@count=\count382
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
-\pgfcirc@labelshift=\dimen357
+\pgfcirc@labelshift=\dimen366
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex))
@@ -977,28 +1048,28 @@ File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\arrowsize=\dimen358
+\arrowsize=\dimen367
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@layerbox@background=\box89
-\pgf@layerboxsaved@background=\box90
+\pgf@layerbox@background=\box135
+\pgf@layerboxsaved@background=\box136
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarydecorations.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen359
-\pgfdecoratedremainingdistance=\dimen360
-\pgfdecoratedinputsegmentcompleteddistance=\dimen361
-\pgfdecoratedinputsegmentremainingdistance=\dimen362
-\pgf@decorate@distancetomove=\dimen363
-\pgf@decorate@repeatstate=\count372
-\pgfdecorationsegmentamplitude=\dimen364
-\pgfdecorationsegmentlength=\dimen365
+\pgfdecoratedcompleteddistance=\dimen368
+\pgfdecoratedremainingdistance=\dimen369
+\pgfdecoratedinputsegmentcompleteddistance=\dimen370
+\pgfdecoratedinputsegmentremainingdistance=\dimen371
+\pgf@decorate@distancetomove=\dimen372
+\pgf@decorate@repeatstate=\count383
+\pgfdecorationsegmentamplitude=\dimen373
+\pgfdecorationsegmentlength=\dimen374
 )
-\tikz@lib@dec@box=\box91
+\tikz@lib@dec@box=\box137
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarydecorations.markings.code.tex
@@ -1016,9 +1087,9 @@ decorations.shapes.code.tex))
 zlibrarydecorations.text.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.text.code.tex
-\pgf@lib@dec@text@box=\box92
+\pgf@lib@dec@text@box=\box138
 )
-\tikz@lib@dec@te@box=\box93
+\tikz@lib@dec@te@box=\box139
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarydecorations.pathmorphing.code.tex
@@ -1028,12 +1099,12 @@ decorations.pathmorphing.code.tex))
 zlibraryintersections.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersection
 s.code.tex
-\pgf@intersect@solutions=\count373
+\pgf@intersect@solutions=\count384
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarymath.code.tex
-\tikz@math@for@depth=\count374
-\tikz@math@dimen=\dimen366
+\tikz@math@for@depth=\count385
+\tikz@math@dimen=\dimen375
 \tikz@math@toks=\toks53
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
@@ -1070,7 +1141,7 @@ Package: expl3 2026-01-19 L3 programming layer (loader)
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count375
+\l__color_backend_stack_int=\count386
 ))
 Package: xfp 2025-10-09 L3 Floating point unit
 )
@@ -1080,18 +1151,18 @@ Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2025-10-09 L3 Experimental document command parser
 ))
-\tkzRadius=\dimen367
-\tkzLength=\dimen368
-\tkz@radi=\dimen369
-\tkz@ax=\dimen370
-\tkz@ay=\dimen371
-\tkz@bx=\dimen372
-\tkz@by=\dimen373
-\tkz@cx=\dimen374
-\tkz@cy=\dimen375
-\tkz@dx=\dimen376
-\tkz@dy=\dimen377
-\tkz@cntmk=\count376
+\tkzRadius=\dimen376
+\tkzLength=\dimen377
+\tkz@radi=\dimen378
+\tkz@ax=\dimen379
+\tkz@ay=\dimen380
+\tkz@bx=\dimen381
+\tkz@by=\dimen382
+\tkz@cx=\dimen383
+\tkz@cy=\dimen384
+\tkz@dx=\dimen385
+\tkz@dy=\dimen386
+\tkz@cntmk=\count387
 
 Local configuration file tkz-euclide.cfg found and used
 (/usr/share/texlive/texmf-dist/tex/latex/tkz-euclide/tkz-euclide.cfg
@@ -1181,27 +1252,27 @@ File: tikzlibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 .tex
 File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count377
-\lst@gtempboxa=\box94
+\lst@mode=\count388
+\lst@gtempboxa=\box140
 \lst@token=\toks54
-\lst@length=\count378
-\lst@currlwidth=\dimen378
-\lst@column=\count379
-\lst@pos=\count380
-\lst@lostspace=\dimen379
-\lst@width=\dimen380
-\lst@newlines=\count381
-\lst@lineno=\count382
-\lst@maxwidth=\dimen381
+\lst@length=\count389
+\lst@currlwidth=\dimen387
+\lst@column=\count390
+\lst@pos=\count391
+\lst@lostspace=\dimen388
+\lst@width=\dimen389
+\lst@newlines=\count392
+\lst@lineno=\count393
+\lst@maxwidth=\dimen390
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count383
-\lst@skipnumbers=\count384
-\lst@framebox=\box95
+\c@lstnumber=\count394
+\lst@skipnumbers=\count395
+\lst@framebox=\box141
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
@@ -1222,77 +1293,6 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
-\c@tracingmulticols=\count385
-\mult@box=\box96
-\multicol@leftmargin=\dimen382
-\c@unbalance=\count386
-\c@collectmore=\count387
-\doublecol@number=\count388
-\multicoltolerance=\count389
-\multicolpretolerance=\count390
-\full@width=\dimen383
-\page@free=\dimen384
-\premulticols=\dimen385
-\postmulticols=\dimen386
-\multicolsep=\skip76
-\multicolbaselineskip=\skip77
-\partial@page=\box97
-\last@line=\box98
-\mc@boxedresult=\box99
-\maxbalancingoverflow=\dimen387
-\mult@rightbox=\box100
-\mult@grightbox=\box101
-\mult@firstbox=\box102
-\mult@gfirstbox=\box103
-\@tempa=\box104
-\@tempa=\box105
-\@tempa=\box106
-\@tempa=\box107
-\@tempa=\box108
-\@tempa=\box109
-\@tempa=\box110
-\@tempa=\box111
-\@tempa=\box112
-\@tempa=\box113
-\@tempa=\box114
-\@tempa=\box115
-\@tempa=\box116
-\@tempa=\box117
-\@tempa=\box118
-\@tempa=\box119
-\@tempa=\box120
-\@tempa=\box121
-\@tempa=\box122
-\@tempa=\box123
-\@tempa=\box124
-\@tempa=\box125
-\@tempa=\box126
-\@tempa=\box127
-\@tempa=\box128
-\@tempa=\box129
-\@tempa=\box130
-\@tempa=\box131
-\@tempa=\box132
-\@tempa=\box133
-\@tempa=\box134
-\@tempa=\box135
-\@tempa=\box136
-\@tempa=\box137
-\@tempa=\box138
-\@tempa=\box139
-\c@minrows=\count391
-\c@columnbadness=\count392
-\c@finalcolumnbadness=\count393
-\last@try=\dimen388
-\multicolovershoot=\dimen389
-\multicolundershoot=\dimen390
-\mult@nat@firstbox=\box140
-\colbreak@box=\box141
-\mc@col@check@num=\count394
-\g__mc_curr_col_int=\count395
 )
 (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
@@ -1315,7 +1315,7 @@ Package chngcntr Info: \counterwithout already defined.
 
 Writing index file main.idx
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 22.
+h' as default language. on input line 24.
 (./main.aux
 
 LaTeX Warning: Label `strength of implanted suture' multiply defined.
@@ -1323,24 +1323,24 @@ LaTeX Warning: Label `strength of implanted suture' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 -- Lines per column: 45 (approximate, difference = 0.60239pt).
 *geometry* driver: auto-detecting
@@ -1377,20 +1377,20 @@ LaTeX Font Info:    ... okay on input line 22.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 24.
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-LaTeX Info: Redefining \celsius on input line 22.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 22.
+LaTeX Info: Redefining \celsius on input line 24.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 24.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 22.
-Package gensymb Info: Using \Omega for \ohm on input line 22.
+LaTeX Info: Redefining \ohm on input line 24.
+Package gensymb Info: Using \Omega for \ohm on input line 24.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -1401,7 +1401,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 22.
+or `english'. on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1429,7 +1429,7 @@ e
 <figs/logo.jpg, id=43, 2537.48pt x 2047.65pt>
 File: figs/logo.jpg Graphic file (type jpg)
 <use figs/logo.jpg>
-Package pdftex.def Info: figs/logo.jpg  used on input line 49.
+Package pdftex.def Info: figs/logo.jpg  used on input line 51.
 (pdftex.def)             Requested size: 72.83794pt x 58.77106pt.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
@@ -1459,433 +1459,398 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
  [3]
 (./formulae/formulae.tex [4
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8]
-Overfull \hbox (73.8313pt too wide) detected at line 385
+] [5] [6] [7] [8] [9]
+Overfull \hbox (83.8313pt too wide) detected at line 509
 []
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-Underfull \hbox (badness 2103) in paragraph at lines 455--456
+[10]
+Underfull \hbox (badness 2103) in paragraph at lines 588--589
 []\OT1/ptm/m/n/10 Converting to com-plex pha-sor no-ta-tion $\OML/cmm/m/it/10 V
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 V[][]e[
 ]$ \OT1/ptm/m/n/10 and $\OML/cmm/m/it/10 I\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\O
 T1/cmr/m/n/10 ) =
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11])
-(./chapters/Bm-2025.tex [12]
+[11] [12]) (./chapters/Bm-2025.tex
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 \end{align}
-                
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
+l.30 \end{align}
+                 [13]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.183 \end{align}
-                 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
+l.182 \end{align}
+                  [14]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.298 \end{align}
-                 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
-[16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17]
+l.296 \end{align}
+                  [15] [16] [17]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.606 \end{align}
-                  [18]
+l.596 \end{align}
+                 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.726 \end{align}
+l.712 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.2}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.733 \end{align}
-                 
+l.719 \end{align}
+                  [18]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.6.3}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.738 \end{align}
+l.724 \end{align}
                  
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
-<figs/bm6.png, id=295, 1078.0275pt x 676.5275pt>
+<figs/bm6.png, id=288, 1078.0275pt x 676.5275pt>
 File: figs/bm6.png Graphic file (type png)
 <use figs/bm6.png>
-Package pdftex.def Info: figs/bm6.png  used on input line 781.
+Package pdftex.def Info: figs/bm6.png  used on input line 767.
 (pdftex.def)             Requested size: 273.14647pt x 171.41283pt.
-
+ [19]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.7.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.802 \end{align}
+l.788 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.7.2}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.846 \end{align}
-                  [20
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.846 \end{align}
-                  <./figs/bm6.png>]
+l.830 \end{align}
+                 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.7.3}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.852 \end{align}
+l.839 \end{align}
                  
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-Underfull \hbox (badness 2005) in paragraph at lines 955--966
+pdfTeX warning (ext4): destination with the same identifier (name{equation.7.4}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.842 \end{align}
+                 
+Underfull \hbox (badness 2005) in paragraph at lines 852--864
 []\OT1/ptm/m/n/10 If $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1
 /cmr/m/n/10 ) = \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ []\OML/cmm/m/it/10 ;$ \
 OT1/ptm/m/n/10 the value of $[][] []$ is $[]$.
  []
 
-
+[20
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.864 \begin
+            {enumerate} <./figs/bm6.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.993 \end{align}
+l.892 \end{align}
                  
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
-<figs/bm8a.png, id=332, 722.7pt x 722.7pt>
+<figs/bm8a.png, id=313, 722.7pt x 722.7pt>
 File: figs/bm8a.png Graphic file (type png)
 <use figs/bm8a.png>
-Package pdftex.def Info: figs/bm8a.png  used on input line 1022.
-(pdftex.def)             Requested size: 273.14647pt x 273.14014pt.
-
+Package pdftex.def Info: figs/bm8a.png  used on input line 921.
+(pdftex.def)             Requested size: 364.1953pt x 364.1942pt.
+ [21]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1070 \end{align}
-                   [23
+l.969 \end{align}
+                  [22
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1070 \end{align}
-                   <./figs/bm8a.png>]
+l.969 \end{align}
+                  <./figs/bm8a.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9.2}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1076 \end{align}
-                  
+l.975 \end{align}
+                 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1120 \end{align}
+l.1019 \end{align}
                   
-<figs/bm10a.png, id=347, 650.43pt x 650.43pt>
+<figs/bm10a.png, id=335, 650.43pt x 650.43pt>
 File: figs/bm10a.png Graphic file (type png)
 <use figs/bm10a.png>
-Package pdftex.def Info: figs/bm10a.png  used on input line 1151.
+Package pdftex.def Info: figs/bm10a.png  used on input line 1052.
 (pdftex.def)             Requested size: 364.1953pt x 364.19861pt.
-
-Underfull \vbox (badness 4543) has occurred while \output is active []
-
- [24]
+ [23]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1165 \end{align}
-                   [25
+l.1066 \end{align}
+                   [24
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1173 \end{align}
+l.1074 \end{align}
                    <./figs/bm10a.png>]
-<figs/bm10.png, id=371, 722.7pt x 361.35pt>
+<figs/bm10.png, id=358, 722.7pt x 361.35pt>
 File: figs/bm10.png Graphic file (type png)
 <use figs/bm10.png>
-Package pdftex.def Info: figs/bm10.png  used on input line 1194.
+Package pdftex.def Info: figs/bm10.png  used on input line 1095.
 (pdftex.def)             Requested size: 364.1953pt x 182.0971pt.
 
-Underfull \hbox (badness 1874) in paragraph at lines 1213--1215
+Underfull \hbox (badness 1874) in paragraph at lines 1114--1116
 []\OT1/ptm/m/n/10 A volt-age source $\OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 = 5 [
 ] [] []$ \OT1/ptm/m/n/10 is driv-ing a cur-rent $\OML/cmm/m/it/10 I \OT1/cmr/m/
 n/10 =
  []
 
-[26
+[25
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10.2})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1230 \end{enumerate}
+l.1133 \end{multicols}
                        <./figs/bm10.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1246 \end{align}
+l.1147 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1246 \end{align}
+l.1147 \end{align}
                   
-<figs/bm11.png, id=386, 650.43pt x 361.35pt>
+<figs/bm11.png, id=373, 650.43pt x 361.35pt>
 File: figs/bm11.png Graphic file (type png)
 <use figs/bm11.png>
-Package pdftex.def Info: figs/bm11.png  used on input line 1272.
+Package pdftex.def Info: figs/bm11.png  used on input line 1172.
 (pdftex.def)             Requested size: 364.1953pt x 202.33257pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.12.1
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1321 \end{align}
-                  
-Underfull \vbox (badness 1237) has occurred while \output is active []
-
- [28
+ [26
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1334 \end{align}
-                   <./figs/bm11.png>]
-<figs/11.png, id=418, 1284.8pt x 900.36375pt>
+l.1177 \begin{lstlisting}
+                          <./figs/bm11.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.12.1
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1217 \end{align}
+                  
+<figs/11.png, id=397, 1284.8pt x 900.36375pt>
 File: figs/11.png Graphic file (type png)
 <use figs/11.png>
-Package pdftex.def Info: figs/11.png  used on input line 1357.
+Package pdftex.def Info: figs/11.png  used on input line 1253.
 (pdftex.def)             Requested size: 273.14647pt x 191.4175pt.
-
+ [27]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.13.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1377 \end{align}
+l.1269 \end{align}
                   
-Underfull \hbox (badness 3058) in paragraph at lines 1380--1382
+Underfull \hbox (badness 3058) in paragraph at lines 1272--1274
 []\OT1/ptm/m/n/10 Here, $\OML/cmm/m/it/10 y[]$ \OT1/ptm/m/n/10 and $\OML/cmm/m/
 it/10 y[]$ \OT1/ptm/m/n/10 are the first and sec-ond deriva-tives of $\OML/cmm/
 m/it/10 y$\OT1/ptm/m/n/10 , re-spec-tively.
  []
 
-[29
-pdfTeX warning (ext4): destination with the same identifier (name{figure.12.1})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1382 
-        <./figs/11.png>]
+
 pdfTeX warning (ext4): destination with the same identifier (name{equation.13.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1408 \begin{equation}
+l.1298 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.13.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1408 \begin{equation}
+l.1298 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.13.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1408 \begin{equation}
+l.1298 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.13.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1408 \begin{equation}
+l.1298 \begin{equation}
                        
 
-LaTeX Warning: Reference `la[lace' on page 30 undefined on input line 1417.
+LaTeX Warning: Reference `la[lace' on page 28 undefined on input line 1307.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.13.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1423 \end{align}
-                  
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
-<figs/13.png, id=444, 1284.8pt x 713.66624pt>
-File: figs/13.png Graphic file (type png)
-<use figs/13.png>
-Package pdftex.def Info: figs/13.png  used on input line 1494.
-(pdftex.def)             Requested size: 364.1953pt x 202.29713pt.
-
-[31
-pdfTeX warning (ext4): destination with the same identifier (name{figure.13.1})
+l.1313 \end{align}
+                   [28
+pdfTeX warning (ext4): destination with the same identifier (name{figure.12.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1514 \begin{center}
-                      <./figs/13.png>]
+l.1327 \end{align}
+                   <./figs/11.png>]
+<figs/13.png, id=423, 1284.8pt x 713.66624pt>
+File: figs/13.png Graphic file (type png)
+<use figs/13.png>
+Package pdftex.def Info: figs/13.png  used on input line 1384.
+(pdftex.def)             Requested size: 364.1953pt x 202.29713pt.
+ [29]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.14.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1588 \end{align}
-                  
+l.1461 \end{align}
+                   [30
+pdfTeX warning (ext4): destination with the same identifier (name{figure.13.1})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1461 \end{align}
+                   <./figs/13.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.14.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1593 \end{align}
+l.1472 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.14.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1598 \end{align}
+l.1477 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.14.4
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1603 \end{align}
+l.1482 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.14.5
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1608 \end{align}
+l.1487 \end{align}
                   
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32]
-<figs/bm14.png, id=466, 722.7pt x 722.7pt>
+pdfTeX warning (ext4): destination with the same identifier (name{equation.14.6
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1492 \end{align}
+                  
+<figs/bm14.png, id=449, 722.7pt x 722.7pt>
 File: figs/bm14.png Graphic file (type png)
 <use figs/bm14.png>
-Package pdftex.def Info: figs/bm14.png  used on input line 1614.
+Package pdftex.def Info: figs/bm14.png  used on input line 1498.
 (pdftex.def)             Requested size: 364.1953pt x 364.1942pt.
-
-[33
-pdfTeX warning (ext4): destination with the same identifier (name{figure.14.1})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1641     \item[(b)]
-                      $y$ is complex valued <./figs/bm14.png>]
+ [31]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1660 \end{align}
-                  
+l.1541 \end{align}
+                   [32
+pdfTeX warning (ext4): destination with the same identifier (name{figure.14.1})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1541 \end{align}
+                   <./figs/bm14.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1668 \end{align}
+l.1549 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1672 \end{align}
+l.1553 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15.4
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1678 \end{align}
+l.1559 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.16.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1751 \end{align}
-                  
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34]
-[35]
+l.1628 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.16.1
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1628 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.16.1
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1628 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.16.1
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1628 \begin{equation}
+                        [33]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.17.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1852 \end{align}
+l.1674 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.17.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1888 \end{align}
+l.1707 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.17.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1894 \end{align}
+l.1713 \end{align}
                   
 
-LaTeX Warning: Reference `(' on page 36 undefined on input line 1895.
+LaTeX Warning: Reference `(' on page 34 undefined on input line 1714.
 
 ! Extra }, or forgotten \endgroup.
-l.1895 ... 0, 1, 2, 3$). (From \eqref(convolution}
+l.1714 ... 0, 1, 2, 3$). (From \eqref(convolution}
                                                   )
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1893,209 +1858,156 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36]
-<figs/bm17a.png, id=499, 578.16pt x 578.16pt>
+[34]
+<figs/bm17a.png, id=486, 578.16pt x 578.16pt>
 File: figs/bm17a.png Graphic file (type png)
 <use figs/bm17a.png>
-Package pdftex.def Info: figs/bm17a.png  used on input line 1965.
+Package pdftex.def Info: figs/bm17a.png  used on input line 1786.
 (pdftex.def)             Requested size: 364.1953pt x 364.18979pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37]
+ [35]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.18.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1996 \end{align}
-                   [38
+l.1813 \end{align}
+                   [36
 pdfTeX warning (ext4): destination with the same identifier (name{figure.17.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2000 \end{align}
+l.1817 \end{align}
                    <./figs/bm17a.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.19.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2135 \end{align}
-                   [39]
+l.1947 \end{align}
+                   [37]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.19.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2139 \end{align}
-                   [40]
+l.1951 \end{align}
+                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.19.3
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1955 \end{align}
+                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.20.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2272 \end{align}
-                  
-pdfTeX warning (ext4): destination with the same identifier (name{equation.20.2
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2276 \end{align}
-                  
-pdfTeX warning (ext4): destination with the same identifier (name{equation.20.3
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2282 \end{align}
-                  
+l.2079 \end{align}
+                   [38]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.21.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2356 \end{align}
+l.2157 \end{align}
                   
-<figs/imp.png, id=542, 849.1725pt x 963.6pt>
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21.2
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2161 \end{align}
+                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21.3
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2173 \end{align}
+                  
+<figs/imp.png, id=530, 849.1725pt x 963.6pt>
 File: figs/imp.png Graphic file (type png)
 <use figs/imp.png>
-Package pdftex.def Info: figs/imp.png  used on input line 2377.
+Package pdftex.def Info: figs/imp.png  used on input line 2177.
 (pdftex.def)             Requested size: 364.1953pt x 413.26659pt.
-
-Underfull \vbox (badness 2005) has occurred while \output is active []
-
- [41]
-Underfull \vbox (badness 2376) has occurred while \output is active []
-
- [42
+ [39] [40
 pdfTeX warning (ext4): destination with the same identifier (name{figure.21.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2405 \text{Function Definition \& Derivative}
-                                                <./figs/imp.png>]
+l.2203 \begin{align}
+                     <./figs/imp.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.22.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2410 \end{align}
+l.2205 \end{align}
                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.22.2
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2415 \end{align}
-                  
-pdfTeX warning (ext4): destination with the same identifier (name{equation.22.3
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2424 \end{align}
-                  
-pdfTeX warning (ext4): destination with the same identifier (name{equation.22.4
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2432 \end{align}
-                  
-pdfTeX warning (ext4): destination with the same identifier (name{equation.22.5
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2435 \end{align}
-                  
-pdfTeX warning (ext4): destination with the same identifier (name{equation.22.6
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2440 \end{align}
-                  
-<figs/bm22.png, id=559, 722.7pt x 433.62pt>
+<figs/bm22.png, id=547, 722.7pt x 433.62pt>
 File: figs/bm22.png Graphic file (type png)
 <use figs/bm22.png>
-Package pdftex.def Info: figs/bm22.png  used on input line 2458.
+Package pdftex.def Info: figs/bm22.png  used on input line 2254.
 (pdftex.def)             Requested size: 364.1953pt x 218.51653pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [43]
+ [41]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.23.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2478 \end{align}
-                   [44
+l.2270 \end{align}
+                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23.2
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2283 \end{align}
+                   [42
 pdfTeX warning (ext4): destination with the same identifier (name{figure.22.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2511 \end{align}
+l.2301 \end{align}
                    <./figs/bm22.png>]
-<figs/bm23.png, id=583, 399.894pt x 314.3745pt>
+<figs/bm23.png, id=574, 399.894pt x 314.3745pt>
 File: figs/bm23.png Graphic file (type png)
 <use figs/bm23.png>
-Package pdftex.def Info: figs/bm23.png  used on input line 2528.
+Package pdftex.def Info: figs/bm23.png  used on input line 2307.
 (pdftex.def)             Requested size: 273.14647pt x 214.7408pt.
- [45
+ [43
 pdfTeX warning (ext4): destination with the same identifier (name{figure.23.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2569 \end{center}
-                    <./figs/bm23.png>]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.24.1
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2593 \end{align}
-                  
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [46]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.24.2
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2642 \end{align}
-                  
-Overfull \hbox (20.0pt too wide) in paragraph at lines 2642--2644
+l.2348 \end{center}
+                    <./figs/bm23.png>] [44]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2421--2423
 [] 
  []
 
-[47]
-Overfull \hbox (98.82234pt too wide) detected at line 2722
-[]
- []
 
-
+pdfTeX warning (ext4): destination with the same identifier (name{equation.25.1
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2475 \end{align}
+                   [45]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.26.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2760 \end{align}
+l.2535 \end{align}
                   
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.26.2
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2538 \end{align}
+                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.26.3
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2543 \end{align}
+                   [46]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.27.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2828     \end{align}
-                      
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [49]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.27.2
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2831     \end{align}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.27.3
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2835 \end{align}
-                  ) [50] (./main.aux)
+l.2604     \end{align}
+                      ) [47] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -2111,13 +2023,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AED2DC6FF22D359F465FB3F212BB286D;340.
  ) 
 Here is how much of TeX's memory you used:
- 53086 strings out of 467533
- 1279923 string characters out of 5422139
- 1912612 words of memory out of 5000000
+ 53079 strings out of 467533
+ 1279829 string characters out of 5422139
+ 1912701 words of memory out of 5000000
  80874 multiletter control sequences out of 15000+600000
  669961 words of font info for 131 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,18n,118p,1194b,1341s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,18n,118p,1194b,1317s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -2135,10 +2047,10 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share
 texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on main.pdf (50 pages, 2153571 bytes).
+Output written on main.pdf (47 pages, 2149545 bytes).
 PDF statistics:
- 792 PDF objects out of 1000 (max. 8388607)
- 653 compressed objects within 7 object streams
- 359 named destinations out of 1000 (max. 500000)
+ 776 PDF objects out of 1000 (max. 8388607)
+ 640 compressed objects within 7 object streams
+ 352 named destinations out of 1000 (max. 500000)
  198 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,18 +1,5 @@
-%\documentclass[12pt]{article}
-%\usepackage{amsmath}
-%\usepackage{amssymb}
-%\usepackage{geometry}
-%\geometry{a4paper, margin=1in}
 
-%\title{GATE BM 2025 --- Theory / Formulae Used}
-%\author{}
-%\date{}
 
-%\begin{document}
-%\maketitle
-
-\noindent This document lists only the \textbf{general theory and formulae}
-used to solve each question (no numerical substitution).
 \begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
 % =========================================================
 %\section*{1. Geometric Progression of Frequencies}
@@ -111,9 +98,9 @@ c(t)=A\,e^{-\zeta\omega_n t}\sin\!\left(\omega_n\sqrt{1-\zeta^{2}}\;t\right),
 \end{align}
 
 % =========================================================
-\item Eigenvalues via the Characteristic Equation
+\item Eigenvalues via the Characteristic Equation \label{eigen}
 
-For a matrix $A$, the eigenvalues $\lambda$ satisfy
+For a matrix $\vec{A}$, the eigenvalues $\lambda$ satisfy
 
 \begin{align}
 \det(A-\lambda I)=0.
@@ -122,11 +109,84 @@ For a matrix $A$, the eigenvalues $\lambda$ satisfy
 For a $2\times2$ rotation matrix
 
 \begin{align}
-A=
-\begin{pmatrix}
+\vec{A}=\myvec{
 \cos\theta & -\sin\theta\\
 \sin\theta & \cos\theta
-\end{pmatrix},
+}
+\end{align}
+Therefore,
+
+Expanding the determinant,
+
+\begin{align}
+(\cos\theta-\lambda)^2+\sin^2\theta=0.
+\end{align}
+
+Expanding further,
+
+\begin{align}
+\cos^2\theta-2\lambda\cos\theta+\lambda^2
++\sin^2\theta=0.
+\end{align}
+
+Using
+
+\begin{align}
+\sin^2\theta+\cos^2\theta=1,
+\end{align}
+
+we get
+
+\begin{align}
+\lambda^2-2\lambda\cos\theta+1=0.
+\end{align}
+
+Using the quadratic formula,
+
+\begin{align}
+\lambda
+=
+\frac{2\cos\theta
+\pm
+\sqrt{4\cos^2\theta-4}}{2}.
+\end{align}
+
+Since
+
+\begin{align}
+4\cos^2\theta-4
+=
+-4\sin^2\theta,
+\end{align}
+
+we have
+
+\begin{align}
+\lambda
+=
+\frac{2\cos\theta
+\pm
+2i\sin\theta}{2}.
+\end{align}
+
+Hence,
+
+\begin{align}
+\lambda
+=
+\cos\theta\pm i\sin\theta.
+\end{align}
+
+Using Euler's formula,
+
+\begin{align}
+e^{i\theta}=\cos\theta+i\sin\theta,
+\end{align}
+
+and
+
+\begin{align}
+e^{-i\theta}=\cos\theta-i\sin\theta,
 \end{align}
 
 using $\sin^2\theta+\cos^2\theta=1$ and Euler's formula
@@ -256,7 +316,7 @@ Z_{\text{in}}(\omega) &= R_1 + Z_p(\omega)\\
 &= \left( R_1 + \frac{R_2}{1 + (\omega R_2 C)^2} \right) - j \left( \frac{\omega R_2^2 C}{1 + (\omega R_2 C)^2} \right)
 \end{align}
 
-\vspace{0.5em}
+
 \text{Magnitude and Phase Expressions in terms of $\omega$}
 
 \text{1. Magnitude Spectrum $|Z_{\text{in}}(\omega)|$:}
@@ -307,7 +367,7 @@ By solving:
 
 
 % =========================================================
-\item Linearity and Causality of a System
+\item Linearity and Causality of a System \label{conditions}
 
 \textbf{Linearity} (superposition): a system is linear if, for inputs
 $x_1,x_2$ and scalars $a,b$,
@@ -361,22 +421,86 @@ For an op-amp inverting summing amplifier with feedback resistor
 $R_f$, input resistors $R_1,R_2,R_3,\dots$ and corresponding input
 voltages $V_1,V_2,V_3,\dots$, the output voltage is
 
-\begin{align}
-V_{\text{out}}=-\left(\frac{R_f}{R_1}V_1+\frac{R_f}{R_2}V_2+\frac{R_f}{R_3}V_3+\cdots\right), \label{amplifier}
-\end{align}
+\begin{center}
+\begin{tikzpicture}[
+    % Define custom styles using TikZ native features
+    resistor/.style={
+        circuitikz/resistor style/.style={},
+        decorate, 
+        decoration={zigzag, segment length=6pt, amplitude=3pt, pre length=6pt, post length=6pt}
+    },
+    terminal/.style={circle, draw, inner sep=1.5pt, fill=white},
+    dot/.style={circle, fill, inner sep=1.2pt}
+]
 
-valid provided $V_{\text{out}}$ stays within the saturation limits,
+  % 1. Draw Op-Amp Triangle
+  \draw[thick] (0,0) -- (0,2) -- (2,1) -- cycle;
+  
+  % Input Labels inside triangle (+ on bottom, - on top)
+  \node at (0.2, 1.6) {$-$};
+  \node at (0.2, 0.4) {$+$};
 
-\begin{align}
--V_{\text{sat}}\le V_{\text{out}}\le +V_{\text{sat}}.
-\end{align}
+  % 2. Power Supply Lines
+  \draw (1, 1.5) -- (1, 2.2) node[above] {$+\text{Vsat} = +15\text{ V}$};
+  \draw (1, 2.2) circle (2pt);
+  
+  \draw (1, 0.5) -- (1, -0.2) node[below] {$-\text{Vsat} = -15\text{ V}$};
+  \draw (1, -0.2) circle (2pt);
 
-\item Derivation
+  % 3. Non-Inverting Input (+) Ground Connection
+  \draw (0, 0.4) -- (-0.8, 0.4) -- (-0.8, -0.2);
+  % Ground Symbol
+  \draw (-1.1, -0.2) -- (-0.5, -0.2);
+  \draw (-1.0, -0.3) -- (-0.6, -0.3);
+  \draw (-0.9, -0.4) -- (-0.7, -0.4);
+
+  % 4. Inverting Input (-) Node
+  \draw (0, 1.6) -- (-0.8, 1.6) coordinate (invNode);
+  \fill (-0.8, 1.6) circle (1.5pt);
+
+  % 5. Three Input Resistors (R1, R2, R3)
+  % R1 (Top)
+  \draw (invNode) |- (-1.2, 2.4);
+  \draw[resistor] (-1.2, 2.4) -- (-3.2, 2.4) node[midway, above=2pt] {$R_1 = 5\text{ k}\Omega$};
+  \draw (-3.2, 2.4) -- (-3.8, 2.4) node[terminal] {} node[left] {$V_1 = 2\text{ V}\ $};
+
+  % R2 (Middle)
+  \draw (invNode) -- (-1.2, 1.6);
+  \draw[resistor] (-1.2, 1.6) -- (-3.2, 1.6) node[midway, above=2pt] {$R_2 = 4\text{ k}\Omega$};
+  \draw (-3.2, 1.6) -- (-3.8, 1.6) node[terminal] {} node[left] {$V_2 = 2\text{ V}\ $};
+
+  % R3 (Bottom)
+  \draw (invNode) |- (-1.2, 0.8);
+  \draw[resistor] (-1.2, 0.8) -- (-3.2, 0.8) node[midway, above=2pt] {$R_3 = 2\text{ k}\Omega$};
+  \draw (-3.2, 0.8) -- (-3.8, 0.8) node[terminal] {} node[left] {$V_3 = 1\text{ V}\ $};
+
+  % 6. Feedback Resistor (Rf)
+  \draw (invNode) -- (-0.8, 3.2);
+  \draw[resistor] (-0.8, 3.2) -- (2.5, 3.2) node[midway, above=2pt] {$R_f = 10\text{ k}\Omega$};
+  \draw (2.5, 3.2) -| (2.8, 1.0);
+
+  % 7. Output Line and Terminal
+  \draw (2, 1) -- (3.2, 1) node[terminal] {} node[right=2pt] {$V_{\text{out}}$};
+  \fill (2.8, 1) circle (1.5pt);
+
+  % Ground at Output Terminal
+  \draw (2.8, 1) -- (2.8, 0.3) node[terminal] {};
+  \draw (2.8, 0.15) -- (2.8, -0.2);
+  % Ground Symbol
+  \draw (2.5, -0.2) -- (3.1, -0.2);
+  \draw (2.6, -0.3) -- (3.0, -0.3);
+  \draw (2.7, -0.4) -- (2.9, -0.4);
+
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+\item \text Derivation
 
 Let the inverting input node (where $R_1,R_2,R_3,R_f$ meet) be node
 $A$, and let the non-inverting input be grounded.
 
-\textbf{Ideal op-amp assumptions:}
+\text{Ideal op-amp assumptions:}
 
 \begin{align}
 \text{(i)}\quad &\text{No current flows into either input terminal.}\\
@@ -417,11 +541,20 @@ V_{\text{out}}
 =-\left(\frac{R_f}{R_1}V_1+\frac{R_f}{R_2}V_2+\frac{R_f}{R_3}V_3\right),
 \end{align}
 
-which recovers equation (19.1). The same derivation extends to any
-number of input branches $R_i,V_i$:
 
 \begin{align}
 V_{\text{out}}=-\sum_{i}\frac{R_f}{R_i}V_i.
+\end{align}
+\end{enumerate}
+
+\begin{align}
+V_{\text{out}}=-\left(\frac{R_f}{R_1}V_1+\frac{R_f}{R_2}V_2+\frac{R_f}{R_3}V_3+\cdots\right), \label{amplifier}
+\end{align}
+
+valid provided $V_{\text{out}}$ stays within the saturation limits,
+
+\begin{align}
+-V_{\text{sat}}\le V_{\text{out}}\le +V_{\text{sat}}.
 \end{align}
 
 % =========================================================
@@ -483,7 +616,7 @@ x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}. \label{raphson}
 \end{align}
 
 % =========================================================
-\item Logarithmic Decay Model \label {decay}
+\item Logarithmic Decay Model
 
 For a quantity that decays logarithmically with time,
 
@@ -496,7 +629,7 @@ constant $\sigma_0$:
 
 \begin{align}
 \sigma(t_2)-\sigma(t_1)=-k\left[\ln(t_2)-\ln(t_1)\right]
-=-k\ln\!\left(\frac{t_2}{t_1}\right).
+=-k\ln\!\left(\frac{t_2}{t_1}\right). \label{decay}
 \end{align}
 
 % =========================================================
@@ -508,36 +641,8 @@ that direction is located by counting $k$ steps around the circle;
 eliminated members are removed from the circle before subsequent
 counts are made from the new reference position.
 
-% =========================================================
-\item Percentage / Proportion of a Total
 
-For a subset with combined value $S$ out of a grand total $T$,
 
-\begin{align}
-\text{Percentage}=\frac{S}{T}\times 100\%.
-\end{align}
-
-% =========================================================
-\item Piecewise (Slab-Based) Fee Structure with Tax
-
-For a fee $F$ exceeding a threshold $F_0$, with base overhead $O_0$
-and marginal overhead rate $r_1$ beyond the threshold, plus a Goods
-and Services Tax rate $r_2$ on the (fee + overhead):
-
-\begin{align}
-O=O_0+r_1\left(F-F_0\right),
-\end{align}
-
-\begin{align}
-T_{\text{pre-tax}}=F+O,
-\end{align}
-
-\begin{align}
-T_{\text{total}}=(1+r_2)\,T_{\text{pre-tax}}.
-\end{align}
-
-Given a maximum payable $T_{\text{total}}$, this is solved for the
-maximum permissible $F$.
 
 % =========================================================
 \item Gaussian (Normal) Function
@@ -599,17 +704,6 @@ Equivalently, for large $n$,
 \sum_{i=1}^{n}X_i\ \approx\ \mathcal{N}\!\left(n\mu,\ n\sigma^{2}\right).
 \end{align}
 
-\textbf{Relevance to Q12 (Binomial distribution):} a Binomial random
-variable $X\sim B(N,p)$ is the sum of $N$ i.i.d.\ Bernoulli trials, each
-with mean $p$ and variance $p(1-p)$. By the CLT, for large $N$,
-
-\begin{align}
-X\ \approx\ \mathcal{N}\!\left(Np,\ Np(1-p)\right),
-\end{align}
-
-which is why the Gaussian approximation to the Binomial distribution
-uses exactly the mean $E(X)=Np$ and variance
-$\operatorname{Var}(X)=Np(1-p)$ obtained in Section 12.
 
 % =========================================================
 \item Effect of Scalar Multiplication on a Determinant

@@ -1,7 +1,4 @@
 
-
-
-
 %Question 1
 
 \begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
@@ -11,14 +8,15 @@ Frequency of each note is $\sqrt[12]{2}$ times the frequency of the previous not
 If the frequency of the note $C$ is 130.8 Hz, then the ratio of frequencies of notes
 $F^\#$ and $C$ is: \hfill\text{(GATE BM 2025)}
 
-
+\begin{multicols}{2}
 \begin{enumerate}
+    \setlength{\itemsep}{0pt}
     \item[(a)] $\sqrt[6]{2}$
     \item[(b)] $\sqrt{2}$
     \item[(c)] $\sqrt[4]{2}$
     \item[(d)] $2$
 \end{enumerate}
-
+\end{multicols}
 \solution
 
 Each successive musical note has a frequency
@@ -158,8 +156,9 @@ iterative algorithm. The total length of the curve generated after
 % =========================================================
 % OPTIONS
 % =========================================================
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
     \item[(a)] $\left(\frac{5}{3}\right)^{\frac{n}{2}}$
 
     \item[(b)] $\left(\frac{5}{3}\right)^n$
@@ -168,7 +167,7 @@ iterative algorithm. The total length of the curve generated after
 
     \item[(d)] $\left(\frac{5}{3}\right)^{n(2n-1)}$
 \end{enumerate}
-
+\end{multicols}
 
 % =========================================================
 % SOLUTION
@@ -257,7 +256,6 @@ representative.
 
 \end{center}
 
-\vspace{0.5cm}
 
 
 
@@ -265,19 +263,19 @@ representative.
 % OPTIONS
 % =========================================================
 
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
+    \item[(a)] $b_1 < 0.5$
 
-    \item[(A)] $b_1 < 0.5$
+    \item[(b)] $b_2 > 0.5$
 
-    \item[(B)] $b_2 > 0.5$
+    \item[(c)] $b_2 < b_1 + 0.5$
 
-    \item[(C)] $b_2 < b_1 + 0.5$
-
-    \item[(D)] $b_1+b_2 < 1$
-
+    \item[(d)] $b_1+b_2 < 1$
 \end{enumerate}
+\end{multicols}
 
-\vspace{0.5cm}
 
 % =========================================================
 % SOLUTION
@@ -397,20 +395,20 @@ Codes/bm3.py
 \item Which one of the following represents the frequency
 response of a notch filter?
 
-\vspace{0.5cm}
+
 \hfill \text{(GATE BM 2025)}
 
 % =========================================================
 % OPTIONS WITH GRAPHS
 % =========================================================
-
+\begin{multicols}{2}
 \begin{enumerate}
-
+\setlength{\itemsep}{0pt}
 % ---------------------------------------------------------
 % OPTION A
 % ---------------------------------------------------------
 
-\item[(A)]
+\item[(a)]
 
 \begin{center}
 \begin{tikzpicture}[scale=1.1]
@@ -421,7 +419,7 @@ response of a notch filter?
 
     % Labels
     \node[above] at (0,3) {Gain};
-    \node[right] at (4.5,0) {Frequency};
+    \node[below] at (2,0) {Frequency};
 
     % Band-pass response
     \draw[thick]
@@ -438,7 +436,7 @@ response of a notch filter?
 % OPTION B
 % ---------------------------------------------------------
 
-\item[(B)]
+\item[(b)]
 
 \begin{center}
 \begin{tikzpicture}[scale=1.1]
@@ -449,7 +447,7 @@ response of a notch filter?
 
     % Labels
     \node[above] at (0,3) {Gain};
-    \node[right] at (4.5,0) {Frequency};
+    \node[below] at (2,0) {Frequency};
 
     % High-pass response
     \draw[thick]
@@ -466,7 +464,7 @@ response of a notch filter?
 % OPTION C
 % ---------------------------------------------------------
 
-\item[(C)]
+\item[(c)]
 
 \begin{center}
 \begin{tikzpicture}[scale=1.1]
@@ -477,7 +475,7 @@ response of a notch filter?
 
     % Labels
     \node[above] at (0,3) {Gain};
-    \node[right] at (4.5,0) {Frequency};
+    \node[below] at (2,0) {Frequency};
 
     % Low-pass response
     \draw[thick]
@@ -494,7 +492,7 @@ response of a notch filter?
 % OPTION D
 % ---------------------------------------------------------
 
-\item[(D)]
+\item[(d)]
 
 \begin{center}
 \begin{tikzpicture}[scale=1.1]
@@ -505,7 +503,7 @@ response of a notch filter?
 
     % Labels
     \node[above] at (0,3) {Gain};
-    \node[right] at (4.5,0) {Frequency};
+    \node[below] at (2,0) {Frequency};
 
     % Notch response
     \draw[thick]
@@ -523,16 +521,11 @@ response of a notch filter?
 \end{center}
 
 \end{enumerate}
-
-\vspace{0.3cm}
-
-
+\end{multicols}
 
 % =========================================================
 % SOLUTION
 % =========================================================
-
-\vspace{0.5cm}
 
 \solution
 
@@ -567,27 +560,25 @@ following is ALWAYS TRUE for $a \neq b$?
 
 Here, $a$ and $b$ are finite and real.
 
-\vspace{0.4cm}
+
 \hfill \text{(GATE BM 2025)}
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
+\item[(a)] $f(a) > f(b)$
 
-\item[(A)] $f(a) > f(b)$
 
-\vspace{0.2cm}
+\item[(b)] $f(a) = f(b)$
 
-\item[(B)] $f(a) = f(b)$
 
-\vspace{0.2cm}
+\item[(c)] $f(a) \neq f(b)$
 
-\item[(C)] $f(a) \neq f(b)$
-
-\vspace{0.2cm}
-
-\item[(D)] $f(a) < f(b)$
+\item[(d)] $f(a) < f(b)$
 
 \end{enumerate}
+\end{multicols}
 
-\vspace{0.4cm}
+
 
 
 
@@ -595,7 +586,6 @@ Here, $a$ and $b$ are finite and real.
 % SOLUTION
 % =========================================================
 
-\vspace{0.5cm}
 
 \solution
 
@@ -686,27 +676,24 @@ f'(x)\neq0 \qquad \text{for all }x.
 
 \end{center}
 
-\vspace{0.5cm}
 \hfill \text{(GATE BM 2025)}
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
+\item[(a)] is overdamped
 
-\item[(A)] is overdamped
 
-\vspace{0.3cm}
 
-\item[(B)] is underdamped
+\item[(b)] is underdamped
 
-\vspace{0.3cm}
 
-\item[(C)] is critically damped
+\item[(c)] is critically damped
 
-\vspace{0.3cm}
 
-\item[(D)] has sustained oscillations
+\item[(d)] has sustained oscillations
 
 \end{enumerate}
-
+\end{multicols}
 \vspace{0.4cm}
 
 
@@ -715,7 +702,6 @@ f'(x)\neq0 \qquad \text{for all }x.
 % SOLUTION TO QUESTION 6
 % =========================================================
 
-\vspace{0.5cm}
 
 \solution
 
@@ -802,28 +788,27 @@ Codes/bm6.py
 \end{align}
 are \underline{\hspace{2cm}}.
 
-\vspace{0.5cm}
 
 \hfill \text{(GATE BM 2025)}
+\begin{multicols}{2}
 \begin{enumerate}
-
-\item[(A)] $\cos\theta$ and $\sin\theta$
-
-\vspace{0.3cm}
-
-\item[(B)] $e^{i\theta}$ and $e^{-i\theta}$, where $i=\sqrt{-1}$
+\setlength{\itemsep}{0pt}
+\item[(a)] $\cos\theta$ and $\sin\theta$
 
 \vspace{0.3cm}
 
-\item[(C)] $\cos\theta$ and $-\sin\theta$
+\item[(b)] $e^{i\theta}$ and $e^{-i\theta}$, where $i=\sqrt{-1}$
 
 \vspace{0.3cm}
 
-\item[(D)] $\cos 2\theta$ and $\sin 2\theta$
+\item[(c)] $\cos\theta$ and $-\sin\theta$
+
+\vspace{0.3cm}
+
+\item[(d)] $\cos 2\theta$ and $\sin 2\theta$
 
 \end{enumerate}
-
-\vspace{0.5cm}
+\end{multicols}
 
 
 
@@ -831,108 +816,20 @@ are \underline{\hspace{2cm}}.
 % SOLUTION TO QUESTION 7
 % =========================================================
 
-\vspace{0.5cm}
+
 
 \solution
 
 Let the given matrix be
 
 \begin{align}
-A=
-\begin{pmatrix}
+\vec{A}=\myvec{
 \cos\theta & -\sin\theta\\
 \sin\theta & \cos\theta
-\end{pmatrix}.
+}
 \end{align}
+\text From \eqref{eigen}
 
-The eigenvalues $\lambda$ are obtained from the characteristic equation
-
-\begin{align}
-\det(A-\lambda I)=0.
-\end{align}
-
-Therefore,
-
-\begin{align}
-\begin{vmatrix}
-\cos\theta-\lambda & -\sin\theta\\
-\sin\theta & \cos\theta-\lambda
-\end{vmatrix}
-=0.
-\end{align}
-
-Expanding the determinant,
-
-\begin{align}
-(\cos\theta-\lambda)^2+\sin^2\theta=0.
-\end{align}
-
-Expanding further,
-
-\begin{align}
-\cos^2\theta-2\lambda\cos\theta+\lambda^2
-+\sin^2\theta=0.
-\end{align}
-
-Using
-
-\begin{align}
-\sin^2\theta+\cos^2\theta=1,
-\end{align}
-
-we get
-
-\begin{align}
-\lambda^2-2\lambda\cos\theta+1=0.
-\end{align}
-
-Using the quadratic formula,
-
-\begin{align}
-\lambda
-=
-\frac{2\cos\theta
-\pm
-\sqrt{4\cos^2\theta-4}}{2}.
-\end{align}
-
-Since
-
-\begin{align}
-4\cos^2\theta-4
-=
--4\sin^2\theta,
-\end{align}
-
-we have
-
-\begin{align}
-\lambda
-=
-\frac{2\cos\theta
-\pm
-2i\sin\theta}{2}.
-\end{align}
-
-Hence,
-
-\begin{align}
-\lambda
-=
-\cos\theta\pm i\sin\theta.
-\end{align}
-
-Using Euler's formula,
-
-\begin{align}
-e^{i\theta}=\cos\theta+i\sin\theta,
-\end{align}
-
-and
-
-\begin{align}
-e^{-i\theta}=\cos\theta-i\sin\theta,
-\end{align}
 
 the eigenvalues are
 
@@ -963,19 +860,21 @@ $
 $
 is \underline{\hspace{2cm}}.
 \hfill \text{(GATE BM 2025)}
-
+\begin{multicols}{2}
 \begin{enumerate}
-    \item[(A)] $0$
+\setlength{\itemsep}{0pt}
+    \item[(a)] $0$
     
-    \item[(B)] $\dfrac{1}{2}$
+    \item[(b)] $\dfrac{1}{2}$
     
-    \item[(C)] $1$
+    \item[(c)] $1$
     
-    \item[(D)] $2$
+    \item[(d)] $2$
 \end{enumerate}
+\end{multicols}
 
 
-\vspace{0.5cm}
+
 %==============================================
 %==============================================
 
@@ -1019,7 +918,7 @@ Therefore, the correct option is (D) 2
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figs/bm8a.png}
+    \includegraphics[width=1\textwidth]{figs/bm8a.png}
     \caption{Derivative vs x; function vs x with tangent}
     \label{Derivative vs x; function vs x with tangent}
 \end{figure}
@@ -1039,13 +938,14 @@ Codes/bm8.py
 \item The elements of the dataset $\{-5, 1, a, 5, b\}$ are in ascending order. If both mean and median of the dataset are equal to $3$, what is the value of $b$?
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
+
 
 % =========================================================
 % OPTIONS
 % =========================================================
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
     \item[(a)] $7$
 
     \item[(b)] $11$
@@ -1054,8 +954,7 @@ Codes/bm8.py
 
     \item[(d)] $12$
 \end{enumerate}
-
-\vspace{0.5cm}
+\end{multicols}
 
 % =========================================================
 % SOLUTION
@@ -1121,13 +1020,14 @@ x(t) = 20\sin(100\pi t) + 36\sin(150\pi t) - 2\sin(300\pi t),
 where time $t$ is in seconds. Among the following options, what is the frequency (in $\text{Hz}$) at which $x(t)$ should be sampled for accurate signal reconstruction?
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
+
 
 % =========================================================
 % OPTIONS
 % =========================================================
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
     \item[(a)] $500$
 
     \item[(b)] $150$
@@ -1136,8 +1036,9 @@ where time $t$ is in seconds. Among the following options, what is the frequency
 
     \item[(d)] $250$
 \end{enumerate}
+\end{multicols}
 
-\vspace{0.5cm}
+
 
 % =========================================================
 % SOLUTION
@@ -1213,13 +1114,14 @@ Codes/bm10.py
 \item A voltage source $V_s = 5\sin\left(100t + \frac{\pi}{2}\right)\text{ volts}$ is driving a current $I = 10\sin\left(100t + \frac{\pi}{6}\right)\text{ mA}$ through a circuit. The average power dissipated in the circuit is \underline{\hspace{2cm}} $\text{mW}$.
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
+
 
 % =========================================================
 % OPTIONS
 % =========================================================
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
     \item[(a)] $0.0$
 
     \item[(b)] $12.5$
@@ -1228,6 +1130,7 @@ Codes/bm10.py
 
     \item[(d)] $50.0$
 \end{enumerate}
+\end{multicols}
 
 
 
@@ -1236,8 +1139,6 @@ Codes/bm10.py
 % =========================================================
 
 \solution
-
-
 
 Given data from the problem:
 \begin{align}
@@ -1266,7 +1167,6 @@ P_{\text{avg}} &= 12.5 \text{ mW}
 
 \text{Correct Option:} \textbf{(b) 12.5}
 
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figs/bm11.png}
@@ -1281,20 +1181,17 @@ Codes/bm11.py
 
 % =========================================================
 % QUESTION 12
-% =========================================================
-
-
+% ========================================================
 
 \item $N$ independent trials of a binomial random variable yield an expectation value of $16$ and variance of $12$. What is the value of $N$?
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
-
 % =========================================================
 % OPTIONS
 % =========================================================
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
     \item[(a)] $80$
 
     \item[(b)] $60$
@@ -1303,8 +1200,7 @@ Codes/bm11.py
 
     \item[(d)] $64$
 \end{enumerate}
-
-\vspace{0.5cm}
+\end{multicols}
 
 % =========================================================
 % SOLUTION
@@ -1363,13 +1259,9 @@ N &= 64
 Codes/bm12.py
 \end{lstlisting}
 
-
-
 % =========================================================
 % QUESTION 13
 % =========================================================
-
-
 
 \item Given a function $y(x)$ satisfying the differential equation
 \begin{align}
@@ -1380,13 +1272,12 @@ with initial conditions $y(0) = 1$; $y'(0) = 1$, what is the value of $y(\log_e 
 Here, $y'$ and $y''$ are the first and second derivatives of $y$, respectively.
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
-
 % =========================================================
 % OPTIONS
 % =========================================================
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
     \item[(a)] $14.05$
 
     \item[(b)] $14.25$
@@ -1395,8 +1286,7 @@ Here, $y'$ and $y''$ are the first and second derivatives of $y$, respectively.
 
     \item[(d)] $14.65$
 \end{enumerate}
-
-\vspace{0.5cm}
+\end{multicols}
 
 % =========================================================
 % SOLUTION
@@ -1411,7 +1301,7 @@ y''(x) - 0.25 y(x) = 0
 
 with initial conditions $y(0) = 1$ and $y'(0) = 1$.
 
-\vspace{0.5cm}
+
 \text{Take the Laplace Transform on both sides}
 Let $\mathcal{L}\{y(x)\} = Y(s)$. 
 From \eqref{la[lace}
@@ -1422,7 +1312,7 @@ Substituting into the differential equation gives:
 \left[ s^2 Y(s) - s y(0) - y'(0) \right] - 0.25 Y(s) = 0
 \end{align}
 
-\vspace{0.5em}
+
 \text{Substitute the initial conditions}
 \
 Substitute $y(0) = 1$ and $y'(0) = 1$:
@@ -1440,7 +1330,7 @@ Group $Y(s)$ terms together as \eqref{partial}
 Y(s) = \frac{s + 1}{s^2 - 0.25} = \frac{s + 1}{\left(s - \frac{1}{2}\right)\left(s + \frac{1}{2}\right)}
 \end{align}
 
-\vspace{0.5em}
+
 \text{Apply Partial Fraction Decomposition}
 
 Express $Y(s)$ as:
@@ -1461,7 +1351,7 @@ So, the transform is:
 Y(s) = \frac{1.5}{s - 0.5} - \frac{0.5}{s + 0.5}
 \end{align}
 
-\vspace{0.5em}
+
 \text{Take the Inverse Laplace Transform}
 
 Using $\mathcal{L}^{-1}\left\{\frac{1}{s - a}\right\} = e^{at}$:
@@ -1469,7 +1359,7 @@ Using $\mathcal{L}^{-1}\left\{\frac{1}{s - a}\right\} = e^{at}$:
 y(x) = 1.5 e^{0.5x} - 0.5 e^{-0.5x}
 \end{align}
 
-\vspace{0.5em}
+
 \text{Evaluate $y(\log_e 100)$}
 
 Substitute $x = \log_e 100 = \ln(100)$:
@@ -1501,12 +1391,9 @@ y(\ln 100) = 1.5(10) - 0.5(0.1) = 15 - 0.05 = 14.95
 Codes/bm13.py
 \end{lstlisting}
 
-
 % =========================================================
 % QUESTION 14
 % =========================================================
-
-
 
 \item In the circuit shown below, $V_{\text{in}} = 10\cos(1000t)\text{ volts}$. The magnitude of the input impedance of the circuit is 
 \underline{\hspace{2cm}} $\text{k}\Omega$. (rounded off to one decimal place)
@@ -1545,13 +1432,12 @@ Codes/bm13.py
 
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
-
 % =========================================================
 % OPTIONS
 % =========================================================
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
     \item[(a)] $5.0$
 
     \item[(b)] $3.5$
@@ -1560,25 +1446,23 @@ Codes/bm13.py
 
     \item[(d)] $4.5$
 \end{enumerate}
+\end{multicols}
 
-\vspace{0.5cm}
 
 % =========================================================
 % SOLUTION
 % =========================================================
 
-
 \solution
 
 Given the input voltage $V_{\text{in}} = 10\cos(1000t)\text{ V}$, the circuit parameter values are:
-\[
+\begin{align}
 R_1 = 3\text{ k}\Omega, \quad R_2 = 1\text{ k}\Omega, \quad C = 1\,\mu\text{F}, \quad \omega = 1000\text{ rad/s}
-\]
+\end{align}
 
-\vspace{0.5em}
+
 Refer to \eqref{impedence deri}
 
-\vspace{0.5em}
 
 Substituting $R_1$, $R_2$, $C$, and $\omega$: 
 
@@ -1624,18 +1508,15 @@ Codes/bm14.py
 % QUESTION 15
 % =========================================================
 
-
-
 \item Which of the following is/are CORRECT about the value of $y = \log_e(-e^x)$, where $x$ is a real number.
 \hfill \text{(GATE BM 2025)}
-
-\vspace{0.5cm}
 
 % =========================================================
 % OPTIONS
 % =========================================================
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
     \item[(a)] $y$ is real valued
 
     \item[(b)] $y$ is complex valued
@@ -1644,8 +1525,8 @@ Codes/bm14.py
 
     \item[(d)] $y = x \pm i n \pi$, where $n$ is an even integer and $i = \sqrt{-1}$
 \end{enumerate}
+\end{multicols}
 
-\vspace{0.5cm}
 
 % =========================================================
 % SOLUTION
@@ -1683,13 +1564,9 @@ This is a Multiple Select Question (MSQ), so both statements (B) and (C) are cor
 
 Hence, the correct options are (b), (c)
                                           
-
-
 % =========================================================
 % QUESTION 16
 % =========================================================
-
-
 
 \item Two systems $U$ and $V$ are defined as shown below. Which of the following statement(s) is/are CORRECT?
 
@@ -1723,13 +1600,12 @@ Hence, the correct options are (b), (c)
 
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
-
 % =========================================================
 % OPTIONS
 % =========================================================
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
     \item[(a)] System $U$ is nonlinear; System $V$ is linear
 
     \item[(b)] System $U$ is causal; System $V$ is noncausal
@@ -1738,128 +1614,73 @@ Hence, the correct options are (b), (c)
 
     \item[(d)] System $U$ is nonlinear; System $V$ is nonlinear
 \end{enumerate}
-
-\vspace{0.5cm}
+\end{multicols}
 
 % =========================================================
 % SOLUTION
 % =========================================================
 \solution
+
+
+\text Conditions to be Satisfied are \eqref{conditions}
+
+\text System U
+\begin{equation}
+y(t) = x(t)^2 + 1
+\end{equation}
+
+Linearity check:
 \begin{align}
-\text{System } U: & \quad y(t) = x(t)^2 + 1 \\
-\text{System } V: & \quad y(t) = x(t + 1)
+T\{a \cdot x(t)\} &= [a \cdot x(t)]^2 + 1 \\
+&= a^2 x(t)^2 + 1 \\
+&\neq a \cdot [x(t)^2 + 1]
 \end{align}
+System U is nonlinear.
 
+Causality check:
+\begin{equation}
+y(t) \text{ depends only on } x(t) \text{ at time } t
+\end{equation}
+System U is causal.
 
-\subsection*{System $U$: $y(t) = x(t)^2 + 1$}
+\text System V
+\begin{equation}
+y(t) = x(t + 1)
+\end{equation}
 
-\text{1. Linearity Check (Additive \& Homogeneous):}
-\begin{itemize}
-    \item \text{Additivity:} Let $y_1(t) = x_1(t)^2 + 1$ and $y_2(t) = x_2(t)^2 + 1$.
-    For input $x_3(t) = x_1(t) + x_2(t)$, the output is:
-    \[
-    y_3(t) = [x_1(t) + x_2(t)]^2 + 1 = x_1(t)^2 + 2x_1(t)x_2(t) + x_2(t)^2 + 1
-    \]
-    Since $y_1(t) + y_2(t) = x_1(t)^2 + x_2(t)^2 + 2 \neq y_3(t)$, the system is \text{not additive}.
+Linearity check:
+\begin{align}
+T\{a \cdot x_1(t) + b \cdot x_2(t)\} &= a \cdot x_1(t + 1) + b \cdot x_2(t + 1) \\
+&= a \cdot y_1(t) + b \cdot y_2(t)
+\end{align}
+System V is linear.
 
-    \item \text{Homogeneity:} For input $a \cdot x(t)$, the output is:
-    \[
-    y_{scaled}(t) = [a \cdot x(t)]^2 + 1 = a^2 x(t)^2 + 1 \neq a \cdot y(t)
-    \]
-    Thus, it is \text{not homogeneous}.
-\end{itemize}
-\text{Conclusion:} System $U$ is \text{nonlinear}.
+Causality check:
+\begin{align}
+\text{At } t = 0: \quad y(0) = x(1)
+\end{align}
+Since $y(0)$ depends on the future input $x(1)$, System V is noncausal.
 
-\vspace{0.5em}
-\text{2. Causality Check:}
-\begin{itemize}
-    \item At $t = 0$: $y(0) = x(0)^2 + 1$.
-    \item The output at $t = 0$ depends only on the present input $x(0)$.
-\end{itemize}
-\text{Conclusion:} System $U$ is \text{causal}.
-
-
-
-\subsection*{System $V$: $y(t) = x(t + 1)$}
-
-\text{1. Linearity Check (Additive \& Homogeneous):}
-\begin{itemize}
-    \item \text{Additivity:} Let $y_1(t) = x_1(t + 1)$ and $y_2(t) = x_2(t + 1)$.
-    For input $x_3(t) = x_1(t) + x_2(t)$:
-    \[
-    y_3(t) = x_1(t + 1) + x_2(t + 1) = y_1(t) + y_2(t) \quad \text{(Satisfied)}
-    \]
-
-    \item \text{Homogeneity:} For input $a \cdot x(t)$:
-    \[
-    y_{scaled}(t) = a \cdot x(t + 1) = a \cdot y(t) \quad \text{(Satisfied)}
-    \]
-\end{itemize}
-\text{Conclusion:} System $V$ is \text{linear}.
-
-\vspace{0.5em}
-\text{2. Causality Check:}
-\begin{itemize}
-    \item At $t = 0$: $y(0) = x(0 + 1) = x(1)$.
-    \item The output at $t = 0$ depends on the future input $x(1)$.
-\end{itemize}
-\text{Conclusion:} System $V$ is \text{noncausal}.
-
-
-
-
-
-\noindent\text{Option (a): System $U$ is nonlinear; System $V$ is linear}
-    \begin{itemize}
-        \item System $U$ fails additivity and homogeneity $\rightarrow$ nonlinear.
-        \item System $V$ satisfies additivity and homogeneity $\rightarrow$ linear.
-    \end{itemize}
-
-\noindent\text{Option (b): System $U$ is causal; System $V$ is noncausal}
-    \begin{itemize}
-        \item For System $U$, $y(0) = x(0)^2 + 1$ (depends on current input) $\rightarrow$ causal.
-        \item For System $V$, $y(0) = x(1)$ (depends on future input) $\rightarrow$ noncausal.
-       
-    \end{itemize}
-
-  \noindent\text{Option (c): System $U$ is noncausal; System $V$ is causal}
-    \begin{itemize}
-        \item Incorrect based on the $y(0)$ check above.
-    \end{itemize}
-
-  \noindent\text{Option (d): System $U$ is nonlinear; System $V$ is nonlinear}
-    \begin{itemize}
-        \item System $V$ is linear, making this statement incorrect.
-    \end{itemize}
-
-
-
-\noindent Correct options are \text{(a)} and \text{(b)}.
-
-
-
+Hence, the correct options are (a) and (b).
 
 
 % =========================================================
 % QUESTION 17
 % =========================================================
 
-
-
 \item A discrete linear time invariant system has an impulse response function given by
 \begin{align}
-h[n] = \delta[n] + \frac{1}{2}\delta[n-1] + \frac{1}{3}\delta[n-2].
+h(n) = \delta(n) + \frac{1}{2}\delta(n-1) + \frac{1}{3}\delta(n-2).
 \end{align}
-For input signal $x[n] = \delta[n] + \delta[n-1]$, which of the following option(s) is/are CORRECT for the output signal $y[n]$?
+For input signal $x(n) = \delta(n) + \delta(n-1)$, which of the following option(s) is/are CORRECT for the output signal $y(n)$?
 \hfill \text{(GATE BM 2025)}
-
-\vspace{0.5cm}
 
 % =========================================================
 % OPTIONS
 % =========================================================
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{0pt}
     \item[(a)] $y(2) = 11/6$
 
     \item[(b)] $y(2) = 5/6$
@@ -1868,8 +1689,7 @@ For input signal $x[n] = \delta[n] + \delta[n-1]$, which of the following option
 
     \item[(d)] $y(2) = 0$ for all $k \ge 4$
 \end{enumerate}
-
-\vspace{0.5cm}
+\end{multicols}
 
 % =========================================================
 % SOLUTION
@@ -1878,7 +1698,6 @@ For input signal $x[n] = \delta[n] + \delta[n-1]$, which of the following option
 \solution
 
 
-\vspace{0.5em}
 \text{Express sequences in vector form}
 
 The impulse response sequence $h(n)$ of length $M = 3$ is:
@@ -1893,9 +1712,9 @@ The input signal sequence $x(n)$ of length $N = 2$ is:
 	\vec{x(n)}=\myvec{1 & 1}
 \end{align}
 The linear convolution $y(n) = h(n) * x(n)$ has a total length of $4$ points (spanning $n = 0, 1, 2, 3$). (From \eqref(convolution})
-\vspace{0.5em}
+
 \text{Construct the Convolution (Toeplitz) Matrix}
-Linear convolution can be represented as a matrix-vector product \myvec{y}=\myvec{H}\myvec{x}, where \myvec{H} is a (M+N-1)*N=8 lower-triangular Toeplitz matrix formed by shifting $h(n)$ downwards:
+Linear convolution can be represented as a matrix-vector product $\vec{y}$ = $\vec{H}$ $\vec{x}$, where $\vec{H}$ is a (M+N-1)*N=8 lower-triangular Toeplitz matrix formed by shifting $h(n)$ downwards:
 \begin{align}
  \vec{H}=\myvec{ 
    h(0) & 0 \\ 
@@ -1912,7 +1731,7 @@ Linear convolution can be represented as a matrix-vector product \myvec{y}=\myve
     0 & 1/3 
     }
     \end{align}
-The input vector \myvec{x} is:
+The input vector $\vec{x}$ is:
 \begin{align}
  \vec{x}=\myvec{
           x(0) \\
@@ -1923,7 +1742,7 @@ The input vector \myvec{x} is:
           1
           }
 \end{align}
-\vspace{0.5em}
+
 \text{Matrix-Vector Multiplication}
 \begin{align}
 	\myvec{
@@ -1943,6 +1762,7 @@ The input vector \myvec{x} is:
 	1
 	}
 \end{align}
+
 Computing each element:
 \begin{align}
 y(0) = 1(1) + 0(1) = 1\\
@@ -1951,7 +1771,7 @@ y(2) = \frac{1}{3}(1) + \frac{1}{2}(1) = \frac{5}{6}\\
 y(3) = 0(1) + \frac{1}{3}(1) = \frac{1}{3}
 \end{align}
 For $k \ge 4$, $y[k] = 0$ since the signal duration ends at $n = 3$.
-\vspace{0.5em}
+
 \text{Verify the Options}
 \begin{itemize}
   \item \text{Option (a):} $y(2) = \frac{11}{6}$ \quad (\text{Incorrect})
@@ -1959,6 +1779,7 @@ For $k \ge 4$, $y[k] = 0$ since the signal duration ends at $n = 3$.
   \item \text{Option (c):} $y(k) = 0$ for all $k \ge 3$ \quad (\text{Incorrect, since } $y(3) = \frac{1}{3} \neq 0$)
   \item \text{Option (d):} $y(k) = 0$ for all $k \ge 4$ \quad (\text{Correct})
 \end{itemize}
+
 \text{Correct Options: (b) and (d)}
 \begin{figure}[H]
     \centering
@@ -1976,12 +1797,8 @@ Codes/bm17a.py
 % QUESTION 18
 % =========================================================
 
-
-
 \item For an 8-bit Digital to Analog Converter (DAC), the binary input 0000 0000 results in $0\text{ V}$, and 1111 1111 results in $5\text{ V}$. The output of the DAC for an input of 1011 0111 is \underline{\hspace{2cm}} (in volts, rounded off to two decimal places).
 \hfill \text{(GATE BM 2025)}
-
-\vspace{0.5cm}
 
 % =========================================================
 % SOLUTION
@@ -2020,7 +1837,6 @@ V_{\text{out}} = \frac{915}{255} \approx 3.5882\text{ V}
 
 Rounding off to two decimal places gives: 3.59
 
-
 \begin{lstlisting}
 Codes/bm18.py
 \end{lstlisting}
@@ -2029,8 +1845,6 @@ Codes/bm18.py
 % =========================================================
 % QUESTION 19
 % =========================================================
-
-
 
 \item What is the output voltage Vout for the circuit shown below? \underline{\hspace{2cm}} (in volts, rounded off to the nearest integer).
 
@@ -2109,15 +1923,13 @@ Codes/bm18.py
 
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
-
 % =========================================================
 % SOLUTION
 % =========================================================
 
 \solution
 
-The given operational amplifier circuit is an **inverting summing amplifier**. 
+The given operational amplifier circuit is an inverting summing amplifier. 
 
 \text Given:
 \begin{itemize}
@@ -2146,12 +1958,9 @@ Since the calculated voltage ($-14\text{ V}$) lies within the saturation limits 
 
 Rounding off to the nearest integer gives: -14
 
-
-
 % =========================================================
 % QUESTION 20
 % =========================================================
-
 
 
 \item The frequency of the oscillator circuit shown in the figure below is \underline{\hspace{2cm}} $\text{kHz}$. (rounded off to two decimal places)
@@ -2248,8 +2057,6 @@ Given: $R = 1\text{ k}\Omega$; $R_1 = 2\text{ k}\Omega$; $R_2 = 6\text{ k}\Omega
 
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
-
 % =========================================================
 % SOLUTION
 % =========================================================
@@ -2284,13 +2091,9 @@ f_0 = \frac{1591.549}{1000}\text{ kHz} \approx 1.5915\text{ kHz}
 Rounding off to two decimal places: 1.59
 
 
-
-
 % =========================================================
 % QUESTION 21
 % =========================================================
-
-
 
 \item For the RLC circuit shown below, the root mean square current ($I_{\text{rms}}$) at the resonance frequency is \underline{\hspace{2cm}} amperes. (rounded off to the nearest integer)
 
@@ -2338,39 +2141,36 @@ Rounding off to two decimal places: 1.59
 
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
-
 % =========================================================
 % SOLUTION
 % =========================================================
 
 \solution
 
-\vspace{0.5em}
 
 \text From \eqref{resonance}
 
 Evaluating the resonance angular frequency and cyclic frequency:
+
 \begin{align}
 \omega_0 = \frac{1}{\sqrt{(10 \times 10^{-3} \text{ H})(8 \times 10^{-6} \text{ F})}} = \frac{1}{\sqrt{8 \times 10^{-8}}} = 3535.53 \text{ rad/s}
 \end{align}
+
 \begin{align}
 f_0 = \frac{\omega_0}{2\pi} \approx 562.7 \text{ Hz}
 \end{align}
 
 At $\omega = \omega_0$, the net reactance is zero ($Z(\omega_0) = R = 60\,\Omega$).
 
-\vspace{0.5em}
+
 \text{RMS Current Evaluation at Resonance}
 From \eqref{res}
 
 Substituting the given numerical values ($V_{\text{rms}} = 240\text{ V}$, $R = 60\,\Omega$):
+
 \begin{align}
 I_{\text{rms}}(\omega_0) = \frac{240\text{ V}}{60\,\Omega} = 4\text{ A}
 \end{align}
-
-
-
 
 \begin{figure}[H]
     \centering
@@ -2387,12 +2187,8 @@ Codes/bm21.py
 % QUESTION 22
 % =========================================================
 
-
-
 \item Newton Raphson method is used to solve the equation $x^3 - 2x - 5 = 0$ with an initial guess $x_0 = 3$. What is $x_1$, the value after ONE iteration? \underline{\hspace{2cm}} (rounded off to two decimal places)
 \hfill \text{(GATE BM 2025)}
-
-\vspace{0.5cm}
 
 % =========================================================
 % SOLUTION
@@ -2400,11 +2196,10 @@ Codes/bm21.py
 
 \solution
 
-
-\vspace{0.5em}
 \text{Function Definition \& Derivative}
 
 Given the non-linear equation:
+
 \begin{align}
 f(x) = x^3 - 2x - 5 = 0
 \end{align}
@@ -2414,22 +2209,24 @@ Taking the derivative with respect to $x$:
 f'(x) = 3x^2 - 2
 \end{align}
 
-\vspace{0.5em}
+
 \text{General Newton-Raphson Update Equation}
 
 From \eqref{raphson}
 Substituting $f(x_n)$ and $f'(x_n)$ into the update equation gives the explicit recurrence relation:
+
 \begin{align}
 x_{n+1} = x_n - \frac{x_n^3 - 2x_n - 5}{3x_n^2 - 2} = \frac{2x_n^3 + 5}{3x_n^2 - 2}
 \end{align}
 
-\vspace{0.5em}
+
 \text{First Iteration Calculation ($n = 0$ with $x_0 = 3$)}
 
 Evaluating $f(x_0)$ and $f'(x_0)$:
 \begin{align}
 f(3) = (3)^3 - 2(3) - 5 = 27 - 6 - 5 = 16
 \end{align}
+
 \begin{align}
 f'(3) = 3(3)^2 - 2 = 27 - 2 = 25
 \end{align}
@@ -2439,7 +2236,6 @@ Using the update equation to calculate $x_1$:
 x_1 = 3 - \frac{16}{25} = 3 - 0.64 = 2.36
 \end{align}
 
-\vspace{0.5em}
 \text{Subsequent Iterations (Finding the Actual Root)}
 
 Using the simplified update equation $x_{n+1} = \frac{2x_n^3 + 5}{3x_n^2 - 2}$:
@@ -2464,13 +2260,9 @@ x_4 &\approx 2.0946 \quad (\text{Converged Real Root } \alpha)
 Codes/bm22a.py
 \end{lstlisting}
 
-
-
 % =========================================================
 % QUESTION 23
 % =========================================================
-
-
 
 \item Strength ($\sigma$) of an implanted suture is given by the equation
 \begin{align}
@@ -2479,33 +2271,21 @@ Codes/bm22a.py
 where $\sigma_0$ represents the original strength and time $t$ is measured in weeks. If the strength of the suture is $2\text{ MPa}$ at $4$ weeks, what will be its strength (in $\text{MPa}$) at $8$ weeks? \underline{\hspace{2cm}} (rounded off to two decimal places)
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
-
 % =========================================================
 % SOLUTION
 % =========================================================
 \solution
 
 Let $\sigma(t)$ denote the strength of the suture at time $t$ weeks:
-\text From \eqref{decay}
+
 \begin{align}
 \sigma(t) = \sigma_0 - 2\ln(t)
 \end{align}
 
 We are given that at $t = 4$ weeks, the strength $\sigma(4) = 2\text{ MPa}$:
 
-\begin{align}
-2 = \sigma_0 - 2\ln(4)
-\end{align}
-
-Now, we need to find the strength at $t = 8$ weeks, $\sigma(8)$:
-
-\begin{align}
-\sigma(8) = \sigma_0 - 2\ln(8)
-\end{align}
-
-By solving:
-
+Now, we need to find the strength at $t = 8$ weeks,
+\text From \eqref{decay}
 \begin{align}
 \sigma(8) - 2 = -2\ln\left(\frac{8}{4}\right) = -2\ln(2)
 \end{align}
@@ -2521,7 +2301,6 @@ Substituting $\ln(2) \approx 0.69315$:
 \end{align}
 
 Rounding off to two decimal places gives: 0.61
-
 
 \begin{figure}[H]
     \centering
@@ -2567,17 +2346,17 @@ After the $1^{\text{st}}$ round, $4^{\text{th}}$ student behind P leaves the gam
     \draw[thick, ->] (70:2.3cm) arc (70:50:2.3cm);
 \end{tikzpicture}
 \end{center}
-
+\begin{multicols}{2}
 \begin{enumerate}
+\setlength{\itemsep}{2pt}
     \item[(A)] P; T; Q; S
     \item[(B)] V; P; T; Q
     \item[(C)] W; R; Q; V
     \item[(D)] Q; T; V; W
 \end{enumerate}
+\end{multicols}
 
 \hfill \text{(GATE BM 2025)}
-
-\vspace{0.5cm}
 
 % =========================================================
 % SOLUTION
@@ -2642,12 +2421,9 @@ Thus, the four students remaining after the $4^{\text{th}}$ round are **P, T, Q,
 \end{align}
 \noindent\framebox[\textwidth][c]{codes/bm24.py}
 
-
 % =========================================================
 % QUESTION 25
 % =========================================================
-
-
 
 \item The table lists the top 5 nations according to the number of gold medals won in a tournament; also included are the number of silver and the bronze medals won by them. Based only on the data provided in the table, which one of the following statements is INCORRECT?
 
@@ -2663,16 +2439,19 @@ France & 16 & 26 & 22 \\ \hline
 \end{tabular}
 \end{center}
 
+\begin{multicols}{2}
 \begin{enumerate}
-    \item[(A)] France will occupy the third place if the list were made on the basis of the total number of medals won.
-    \item[(B)] The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.
-    \item[(C)] USA and Canada together have less than 50\% of the medals awarded to the nations in the above table.
-    \item[(D)] Canada has won twice as many total medals as Japan.
+\setlength{\itemsep}{0pt}
+    \item[(a)] France will occupy the third place if the list were made on the basis of the total number of medals won.
+    \item[(b)] The order of the top two nations will not change even if the list is made on the basis of the total number of medals won.
+    \item[(c)] USA and Canada together have less than 50\% of the medals awarded to the nations in the above table.
+    \item[(d)] Canada has won twice as many total medals as Japan.
 \end{enumerate}
+\end{multicols}
 
 \hfill \text{(GATE BM 2025)}
 
-\vspace{0.5cm}
+
 
 % =========================================================
 % SOLUTION
@@ -2698,28 +2477,25 @@ Total medals won by all 5 nations combined:
 Now, evaluate each statement:
 
 \begin{enumerate}
-    \item[(A)] \text{France in 3rd place by total medals:} 
+    \item[(a)] \text{France in 3rd place by total medals:} 
     Ranking by total medals: USA ($125$), Canada ($90$), France ($64$), Australia ($52$), Japan ($45$). 
     France is indeed in 3rd place. \textit{(Correct statement)}
 
-    \item[(B)] \text{Top two order unchanged:} 
+    \item[(b)] \text{Top two order unchanged:} 
     USA ($125$) is 1st and Canada ($90$) is 2nd in total medals, which matches their original gold medal ranking order. \textit{(Correct statement)}
 
-    \item[(C)] \text{USA and Canada have less than 50\% of total medals:} 
+    \item[(c)] \text{USA and Canada have less than 50\% of total medals:} 
     Combined total for USA and Canada: $125 + 90 = 215$. 
     Percentage of total medals:
     \begin{align}
     \frac{215}{376} \times 100\% \approx 57.18\%
     \end{align}
-    Since $57.18\% > 50\%$, USA and Canada have \text{more} than 50\% of the medals, making statement (C) \text{INCORRECT}.
+    
+    Since $57.18\% > 50\%$, USA and Canada have \text{more} than 50\% of the medals, making statement (c) \text{INCORRECT}.
 
-    \item[(D)] \text{Canada has twice as many total medals as Japan:} 
+    \item[(d)] \text{Canada has twice as many total medals as Japan:} 
     Japan = $45$, Canada = $90 = 2 \times 45$. \textit{(Correct statement)}
 \end{enumerate}
-
-\begin{align}
-\text{(C) USA and Canada together have less than 50\% of the medals awarded to the nations in the above table.}
-\end{align}
 
 
 \begin{lstlisting}
@@ -2731,20 +2507,19 @@ Codes/bm25.py
 % QUESTION 26
 % =========================================================
 
-
-
 \item An organization allows its employees to work independently on consultancy projects but charges an overhead on the consulting fee. The overhead is $20\%$ of the consulting fee, if the fee is up to $\text{rupee } 5,00,000$. For higher fees, the overhead is $\text{rupee } 1,00,000$ plus $10\%$ of the amount by which the fee exceeds $\text{rupee } 5,00,000$. The government charges a Goods and Services Tax of $18\%$ on the total amount (the consulting fee plus the overhead). An employee of the organization charges this entire amount, i.e., the consulting fee, overhead, and tax, to the client. If the client cannot pay more than $\text{rupee } 10,00,000$, what is the maximum consulting fee that the employee can charge?
 
+\begin{multicols}{2}
 \begin{enumerate}
-    \item[(A)] $\text{rupee } 7,01,438$
-    \item[(B)] $\text{rupee } 7,24,961$
-    \item[(C)] $\text{rupee } 7,51,232$
-    \item[(D)] $\text{rupee } 7,75,784$
+\setlength{\itemsep}{0pt}
+    \item[(a)] $\text{rupee } 7,01,438$
+    \item[(b)] $\text{rupee } 7,24,961$
+    \item[(c)] $\text{rupee } 7,51,232$
+    \item[(d)] $\text{rupee } 7,75,784$
 \end{enumerate}
+\end{multicols}
 
 \hfill \text{(GATE BM 2025)}
-
-\vspace{0.5cm}
 
 % =========================================================
 % SOLUTION
@@ -2804,17 +2579,18 @@ Rounding off to the nearest integer gives $\text{rupee } 7,24,961$.
 
 \item The determinant of a $3 \times 3$ matrix $M$ is $8$. If every element of $M$ is multiplied by $-2$, the determinant of the modified matrix will be:
 \hfill\text{(GATE BM 2025)}
+\begin{multicols}{2}
 \begin{enumerate}
-    \item[(A)] $-64$
-    \item[(B)] $-16$
-    \item[(C)] $8$
-    \item[(D)] $64$
+\setlength{\itemsep}{0pt}
+    \item[(a)] $-64$
+    \item[(b)] $-16$
+    \item[(c)] $8$
+    \item[(d)] $64$
 \end{enumerate}
+\end{multicols}
 
-\vspace{0.5cm}
+
 \solution
-
-\vspace{0.2cm}
 
     
 \text{Given Data:}
@@ -2843,5 +2619,3 @@ Codes/bm26.py
 
 
 %\end{document}
-
-
