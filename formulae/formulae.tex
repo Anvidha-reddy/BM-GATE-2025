@@ -26,17 +26,6 @@ L_1=L_0\left(\frac{m}{p}\right),
 L_n=L_0\left(\frac{m}{p}\right)^{n}. \label{iteration}
 \end{align}
 
-% =========================================================
-\item Triangle Inequality
-
-A triangle can be formed from three lengths $l_1,l_2,l_3$ if and only if
-the sum of any two sides exceeds the third:
-
-\begin{align}
-l_1+l_2>l_3,\qquad
-l_2+l_3>l_1,\qquad
-l_3+l_1>l_2.
-\end{align}
 
 % =========================================================
 \item Notch (Band-Stop) Filter Response
@@ -219,7 +208,7 @@ If $n$ is odd, the median is the middle term,
 \end{align}
 
 % =========================================================
-\item Nyquist Sampling Theorem \label {sampling}
+\item Nyquist Sampling Theorem \label{sampling}
 
 A band-limited signal with maximum frequency component $f_{\max}$
 must be sampled at a rate
@@ -369,7 +358,7 @@ By solving:
 % =========================================================
 \item Linearity and Causality of a System \label{conditions}
 
-\textbf{Linearity} (superposition): a system is linear if, for inputs
+\text{Linearity} (superposition): a system is linear if, for inputs
 $x_1,x_2$ and scalars $a,b$,
 
 \begin{align}
@@ -571,7 +560,9 @@ f_0=\frac{1}{2\pi RC}. \label{wien}
 \item Series RLC Circuit --- Resonance \label{resonance}
 
 Kirchhoff's Voltage Law for a series $RLC$ circuit driven by
-$v(t)=V_m\cos(\omega t)$:
+\begin{align}
+v(t)=V_m\cos(\omega t)
+\end{align}
 
 \begin{align}
 R\,i(t)+L\frac{di(t)}{dt}+\frac{1}{C}\int i(t)\,dt=v(t).
@@ -631,17 +622,6 @@ constant $\sigma_0$:
 \sigma(t_2)-\sigma(t_1)=-k\left[\ln(t_2)-\ln(t_1)\right]
 =-k\ln\!\left(\frac{t_2}{t_1}\right). \label{decay}
 \end{align}
-
-% =========================================================
-\item Circular Elimination (Josephus-type) Counting \label{count}
-
-Given $N$ people arranged in a circle and a fixed direction of
-counting, the $k^{\text{th}}$ person from a reference position $P$ in
-that direction is located by counting $k$ steps around the circle;
-eliminated members are removed from the circle before subsequent
-counts are made from the new reference position.
-
-
 
 
 % =========================================================

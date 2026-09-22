@@ -54,6 +54,7 @@ Hence,
 \text{(b)}\ \sqrt{2}
 \end{align}
 
+\text{The following code verifies the solution}
 \begin{lstlisting}
 codes/bm1.py
 \end{lstlisting}
@@ -75,8 +76,6 @@ iterative algorithm. The total length of the curve generated after
 % ITERATION 0
 % =========================================================
 
-
-
 \begin{tikzpicture}[scale=1.4]
 
     \draw[thick] (0,0) -- (5,0);
@@ -87,7 +86,6 @@ iterative algorithm. The total length of the curve generated after
 \end{tikzpicture}
 
 \vspace{1.2cm}
-
 
 % =========================================================
 % ITERATION 1
@@ -212,11 +210,10 @@ Hence, the correct answer is
 \begin{align}
 \text{(b)}\ \left(\frac{5}{3}\right)^n
 \end{align}
+
 % =========================================================
 % QUESTION 3
 % =========================================================
-
-
 
 \item A stick of length one meter is broken at two locations at
 distances of $b_1$ and $b_2$ from the origin $(0)$, as shown in the
@@ -256,9 +253,6 @@ representative.
 
 \end{center}
 
-
-
-
 % =========================================================
 % OPTIONS
 % =========================================================
@@ -275,7 +269,6 @@ representative.
     \item[(d)] $b_1+b_2 < 1$
 \end{enumerate}
 \end{multicols}
-
 
 % =========================================================
 % SOLUTION
@@ -380,10 +373,10 @@ is not required for the three pieces to form a triangle.
 
 Therefore, the condition which is \textbf{NOT} necessary is (D)
 
+\text The following code gives whether the triangle is feasible or not by taking $b_1$,$b_2$
 \begin{lstlisting}
 Codes/bm3.py
 \end{lstlisting}
-
 
 
 % =========================================================
@@ -579,9 +572,6 @@ Here, $a$ and $b$ are finite and real.
 \end{multicols}
 
 
-
-
-
 % =========================================================
 % SOLUTION
 % =========================================================
@@ -616,16 +606,13 @@ f'(x)\neq0 \qquad \text{for all }x.
 
 \begin{align}
 \boxed{f(a)\neq f(b)}.
-\end{align}% =========================================================
+\end{align}
+% =========================================================
 % QUESTION 6
 % =========================================================
 
-
-
 \item The closed loop system shown below
 \underline{\hspace{2cm}}.
-
-\vspace{0.5cm}
 
 \begin{center}
 
@@ -702,9 +689,7 @@ f'(x)\neq0 \qquad \text{for all }x.
 % SOLUTION TO QUESTION 6
 % =========================================================
 
-
 \solution
-
 
 The forward transfer function is:
 \begin{align}
@@ -764,11 +749,11 @@ Correct option: (B) is underdamped
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{figs/bm6.png}
+    \includegraphics[width=1\textwidth]{figs/bm6.png}
     \caption{c(t) vs time}
     \label{c(t) vs time}
 \end{figure}
-
+\text{The following code gives the above graph}
 \begin{lstlisting}
 Codes/bm6.py
 \end{lstlisting}
@@ -795,28 +780,18 @@ are \underline{\hspace{2cm}}.
 \setlength{\itemsep}{0pt}
 \item[(a)] $\cos\theta$ and $\sin\theta$
 
-\vspace{0.3cm}
-
 \item[(b)] $e^{i\theta}$ and $e^{-i\theta}$, where $i=\sqrt{-1}$
 
-\vspace{0.3cm}
-
 \item[(c)] $\cos\theta$ and $-\sin\theta$
-
-\vspace{0.3cm}
 
 \item[(d)] $\cos 2\theta$ and $\sin 2\theta$
 
 \end{enumerate}
 \end{multicols}
 
-
-
 % =========================================================
 % SOLUTION TO QUESTION 7
 % =========================================================
-
-
 
 \solution
 
@@ -841,6 +816,7 @@ the eigenvalues are
 \text{Therefore, the correct answer is (B)}
 \end{align}
 
+\text{The following code verifies the solution}
 \begin{lstlisting}
 Codes/bm7.py
 \end{lstlisting}
@@ -872,8 +848,6 @@ is \underline{\hspace{2cm}}.
     \item[(d)] $2$
 \end{enumerate}
 \end{multicols}
-
-
 
 %==============================================
 %==============================================
@@ -923,22 +897,17 @@ Therefore, the correct option is (D) 2
     \label{Derivative vs x; function vs x with tangent}
 \end{figure}
 
+\text{The following code results the graph}
 \begin{lstlisting}
 Codes/bm8.py
 \end{lstlisting}
-
-
 
 % =========================================================
 % QUESTION 9
 % =========================================================
 
-
-
 \item The elements of the dataset $\{-5, 1, a, 5, b\}$ are in ascending order. If both mean and median of the dataset are equal to $3$, what is the value of $b$?
 \hfill \text{(GATE BM 2025)}
-
-
 
 % =========================================================
 % OPTIONS
@@ -1001,7 +970,7 @@ b = 11
 \text{Hence, the correct answer is (b) 11}
 \end{align}
 
-
+\text{The following code verifies the solution}
 \begin{lstlisting}
 Codes/bm9.py
 \end{lstlisting}
@@ -1011,8 +980,6 @@ Codes/bm9.py
 % QUESTION 10
 % =========================================================
 
-
-
 \item A time domain signal is given by
 \begin{align}
 x(t) = 20\sin(100\pi t) + 36\sin(150\pi t) - 2\sin(300\pi t),
@@ -1020,11 +987,10 @@ x(t) = 20\sin(100\pi t) + 36\sin(150\pi t) - 2\sin(300\pi t),
 where time $t$ is in seconds. Among the following options, what is the frequency (in $\text{Hz}$) at which $x(t)$ should be sampled for accurate signal reconstruction?
 \hfill \text{(GATE BM 2025)}
 
-
-
 % =========================================================
 % OPTIONS
 % =========================================================
+
 \begin{multicols}{2}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
@@ -1037,8 +1003,6 @@ where time $t$ is in seconds. Among the following options, what is the frequency
     \item[(d)] $250$
 \end{enumerate}
 \end{multicols}
-
-
 
 % =========================================================
 % SOLUTION
@@ -1053,7 +1017,7 @@ From \eqref{sampling}
     \caption{Aliasing and Non-Aliasing}
     \label{Aliasing and Non-Aliasing}
 \end{figure}
-
+\text{The following code results the graph}
 \begin{lstlisting}
 Codes/bm10a.py
 \end{lstlisting}
@@ -1097,6 +1061,7 @@ Hence, the correct answer is (a) 500
     \label{plot of x(t) vs time}
 \end{figure}
 
+\text{The following graph results the graph}
 \begin{lstlisting}
 Codes/bm10.py
 \end{lstlisting}
@@ -1114,8 +1079,6 @@ Codes/bm10.py
 \item A voltage source $V_s = 5\sin\left(100t + \frac{\pi}{2}\right)\text{ volts}$ is driving a current $I = 10\sin\left(100t + \frac{\pi}{6}\right)\text{ mA}$ through a circuit. The average power dissipated in the circuit is \underline{\hspace{2cm}} $\text{mW}$.
 \hfill \text{(GATE BM 2025)}
 
-
-
 % =========================================================
 % OPTIONS
 % =========================================================
@@ -1131,8 +1094,6 @@ Codes/bm10.py
     \item[(d)] $50.0$
 \end{enumerate}
 \end{multicols}
-
-
 
 % =========================================================
 % SOLUTION
@@ -1165,7 +1126,7 @@ P_{\text{avg}} &= \frac{1}{2} \times 5 \times 10 \times \cos\left(\frac{\pi}{3}\
 P_{\text{avg}} &= 12.5 \text{ mW}
 \end{align}
 
-\text{Correct Option:} \textbf{(b) 12.5}
+\text{Correct Option:} \text{(b) 12.5}
 
 \begin{figure}[H]
     \centering
@@ -1174,10 +1135,10 @@ P_{\text{avg}} &= 12.5 \text{ mW}
     \label{power vs time}
 \end{figure}
 
+\text{The following code results the graph}
 \begin{lstlisting}
 Codes/bm11.py
 \end{lstlisting}
-
 
 % =========================================================
 % QUESTION 12
@@ -1224,8 +1185,8 @@ f_Y(x) = \frac{1}{\sqrt{24\pi}} \exp\left( -\frac{(x - 16)^2}{24} \right)
 \end{align}
 
 To find $N$, divide the variance equation by the mean equation:
-\begin{align}
 From \eqref{variance}
+\begin{align}
 \frac{Np(1 - p)}{Np} = \frac{12}{16}
 \end{align}
 
@@ -1255,6 +1216,7 @@ N &= 64
     \label{probability vs values}
 \end{figure}
 
+\text{The following code results the graph}
 \begin{lstlisting}
 Codes/bm12.py
 \end{lstlisting}
@@ -1386,7 +1348,7 @@ y(\ln 100) = 1.5(10) - 0.5(0.1) = 15 - 0.05 = 14.95
     \label{Stem plot of Euler Reccurrence relation}
 \end{figure}
 
-
+\text{The following graph results the graph}
 \begin{lstlisting}
 Codes/bm13.py
 \end{lstlisting}
@@ -1500,6 +1462,7 @@ Evaluating Phase $\angle Z_{\text{in}}$:
     \label{Impedance Magnitude VS Omega; Phase VS Omega}
 \end{figure}
 
+\text{The following graph results the graph}
 \begin{lstlisting}
 Codes/bm14.py
 \end{lstlisting}
@@ -1711,7 +1674,7 @@ The input signal sequence $x(n)$ of length $N = 2$ is:
 \begin{align}
 	\vec{x(n)}=\myvec{1 & 1}
 \end{align}
-The linear convolution $y(n) = h(n) * x(n)$ has a total length of $4$ points (spanning $n = 0, 1, 2, 3$). (From \eqref(convolution})
+The linear convolution $y(n) = h(n) * x(n)$ has a total length of $4$ points (spanning $n = 0, 1, 2, 3$). (From \eqref{convolution})
 
 \text{Construct the Convolution (Toeplitz) Matrix}
 Linear convolution can be represented as a matrix-vector product $\vec{y}$ = $\vec{H}$ $\vec{x}$, where $\vec{H}$ is a (M+N-1)*N=8 lower-triangular Toeplitz matrix formed by shifting $h(n)$ downwards:
@@ -1770,7 +1733,7 @@ y(1) = \frac{1}{2}(1) + 1(1) = \frac{3}{2}\\
 y(2) = \frac{1}{3}(1) + \frac{1}{2}(1) = \frac{5}{6}\\
 y(3) = 0(1) + \frac{1}{3}(1) = \frac{1}{3}
 \end{align}
-For $k \ge 4$, $y[k] = 0$ since the signal duration ends at $n = 3$.
+For $k \ge 4$, $y(k) = 0$ since the signal duration ends at $n = 3$.
 
 \text{Verify the Options}
 \begin{itemize}
@@ -1788,6 +1751,7 @@ For $k \ge 4$, $y[k] = 0$ since the signal duration ends at $n = 3$.
     \label{signals vs n}
 \end{figure}
 
+\text{The following code results the graph}
 \begin{lstlisting}
 Codes/bm17a.py
 \end{lstlisting}
@@ -1837,6 +1801,7 @@ V_{\text{out}} = \frac{915}{255} \approx 3.5882\text{ V}
 
 Rounding off to two decimal places gives: 3.59
 
+\text{The following code verifies the answer}
 \begin{lstlisting}
 Codes/bm18.py
 \end{lstlisting}
@@ -2179,6 +2144,7 @@ I_{\text{rms}}(\omega_0) = \frac{240\text{ V}}{60\,\Omega} = 4\text{ A}
     \label{strength of implanted suture}
 \end{figure}
 
+\text{The following code results in graph}
 \begin{lstlisting}
 Codes/bm21.py
 \end{lstlisting}
@@ -2256,6 +2222,7 @@ x_4 &\approx 2.0946 \quad (\text{Converged Real Root } \alpha)
     \label{Newton Raphson iteration for f(x)}
 \end{figure}
 
+\text{The following code results in graph}
 \begin{lstlisting}
 Codes/bm22a.py
 \end{lstlisting}
@@ -2309,7 +2276,7 @@ Rounding off to two decimal places gives: 0.61
     \label{strength of implanted suture}
 \end{figure}
 
-
+\text{The following code results in graph}
 \begin{lstlisting}
 Codes/bm23.py
 \end{lstlisting}
