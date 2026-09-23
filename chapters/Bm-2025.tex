@@ -1082,9 +1082,11 @@ V_0 &= 5 \text{ V}\\ I_0 &= 10 \text{ mA}\\
 \end{align}
 
 Calculate the phase difference $\theta$:
-\begin{equation}
-\theta = \phi_v - \phi_i = \frac{\pi}{2} - \frac{\pi}{6} = \frac{3\pi - \pi}{6} = \frac{2\pi}{6} = \frac{\pi}{3} \text{ rad}
-\end{equation}
+\begin{align}
+\theta &= \phi_v - \phi_i \\
+&= \frac{\pi}{2} - \frac{\pi}{6} \\
+&= \frac{\pi}{3} \text{ rad}
+\end{align}
 From \eqref{power}
 
 Substituting these values into the average power formula:
@@ -1102,6 +1104,8 @@ P_{\text{avg}} &= 12.5 \text{ mW}
 \end{figure}
 
 \text{The following code results the graph}
+
+
 \begin{lstlisting}
 Codes/bm11.py
 \end{lstlisting}
@@ -1418,8 +1422,7 @@ Evaluating Magnitude $|Z_{\text{in}}|$:
 
 Evaluating Phase $\angle Z_{\text{in}}$:
 \begin{align}
-\angle Z_{\text{in}}\\
-&= \tan^{-1}\left(\frac{-0.5}{3.5}\right)\\
+\angle Z_{\text{in}}&= \tan^{-1}\left(\frac{-0.5}{3.5}\right)\\
 &= -\tan^{-1}\left(\frac{1}{7}\right)\\
 &\approx -8.13^\circ
 \end{align}
@@ -2086,7 +2089,8 @@ Rounding off to two decimal places: 1.59
 Evaluating the resonance angular frequency and cyclic frequency:
 
 \begin{align}
-\omega_0 = \frac{1}{\sqrt{(10 \times 10^{-3} \text{ H})(8 \times 10^{-6} \text{ F})}} = \frac{1}{\sqrt{8 \times 10^{-8}}} = 3535.53 \text{ rad/s}
+\omega_0 &= \frac{1}{\sqrt{(10 \times 10^{-3} \text{ H})(8 \times 10^{-6} \text{ F})}}\\ &= \frac{1}{\sqrt{8 \times 10^{-8}}}\\
+&= 3535.53 \text{ rad/s}
 \end{align}
 
 \begin{align}
@@ -2150,7 +2154,8 @@ From \eqref{raphson}
 Substituting $f(x_n)$ and $f'(x_n)$ into the update equation gives the explicit recurrence relation:
 
 \begin{align}
-x_{n+1} = x_n - \frac{x_n^3 - 2x_n - 5}{3x_n^2 - 2} = \frac{2x_n^3 + 5}{3x_n^2 - 2}
+x_{n+1} &= x_n - \frac{x_n^3 - 2x_n - 5}{3x_n^2 - 2}\\
+&= \frac{2x_n^3 + 5}{3x_n^2 - 2}
 \end{align}
 
 
@@ -2158,16 +2163,16 @@ x_{n+1} = x_n - \frac{x_n^3 - 2x_n - 5}{3x_n^2 - 2} = \frac{2x_n^3 + 5}{3x_n^2 -
 
 Evaluating $f(x_0)$ and $f'(x_0)$:
 \begin{align}
-f(3) = (3)^3 - 2(3) - 5 = 27 - 6 - 5 = 16
+f(3) = (3)^3 - 2(3) - 5 = 16
 \end{align}
 
 \begin{align}
-f'(3) = 3(3)^2 - 2 = 27 - 2 = 25
+f'(3) = 3(3)^2 - 2 = 25
 \end{align}
 
 Using the update equation to calculate $x_1$:
 \begin{align}
-x_1 = 3 - \frac{16}{25} = 3 - 0.64 = 2.36
+x_1 = 3 - \frac{16}{25} = 2.36
 \end{align}
 
 \text{Subsequent Iterations (Finding the Actual Root)}
@@ -2222,13 +2227,14 @@ We are given that at $t = 4$ weeks, the strength $\sigma(4) = 2\text{ MPa}$:
 Now, we need to find the strength at $t = 8$ weeks,
 \text From \eqref{decay}
 \begin{align}
-\sigma(8) - 2 = -2\ln\left(\frac{8}{4}\right) = -2\ln(2)
+\sigma(8) - 2 &= -2\ln\left(\frac{8}{4}\right)\\
+&= -2\ln(2)
 \end{align}
 
 Substituting $\ln(2) \approx 0.69315$:
 
 \begin{align}
-\sigma(8) - 2 = -2(0.69315) = -1.3863
+\sigma(8) - 2 = -1.3863
 \end{align}
 
 \begin{align}
