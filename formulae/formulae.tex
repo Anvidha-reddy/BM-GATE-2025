@@ -21,9 +21,8 @@ If, at every iteration, each segment is replaced by $m$ segments each
 of length $\dfrac{1}{p}$ of the original segment, the length scales as
 
 \begin{align}
-L_1=L_0\left(\frac{m}{p}\right),
-\qquad
-L_n=L_0\left(\frac{m}{p}\right)^{n}. \label{iteration}
+L_1&=L_0\left(\frac{m}{p}\right),\\
+L_n&=L_0\left(\frac{m}{p}\right)^{n}. \label{iteration}
 \end{align}
 
 
@@ -35,9 +34,8 @@ a rejected frequency $\omega_0$, while passing frequencies away from
 it:
 
 \begin{align}
-|H(j\omega_0)|\approx 0,
-\qquad
-|H(j\omega)|\ \text{high for}\ \omega<\omega_0\ \text{and}\ \omega>\omega_0. \label{freq}
+&|H(j\omega_0)|\approx 0, \\
+&|H(j\omega)|\ \text{high for}\ \omega<\omega_0\ \text{and}\ \omega>\omega_0. \label{freq}
 \end{align}
 
 % =========================================================
@@ -234,11 +232,9 @@ P_{\text{avg}}=V_{\text{rms}}I_{\text{rms}}\cos\theta, \label{power}
 where
 
 \begin{align}
-V_{\text{rms}}=\frac{V_m}{\sqrt2},
-\qquad
-I_{\text{rms}}=\frac{I_m}{\sqrt2},
-\qquad
-\theta=\phi_v-\phi_i.
+V_{\text{rms}}&=\frac{V_m}{\sqrt2}\\
+I_{\text{rms}}&=\frac{I_m}{\sqrt2}\\
+\theta&=\phi_v-\phi_i.
 \end{align}
 
 % =========================================================
@@ -247,9 +243,8 @@ I_{\text{rms}}=\frac{I_m}{\sqrt2},
 For $X\sim B(N,p)$,
 
 \begin{align}
-E(X)=Np,
-\qquad
-\operatorname{Var}(X)=Np(1-p). \label{variance}
+E(X)&=Np\\
+\operatorname{Var}(X)&=Np(1-p). \label{variance}
 \end{align}
 
 % =========================================================
@@ -289,7 +284,8 @@ Z_C(\omega) = \frac{1}{j\omega C} = -\frac{j}{\omega C}
 
 The parallel combination of resistor $R_2$ and capacitor $Z_C(\omega)$ gives $Z_p(\omega)$:
 \begin{align}
-Z_p(\omega) &= \frac{R_2 \cdot Z_C(\omega)}{R_2 + Z_C(\omega)} = \frac{R_2 \left(-\frac{j}{\omega C}\right)}{R_2 - \frac{j}{\omega C}}\\
+Z_p(\omega) &= \frac{R_2 \cdot Z_C(\omega)}{R_2 + Z_C(\omega)}\\
+& = \frac{R_2 \left(-\frac{j}{\omega C}\right)}{R_2 - \frac{j}{\omega C}}\\
 & = \frac{-j R_2}{\omega R_2 C - j}
 \end{align}
 
@@ -331,7 +327,7 @@ For real $x$, using Euler's identity for $-1$,
 
 
 \begin{align}
-y = \log_e(-e^x) = \ln(-e^x)
+y = \ln(-e^x)
 \end{align}
 
 Using logarithmic properties, we rewrite the term inside the logarithm:
@@ -349,7 +345,8 @@ Applying Euler's identity, $-1$ can be expressed in complex exponential form as:
 By solving:
 
 \begin{align}
--e^x = e^{x} \cdot e^{i(2k+1)\pi} = e^{x + i(2k+1)\pi} \label{e^x}
+-e^x &= e^{x} \cdot e^{i(2k+1)\pi}\\
+&= e^{x + i(2k+1)\pi} \label{e^x}
 \end{align}
 
 
@@ -365,18 +362,18 @@ $x_1,x_2$ and scalars $a,b$,
 T\{a\,x_1(t)+b\,x_2(t)\}=a\,T\{x_1(t)\}+b\,T\{x_2(t)\}.
 \end{align}
 
-\textbf{Causality}: a system is causal if the output at time $t_0$
+\text{Causality}: a system is causal if the output at time $t_0$
 depends only on input values for $t\le t_0$; if it depends on future
 input values ($t>t_0$), it is noncausal.
 
 % =========================================================
 \item Linear (Discrete) Convolution
 
-For an LTI system with impulse response $h[n]$ of length $M$ and
-input $x[n]$ of length $N$,
+For an LTI system with impulse response $h(n)$ of length $M$ and
+input $x(n)$ of length $N$,
 
 \begin{align}
-y[n]=h[n]*x[n]=\sum_{k}h[k]\,x[n-k],
+y(n)=h(n)*x(n)=\sum_{k}h(k)\,x(n-k),
 \end{align}
 
 with output length
@@ -386,11 +383,11 @@ L=M+N-1. \label{convolution}
 \end{align}
 
 This can be written as a matrix--vector product using a lower
-triangular Toeplitz matrix \myvec{H} built from shifted copies of
-$h[n]$:
+triangular Toeplitz matrix $\vec{H}$ built from shifted copies of
+$h(n)$:
 
 \begin{align}
-\myvec{y}=\myvec{H},\myvec{x}.
+\vec{y}=\vec{H},\vec{x}.
 \end{align}
 
 % =========================================================
@@ -491,11 +488,10 @@ $A$, and let the non-inverting input be grounded.
 
 \text{Ideal op-amp assumptions:}
 
-\begin{align}
-\text{(i)}\quad &\text{No current flows into either input terminal.}\\
-\text{(ii)}\quad &\text{The open-loop gain is infinite, so the two
-inputs are forced to the same potential (virtual short).}
-\end{align}
+\begin{itemize}
+\item\text{No current flows into either input terminal.}
+\item\text{The open-loop gain is infinite, so the two inputs are forced to the same} \text{potential (virtual short).}
+\end{itemize}
 
 Since the non-inverting input is at $0\,\text{V}$ (grounded), the
 virtual short forces node $A$ to also be at $0\,\text{V}$:
@@ -526,8 +522,8 @@ Solving for $V_{\text{out}}$:
 
 \begin{align}
 V_{\text{out}}
-=-R_f\left(\frac{V_1}{R_1}+\frac{V_2}{R_2}+\frac{V_3}{R_3}\right)
-=-\left(\frac{R_f}{R_1}V_1+\frac{R_f}{R_2}V_2+\frac{R_f}{R_3}V_3\right),
+&=-R_f\left(\frac{V_1}{R_1}+\frac{V_2}{R_2}+\frac{V_3}{R_3}\right)\\
+&=-\left(\frac{R_f}{R_1}V_1+\frac{R_f}{R_2}V_2+\frac{R_f}{R_3}V_3\right),
 \end{align}
 
 
@@ -571,24 +567,28 @@ R\,i(t)+L\frac{di(t)}{dt}+\frac{1}{C}\int i(t)\,dt=v(t).
 In the phasor domain, the impedance is
 
 \begin{align}
-Z(\omega)=R+j\left(\omega L-\frac{1}{\omega C}\right)\\
-\qquad
-|Z(\omega)|=\sqrt{R^{2}+\left(\omega L-\frac{1}{\omega C}\right)^{2}}.
+Z(\omega)&=R+j\left(\omega L-\frac{1}{\omega C}\right)\\
+|Z(\omega)|&=\sqrt{R^{2}+\left(\omega L-\frac{1}{\omega C}\right)^{2}}.
 \end{align}
 
-Converting to complex phasor notation $V(t) = V_{\text{rms}} \sqrt{2} e^{j\omega t}$ and $I(t) = I_{\text{rms}} \sqrt{2} e^{j(\omega t - \phi)}$:
+Converting to complex phasor notation 
+
 \begin{align}
-Z(\omega) = \frac{V(\omega)}{I(\omega)} = R + j\omega L + \frac{1}{j\omega C} = R + j\left(\omega L - \frac{1}{\omega C}\right)
+V(t) &= V_{\text{rms}} \sqrt{2} e^{j\omega t}\\
+I(t) &= I_{\text{rms}} \sqrt{2} e^{j(\omega t - \phi)}
+\end{align}
+\begin{align}
+Z(\omega) &= \frac{V(\omega)}{I(\omega)}\\
+&= R + j\omega L + \frac{1}{j\omega C} \\
+&= R + j\left(\omega L - \frac{1}{\omega C}\right)
 \end{align}
 
 Resonance occurs when the reactive part vanishes:
 
 \begin{align}
-\omega_0 L=\frac{1}{\omega_0 C}
-\;\Longrightarrow\;
-\omega_0=\frac{1}{\sqrt{LC}},
-\qquad
-f_0=\frac{\omega_0}{2\pi}.
+\omega_0 L&=\frac{1}{\omega_0 C}\\
+\implies \omega_0 &=\frac{1}{\sqrt{LC}}\\
+f_0 &=\frac{\omega_0}{2\pi}.
 \end{align}
 
 At resonance, $Z(\omega_0)=R$, so
@@ -619,8 +619,8 @@ the difference between two times $t_1,t_2$ eliminates the unknown
 constant $\sigma_0$:
 
 \begin{align}
-\sigma(t_2)-\sigma(t_1)=-k\left[\ln(t_2)-\ln(t_1)\right]
-=-k\ln\!\left(\frac{t_2}{t_1}\right). \label{decay}
+\sigma(t_2)-\sigma(t_1)&=-k\left[\ln(t_2)-\ln(t_1)\right]\\
+&=-k\ln\!\left(\frac{t_2}{t_1}\right). \label{decay}
 \end{align}
 
 
@@ -654,6 +654,28 @@ E[X]=\mu,
 \qquad
 \operatorname{Var}(X)=\sigma^{2}.
 \end{align}
+
+
+\begin{enumerate}
+
+    \item Binomial Approximation (De Moivre--Laplace Theorem)
+    For a binomial random variable $X \sim \text{Bin}(n, p)$ with large $n$ such that $np \ge 5$ and $n(1-p) \ge 5$, the binomial distribution can be approximated by a Gaussian distribution with:
+    \begin{align}
+    \mu = np, \quad \sigma^2 = np(1-p).
+    \end{align}
+    
+    The probability mass function is approximated as:
+    \begin{align}
+    \pr{X = k} \approx \frac{1}{\sqrt{2\pi np(1-p)}} \exp\left( -\frac{(k - np)^2}{2np(1-p)} \right).
+    \end{align}
+
+    \item Continuity Correction
+    When approximating a discrete binomial distribution using a continuous Gaussian distribution, a continuity correction factor of $0.5$ is applied:
+    \begin{align}
+    \pr{a \le X \le b} \approx P\left( \frac{a - 0.5 - np}{\sqrt{np(1-p)}} \le Z \le \frac{b + 0.5 - np}{\sqrt{np(1-p)}} \right).
+    \end{align}
+
+\end{enumerate}
 
 % =========================================================
 \item Central Limit Theorem (CLT)

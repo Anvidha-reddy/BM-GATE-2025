@@ -50,10 +50,6 @@ Hence,
 \end{align}
 
 
-\begin{align}
-\text{(b)}\ \sqrt{2}
-\end{align}
-
 \text{The following code verifies the solution}
 \begin{lstlisting}
 codes/bm1.py
@@ -205,11 +201,6 @@ from \eqref{iteration}
 L_n=\left(\frac{5}{3}\right)^n
 \end{align}
 
-Hence, the correct answer is
-
-\begin{align}
-\text{(b)}\ \left(\frac{5}{3}\right)^n
-\end{align}
 
 % =========================================================
 % QUESTION 3
@@ -537,10 +528,6 @@ From \eqref{freq}
 Among the given frequency responses, only option (D) shows a sharp
 reduction in gain at a particular frequency while allowing frequencies
 on either side to pass.
-Hence, Answer: (D)
-
-
-
 
 % =========================================================
 % QUESTION 5
@@ -602,11 +589,8 @@ But this contradicts the given condition
 f'(x)\neq0 \qquad \text{for all }x.
 \end{align}
 
-\noindent Therefore, our assumption that $f(a)=f(b)$ is false. Hence,
+\noindent Therefore, our assumption that $f(a)=f(b)$ is false. Hence,$f(a)\neq f(b)$
 
-\begin{align}
-\boxed{f(a)\neq f(b)}.
-\end{align}
 % =========================================================
 % QUESTION 6
 % =========================================================
@@ -681,8 +665,6 @@ f'(x)\neq0 \qquad \text{for all }x.
 
 \end{enumerate}
 \end{multicols}
-\vspace{0.4cm}
-
 
 
 % =========================================================
@@ -743,8 +725,6 @@ c(t) = \frac{10}{\sqrt{3}} e^{-\frac{5}{2}t} \sin\left(\frac{5\sqrt{3}}{2}t\righ
 \end{align}
 
 The presence of the decaying exponential $e^{-\frac{5}{2}t}$ multiplied by the sine term confirms an underdamped oscillatory response.
-
-Correct option: (B) is underdamped
 
 
 \begin{figure}[H]
@@ -812,9 +792,7 @@ the eigenvalues are
 \boxed{\lambda_1=e^{i\theta},\qquad
 \lambda_2=e^{-i\theta}}.
 \end{align}
-\begin{align}
-\text{Therefore, the correct answer is (B)}
-\end{align}
+
 
 \text{The following code verifies the solution}
 \begin{lstlisting}
@@ -886,9 +864,6 @@ f'(1)
 2.
 \end{align}
 
-
-
-Therefore, the correct option is (D) 2
 
 \begin{figure}[H]
     \centering
@@ -966,9 +941,7 @@ Substituting $a = 3$ into equation (9.3):
 \begin{align}
 b = 11
 \end{align}
-\begin{align}
-\text{Hence, the correct answer is (b) 11}
-\end{align}
+
 
 \text{The following code verifies the solution}
 \begin{lstlisting}
@@ -1051,8 +1024,6 @@ f_s \ge 2 \times 150\text{ Hz} = 300\text{ Hz}
 
 Among the given options, the only frequency greater than or equal to $300\text{ Hz}$ that guarantees accurate signal reconstruction is $500\text{ Hz}$.
 
-Hence, the correct answer is (a) 500
-
 
 \begin{figure}[H]
     \centering
@@ -1065,9 +1036,6 @@ Hence, the correct answer is (a) 500
 \begin{lstlisting}
 Codes/bm10.py
 \end{lstlisting}
-
-
-
 
 
 % =========================================================
@@ -1126,7 +1094,6 @@ P_{\text{avg}} &= \frac{1}{2} \times 5 \times 10 \times \cos\left(\frac{\pi}{3}\
 P_{\text{avg}} &= 12.5 \text{ mW}
 \end{align}
 
-\text{Correct Option:} \text{(b) 12.5}
 
 \begin{figure}[H]
     \centering
@@ -1207,7 +1174,6 @@ N &= 16 \times 4 \\
 N &= 64
 \end{align}
 
-\text{Correct Option:} \text{(d) 64}
 
 \begin{figure}[H]
     \centering
@@ -1338,9 +1304,6 @@ y(\ln 100) = 1.5(10) - 0.5(0.1) = 15 - 0.05 = 14.95
 \end{align}
  
 
-\text{Correct Option: (c) 14.95}
-
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figs/13.png}
@@ -1454,7 +1417,6 @@ Evaluating Phase $\angle Z_{\text{in}}$:
 \angle Z_{\text{in}} = \tan^{-1}\left(\frac{-0.5}{3.5}\right) = -\tan^{-1}\left(\frac{1}{7}\right) \approx -8.13^\circ
 \end{align}
 
-\text{Correct Answer: (b) 3.5}
 
 \begin{figure}[H]
     \centering
@@ -1524,9 +1486,9 @@ y = x \pm i n \pi, \quad \text{where } n \text{ is an odd integer and } i = \sqr
 
 Since $y$ contains an imaginary component $i n \pi$ (with $n \ge 1$), $y$ is a complex-valued function.
 
-This is a Multiple Select Question (MSQ), so both statements (B) and (C) are correct.
+ Both statements (B) and (C) are correct.
 
-Hence, the correct options are (b), (c)
+
                                           
 % =========================================================
 % QUESTION 16
@@ -1625,7 +1587,7 @@ Causality check:
 \end{align}
 Since $y(0)$ depends on the future input $x(1)$, System V is noncausal.
 
-Hence, the correct options are (a) and (b).
+
 
 
 % =========================================================
@@ -1744,7 +1706,6 @@ For $k \ge 4$, $y(k) = 0$ since the signal duration ends at $n = 3$.
   \item \text{Option (d):} $y(k) = 0$ for all $k \ge 4$ \quad (\text{Correct})
 \end{itemize}
 
-\text{Correct Options: (b) and (d)}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figs/bm17a.png}
@@ -1922,7 +1883,6 @@ V_{\text{out}} = -(4 + 5 + 5) = -14\text{ V}
 
 Since the calculated voltage ($-14\text{ V}$) lies within the saturation limits ($-15\text{ V}$ to $+15\text{ V}$), the op-amp stays in its linear region.
 
-Rounding off to the nearest integer gives: -14
 
 % =========================================================
 % QUESTION 20
@@ -2214,7 +2174,7 @@ x_3 &= \frac{2(2.1272)^3 + 5}{3(2.1272)^2 - 2} \approx 2.0951 \\
 x_4 &\approx 2.0946 \quad (\text{Converged Real Root } \alpha)
 \end{align}
 
-\text{Answer for $x_1$ after ONE iteration: 2.36}
+\text{$x_1$ after ONE iteration: 2.36}
 
 \begin{figure}[H]
     \centering
@@ -2539,13 +2499,9 @@ F = \frac{797,457.627}{1.10} \approx 724,961.48
 
 Rounding off to the nearest integer gives $\text{rupee } 7,24,961$.
 
-\begin{align}
-\text{(B) rupee\ 7,24,961}
-\end{align}
-
 %Question 27
 
-\item The determinant of a $3 \times 3$ matrix $M$ is $8$. If every element of $M$ is multiplied by $-2$, the determinant of the modified matrix will be:
+\item The determinant of a $3 \times 3$ matrix $\vec{M}$ is $8$. If every element of $\vec{M}$ is multiplied by $-2$, the determinant of the modified matrix will be:
 \hfill\text{(GATE BM 2025)}
 \begin{multicols}{2}
 \begin{enumerate}
@@ -2557,26 +2513,21 @@ Rounding off to the nearest integer gives $\text{rupee } 7,24,961$.
 \end{enumerate}
 \end{multicols}
 
-
 \solution
-
     
 \text{Given Data:}
    
-Order of matrix $M$, $n = 3$
-Determinant of matrix $M$, $\det(M) = 8$
+Order of matrix $\vec{M}$, $n = 3$
+Determinant of matrix $\vec{M}$, $\det\vec{M} = 8$
 Scalar multiplier, $k = -2$
 Substituting the given values into \eqref{det}
     \begin{align}
-    \det(-2 M) = (-2)^3 \cdot \det(M)
+    \det(-2 \vec{M}) = (-2)^3 \cdot \det(\vec{M})
     \end{align}
     \begin{align}
-    \det(-2 M) = -8 \cdot 8 = -64
+    \det(-2 \vec{M}) = -8 \cdot 8 = -64
     \end{align}
 
-\begin{align}
-\text{(A) -64}
-\end{align}
 
 \text{The following code verifies solution}
 \begin{lstlisting}
