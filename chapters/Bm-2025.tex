@@ -619,8 +619,8 @@ f'(x)\neq0 \qquad \text{for all }x.
 \node[sum] (sum) {};
 
 % Plus and minus signs
-\node at ($(sum.west)+(0.15,0.25)$) {$ +$};
-\node at ($(sum.south)+(0.18,0.18)$) {$- $};
+\node at ($(sum.center)+(-0.2,0.0)$) [font=\tiny] {$ +$};
+\node at ($ (sum.center)+(0.2,0.0)$)[font=\tiny] {$- $};
 
 % Input arrow
 \draw[->] ($(sum.west)+(-1.2,0)$) -- (sum.west);
@@ -654,7 +654,6 @@ f'(x)\neq0 \qquad \text{for all }x.
 \item[(a)] is overdamped
 
 
-
 \item[(b)] is underdamped
 
 
@@ -682,7 +681,8 @@ From \eqref{neg}
 
 Substitute $G(s)$:
 \begin{align}
-\frac{C(s)}{R(s)} = \frac{\frac{25}{s(s+5)}}{1 + \frac{25}{s(s+5)}} = \frac{25}{s^2 + 5s + 25}
+\frac{C(s)}{R(s)} &= \frac{\frac{25}{s(s+5)}}{1 + \frac{25}{s(s+5)}} \\
+&= \frac{25}{s^2 + 5s + 25}
 \end{align}
 
 The characteristic equation in the Laplace domain is:
@@ -695,7 +695,7 @@ Comparing this with the standard second-order system equation $s^2 + 2\zeta\omeg
 \omega_n^2 = 25 \implies \omega_n = 5
 \end{align}
 \begin{align}
-2\zeta\omega_n = 5 \implies 2\zeta(5) = 5 \implies \zeta = 0.5
+2\zeta\omega_n = 5 \implies 2\zeta(5)= 5 \implies \zeta = 0.5
 \end{align}
 
 Since $0 < \zeta < 1$, From \eqref{compare} the system is underdamped.
@@ -707,15 +707,14 @@ C(s) = \frac{25}{s^2 + 5s + 25}
 
 Completing the square in the denominator:
 \begin{align}
-s^2 + 5s + 25 = \left(s + \frac{5}{2}\right)^2 + \frac{75}{4} = (s + 2.5)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2
+s^2 + 5s + 25 &= \left(s + \frac{5}{2}\right)^2 + \frac{75}{4} \\
+&= (s + 2.5)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2
 \end{align}
 
 Rewriting $C(s)$:
 \begin{align}
-C(s) = \frac{25}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2} = \frac{25}{\frac{5\sqrt{3}}{2}} \cdot \frac{\frac{5\sqrt{3}}{2}}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2}
-\end{align}
-\begin{align}
-C(s) = \frac{10}{\sqrt{3}} \cdot \frac{\frac{5\sqrt{3}}{2}}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2}
+C(s) &= \frac{25}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2}\\ &= \frac{25}{\frac{5\sqrt{3}}{2}} \cdot \frac{\frac{5\sqrt{3}}{2}}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2}\\
+&= \frac{10}{\sqrt{3}} \cdot \frac{\frac{5\sqrt{3}}{2}}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2}
 \end{align}
 
 From \eqref{inverse}
@@ -729,7 +728,7 @@ The presence of the decaying exponential $e^{-\frac{5}{2}t}$ multiplied by the s
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figs/bm6.png}
+    \includegraphics[width=0.75\textwidth]{figs/bm6.png}
     \caption{c(t) vs time}
     \label{c(t) vs time}
 \end{figure}
@@ -1097,7 +1096,7 @@ P_{\text{avg}} &= 12.5 \text{ mW}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{figs/bm11.png}
+    \includegraphics[width=0.75\textwidth]{figs/bm11.png}
     \caption{Power vs time}
     \label{power vs time}
 \end{figure}
@@ -1232,7 +1231,7 @@ with initial conditions $y(0) = 1$ and $y'(0) = 1$.
 
 \text{Take the Laplace Transform on both sides}
 Let $\mathcal{L}\{y(x)\} = Y(s)$. 
-From \eqref{la[lace}
+From \eqref{laplace}
 
 Substituting into the differential equation gives:
 
@@ -1251,11 +1250,9 @@ s^2 Y(s) - s - 1 - 0.25 Y(s) = 0
 
 Group $Y(s)$ terms together as \eqref{partial}
 \begin{align}
-(s^2 - 0.25) Y(s) = s + 1
-\end{align}
-
-\begin{align}
-Y(s) = \frac{s + 1}{s^2 - 0.25} = \frac{s + 1}{\left(s - \frac{1}{2}\right)\left(s + \frac{1}{2}\right)}
+(s^2 - 0.25) Y(s) &= s + 1\\
+Y(s) &= \frac{s + 1}{s^2 - 0.25}\\
+&= \frac{s + 1}{\left(s - \frac{1}{2}\right)\left(s + \frac{1}{2}\right)}
 \end{align}
 
 
@@ -1268,10 +1265,12 @@ Y(s) = \frac{A}{s - 0.5} + \frac{B}{s + 0.5}
 
 Solving for constants $A$ and $B$:
 \begin{align}
-A = \lim_{s \to 0.5} (s - 0.5) Y(s) = \frac{0.5 + 1}{0.5 + 0.5} = 1.5 = \frac{3}{2}
+A &= \lim_{s \to 0.5} (s - 0.5) Y(s) \\
+&= \frac{0.5 + 1}{0.5 + 0.5} = 1.5
 \end{align}
 \begin{align}
-B = \lim_{s \to -0.5} (s + 0.5) Y(s) = \frac{-0.5 + 1}{-0.5 - 0.5} = -0.5 = -\frac{1}{2}
+B &= \lim_{s \to -0.5} (s + 0.5) Y(s) \\
+&= \frac{-0.5 + 1}{-0.5 - 0.5} = -0.5
 \end{align}
 
 So, the transform is:
@@ -1399,22 +1398,30 @@ First calculate the normalized frequency factor:
 
 Now, compute real and imaginary components of $Z_p$:
 \begin{align}
-Z_p = \frac{1 - j(1)}{1 + (1)^2} = 0.5 - j0.5\text{ k}\Omega
+Z_p &= \frac{1 - j(1)}{1 + (1)^2}\\
+&= 0.5 - j0.5\text{ k}\Omega
 \end{align}
 
 Total impedance:
 \begin{align}
-Z_{\text{in}} = 3 + (0.5 - j0.5) = 3.5 - j0.5\text{ k}\Omega
+Z_{\text{in}} &= 3 + (0.5 - j0.5)\\
+&= 3.5 - j0.5\text{ k}\Omega
 \end{align}
 
 Evaluating Magnitude $|Z_{\text{in}}|$:
 \begin{align}
-|Z_{\text{in}}| = \sqrt{(3.5)^2 + (-0.5)^2} = \sqrt{12.25 + 0.25} = \sqrt{12.5} \approx 3.5355\text{ k}\Omega \approx 3.5\text{ k}\Omega
+|Z_{\text{in}}| &= \sqrt{(3.5)^2 + (-0.5)^2} \\
+&= \sqrt{12.25 + 0.25} \\
+&= \sqrt{12.5} \\
+&\approx 3.5\text{ k}\Omega
 \end{align}
 
 Evaluating Phase $\angle Z_{\text{in}}$:
 \begin{align}
-\angle Z_{\text{in}} = \tan^{-1}\left(\frac{-0.5}{3.5}\right) = -\tan^{-1}\left(\frac{1}{7}\right) \approx -8.13^\circ
+\angle Z_{\text{in}}\\
+&= \tan^{-1}\left(\frac{-0.5}{3.5}\right)\\
+&= -\tan^{-1}\left(\frac{1}{7}\right)\\
+&\approx -8.13^\circ
 \end{align}
 
 
