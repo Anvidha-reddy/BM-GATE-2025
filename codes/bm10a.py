@@ -1,5 +1,13 @@
+import os
+import shutil
+import subprocess
+import shlex
+
 import numpy as np
 import matplotlib.pyplot as plt
+
+# Import custom matrix and vector modules
+from CoordGeo.plotting.funcs import label_pts
 
 # ---------------------------------------------------------
 # Signal Parameters
@@ -10,121 +18,79 @@ f1, A1 = 50, 20
 f2, A2 = 75, 36
 f3, A3 = 150, 2
 
-f_max = 150  # Maximum frequency in Hz
-duration = 4.0  # Time duration in seconds for fine FFT resolution
+f_max = 150      # Maximum frequency in Hz
+duration = 4.0   # Time duration in seconds for fine FFT resolution
 
-# Create figure
-plt.figure(figsize=(9, 9))
+
+def spectrum(fs):
+    """Return positive-frequency axis and amplitude spectrum for sampling rate fs."""
+    t = np.arange(0, duration, 1 / fs)
+    x = (
+        A1 * np.sin(2 * np.pi * f1 * t)
+        + A2 * np.sin(2 * np.pi * f2 * t)
+        - A3 * np.sin(2 * np.pi * f3 * t)
+    )
+    N = len(t)
+    X = np.fft.fft(x) / N
+    freqs = np.fft.fftfreq(N, 1 / fs)
+    mask = (freqs >= 0) & (freqs <= fs / 2)   # up to Nyquist limit
+    return freqs[mask], 2 * np.abs(X[mask])
+
+
+# Initialize figure
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(9, 9), layout='constrained')
 
 # =========================================================
 # CASE 1: Non-Aliasing (fs = 500 Hz > 2 * f_max = 300 Hz)
 # =========================================================
-fs1 = 500  # Option (a)
-t1 = np.arange(0, duration, 1 / fs1)
-x1 = (
-    A1 * np.sin(2 * np.pi * f1 * t1)
-    + A2 * np.sin(2 * np.pi * f2 * t1)
-    - A3 * np.sin(2 * np.pi * f3 * t1)
-)
+fs1 = 500   # Option (a)
+freqs1, amp1 = spectrum(fs1)
 
-# Compute FFT & Magnitude Spectrum
-N1 = len(t1)
-X1 = np.fft.fft(x1) / N1
-freqs1 = np.fft.fftfreq(N1, 1 / fs1)
+ax1.stem(freqs1, amp1, linefmt='b-', markerfmt='bo', basefmt='k-')
+ax1.set_title(r'Case 1: Non-Aliasing ($f_s = 500$ Hz $> 2f_{max}$)', fontsize=12)
+ax1.set_xlabel('Frequency (Hz)')
+ax1.set_ylabel('Amplitude')
+ax1.set_xlim(0, 250)
+ax1.set_ylim(0, 50)
+ax1.grid(True, linestyle='--', alpha=0.5)
 
-# Extract positive frequencies up to Nyquist Limit (fs/2 = 250 Hz)
-mask1 = (freqs1 >= 0) & (freqs1 <= fs1 / 2)
-freqs1_pos = freqs1[mask1]
-amp1 = 2 * np.abs(X1[mask1])
-
-# Plot Case 1
-plt.subplot(2, 1, 1)
-plt.stem(freqs1_pos, amp1, linefmt="b-", markerfmt="bo", basefmt="k-")
-plt.title("Case 1: Non-Aliasing ($f_s = 500$ Hz $> 2f_{max}$)", fontsize=12)
-plt.xlabel("Frequency (Hz)", fontsize=11)
-plt.ylabel("Amplitude", fontsize=11)
-plt.xlim(0, 250)
-plt.ylim(0, 45)
-plt.grid(True, linestyle=":", alpha=0.7)
-
-plt.text(
-    50,
-    22,
-    "50 Hz\n(Amp: 20)",
-    ha="center",
-    va="bottom",
-    fontweight="bold",
-    color="blue",
-)
-plt.text(
-    75,
-    38,
-    "75 Hz\n(Amp: 36)",
-    ha="center",
-    va="bottom",
-    fontweight="bold",
-    color="blue",
-)
-plt.text(
-    150,
-    4,
-    "150 Hz\n(Amp: 2)",
-    ha="center",
-    va="bottom",
-    fontweight="bold",
-    color="blue",
-)
+# Label the three peaks
+peaks1 = np.array([[f1, f2, f3],
+                   [A1, A2, A3]], dtype=float)
+plt.sca(ax1)
+label_pts(peaks1, ['50 Hz\n(Amp: 20)', '75 Hz\n(Amp: 36)', '150 Hz\n(Amp: 2)'])
 
 # =========================================================
 # CASE 2: Aliasing (fs = 200 Hz < 2 * f_max = 300 Hz)
 # =========================================================
-fs2 = 200  # Option (c)
-t2 = np.arange(0, duration, 1 / fs2)
-x2 = (
-    A1 * np.sin(2 * np.pi * f1 * t2)
-    + A2 * np.sin(2 * np.pi * f2 * t2)
-    - A3 * np.sin(2 * np.pi * f3 * t2)
-)
+fs2 = 200   # Option (c)
+freqs2, amp2 = spectrum(fs2)
 
-# Compute FFT & Magnitude Spectrum
-N2 = len(t2)
-X2 = np.fft.fft(x2) / N2
-freqs2 = np.fft.fftfreq(N2, 1 / fs2)
+ax2.stem(freqs2, amp2, linefmt='r-', markerfmt='ro', basefmt='k-')
+ax2.set_title(r'Case 2: Aliasing ($f_s = 200$ Hz $< 2f_{max}$)', fontsize=12)
+ax2.set_xlabel('Frequency (Hz)')
+ax2.set_ylabel('Amplitude')
+ax2.set_xlim(0, 110)
+ax2.set_ylim(0, 50)
+ax2.grid(True, linestyle='--', alpha=0.5)
 
-# Extract positive frequencies up to Nyquist Limit (fs/2 = 100 Hz)
-mask2 = (freqs2 >= 0) & (freqs2 <= fs2 / 2)
-freqs2_pos = freqs2[mask2]
-amp2 = 2 * np.abs(X2[mask2])
+# Label the peaks: 150 Hz folds onto 50 Hz, so 20 + 2 = 22
+peaks2 = np.array([[f1, f2],
+                   [A1 + A3, A2]], dtype=float)
+plt.sca(ax2)
+label_pts(peaks2, ['50 Hz (+ aliased 150 Hz)\n(Amp: 22)', '75 Hz\n(Amp: 36)'])
 
-# Plot Case 2
-plt.subplot(2, 1, 2)
-plt.stem(freqs2_pos, amp2, linefmt="r-", markerfmt="ro", basefmt="k-")
-plt.title("Case 2: Aliasing ($f_s = 200$ Hz $< 2f_{max}$)", fontsize=12)
-plt.xlabel("Frequency (Hz)", fontsize=11)
-plt.ylabel("Amplitude", fontsize=11)
-plt.xlim(0, 110)
-plt.ylim(0, 45)
-plt.grid(True, linestyle=":", alpha=0.7)
+# Remove the outer plot box (spines)
+for ax in (ax1, ax2):
+    for spine in ax.spines.values():
+        spine.set_visible(False)
 
-plt.text(
-    50,
-    24,
-    "50 Hz (Combines with aliased 150 Hz)\n(Amp: 22)",
-    ha="center",
-    va="bottom",
-    fontweight="bold",
-    color="red",
-)
-plt.text(
-    75,
-    38,
-    "75 Hz\n(Amp: 36)",
-    ha="center",
-    va="bottom",
-    fontweight="bold",
-    color="red",
-)
+# Save figure (run from repo root: python3 codes/bm10a.py)
+os.makedirs('figs', exist_ok=True)
+plt.savefig('figs/bm10a.png', dpi=300)
 
-plt.tight_layout(pad=2.0)
-plt.savefig("bm10a.png", dpi=300)
-plt.close()
+# Open the image: termux-open on phone, normal window on laptop/PC
+if shutil.which('termux-open'):
+    subprocess.run(shlex.split("termux-open figs/bm10a.png"))
+else:
+    plt.show()

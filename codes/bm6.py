@@ -1,36 +1,64 @@
-import matplotlib.pyplot as plt
+import os
+import shutil
+import subprocess
+import shlex
+
 import numpy as np
+import matplotlib.pyplot as plt
 
-# Time vector from t = 0 to 3 seconds
-t = np.linspace(0, 3, 1000)
+# Import custom matrix and vector modules
+from CoordGeo.line.funcs import line_gen_num
 
-# Underdamped impulse response function c(t)
-c_t = (10 / np.sqrt(3)) * np.exp(-2.5 * t) * np.sin((5 * np.sqrt(3) / 2) * t)
+# Initialize figure
+fig, ax = plt.subplots(figsize=(8, 5), layout='constrained')
 
-# Exponential decay envelope bounds
-envelope = (10 / np.sqrt(3)) * np.exp(-2.5 * t)
+# Parameters (closed loop: C(s)/R(s) = 25 / (s^2 + 5s + 25))
+wn = 5.0
+zeta = 0.5
+sigma = zeta * wn                     # 2.5
+wd = wn * np.sqrt(1 - zeta**2)        # 5*sqrt(3)/2
+K = wn**2 / wd                        # 10/sqrt(3)
 
-# Plotting setup
-plt.figure(figsize=(8, 5))
-plt.plot(
-    t,
-    c_t,
-    label=r"$c(t) = \frac{10}{\sqrt{3}} e^{-\frac{5}{2}t} \sin\left(\frac{5\sqrt{3}}{2}t\right)$",
-    color="blue",
-    linewidth=2,
-)
-plt.plot(t, envelope, "--", color="red", alpha=0.5, label="Decay Envelope")
-plt.plot(t, -envelope, "--", color="red", alpha=0.5)
+# 1. Time axis (0 to 3 s) generated as points on a line;
+#    the same points also draw the zero axis
+A_ax = np.array([0.0, 0.0]).reshape(-1, 1)
+B_ax = np.array([3.0, 0.0]).reshape(-1, 1)
+x_ax = line_gen_num(A_ax, B_ax, 1000)
+t = x_ax[0, :]
 
-# Formatting
-plt.title("Underdamped Impulse Response $c(t)$", fontsize=14)
-plt.xlabel("time (s)", fontsize=12)
-plt.ylabel("c(t)", fontsize=12)
-plt.axhline(0, color="black", linestyle="--", linewidth=0.8)
-plt.grid(True, linestyle=":", alpha=0.6)
-plt.legend(loc="upper right", fontsize=10)
-plt.tight_layout()
+# 2. Impulse response c(t) and decay envelope
+c_t = K * np.exp(-sigma * t) * np.sin(wd * t)
+env = K * np.exp(-sigma * t)
 
-# Save plot as bm6.png
-plt.savefig("bm6.png", dpi=300)
-plt.close()
+# Plot
+ax.plot(t, c_t, 'b-', linewidth=2,
+        label=r'$c(t)=\frac{10}{\sqrt{3}}e^{-\frac{5}{2}t}\sin\left(\frac{5\sqrt{3}}{2}t\right)$')
+ax.plot(t, env, '--', color='red', alpha=0.5, label='Decay envelope')
+ax.plot(t, -env, '--', color='red', alpha=0.5)
+ax.plot(x_ax[0, :], x_ax[1, :], 'k--', linewidth=0.8)
+
+# Formatting plot area
+ax.set_title(r'Underdamped Impulse Response $c(t)$')
+ax.set_xlim(0, 3)
+ax.grid(True, linestyle=':', alpha=0.6)
+
+# Remove the outer plot box (spines)
+for spine in ax.spines.values():
+    spine.set_visible(False)
+
+# Axis labels
+ax.set_xlabel('time (s)')
+ax.set_ylabel('c(t)')
+
+# Legend
+ax.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0., frameon=True)
+
+# Save figure (run from repo root: python3 codes/bm6.py)
+os.makedirs('figs', exist_ok=True)
+plt.savefig('figs/bm6.png', dpi=300)
+
+# Open the image: termux-open on phone, normal window on laptop/PC
+if shutil.which('termux-open'):
+    subprocess.run(shlex.split("termux-open figs/bm6.png"))
+else:
+    plt.show()

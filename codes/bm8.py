@@ -1,93 +1,85 @@
-import matplotlib.pyplot as plt
+import os
+import shutil
+import subprocess
+import shlex
+
 import numpy as np
+import matplotlib.pyplot as plt
 
-# 1. Define x domain (excluding 0)
-x = np.linspace(0.2, 3.0, 400)
+# Import custom matrix and vector modules
+from CoordGeo.line.funcs import line_gen, line_gen_num, line_dir_pt
+from CoordGeo.plotting.funcs import label_pts
 
-# 2. Define function and derivative equations
+# Initialize figure with 2 vertical subplots
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 10), layout='constrained')
+
+# 1. Domain of x (excluding 0), generated as points on a line
+A_dom = np.array([0.2, 0.0]).reshape(-1, 1)
+B_dom = np.array([3.0, 0.0]).reshape(-1, 1)
+x = line_gen_num(A_dom, B_dom, 400)[0, :]
+
+# 2. Function and derivative
 f_x = x - 1 / x
 f_prime = 1 + 1 / (x**2)
 
-# 3. Tangent point values at x = 1
+# 3. Point of tangency at x = 1
 x0 = 1.0
-y0 = x0 - 1 / x0
-slope = 1 + 1 / (x0**2)
-tangent_y = slope * (x - x0) + y0
+y0 = x0 - 1 / x0                 # 0
+slope = 1 + 1 / (x0**2)          # 2
+P0 = np.array([x0, y0]).reshape(-1, 1)         # (1, 0) on f(x)
+Q0 = np.array([x0, slope]).reshape(-1, 1)      # (1, 2) on f'(x)
 
-# Create tall figure with 2 vertical subplots (stacked up and down)
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 10))
+# 4. Tangent line y = 2x - 2 in parametric form: point P0, direction m = (1, slope)
+m = np.array([1.0, slope]).reshape(-1, 1)
+x_tan = line_dir_pt(m, P0, x[0] - x0, x[-1] - x0)
 
-# --- Subplot 1: Derivative Plot (Top) ---
-ax1.plot(
-    x,
-    f_prime,
-    color="purple",
-    linewidth=2.5,
-    label=r"$f'(x) = 1 + \frac{1}{x^2}$",
-)
-ax1.scatter([x0], [slope], color="red", zorder=5, s=80)
-ax1.annotate(
-    f"f'(1) = {slope:.0f}\n(1, 2)",
-    (x0, slope),
-    textcoords="offset points",
-    xytext=(-35, 15),
-    fontsize=11,
-    fontweight="bold",
-    arrowprops=dict(arrowstyle="->", color="black", lw=1.5),
-)
+# 5. Dotted reference lines from the point to the axes
+P_x = np.array([x0, f_x.min()]).reshape(-1, 1)
+P_y = np.array([x[0], y0]).reshape(-1, 1)
+x_vref = line_gen(P_x, P0)
+x_href = line_gen(P_y, P0)
 
-ax1.set_title(
-    r"Derivative Graph $f'(x)$", fontsize=14, fontweight="bold", pad=10
-)
-ax1.set_xlabel("x", fontsize=12)
-ax1.set_ylabel("f'(x)", fontsize=12)
-ax1.grid(True, linestyle=":", alpha=0.6)
-ax1.legend(fontsize=11)
+# --- Subplot 1: Derivative plot (top) ---
+ax1.plot(x, f_prime, color='purple', linewidth=2.5,
+         label=r"$f'(x) = 1 + \frac{1}{x^2}$")
+ax1.scatter(Q0[0, 0], Q0[1, 0], color='red', zorder=5, s=80)
+plt.sca(ax1)
+label_pts(Q0, ["f'(1) = 2\n(1, 2)"])
 
-# --- Subplot 2: Function & Tangent Line Plot (Bottom) ---
-ax2.plot(x, f_x, color="blue", linewidth=2.5, label=r"$f(x) = x - \frac{1}{x}$")
-ax2.plot(
-    x,
-    tangent_y,
-    color="red",
-    linestyle="--",
-    linewidth=2.5,
-    label=r"Tangent: $y = 2x - 2$",
-)
+ax1.set_title(r"Derivative Graph $f'(x)$", fontsize=14, fontweight='bold')
+ax1.set_xlabel('x')
+ax1.set_ylabel("f'(x)")
+ax1.grid(True, linestyle='--', alpha=0.5)
+for spine in ax1.spines.values():
+    spine.set_visible(False)
+ax1.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0., frameon=True)
 
-# Mark point (x, y) = (1, 0) for tangent
-ax2.scatter([x0], [y0], color="black", zorder=5, s=80)
-ax2.annotate(
-    f"Point of Tangency\n(x={x0:.0f}, y={y0:.0f})",
-    (x0, y0),
-    textcoords="offset points",
-    xytext=(30, -30),
-    fontsize=11,
-    fontweight="bold",
-    arrowprops=dict(arrowstyle="->", color="black", lw=1.5),
-)
+# --- Subplot 2: Function and tangent line (bottom) ---
+ax2.plot(x, f_x, color='blue', linewidth=2.5, label=r'$f(x) = x - \frac{1}{x}$')
+ax2.plot(x_tan[0, :], x_tan[1, :], color='red', linestyle='--', linewidth=2.5,
+         label=r'Tangent: $y = 2x - 2$')
+ax2.plot(x_vref[0, :], x_vref[1, :], color='gray', linestyle=':', linewidth=1.5)
+ax2.plot(x_href[0, :], x_href[1, :], color='gray', linestyle=':', linewidth=1.5)
+ax2.scatter(P0[0, 0], P0[1, 0], color='black', zorder=5, s=80)
+plt.sca(ax2)
+label_pts(P0, ['Point of Tangency\n(1, 0)'])
 
-# Dotted reference lines to axes
-ax2.vlines(
-    x=x0, ymin=min(f_x), ymax=y0, color="gray", linestyle=":", linewidth=1.5
-)
-ax2.hlines(
-    y=y0, xmin=min(x), xmax=x0, color="gray", linestyle=":", linewidth=1.5
-)
+ax2.set_title(r'Function $f(x)$ & Tangent at $x=1$', fontsize=14, fontweight='bold')
+ax2.set_xlabel('x')
+ax2.set_ylabel('y')
+ax2.axhline(0, color='black', linewidth=0.8)
+ax2.axvline(0, color='black', linewidth=0.8)
+ax2.grid(True, linestyle='--', alpha=0.5)
+for spine in ax2.spines.values():
+    spine.set_visible(False)
+ax2.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0., frameon=True)
 
-ax2.set_title(
-    r"Function $f(x)$ & Tangent at $x=1$",
-    fontsize=14,
-    fontweight="bold",
-    pad=10,
-)
-ax2.set_xlabel("x", fontsize=12)
-ax2.set_ylabel("y", fontsize=12)
-ax2.axhline(0, color="black", linewidth=0.8)
-ax2.axvline(0, color="black", linewidth=0.8)
-ax2.grid(True, linestyle=":", alpha=0.6)
-ax2.legend(fontsize=11)
+# Save figure (run from repo root: python3 codes/bm8.py)
+os.makedirs('figs', exist_ok=True)
+plt.savefig('figs/bm8a.png', dpi=300)
 
-plt.tight_layout(pad=2.5)
-plt.savefig("bm8a.png", dpi=300)
-plt.close()
+# Open the image: termux-open on phone, normal window on laptop/PC
+if shutil.which('termux-open'):
+    subprocess.run(shlex.split("termux-open figs/bm8a.png"))
+else:
+    plt.show()
