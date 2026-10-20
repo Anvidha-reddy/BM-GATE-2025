@@ -1,0 +1,302 @@
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi,itemsep=0pt]
+
+\item Exponential Series
+\begin{align}
+e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \label{eq:EE26BTECH11213-exp_maclaurin}
+\end{align}
+\item The normal form of the equation of a line is 
+\begin{align}
+	\vec{n}^{\top}
+\vec{x} = c
+\label{eq:EE26BTECH11213-line-normal}
+\end{align}
+\item The parametric form of the equation of a line is 
+\begin{align}
+\vec{x} = \vec{h}+ \kappa \vec{m}
+\label{eq:EE26BTECH11213-line-param}
+\end{align}
+where
+\begin{align}
+\vec{m}^\top \vec{n} = 0
+\end{align}
+\item A circle with center $\vec{c}$ and radius $r$, 
+	can be expressed as
+    \eqref{eq:EE26BTECH11202-app-conic_quad_form}
+    with 
+\begin{align}
+\vec{V} = \vec{I} = \myvec{1 & 0 \\ 0 & 1}, \quad \vec{u} = -\vec{c}, \quad f = \norm{\vec{c}}^2 - r^2 
+\label{eq:EE26BTECH11213-2-quad-form}
+\end{align}
+\solution  The equation of a circle is
+\begin{align}
+	\norm{\vec{x} - \vec{c}}^2 &= r^2
+\\
+\brak{\vec{x} - \vec{c}}^\top \brak{\vec{x} - \vec{c}} &= r^2 \\
+\vec{x}^\top \vec{x} - 2\vec{c}^\top \vec{x} + \vec{c}^\top \vec{c} - r^2 &= 0
+\end{align}
+yielding \eqref{eq:EE26BTECH11213-2-quad-form}
+upon comparing with 
+    \eqref{eq:EE26BTECH11202-app-conic_quad_form}
+\item (Line-Conic Intersection) The points of intersection of a line $L: \vec{x} = \vec{h} + \kappa \vec{m}$ ($\kappa \in \mathbb{R}$) with a conic section $\vec{x}^\top \vec{V} \vec{x} + 2\vec{u}^\top \vec{x} + f = 0$ are given by
+\begin{align}
+\vec{X} = \myvec{\vec{h} & \vec{m}} \myvec{1 & 1 \\ \kappa_1 & \kappa_2} \label{eq:EE26BTECH11213-conic_sol_matrix}
+\end{align}
+\iffalse
+\begin{align}
+\vec{x}_i = \vec{h} + \kappa_i \vec{m} \label{eq:EE26BTECH11213-conic_line_intersect}
+\end{align}
+\fi
+where 
+\begin{align}
+\kappa_i = \frac{-\vec{m}^\top \brak{\vec{V}\vec{h} + \vec{u}} \pm \sqrt{\sbrak{\vec{m}^\top \brak{\vec{V}\vec{h} + \vec{u}}}^2 - g\brak{\vec{h}}\brak{\vec{m}^\top \vec{V} \vec{m}}}}{\vec{m}^\top \vec{V} \vec{m}}, i = 1,2.
+\label{eq:EE26BTECH11213-conic_kappa_roots}
+\end{align}
+with $g\brak{\vec{h}} = \vec{h}^\top \vec{V} \vec{h} + 2\vec{u}^\top \vec{h} + f$.
+%
+	\iffalse
+\item {Matrix Formulation of Intersection Points:} The intersection coordinates can be written in matrix form as:
+\item {Degenerate Conic Condition:} A quadratic form $\vec{x}^\top \vec{V} \vec{x} + 2\vec{u}^\top \vec{x} + f = 0$ represents a pair of straight lines if and only if the augmented matrix is singular:
+\begin{align}
+\mydet{\vec{V} & \vec{u} \\ \vec{u}^\top & f} = 0 \label{eq:EE26BTECH11213-conic_singularity}
+\end{align}
+\fi
+\item (Intersection of Conics and Common Chord)
+ The intersection of two conics with parameters $\brak{\vec{V}_1, \vec{u}_1, f_1}$ and $\brak{\vec{V}_2, \vec{u}_2, f_2}$ is given by the pencil
+\begin{align}
+\vec{x}^\top \brak{\vec{V}_1 + \mu \vec{V}_2}\vec{x} + 2\brak{\vec{u}_1 + \mu \vec{u}_2}^\top \vec{x} + \brak{f_1 + \mu f_2} = 0 \label{eq:EE26BTECH11213-pencil_conics}
+\end{align}
+The value of $\mu$ corresponding to the degenerate conic (the radical axis / common chord line) is found from
+\begin{align}
+\mydet{\vec{V}_1 + \mu \vec{V}_2 & \vec{u}_1 + \mu \vec{u}_2 \\ \brak{\vec{u}_1 + \mu \vec{u}_2}^\top & f_1 + \mu f_2} = 0 \label{eq:EE26BTECH11213-pencil_det_zero}
+\end{align}
+
+\item 
+For a differentiable function $f\brak{x}$,
+\begin{align}
+f''\brak{x} > 0 \quad \forall x \in \brak{0, \infty} \implies f\brak{x} \text{ is strictly convex} \label{eq:EE26BTECH11213-convexity_check}
+\end{align}
+\item (Gradient Descent Optimization) For the convex optimization problem
+\begin{align}
+	\min_x f(x),
+	\\
+x_{k+1} = x_k - \eta f'\brak{x_k} \label{eq:EE26BTECH11213-grad_descent_update}
+\end{align}
+is the iterative parameter update with learning rate $\eta > 0$. 
+\item (Newton-Raphson Method)
+For a real-valued differentiable function $f\brak{x}$, the root is iteratively approximated using its first-order Taylor series expansion about the current estimate $x_n$
+\begin{align}
+x_{n+1} = x_n - \frac{f\brak{x_n}}{f'\brak{x_n}} 
+\label{eq:EE26BTECH11213-newton_raphson}
+\end{align}
+\item (System of Linear Equations) 
+The matrix equation
+\begin{align}
+\vec{A}\vec{x} = \vec{b} \label{eq:EE26BTECH11213-linear_sys}
+\end{align}
+    is consistent iff
+    \begin{align}
+    \rank\brak{\vec{A}} = \rank\brak{\sbrak{\vec{A} \mid \vec{b}}} = r \label{eq:EE26BTECH11213-consistent_rank}
+    \end{align}
+\iffalse
+	The solvability of the system is governed by the ranks of the coefficient matrix $\vec{A}$ and the augmented matrix $\sbrak{\vec{A} \mid \vec{b}}$:
+\begin{enumerate}
+    \item {Inconsistent System (No Solution):} A linear system has no solution if and only if:
+    \begin{align}
+    \text{rank}\brak{\vec{A}} < \text{rank}\brak{\sbrak{\vec{A} \mid \vec{b}}} \label{eq:EE26BTECH11213-inconsistent_rank}
+    \end{align}
+    Geometrically, this corresponds to distinct parallel lines that do not intersect.
+    \item {Consistent System (At Least One Solution):} A linear system has at least one solution if and only if:
+    \begin{itemize}
+        \item If $r = n$ (where $n$ is the number of variables), there exists a unique solution.
+        \item If $r < n$, there exist infinitely many solutions with $n - r$ free variables (coincident lines).
+    \end{itemize}
+\end{enumerate}
+\fi
+
+\item Sum of Independent Discrete Random Variables (Two Dice Roll)
+\begin{itemize}
+\item Let $X_1, X_2 \in \{1, 2, 3, 4, 5, 6\}$ be independent discrete uniform random variables representing the outcomes of two fair dice, each having probability mass function (PMF)
+\begin{align}
+p_{X_1}\brak{n} = p_{X_2}\brak{n} = \begin{cases} 
+\frac{1}{6}, & 1 \le n \le 6 \\ 
+0, & \text{otherwise} 
+\end{cases} 
+\label{eq:EE26BTECH11213-dice_uniform_pmf}
+\end{align}
+
+\item (Convolution) Let $X = X_1 + X_2$ denote their sum. The PMF of $X$ is given by the discrete convolution of $p_{X_1}\brak{n}$ and $p_{X_2}\brak{n}$:
+\begin{align}
+p_X\brak{n} &= \Pr\brak{X_1 + X_2 = n} = \sum_{k} \Pr\brak{X_1 = n - k \mid X_2 = k} p_{X_2}\brak{k} \\
+&= \sum_{k} p_{X_1}\brak{n - k} p_{X_2}\brak{k} = p_{X_1}\brak{n} * p_{X_2}\brak{n} \label{eq:EE26BTECH11213-dice_convolution}
+\end{align}
+
+\item Substituting \eqref{eq:EE26BTECH11213-dice_uniform_pmf} into \eqref{eq:EE26BTECH11213-dice_convolution} yields the triangular PMF
+\begin{align}
+p_X\brak{n} = \begin{cases} 
+0, & n < 2 \\ 
+\frac{n - 1}{36}, & 2 \le n \le 7 \\ 
+\frac{13 - n}{36}, & 7 < n \le 12 \\ 
+0, & n > 12 
+\end{cases} 
+\label{eq:EE26BTECH11213-triangular_pmf}
+\end{align}
+\end{itemize}
+The following code verifies
+\eqref{eq:EE26BTECH11213-triangular_pmf}
+    in \figref{fig:EE26BTECH11213-bt25_q35}.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq35/dice.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\linewidth]{EE26BTECH11213/figs/pmf.pdf}
+    \caption{PMF of the sum of two fair dice: Simulation vs Analysis}
+    \label{fig:EE26BTECH11213-bt25_q35}
+\end{figure}
+\item (Unit Step Response of an $RC$ Circuit)
+Consider a series $RC$ circuit excited by a step input $v_i\brak{t} = V_{0} u\brak{t}$ where $V_{0}$ is a constant. 
+Applying KVL around the loop,
+\begin{align}
+RC \frac{dv_{o}}{dt} + v_{o}\brak{t} = V_{0} u(t)
+\label{eq:EE26BTECH11213-rc_circuit_ode}
+\end{align}
+yielding
+\begin{align}
+	\frac{V_{0}}{s} &=sCR V_{o}(s) + V_{o}\brak{s} 
+	\\
+\label{eq:EE26BTECH11213-rc_circuit_s}
+	\implies 
+V_{o}\brak{s} &=  \frac{V_{0}}{s\brak{RCs + 1}} \\
+ &= V_{0} \sbrak{\frac{1}{s} - \frac{1}{s + \frac{1}{RC}}} \label{eq:EE26BTECH11213-rc_s_domain_vout}
+ \\
+\implies v_{o}\brak{t} &= V_{0}\brak{1 - e^{-\frac{t}{RC}}} u\brak{t} 
+\label{eq:EE26BTECH11213-rc_time_response}
+\end{align}
+\item (Continuity) 
+A real-valued function $f\brak{x}$ is continuous at $x = x_0$ iff
+\begin{align}
+\lim_{x \to x_0^-} f\brak{x} = \lim_{x \to x_0^+} f\brak{x} = f\brak{x_0} \label{eq:EE26BTECH11213-continuity_cond}
+\end{align}
+\item (Differentiability) 
+A function $f\brak{x}$ is differentiable at $x = x_0$ if
+\begin{align}
+f'\brak{x_0^-} = \lim_{h \to 0^-} \frac{f\brak{x_0 + h} - f\brak{x_0}}{h} = \lim_{h \to 0^+} \frac{f\brak{x_0 + h} - f\brak{x_0}}{h} = f'\brak{x_0^+} 
+\label{eq:EE26BTECH11213-deriv_equality}
+\end{align}
+\item 
+If $f\brak{x}$ is differentiable at $x = x_0$, it must necessarily be continuous at $x = x_0$
+\begin{align}
+\lim_{x \to x_0} \sbrak{f\brak{x} - f\brak{x_0}} = \lim_{x \to x_0} \sbrak{\frac{f\brak{x} - f\brak{x_0}}{x - x_0} \brak{x - x_0}} = f'\brak{x_0} \cdot 0 = 0 \label{eq:EE26BTECH11213-diff_implies_cont}
+\end{align}
+%
+\item Piecewise Boundary Conditions at $x = a$
+\begin{itemize}
+\item Consider a function $f\brak{x}$ defined by differentiable branches $f_1\brak{x}$ and $f_2\brak{x}$ across a boundary point $x = a$:
+\begin{align}
+f\brak{x} = \begin{cases}
+f_1\brak{x}, & x \le a \\
+f_2\brak{x}, & x > a
+\end{cases} \label{eq:EE26BTECH11213-piecewise_branches}
+\end{align}
+For $f\brak{x}$ to be continuous at $x = a$, the one-sided limits must equal the boundary value:
+\begin{align}
+\lim_{x \to a^-} f_1\brak{x} = \lim_{x \to a^+} f_2\brak{x} \implies f_1\brak{a} = f_2\brak{a} \label{eq:EE26BTECH11213-piecewise_cont_cond}
+\end{align}
+For $f\brak{x}$ to be differentiable at $x = a$, the one-sided derivatives at the boundary must coincide:
+\begin{align}
+f_1'\brak{a} = f_2'\brak{a} \label{eq:EE26BTECH11213-piecewise_diff_cond}
+\end{align}
+\end{itemize}
+\iffalse
+\item Representation of Linear Balance Systems as Matrix Equations
+\begin{itemize}
+\item A general system of $m$ linear equations in $n$ variables $x_1, x_2, \dots, x_n$:
+\begin{align}
+a_{i1} x_1 + a_{i2} x_2 + \dots + a_{in} x_n = b_i, \quad i = 1, 2, \dots, m
+\end{align}
+can be expressed in matrix-vector form:
+\begin{align}
+\vec{A}\vec{x} = \vec{b} \label{eq:EE26BTECH11213-matrix_system_linear}
+\end{align}
+where $\vec{A} \in \mathbb{R}^{m \times n}$ is the coefficient matrix, $\vec{x} \in \mathbb{R}^n$ is the state vector, and $\vec{b} \in \mathbb{R}^m$ is the constant vector:
+\begin{align}
+\vec{A} = \myvec{
+a_{11} & a_{12} & \dots & a_{1n} \\
+a_{21} & a_{22} & \dots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \dots & a_{mn}
+}, \quad
+\vec{x} = \myvec{x_1 \\ x_2 \\ \vdots \\ x_n}, \quad
+\vec{b} = \myvec{b_1 \\ b_2 \\ \vdots \\ b_m}
+\end{align}
+
+\item In multi-component conservation and stoichiometric balances, the conservation of elemental species across reactant and product streams is represented by:
+\begin{align}
+\vec{A}_{\text{reactants}} \vec{x}_{\text{reactants}} = \vec{A}_{\text{products}} \vec{x}_{\text{products}}
+\end{align}
+Combining both sides into a single stoichiometric matrix yields the homogeneous system:
+\begin{align}
+\sbrak{\vec{A}_{\text{reactants}} \quad -\vec{A}_{\text{products}}} \vec{x} = \vec{0} \label{eq:EE26BTECH11213-stoich_matrix_homo}
+\end{align}
+When boundary parameters or specific yields fix certain degrees of freedom (such as basis mole values and yield coefficients), the homogeneous system reduces to a deterministic non-homogeneous matrix equation $\vec{A}\vec{x} = \vec{b}$ that can be solved directly via row operations or symbolic matrix inversion.
+\end{itemize}
+\fi
+\item The Z-Transform
+%\item The bilateral Z-transform of a discrete-time sequence $x\sbrak{n}$ is defined as:
+\begin{align}
+X\brak{z} =  \sum_{n=-\infty}^{\infty} x\sbrak{n} z^{-n} 
+\label{eq:EE26BTECH11213-z_transform_def}
+\end{align}
+over the Region of Convergence (ROC) where the series converges absolutely.
+%
+\item 
+The discrete unit step function  is defined as
+\begin{align}
+u\brak{n} = \begin{cases}
+1, & n \ge 0 \\
+0, & n < 0
+\end{cases} \label{eq:EE26BTECH11213-discrete_unit_step}
+\end{align}
+and 
+\begin{align}
+	u\sbrak{n} \system{Z} \sum_{n=0}^{\infty} z^{-n} = \frac{1}{1 - z^{-1}}, \quad \abs{z} > 1 \label{eq:EE26BTECH11213-z_step_transform}
+\end{align}
+%
+\item Time-Shift Property
+%Shifting a sequence by an integer delay $k$ corresponds to multiplication by $z^{-k}$ in the Z-domain:
+\begin{align}
+	x\brak{n - k} \system{Z} z^{-k} X\brak{z} 
+	\label{eq:EE26BTECH11213-z_shift_property}
+\end{align}
+%Consequently, delaying the discrete unit step by one sample yields:
+%\begin{align}
+%\mathcal{Z}\sbrak{u\sbrak{n - 1}} = \frac{z^{-1}}{1 - z^{-1}}, \quad \abs{z} > 1 \label{eq:EE26BTECH11213-z_delayed_step}
+%\end{align}
+
+\item Standard Inverse Transform Pair:
+For any scalar constant $\alpha$,
+\begin{align}
+\alpha^n u\brak{n}\system{Z}\frac{1}{1 - \alpha z^{-1}}, \quad \abs{z} > \abs{\alpha} \label{eq:EE26BTECH11213-z_inv_exponential}
+\end{align}
+%
+\item (Trace of a Matrix)
+Let $\vec{A} \in \mathbb{R}^{n \times n}$ be a square matrix with eigenvalues $\lambda_1, \lambda_2, \dots, \lambda_n$.  Then,
+\begin{align}
+\sum_{i=1}^n \lambda_i = \sum_{i=1}^n a_{ii} = \operatorname{tr}\brak{\vec{A}} \label{eq:EE26BTECH11213-sum_eigenvalues_trace}
+\end{align}
+\solution
+ The characteristic polynomial of $\vec{A}$ is defined by
+\begin{align}
+	p_{\vec{A}}\brak{\lambda} &= \mydet{\lambda \vec{I} - \vec{A}} 
+	\label{eq:EE26BTECH11213-char_poly_det}
+	\\
+ &= \prod_{i=1}^n \brak{\lambda - \lambda_i} = \lambda^n - \brak{\sum_{i=1}^n \lambda_i} \lambda^{n-1} + \dots + \brak{-1}^n \prod_{i=1}^n \lambda_i \label{eq:EE26BTECH11213-char_poly_factored}
+\end{align}
+Evaluating the determinant $\mydet{\lambda \vec{I} - \vec{A}}$ using cofactor expansion, the only term that contributes to $\lambda^n$ and $\lambda^{n-1}$ is the product of the principal diagonal entries
+\begin{align}
+\prod_{i=1}^n \brak{\lambda - a_{ii}} = \lambda^n - \brak{\sum_{i=1}^n a_{ii}} \lambda^{n-1} + \dots \label{eq:EE26BTECH11213-diagonal_expansion}
+\end{align}
+where $a_{ii}$ denotes the diagonal elements of $\vec{A}$.
+Equating the coefficient of $\lambda^{n-1}$ from \eqref{eq:EE26BTECH11213-char_poly_factored} and \eqref{eq:EE26BTECH11213-diagonal_expansion}
+%\item (Eigenvalues and Determinant)
+\end{enumerate}

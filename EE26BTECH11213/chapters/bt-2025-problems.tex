@@ -1,0 +1,615 @@
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi,itemsep=0pt]
+
+\item The sum of the following infinite series is:
+\begin{align}
+\frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \frac{1}{5!} + \cdots
+\label{eq:EE26BTECH11213-1}
+\end{align}
+\hfill (BT~2025)
+\begin{enumerate}[itemsep=0pt]
+    \begin{multicols}{4}
+    \item $\pi$
+    \item $1+e$
+    \item $e-1$
+    \item $e$
+    \end{multicols}
+\end{enumerate}
+\solution
+\eqref{eq:EE26BTECH11213-1}
+can be expressed as
+\begin{align}
+\sum_{n=1}^{\infty} \frac{1}{n!} = 
+\sum_{n=0}^{\infty} \frac{1}{n!} - 1 = e - 1
+\end{align}
+upon substituting from \eqref{eq:EE26BTECH11213-exp_maclaurin}
+The following C code verifies the series sum numerically.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq3/btq3.c}@*)
+\end{lstlisting}
+
+\item A circle with center at $\brak{x, y} = \brak{0.5, 0}$ and radius $r_1 = 0.5$ intersects with another circle with center at $\brak{x, y} = \brak{1, 1}$ and radius $r_2 = 1$ at two points. One of the points of intersection $\brak{x, y}$ is:
+\hfill (BT~2025)
+\begin{enumerate}[itemsep=0pt]
+    \begin{multicols}{4}
+        \item $\brak{0, 0}$
+        \item $\brak{0.2, 0.4}$
+        \item $\brak{0.5, 0.5}$
+        \item $\brak{1, 2}$
+    \end{multicols}
+\end{enumerate}
+
+\solution
+From \eqref{eq:EE26BTECH11213-2-quad-form}, the circle parameters are
+\begin{align}
+\label{eq:EE26BTECH11213-circ-1}, 
+ \vec{c}_1 = \myvec{0.5 \\ 0},  r_1 = 0.5, 
+ \quad \vec{u}_1 = -\vec{c}_1 = \myvec{-0.5 \\ 0}, \quad f_1 = \norm{\vec{c}_1}^2 - r_1^2 = 0 \\
+ \vec{c}_2 = \myvec{1 \\ 1}, \; r_2 = 1, \; 
+ \quad \vec{u}_2 = -\vec{c}_2 = \myvec{-1 \\ -1}, \quad f_2 = \norm{\vec{c}_2}^2 - r_2^2 = 1
+\end{align}
+Substituting the above in 
+%Using the pencil of conics from \eqref{eq:EE26BTECH11213-pencil_conics}, the condition for a degenerate conic from 
+\eqref{eq:EE26BTECH11213-pencil_det_zero}, 
+\begin{align}
+\mydet{1 + \mu & 0 & -0.5 - \mu \\
+0 & 1 + \mu & -\mu \\
+-0.5 - \mu & -\mu & \mu} &= 0
+\\
+\implies \brak{1 + \mu}\brak{-\mu^2 - \frac{1}{4}} &= 0
+\\
+\text{or, }
+\mu = -1
+\end{align}
+ignoring imaginary roots.
+Substituting $\mu = -1$ in \eqref{eq:EE26BTECH11213-pencil_conics},
+\begin{align}
+2\brak{\vec{u}_1 - \vec{u}_2}^\top \vec{x} + \brak{f_1 - f_2} &= 0 \\
+ \implies \myvec{1 & 2}\vec{x} &= 1
+\end{align}
+From 
+\eqref{eq:EE26BTECH11213-line-normal}
+and
+\eqref{eq:EE26BTECH11213-line-param},
+\begin{align}
+\vec{n} = \myvec{1 \\ 2},
+\vec{m} = \myvec{2 \\ -1}, \vec{h} = \myvec{1 \\ 0}
+\end{align}
+Substituting
+the above 
+along with the first circle paramters from
+\eqref{eq:EE26BTECH11213-circ-1} 
+in 
+\eqref{eq:EE26BTECH11213-conic_kappa_roots},
+\begin{align}
+\vec{m}^\top \vec{V}_1 \vec{m} = \myvec{2 & -1}\myvec{1 & 0 \\ 0 & 1}\myvec{2 \\ -1} = 5 \\
+\vec{V}_1 \vec{h} + \vec{u}_1 = \myvec{1 \\ 0} + \myvec{-0.5 \\ 0} = \myvec{0.5 \\ 0} \\
+\vec{m}^\top \brak{\vec{V}_1 \vec{h} + \vec{u}_1} = \myvec{2 & -1}\myvec{0.5 \\ 0} = 1 \\
+g\brak{\vec{h}} = \vec{h}^\top \vec{V}_1 \vec{h} + 2\vec{u}_1^\top \vec{h} + f_1 = 1 - 1 + 0 = 0
+\end{align}
+yielding
+\begin{align}
+\kappa = \frac{-1 \pm \sqrt{1^2 - 0}}{5} 
+\implies
+\kappa_1 = 0,
+\kappa_2 = -\frac{2}{5}
+\end{align}
+$\therefore$ the points of intersection are
+\begin{align}
+\vec{x}_1 &= \vec{h} + 0\vec{m} = \myvec{1 \\ 0} \\
+\vec{x}_2 &= \vec{h} - \frac{2}{5}\vec{m} =  \myvec{0.2 \\ 0.4}
+\end{align}
+Hence, one of the points of intersection is $\brak{0.2, 0.4}$
+The following code 
+verifies this in 
+\figref{fig:EE26BTECH11213-bt25_q9}.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq9/circleProblem1.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\linewidth]{figs/circleintersect.pdf}
+    \caption{Intersection of the two circles and the radical axis}
+    \label{fig:EE26BTECH11213-bt25_q9}
+\end{figure}
+%
+\item Let $y\brak{t}$ be a bacterial population whose growth is given by
+\begin{align}
+\frac{dy}{dt} = \lambda\brak{y + 2}
+\end{align}
+where $\lambda$ is the growth rate constant. If $y\brak{0} = 1$ and $y\brak{1} = 4$, then the value of $\lambda$ is
+\hfill (BT~2025)
+\begin{enumerate}[itemsep=0pt]
+    \begin{multicols}{4}
+        \item $\ln 2$
+        \item $\ln 3$
+        \item $\ln 4$
+        \item $\ln 6$
+    \end{multicols}
+\end{enumerate}
+
+\solution
+Rearranging the differential equation into standard linear form
+\begin{align}
+\frac{dy}{dt} - \lambda y = 2\lambda u(t)
+\end{align}
+
+Taking the unilateral Laplace transform on both sides using \eqref{eq:EE26BTECH11202-Laplace_1} and \eqref{eq:EE26BTECH11202-Laplace_4.1}:
+\begin{align}
+s Y(s) - y\brak{0} - \lambda Y(s) &= \frac{2\lambda}{s}
+\end{align}
+Substituting the initial condition $y\brak{0} = 1$,
+\begin{align}
+\brak{s - \lambda}Y(s) - 1 &= \frac{2\lambda}{s} \\
+\implies Y(s) &= \frac{s + 2\lambda}{s\brak{s - \lambda}}
+\\
+ &= -\frac{2}{s} + \frac{3}{s - \lambda} 
+\end{align}
+Applying the inverse Laplace transform using \eqref{eq:EE26BTECH11202-Laplace_4.1} and \eqref{eq:EE26BTECH11202-Laplace_3},
+\begin{align}
+y\brak{t} &= 3e^{\lambda t} - 2
+\\
+\implies y\brak{1} = 4 &= 3e^{\lambda} - 2 \\
+\text{or, }\lambda &= \ln 2
+\end{align}
+From \eqref{eq:EE26BTECH11202-ED_1}, with step size $h = 0.01$ and $\lambda = \ln 2$, the following difference equation is obtained.
+\begin{align}
+y_{n+1} = y_n + 0.01\sbrak{\ln\brak{2}\brak{y_n + 2}}, \quad y_0 = 1
+\end{align}
+The following  codes are used to generate
+    \figref{fig:EE26BTECH11213-bt25_q13}.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq13/bac.py}@*)
+\end{lstlisting}
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq13/bac.c}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\linewidth]{figs/bac.png}
+    \caption{Euler's Forward Difference Simulation of Bacterial Growth}
+    \label{fig:EE26BTECH11213-bt25_q13}
+\end{figure}
+\item The minimum value of the function
+\begin{align}
+f\brak{x} = x + \frac{4}{x}
+\end{align}
+for $x > 0$ is:
+\hfill (BT~2025)
+\begin{enumerate}[itemsep=0pt]
+    \begin{multicols}{4}
+        \item $1$
+        \item $2$
+        \item $3$
+        \item $4$
+    \end{multicols}
+\end{enumerate}
+\solution
+To locate the critical points of $f\brak{x}$, we set the first derivative to zero:
+\begin{align}
+f'\brak{x} &= \diff{}{x}\brak{x + \frac{4}{x}} = 1 - \frac{4}{x^2} = 0 \\
+1 &= \frac{4}{x^2} \implies x^2 = 4
+\end{align}
+Since $x > 0$, the only admissible critical point is:
+\begin{align}
+x = 2
+\end{align}
+From \eqref{eq:EE26BTECH11213-convexity_check}
+\begin{align}
+	f''\brak{x} = \frac{d^2}{dx^2}\brak{x + \frac{4}{x}} = \frac{8}{x^3} > 0, \quad x \in \brak{0,\infty}
+\end{align}
+Thus, $f\brak{x}$ is strictly convex in the above interval.  
+This is verified by the following code in 
+    \figref{fig:EE26BTECH11213-bt25_q14}.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq14/min.py}@*)
+\end{lstlisting}
+%, and $x = 2$ corresponds to a unique global minimum.
+%\noindent{Numerical Simulation (Gradient Descent):} 
+Applying the first-order update relation from \eqref{eq:EE26BTECH11213-grad_descent_update} with learning rate $\eta = 0.3$:
+\begin{align}
+x_{k+1} = x_k - 0.3\brak{1 - \frac{4}{x_k^2}}
+\end{align}
+Starting from the initial guess $x_0 = 5$, the sequence converges to $x^* = 2$, yielding $f\brak{x^*} = 4$.  The following code accomplishes this.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq14/min.c}@*)
+\end{lstlisting}
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\linewidth]{figs/min.png}
+    \caption{Plot of $f\brak{x} = x + \frac{4}{x}$ indicating the minimum at $\brak{2, 4}$}
+    \label{fig:EE26BTECH11213-bt25_q14}
+\end{figure}
+\item Consider a nonlinear algebraic equation, $e^x - 2 = 0$. Using the Newton-Raphson method, with the initial guess of $x_0 = 1$, the approximated value of the root of the equation after one iteration is \underline{\hspace{1.5cm}} (round off to two decimal places).
+\hfill (BT~2025)
+\\
+\solution
+Substituting
+\begin{align}
+f\brak{x} &= e^x - 2 \\
+f'\brak{x} &= e^x
+\end{align}
+into \eqref{eq:EE26BTECH11213-newton_raphson},
+\begin{align}
+x_{n+1} &= x_n - \frac{e^{x_n} - 2}{e^{x_n}} \\
+&= x_n - \brak{1 - \frac{2}{e^{x_n}}} \\
+&= x_n - 1 + 2e^{-x_n}
+\end{align}
+Given the initial guess $x_0 = 1$, the first iteration ($n = 0$) gives
+\begin{align}
+	x_1 &\approx x_0 - 1 + 2e^{-x_0} \\
+&= 1 - 1 + 2e^{-1} \\
+&= \frac{2}{e} 
+\end{align}
+From the following code, 
+\begin{align}
+x_4  = 0.693147 \approx \ln 2
+\end{align}
+which is the exact solution.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq33/raph.c}@*)
+\end{lstlisting}
+The following code generates
+    \figref{fig:EE26BTECH11213-bt25_q33}.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq33/raph.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\linewidth]{figs/raph.pdf}
+    \caption{Convergence of the Newton-Raphson method to $x = \ln 2$}
+    \label{fig:EE26BTECH11213-bt25_q33}
+\end{figure}
+\item The value of $k$, for which the linear equations $2x + 3y = 6$ and $4x + 6y = 3k$ have at least one solution, is \underline{\hspace{1.5cm}} (answer in integer).
+\hfill (BT~2025)
+\\
+\solution
+Expressing in matrix form $\vec{A}\vec{x} = \vec{b}$,
+\begin{align}
+\myvec{2 & 3 \\ 4 & 6} \myvec{x \\ y} = \myvec{6 \\ 3k}
+\label{eq:EE26BTECH11213-system}
+\end{align}
+The augmented matrix is 
+\begin{align}
+\augvec{1}{1}{\vec{A} & \vec{b}} = \augvec{2}{1}{2 & 3 & 6 \\ 4 & 6 & 3k}
+\end{align}
+Applying Gaussian elimination using elementary row operations,
+\begin{align}
+\augvec{2}{1}{2 & 3 & 6 \\ 4 & 6 & 3k} \xrightarrow{R_2 \to R_2 - 2R_1} \augvec{2}{1}{2 & 3 & 6 \\ 0 & 0 & 3k - 12}
+\end{align}
+$\because \rank\brak{\vec{A}}=1$, from the above, 
+\eqref{eq:EE26BTECH11213-system}
+is consistent if 
+\begin{align}
+\text{rank}\brak{\augvec{1}{1}{\vec{A} & \vec{b}}} = \text{rank}\brak{\vec{A}} = 1
+\\
+\implies 
+3k - 12 &= 0 \\
+\text{or, }k = 4
+\end{align}
+The following code verifies the result by 
+generating
+    \figref{fig:EE26BTECH11213-bt25_q34}.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq34/bt34.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\linewidth]{figs/bt34_plot.pdf}
+    \caption{Coincident lines representing infinitely many solutions at $k = 4$}
+    \label{fig:EE26BTECH11213-bt25_q34}
+\end{figure}
+
+\item Two fair six-sided dice, with sides numbered 1 to 6, are thrown once. The probability of getting 7 as the sum of the numbers on the top side of the dice is \underline{\hspace{1.5cm}}.
+\hfill (BT~2025)
+\\
+\solution
+Let $X_1$ and $X_2$ represent the scores on the two dice, and let $X = X_1 + X_2$ denote their sum. 
+From the triangular distribution derived in \eqref{eq:EE26BTECH11213-triangular_pmf}, 
+\begin{align}
+	p_X\brak{n} = \frac{n - 1}{36},\quad 2 \le n \le 7
+\\
+	\implies \pr{X=7} =  \frac{1}{6}
+\end{align}
+\item A thermometer measuring body temperature follows a first-order response with a time constant of $40$ seconds. The instrument will reach $95\%$ of its steady-state output at \underline{\hspace{1.5cm}} seconds (round off to the nearest integer).
+\hfill (BT~2025)
+\begin{enumerate}[itemsep=0pt]
+    \begin{multicols}{4}
+        \item $60$
+        \item $80$
+        \item $120$
+        \item $160$
+    \end{multicols}
+\end{enumerate}
+\solution
+From \eqref{eq:EE26BTECH11213-rc_time_response},
+\begin{align}
+	\frac{v_{o}\brak{t}}{V_{0}} &= \brak{1 - e^{-\frac{t}{RC}}} u\brak{t} 
+	\\
+	\implies 0.95 &= \brak{1 - e^{-\frac{t}{40}}}  
+	\\
+	\implies t &= 
+ 40 \ln\brak{20} 
+\approx 120\text{ s}
+\end{align}
+The following code generates 
+    \figref{fig:EE26BTECH11213-bt25_q42}.
+    for verification.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq42/plot.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\linewidth]{figs/rc-step-response.pdf}
+    \caption{Step response of the first-order system with $\tau = 40\text{ s}$}
+    \label{fig:EE26BTECH11213-bt25_q42}
+\end{figure}
+\item The output $y\brak{t}$ of a first-order process is governed by the following differential equation
+\begin{align}
+\tau_p \frac{dy}{dt} + y = K_p f\brak{t}
+    \label{eq:EE26BTECH11213-bt25_s}
+\end{align}
+where $\tau_p$ is a non-zero time constant, $K_p$ is the gain and $f\brak{t}$ is the input with $f\brak{0} = 0$.
+Assume $y\brak{0} = 0$. The transfer function for this process is (consider $s$ as the independent variable in the Laplace domain)
+\hfill (BT 2025)
+\begin{enumerate}[itemsep=1ex]
+    \begin{multicols}{4}
+        \item $\frac{K_p}{\tau_p s + 1}$
+        \item $\frac{\tau_p}{K_p s + 1}$
+        \item $\frac{\tau_p}{K_p\brak{s + 1}}$
+        \item $\frac{K_p}{\tau_p\brak{s + 1}}$
+    \end{multicols}
+\end{enumerate}
+\solution In the $s$-domain, 
+    \eqref{eq:EE26BTECH11213-bt25_s}
+    becomes
+\begin{align}
+\tau_p s Y\brak{s}  + Y\brak{s} &= K_p F\brak{s}
+\\
+\implies
+\frac{Y\brak{s}}{F\brak{s}} &= \frac{K_p}{\tau_p s + 1}
+\end{align}
+\item Let $m$ and $n$ be fixed real numbers. If the function $y\brak{t} = C_1 e^t + C_2 e^{-t}$ is a solution of
+\begin{align}
+\frac{d^2 y}{dt^2} + m \frac{dy}{dt} + ny = 0
+    \label{eq:EE26BTECH11213-bt25_int-der}
+\end{align}
+for any constants $C_1$ and $C_2$, then $m + n$ is equal to
+\hfill (BT~2025)
+\begin{enumerate}[itemsep=0pt]
+    \begin{multicols}{4}
+        \item -2
+        \item -1
+        \item 0
+        \item 1
+    \end{multicols}
+\end{enumerate}
+\solution
+Substituting
+\begin{align}
+\frac{dy}{dt} &= C_1 e^t - C_2 e^{-t} \\
+\frac{d^2 y}{dt^2} &= C_1 e^t + C_2 e^{-t}
+\end{align}
+Substituting $y$, $\frac{dy}{dt}$, and $\frac{d^2 y}{dt^2}$ into 
+    \eqref{eq:EE26BTECH11213-bt25_int-der},
+\begin{align}
+\brak{C_1 e^t + C_2 e^{-t}} + m\brak{C_1 e^t - C_2 e^{-t}} + n\brak{C_1 e^t + C_2 e^{-t}} &= 0
+\\
+\implies C_1 e^t \brak{1 + m + n} + C_2 e^{-t} \brak{1 - m + n} &= 0
+\\
+\text{or, }
+m + n &= -1
+\end{align}
+\item Consider the piecewise function
+\begin{align}
+f\brak{x} = \begin{cases}
+\sin\brak{2x}, & x > 0 \\
+a + bx, & x \le 0
+\end{cases}
+\end{align}
+where $a$ and $b$ are real constants. If $f\brak{x}$ is differentiable at $x = 0$, then the value of $a + b$ is
+\hfill (BT~2025)
+\begin{enumerate}[itemsep=0pt]
+    \begin{multicols}{4}
+        \item 0
+        \item 1
+        \item 2
+        \item 3
+    \end{multicols}
+\end{enumerate}
+\solution
+Evaluating the one-sided limits
+\begin{align}
+	\lim_{x \to 0^+} f\brak{x} &= \lim_{x \to 0^+} \sin\brak{2x} = \sin\brak{0} = 0 \\
+\lim_{x \to 0^-} f\brak{x} &= \lim_{x \to 0^-} \brak{a + bx} = a + b\brak{0} = a
+\\
+\implies
+a &= 0
+\end{align}
+from \eqref{eq:EE26BTECH11213-diff_implies_cont} and \eqref{eq:EE26BTECH11213-continuity_cond}.
+Also, 
+\begin{align}
+	f'\brak{0^+} = 2\cos\brak{0} &= 2
+\\
+	f'\brak{0^-} = b
+	\implies b &= 2
+\end{align}
+from \eqref{eq:EE26BTECH11213-deriv_equality}.
+\begin{align}
+\therefore a + b = 2
+\end{align}
+The following code generates
+    \figref{fig:EE26BTECH11213-bt25_q46} for verification.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq46/bt46.py}@*)
+\end{lstlisting}
+%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.70\linewidth]{figs/piecewise-tangent-plot.pdf}
+    \caption{Differentiable piecewise function and its tangent line $y = 2x$ at $x = 0$}
+    \label{fig:EE26BTECH11213-bt25_q46}
+\end{figure}
+%
+%
+\item In a fermentation process, each mole of glucose is converted to biomass $\brak{\text{CH}_{1.8}\text{O}_{0.5}\text{N}_{0.2}}$, with a biomass yield coefficient of $0.4\text{ C-mol/C-mol}$, according to the unbalanced equation given below.
+\begin{align}
+\text{C}_6\text{H}_{12}\text{O}_6 + \text{NH}_3 + \text{O}_2 \rightarrow \text{CH}_{1.8}\text{O}_{0.5}\text{N}_{0.2} + \text{CO}_2 + \text{H}_2\text{O}
+\end{align}
+The moles of oxygen consumption per mole of glucose consumed during fermentation is \underline{\hspace{2cm}}. 
+\hfill (BT~2025)
+
+\solution
+Let the balanced stoichiometric reaction be represented as
+\begin{align}
+x_1 \text{C}_6\text{H}_{12}\text{O}_6 + x_2 \text{NH}_3 + x_3 \text{O}_2 \rightarrow x_4 \text{CH}_{1.8}\text{O}_{0.5}\text{N}_{0.2} + x_5 \text{CO}_2 + x_6 \text{H}_2\text{O}
+\end{align}
+where $x_1, x_2, x_3, x_4, x_5, x_6$ are the respective stoichiometric coefficients.
+Formulating the elemental conservation balances for $\text{C}$, $\text{N}$, $\text{H}$, and $\text{O}$ using exact rational fractions:
+\begin{align}
+\text{Carbon (C):} \quad & 6x_1 = x_4 + x_5 \\
+\text{Nitrogen (N):} \quad & x_2 = \frac{1}{5}x_4 \\
+\text{Hydrogen (H):} \quad & 12x_1 + 3x_2 = \frac{9}{5}x_4 + 2x_6 \\
+\text{Oxygen (O):} \quad & 6x_1 + 2x_3 = \frac{1}{2}x_4 + 2x_5 + x_6
+\end{align}
+%
+Formulating the equivalent matrix equation,
+%Writing the elemental balances in matrix form $\vec{A}_{\text{LHS}}\vec{x}_{\text{reactants}} = \vec{A}_{\text{RHS}}\vec{x}_{\text{products}}$:
+\begin{align}
+\myvec{
+6 & 0 & 0 \\
+0 & 1 & 0 \\
+12 & 3 & 0 \\
+6 & 0 & 2
+}
+\myvec{x_1 \\ x_2 \\ x_3}
+=
+\myvec{
+1 & 1 & 0 \\
+\frac{1}{5} & 0 & 0 \\
+\frac{9}{5} & 0 & 2 \\
+\frac{1}{2} & 2 & 1
+}
+\myvec{x_4 \\ x_5 \\ x_6}
+\\
+\implies\myvec{
+6 & 0 & 0 & -1 & -1 & 0 \\
+0 & 1 & 0 & -\frac{1}{5} & 0 & 0 \\
+12 & 3 & 0 & -\frac{9}{5} & 0 & -2 \\
+6 & 0 & 2 & -\frac{1}{2} & -2 & -1
+}
+\myvec{x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6}
+=
+\myvec{0 \\ 0 \\ 0 \\ 0}
+\end{align}
+The biomass yield coefficient is $0.4\text{ C-mol/C-mol} = \frac{2}{5}\text{ C-mol/C-mol}$, which provides the relation:
+\begin{align}
+x_4 - \frac{2}{5}\brak{6x_1} = 0 \implies x_4 = \frac{12}{5}x_1
+\end{align}
+%
+Solving the system symbolically in terms of $x_4$:
+\begin{align}
+x_1 &= \frac{5}{12}x_4 \\
+x_2 &= \frac{1}{5}x_4 \\
+x_3 &= \frac{29}{20}x_4 \\
+x_5 &= \frac{3}{2}x_4 \\
+x_6 &= \frac{19}{10}x_4
+\end{align}
+%
+Evaluating with the sample numerical basis $x_4 = 5.0$:
+\begin{align}
+x_1 &= \frac{25}{12} \approx 2.0833 \\
+x_2 &= 1.0000 \\
+x_3 &= 7.2500 \\
+x_4 &= 5.0000 \\
+x_5 &= 7.5000 \\
+x_6 &= 9.5000
+\end{align}
+%
+The moles of oxygen consumed per mole of glucose consumed during fermentation is given by:
+\begin{align}
+\frac{x_3}{x_1} = \frac{\frac{29}{20}x_4}{\frac{5}{12}x_4} = \frac{29}{20} \times \frac{12}{5} = \frac{87}{25} = 3.48
+\end{align}
+or using the numerical evaluation:
+\begin{align}
+\frac{x_3}{x_1} = \frac{7.2500}{2.0833} = 3.48
+\end{align}
+%
+Rounding off to two decimal places, the answer is 3.48.
+%
+The implementation in SymPy to find solutions is as follows:
+%
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq58/58.py}@*)
+\end{lstlisting}
+%
+\item Let $a_0 = 0$ and define $a_n = \frac{1}{2}\brak{1 + a_{n-1}}$ for all positive integers $n \ge 1$.
+The least value of $n$ for which $\abs{1 - a_n} < \frac{1}{2^{10}}$ is \underline{\hspace{2cm}}. 
+\hfill (BT~2025)
+%
+\solution
+The given recurrence relation is
+\begin{align}
+a_n = \frac{1}{2}\brak{1 + a_{n-1}}, \quad n \ge 1, \quad a_0 = 0
+\end{align}
+%
+which can be expressed as
+difference equation 
+%across all $n \in \mathbb{Z}$ by causal multiplication with $u\sbrak{n}$ from \eqref{eq:EE26BTECH11213-discrete_unit_step}:
+\begin{align}
+a_n  - \frac{1}{2} a_{n-1}  = \frac{1}{2} u\sbrak{n-1}
+\end{align}
+%
+From \eqref{eq:EE26BTECH11213-z_shift_property} and 
+	\eqref{eq:EE26BTECH11213-z_shift_property},
+%\eqref{eq:EE26BTECH11213-z_delayed_step},
+\begin{align}
+A\brak{z} - \frac{1}{2} z^{-1} A\brak{z} &= \frac{\frac{1}{2} z^{-1}}{1 - z^{-1}}
+%&= \frac{1}{2} \mathcal{Z}\sbrak{u\sbrak{n-1}} \\
+%A\brak{z}\brak{1 - \frac{1}{2} z^{-1}} 
+\\
+\implies A\brak{z} = \frac{\frac{1}{2} z^{-1}}{\brak{1 - z^{-1}}\brak{1 - \frac{1}{2} z^{-1}}}, \quad \abs{z} > 1
+\\
+ & = \frac{1}{1 - z^{-1}} - \frac{1}{1 - \frac{1}{2} z^{-1}}
+\end{align}
+%
+From \eqref{eq:EE26BTECH11213-z_step_transform} and \eqref{eq:EE26BTECH11213-z_inv_exponential},
+\begin{align}
+a_n = \sbrak{1 - \brak{\frac{1}{2}}^n} u\sbrak{n} = 1 - 2^{-n}, \quad n \ge 0
+\end{align}
+Applying the stopping threshold condition $\abs{1 - a_n} < \frac{1}{2^{10}}$,
+\begin{align}
+\abs{1 - \brak{1 - 2^{-n}}} &< \frac{1}{2^{10}} \\
+\implies
+2^{-n} &< 2^{-10} \\
+\text{or, }n > 10.
+\end{align}
+%
+Since $n$ must be an integer, the minimal integer satisfying the strict inequality is
+\begin{align}
+n = 11
+\end{align}
+%
+The following code verifies the result.
+%
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq59/ztransform.c}@*)
+\end{lstlisting}
+%
+\item Let $A = \myvec{1 & 0 & 1 \\ 0 & k & 0 \\ 3 & 0 & -1}$. If the eigenvalues of $A$ are $-2$, $1$, and $2$, then the value of $k$ is \underline{\hspace{2cm}}.
+\hfill (BT~2025)
+\\
+%
+\solution
+From \eqref{eq:EE26BTECH11213-sum_eigenvalues_trace}, 
+\begin{align}
+	1 + k + \brak{-1} &=\brak{-2} + 1 + 2 
+\implies k =  1
+\end{align}
+The following code verifies the above result.
+%
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/btq63/eigen.py}@*)
+\end{lstlisting}
+
+\end{enumerate}
