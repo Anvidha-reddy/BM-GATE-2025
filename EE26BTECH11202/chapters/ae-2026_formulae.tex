@@ -425,11 +425,46 @@ then
 $\vec{x}$
 of 
 $\vec{A}$.
-\item Let $\lambda_1, \lambda_2, .... , \lambda_i$ be the eigenvalues of a matrix $\vec{A}$. Then, 
+\item 
+\eqref{eq:EE26BTECH11202-eig-def}
+	can be expressed as
 \begin{align}
-	\sum_{i=1}^{n} \lambda_i &= \text{Tr}\brak{\vec{A}} \label{eq:EE26BTECH11202-Matrices_2}
+\begin{split}
+	\brak{\lambda \vec{I} - \vec{A}}\vec{x} = 0
+	\\
+\implies p_{\vec{A}}\brak{\lambda} =
+	\brak{\lambda -\lambda_i} = 
+\mydet{\lambda \vec{I} - \vec{A}} = 0
+\end{split}
+ \label{eq:EE26BTECH11213-char_poly_det}
+\end{align}
+	where $p_{\vec{A}}\brak{\lambda}$ is defined to be the characteristic polynomial of $\vec{A}$ and $\lambda_i$ are the eigenvalues. 
+%
+\item 
+\begin{align}
+	\sum_{i=1}^{n} \lambda_i &= \text{Tr}\brak{\vec{A}} 
+	\label{eq:EE26BTECH11202-Matrices_2}
 	\\
 	\prod_{i=1}^{n} \lambda_i &= \mydet{\vec{A}} \label{eq:EE26BTECH11202-Matrices_3}
+\end{align}
+\solution
+	From \eqref{eq:EE26BTECH11213-char_poly_det},
+\begin{align}
+	\mydet{\lambda \vec{I} - \vec{A}} 
+ = \lambda^n - \brak{\sum_{i=1}^n \lambda_i} \lambda^{n-1} + \dots + \brak{-1}^n \prod_{i=1}^n \lambda_i \label{eq:EE26BTECH11213-char_poly_factored}
+\end{align}
+Evaluating the determinant $\mydet{\lambda \vec{I} - \vec{A}}$ using cofactor expansion, the only term that contributes to $\lambda^n$ and $\lambda^{n-1}$ is the product of the principal diagonal entries
+\begin{align}
+\prod_{i=1}^n \brak{\lambda - a_{ii}} = \lambda^n - \brak{\sum_{i=1}^n a_{ii}} \lambda^{n-1} + \dots \label{eq:EE26BTECH11213-diagonal_expansion}
+\end{align}
+where $a_{ii}$ denotes the diagonal elements of $\vec{A}$.
+Equating the coefficient of $\lambda^{n-1}$ from \eqref{eq:EE26BTECH11213-char_poly_factored} and \eqref{eq:EE26BTECH11213-diagonal_expansion} yields 
+	\eqref{eq:EE26BTECH11202-Matrices_2}
+ From \eqref{eq:EE26BTECH11213-char_poly_det},
+\begin{align}
+p_{\vec{A}}\brak{0} = 
+ \prod_{i=1}^n \lambda_i
+=\mydet{\vec{A}} 
 \end{align}
 \item $\vec{A}$ and $\vec{A}^{\top}$ have the same eigenvalues.
 	\\

@@ -279,24 +279,13 @@ For any scalar constant $\alpha$,
 \alpha^n u\brak{n}\system{Z}\frac{1}{1 - \alpha z^{-1}}, \quad \abs{z} > \abs{\alpha} \label{eq:EE26BTECH11213-z_inv_exponential}
 \end{align}
 %
+\iffalse
 \item (Trace of a Matrix)
 Let $\vec{A} \in \mathbb{R}^{n \times n}$ be a square matrix with eigenvalues $\lambda_1, \lambda_2, \dots, \lambda_n$.  Then,
 \begin{align}
 \sum_{i=1}^n \lambda_i = \sum_{i=1}^n a_{ii} = \operatorname{tr}\brak{\vec{A}} \label{eq:EE26BTECH11213-sum_eigenvalues_trace}
 \end{align}
 \solution
- The characteristic polynomial of $\vec{A}$ is defined by
-\begin{align}
-	p_{\vec{A}}\brak{\lambda} &= \mydet{\lambda \vec{I} - \vec{A}} 
-	\label{eq:EE26BTECH11213-char_poly_det}
-	\\
- &= \prod_{i=1}^n \brak{\lambda - \lambda_i} = \lambda^n - \brak{\sum_{i=1}^n \lambda_i} \lambda^{n-1} + \dots + \brak{-1}^n \prod_{i=1}^n \lambda_i \label{eq:EE26BTECH11213-char_poly_factored}
-\end{align}
-Evaluating the determinant $\mydet{\lambda \vec{I} - \vec{A}}$ using cofactor expansion, the only term that contributes to $\lambda^n$ and $\lambda^{n-1}$ is the product of the principal diagonal entries
-\begin{align}
-\prod_{i=1}^n \brak{\lambda - a_{ii}} = \lambda^n - \brak{\sum_{i=1}^n a_{ii}} \lambda^{n-1} + \dots \label{eq:EE26BTECH11213-diagonal_expansion}
-\end{align}
-where $a_{ii}$ denotes the diagonal elements of $\vec{A}$.
-Equating the coefficient of $\lambda^{n-1}$ from \eqref{eq:EE26BTECH11213-char_poly_factored} and \eqref{eq:EE26BTECH11213-diagonal_expansion}
+\fi
 %\item (Eigenvalues and Determinant)
 \end{enumerate}

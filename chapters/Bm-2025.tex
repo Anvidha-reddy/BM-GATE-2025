@@ -306,30 +306,26 @@ are \underline{\hspace{2cm}}.
 % SOLUTION TO QUESTION 7
 % =========================================================
 \solution
-Let the given matrix be
-
+From 
+ \eqref{eq:EE26BTECH11213-char_poly_det}, the characteristic equation is
 \begin{align}
-\vec{A}=\myvec{
-\cos\theta & -\sin\theta\\
-\sin\theta & \cos\theta
-}
+\mydet{
+\lambda-\cos\theta & \sin\theta\\
+-\sin\theta & \lambda -\cos\theta
+} = 0
+\\
+\implies
+(\cos\theta-\lambda)^2+\sin^2\theta=0.
+\\
+\text{or, }
+\lambda
+=
+e^{\pm \j\theta}
 \end{align}
-\text From \eqref{eigen}
-
-
-the eigenvalues are
-
-\begin{align}
-\boxed{\lambda_1=e^{i\theta},\qquad
-\lambda_2=e^{-i\theta}}.
-\end{align}
-
-
-\text{The following code verifies the solution}
+The following code verifies the solution.
 \begin{lstlisting}
 Codes/bm7.py
 \end{lstlisting}
-
 % ============================================================
 % QUESTION 8
 % ============================================================
