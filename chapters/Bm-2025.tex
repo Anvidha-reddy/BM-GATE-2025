@@ -6,72 +6,39 @@
 $C,C^\#,D,D^\#,E,F,F^\#,G,G^\#,A,A^\#,B$.
 Frequency of each note is $\sqrt[12]{2}$ times the frequency of the previous note.
 If the frequency of the note $C$ is 130.8 Hz, then the ratio of frequencies of notes
-$F^\#$ and $C$ is: \hfill\text{(GATE BM 2025)}
-
-\begin{multicols}{2}
+$F^\#$ and $C$ is \hfill (BM 2025)
+%
+\begin{multicols}{4}
 \begin{enumerate}
     \setlength{\itemsep}{0pt}
-    \item[(a)] $\sqrt[6]{2}$
-    \item[(b)] $\sqrt{2}$
-    \item[(c)] $\sqrt[4]{2}$
-    \item[(d)] $2$
+    \item $\sqrt[6]{2}$
+    \item $\sqrt{2}$
+    \item $\sqrt[4]{2}$
+    \item $2$
 \end{enumerate}
 \end{multicols}
 \solution
-
-Each successive musical note has a frequency
-$\sqrt[12]{2}$ times that of the previous note.
-
-From $C$ to $F^\#$, there are 6 successive intervals:
-
+Let the respective frequencies be $f_i, 0 \le i \le 12$. They can be reprepresented as a G.P with common ratio $r = \sqrt[12]{2}$.  The desired ratio is
+%
 \begin{align}
-C \rightarrow C^\# \rightarrow D \rightarrow D^\#
-\rightarrow E \rightarrow F \rightarrow F^\#
-\end{align}
-
-From \eqref{GP}
-
-\begin{align}
-\frac{f_{F^\#}}{f_C}
-=
-\left(\sqrt[12]{2}\right)^6
-\end{align}
-
-\begin{align}
-=2^{6/12}
-=2^{1/2}
+\frac{f_{6}}{f_0}
+= r^6
 =\sqrt{2}
 \end{align}
-
-Hence,
-
-\begin{align}
-\boxed{\frac{f_{F^\#}}{f_C}=\sqrt{2}}
-\end{align}
-
-
-\text{The following code verifies the solution}
+The following code verifies the result.
 \begin{lstlisting}
 codes/bm1.py
 \end{lstlisting}
-
 % =========================================================
 % QUESTION 2
 % =========================================================
-
-
-
 \item The following figures show three curves generated using an
 iterative algorithm. The total length of the curve generated after
-``Iteration $n$'' is:
-
-
-\hfill\text{GATE BM 2025}
-
+``Iteration $n$'' is
+\hfill (BM 2025)
 % =========================================================
 % ITERATION 0
 % =========================================================
-
 \begin{tikzpicture}[scale=1.4]
 
     \draw[thick] (0,0) -- (5,0);
@@ -80,9 +47,7 @@ iterative algorithm. The total length of the curve generated after
     \node at (2.5,0.35) {$1$};
     \node[below] at (1.5,-0.65) {Length of segment: 1};
 \end{tikzpicture}
-
 \vspace{1.2cm}
-
 % =========================================================
 % ITERATION 1
 % =========================================================
@@ -103,13 +68,10 @@ iterative algorithm. The total length of the curve generated after
     \node[below] at (1.5,-0.65) {Length of each segment: 1/3};
 
 \end{tikzpicture}
-
-
 % =========================================================
 % ITERATION 2
 % =========================================================
 \begin{tikzpicture}[scale=1.4]
-
     \draw[thick]
     (0,0)
     -- (0.4,0)
@@ -145,78 +107,33 @@ iterative algorithm. The total length of the curve generated after
     \node[below] at (1.5,-0.65) {Length of each segment: $\frac{1}{9}$};
 
 \end{tikzpicture}
-
-
 % =========================================================
 % OPTIONS
 % =========================================================
-\begin{multicols}{2}
+\begin{multicols}{4}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-    \item[(a)] $\left(\frac{5}{3}\right)^{\frac{n}{2}}$
-
-    \item[(b)] $\left(\frac{5}{3}\right)^n$
-
-    \item[(c)] $\left(\frac{5}{3}\right)^{2n}$
-
-    \item[(d)] $\left(\frac{5}{3}\right)^{n(2n-1)}$
+\item $\left(\frac{5}{3}\right)^{\frac{n}{2}}$
+\item $\left(\frac{5}{3}\right)^n$
+\item $\left(\frac{5}{3}\right)^{2n}$
+\item $\left(\frac{5}{3}\right)^{n(2n-1)}$
 \end{enumerate}
 \end{multicols}
-
 % =========================================================
 % SOLUTION
 % =========================================================
-
 \solution
-
-At iteration $0$, the length of the curve is $1$.
-
-\begin{align}
-L_0=1
-\end{align}
-
-At iteration $1$, the curve consists of $5$ segments, each of length
-$\frac{1}{3}$.
-
-Therefore,
-
-\begin{align}
-L_1=5\left(\frac{1}{3}\right)
-=\frac{5}{3}
-\end{align}
-
-At every subsequent iteration, each segment is replaced by $5$ segments,
-each having $\frac{1}{3}$ of the length of the original segment.
-Hence, the total length is multiplied by
-
-\begin{align}
-\frac{5}{3}
-\end{align}
-
-Therefore, after $n$ iterations,
-from \eqref{iteration}
-
-
-\begin{align}
-L_n=\left(\frac{5}{3}\right)^n
-\end{align}
-
-
+The length is 
+$L_n=\left(\frac{5}{3}\right)^n$
 % =========================================================
 % QUESTION 3
 % =========================================================
-
 \item A stick of length one meter is broken at two locations at
 distances of $b_1$ and $b_2$ from the origin $(0)$, as shown in the
 figure. Note that $0<b_1<b_2<1$. Which one of the following is
 \text{NOT} a necessary condition for forming a triangle using the
 three pieces?
-
-\text{Note:} All lengths are in meter. The figure shown is
-representative.
-
-\hfill\text{(GATE BM 2025)}
-
+\hfill (BM 2025)
 % =========================================================
 % FIGURE
 % =========================================================
@@ -243,145 +160,32 @@ representative.
 \end{tikzpicture}
 
 \end{center}
-
 % =========================================================
 % OPTIONS
 % =========================================================
-
-\begin{multicols}{2}
+\begin{multicols}{4}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-    \item[(a)] $b_1 < 0.5$
-
-    \item[(b)] $b_2 > 0.5$
-
-    \item[(c)] $b_2 < b_1 + 0.5$
-
-    \item[(d)] $b_1+b_2 < 1$
+    \item $b_1 < 0.5$
+    \item $b_2 > 0.5$
+    \item $b_2 < b_1 + 0.5$
+    \item $b_1+b_2 < 1$
 \end{enumerate}
 \end{multicols}
-
 % =========================================================
 % SOLUTION
 % =========================================================
-
 \solution
-
-The stick of length $1$ m is broken at $b_1$ and $b_2$.
-
-Therefore, the lengths of the three pieces are
-
-\begin{align}
-l_1=b_1,
-\qquad
-l_2=b_2-b_1,
-\qquad
-l_3=1-b_2.
-\end{align}
-
-For three lengths to form a triangle, the sum of any two sides must
-be greater than the third side.
-
-Therefore,
-
-\begin{align}
-l_1+l_2>l_3
-\end{align}
-
-\begin{align}
-b_1+(b_2-b_1)>1-b_2
-\end{align}
-
-\begin{align}
-b_2>1-b_2
-\end{align}
-
-\begin{align}
-b_2>\frac{1}{2}.
-\end{align}
-
-Hence, option (B) is a necessary condition.
-
-Now consider
-
-\begin{align}
-l_1+l_3>l_2.
-\end{align}
-
-Substituting the lengths,
-
-\begin{align}
-b_1+(1-b_2)>b_2-b_1.
-\end{align}
-
-Therefore,
-
-\begin{align}
-2b_1+1>2b_2
-\end{align}
-
-or
-
-\begin{align}
-b_2<b_1+\frac{1}{2}.
-\end{align}
-
-Hence, option (C) is also a necessary condition.
-
-Finally,
-
-\begin{align}
-l_2+l_3>l_1.
-\end{align}
-
-Substituting,
-
-\begin{align}
-(b_2-b_1)+(1-b_2)>b_1.
-\end{align}
-
-Therefore,
-
-\begin{align}
-1-b_1>b_1
-\end{align}
-
-which gives
-
-\begin{align}
-b_1<\frac{1}{2}.
-\end{align}
-
-Hence, option (A) is also a necessary condition.
-
-However, the condition
-
-\begin{align}
-b_1+b_2<1
-\end{align}
-
-is not required for the three pieces to form a triangle.
-
-Therefore, the condition which is \textbf{NOT} necessary is (D)
-
-\text The following code gives whether the triangle is feasible or not by taking $b_1$,$b_2$
+The following code gives whether the triangle is feasible or not by considering $b_1, b_2$.
 \begin{lstlisting}
 Codes/bm3.py
 \end{lstlisting}
-
-
 % =========================================================
 % QUESTION 4
 % =========================================================
-
-
-
 \item Which one of the following represents the frequency
 response of a notch filter?
-
-
-\hfill \text{(GATE BM 2025)}
-
+\hfill  (BM 2025)
 % =========================================================
 % OPTIONS WITH GRAPHS
 % =========================================================
@@ -541,7 +345,7 @@ following is ALWAYS TRUE for $a \neq b$?
 Here, $a$ and $b$ are finite and real.
 
 
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 \begin{multicols}{2}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
@@ -647,7 +451,7 @@ f'(x)\neq0 \qquad \text{for all }x.
 
 \end{center}
 
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 \begin{multicols}{2}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
@@ -753,7 +557,7 @@ Codes/bm6.py
 are \underline{\hspace{2cm}}.
 
 
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 \begin{multicols}{2}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
@@ -812,7 +616,7 @@ $
 \frac{f(1+\Delta x)-f(1)}{\Delta x}
 $
 is \underline{\hspace{2cm}}.
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 \begin{multicols}{2}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
@@ -881,7 +685,7 @@ Codes/bm8.py
 % =========================================================
 
 \item The elements of the dataset $\{-5, 1, a, 5, b\}$ are in ascending order. If both mean and median of the dataset are equal to $3$, what is the value of $b$?
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % OPTIONS
@@ -957,7 +761,7 @@ Codes/bm9.py
 x(t) = 20\sin(100\pi t) + 36\sin(150\pi t) - 2\sin(300\pi t),
 \end{align}
 where time $t$ is in seconds. Among the following options, what is the frequency (in $\text{Hz}$) at which $x(t)$ should be sampled for accurate signal reconstruction?
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % OPTIONS
@@ -1044,7 +848,7 @@ Codes/bm10.py
 
 
 \item A voltage source $V_s = 5\sin\left(100t + \frac{\pi}{2}\right)\text{ volts}$ is driving a current $I = 10\sin\left(100t + \frac{\pi}{6}\right)\text{ mA}$ through a circuit. The average power dissipated in the circuit is \underline{\hspace{2cm}} $\text{mW}$.
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % OPTIONS
@@ -1115,7 +919,7 @@ Codes/bm11.py
 % ========================================================
 
 \item $N$ independent trials of a binomial random variable yield an expectation value of $16$ and variance of $12$. What is the value of $N$?
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % OPTIONS
@@ -1201,7 +1005,7 @@ y'' - 0.25y = 0,
 with initial conditions $y(0) = 1$; $y'(0) = 1$, what is the value of $y(\log_e 100)$?
 
 Here, $y'$ and $y''$ are the first and second derivatives of $y$, respectively.
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % OPTIONS
@@ -1359,7 +1163,7 @@ Codes/bm13.py
 \end{center}
 
 
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % OPTIONS
@@ -1445,7 +1249,7 @@ Codes/bm14.py
 % =========================================================
 
 \item Which of the following is/are CORRECT about the value of $y = \log_e(-e^x)$, where $x$ is a real number.
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % OPTIONS
@@ -1534,7 +1338,7 @@ Since $y$ contains an imaginary component $i n \pi$ (with $n \ge 1$), $y$ is a c
 \end{tikzpicture}
 \end{center}
 
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % OPTIONS
@@ -1609,7 +1413,7 @@ Since $y(0)$ depends on the future input $x(1)$, System V is noncausal.
 h(n) = \delta(n) + \frac{1}{2}\delta(n-1) + \frac{1}{3}\delta(n-2).
 \end{align}
 For input signal $x(n) = \delta(n) + \delta(n-1)$, which of the following option(s) is/are CORRECT for the output signal $y(n)$?
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % OPTIONS
@@ -1734,7 +1538,7 @@ Codes/bm17a.py
 % =========================================================
 
 \item For an 8-bit Digital to Analog Converter (DAC), the binary input 0000 0000 results in $0\text{ V}$, and 1111 1111 results in $5\text{ V}$. The output of the DAC for an input of 1011 0111 is \underline{\hspace{2cm}} (in volts, rounded off to two decimal places).
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % SOLUTION
@@ -1858,7 +1662,7 @@ Codes/bm18.py
 \end{tikzpicture}
 \end{center}
 
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % SOLUTION
@@ -1991,7 +1795,7 @@ Given: $R = 1\text{ k}\Omega$; $R_1 = 2\text{ k}\Omega$; $R_2 = 6\text{ k}\Omega
 \end{tikzpicture}
 \end{center}
 
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % SOLUTION
@@ -2075,7 +1879,7 @@ Rounding off to two decimal places: 1.59
 \end{center}
 
 
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % SOLUTION
@@ -2126,7 +1930,7 @@ Codes/bm21.py
 % =========================================================
 
 \item Newton Raphson method is used to solve the equation $x^3 - 2x - 5 = 0$ with an initial guess $x_0 = 3$. What is $x_1$, the value after ONE iteration? \underline{\hspace{2cm}} (rounded off to two decimal places)
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % SOLUTION
@@ -2209,7 +2013,7 @@ Codes/bm22a.py
 \sigma = \sigma_0 - 2\log_e(t) \quad \text{for } t \ge 1,
 \end{align}
 where $\sigma_0$ represents the original strength and time $t$ is measured in weeks. If the strength of the suture is $2\text{ MPa}$ at $4$ weeks, what will be its strength (in $\text{MPa}$) at $8$ weeks? \underline{\hspace{2cm}} (rounded off to two decimal places)
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % SOLUTION
@@ -2297,7 +2101,7 @@ After the $1^{\text{st}}$ round, $4^{\text{th}}$ student behind P leaves the gam
 \end{enumerate}
 \end{multicols}
 
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % SOLUTION
@@ -2390,7 +2194,7 @@ France & 16 & 26 & 22 \\ \hline
 \end{enumerate}
 \end{multicols}
 
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 
 
@@ -2460,7 +2264,7 @@ Codes/bm25.py
 \end{enumerate}
 \end{multicols}
 
-\hfill \text{(GATE BM 2025)}
+\hfill  (BM 2025)
 
 % =========================================================
 % SOLUTION
@@ -2515,7 +2319,7 @@ Rounding off to the nearest integer gives $\text{rupee } 7,24,961$.
 %Question 27
 
 \item The determinant of a $3 \times 3$ matrix $\vec{M}$ is $8$. If every element of $\vec{M}$ is multiplied by $-2$, the determinant of the modified matrix will be:
-\hfill\text{(GATE BM 2025)}
+\hfill (BM 2025)
 \begin{multicols}{2}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
