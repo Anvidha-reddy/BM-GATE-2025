@@ -353,61 +353,33 @@ is \underline{\hspace{2cm}}.
     \item[(d)] $2$
 \end{enumerate}
 \end{multicols}
-
 %==============================================
 %==============================================
-
 \solution
-
-The given limit is the definition of the derivative of $f(x)$ at
-$x=1$:
-
-From \eqref{derivative}
 \begin{align}
+f'(x)=1+\frac{1}{x^2}
+\\
+\implies 
 f'(1)
-=
-\lim_{\Delta x\to 0}
-\frac{f(1+\Delta x)-f(1)}{\Delta x}.
-\end{align}
-
-Given
-\begin{align}
-f(x)=x-\frac{1}{x},
-\end{align}
-
-differentiate with respect to $x$:
-
-\begin{align}
-f'(x)=1+\frac{1}{x^2}.
-\end{align}
-
-Therefore,
-
-\begin{align}
-f'(1)
-=
-1+\frac{1}{1^2}
 =
 2.
 \end{align}
-
-
+using \eqref{eq:derivative}.
+The following code 
+    generates \figref{fig:derivative}
+    to verify the result.
+\begin{lstlisting}
+Codes/bm8.py
+\end{lstlisting}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figs/bm8a.png}
     \caption{Derivative vs x; function vs x with tangent}
-    \label{Derivative vs x; function vs x with tangent}
+    \label{fig:derivative}
 \end{figure}
-
-\text{The following code results the graph}
-\begin{lstlisting}
-Codes/bm8.py
-\end{lstlisting}
-
 % =========================================================
 % QUESTION 9
 % =========================================================
-
 \item The elements of the dataset $\{-5, 1, a, 5, b\}$ are in ascending order. If both mean and median of the dataset are equal to $3$, what is the value of $b$?
 \hfill  (BM 2025)
 
