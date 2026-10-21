@@ -1,6 +1,7 @@
 \begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
 % =========================================================
 %\section*{1. Geometric Progression of Frequencies}
+	\iffalse
 \item Geometric Progression of Frequencies
 
 If each successive term is $r$ times the previous term, then after
@@ -22,33 +23,18 @@ of length $\dfrac{1}{p}$ of the original segment, the length scales as
 L_1&=L_0\left(\frac{m}{p}\right),\\
 L_n&=L_0\left(\frac{m}{p}\right)^{n}. \label{iteration}
 \end{align}
-
-
+\fi
 % =========================================================
-\item Notch (Band-Stop) Filter Response
-
-A notch filter strongly attenuates a narrow band of frequencies around
-a rejected frequency $\omega_0$, while passing frequencies away from
-it:
-
-\begin{align}
-&|H(j\omega_0)|\approx 0, \\
-&|H(j\omega)|\ \text{high for}\ \omega<\omega_0\ \text{and}\ \omega>\omega_0. \label{freq}
-\end{align}
-
-% =========================================================
-\item Rolle's Theorem \label{rolle's}
-
+\item (Rolle's Theorem)
+	\label{prop:rolle}
 If $f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and
 $f(a)=f(b)$, then
-
 \begin{align}
 \exists\, c\in(a,b)\ \text{such that}\ f'(c)=0.
+	\label{eq:rolle}
 \end{align}
-
-Contrapositive form: if $f'(x)\neq 0$ for all $x$, then
-$f(a)\neq f(b)$ for $a\neq b$.
-
+%Contrapositive form: if $f'(x)\neq 0$ for all $x$, then
+%$f(a)\neq f(b)$ for $a\neq b$.
 % =========================================================
 \item Standard Second-Order System / Closed-Loop Transfer Function
 
@@ -715,6 +701,16 @@ For an $n\times n$ matrix $A$ and scalar $k$,
 \det(kA)=k^{n}\det(A). \label{det}
 \end{align}
 % =========================================================
+\item Notch (Band-Stop) Filter Response
+\begin{align}
+	\abs{H\brak{\j \omega}} = 
+	\begin{cases}
+0 & \omega = \omega_0, \\
+\ne 0 & \text{otherwise} 
+\end{cases}
+\label{eq:notch}
+\end{align}
+% =========================================================
 % QUESTION 4
 % =========================================================
 \item Which one of the following represents the frequency
@@ -842,15 +838,7 @@ response of a notch filter?
 % SOLUTION
 % =========================================================
 \solution
-A notch filter is a band-stop filter that rejects or strongly
-attenuates a narrow range of frequencies while allowing frequencies
-outside that range to pass.
-Therefore, its frequency response has high gain at low and high
-frequencies, with a sharp reduction in gain at a particular frequency.
-The response has a deep attenuation around rejected frequency.
-From \eqref{freq}
-Among the given frequency responses, only option d) shows a sharp
-reduction in gain at a particular frequency while allowing frequencies
-on either side to pass.
+From \eqref{eq:notch},
+d). 
 \end{enumerate}
 %\end{document}

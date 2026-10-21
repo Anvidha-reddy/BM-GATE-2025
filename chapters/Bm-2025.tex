@@ -182,73 +182,34 @@ The following code gives whether the triangle is feasible or not by considering 
 \begin{lstlisting}
 Codes/bm3.py
 \end{lstlisting}
-
 % =========================================================
 % QUESTION 5
 % =========================================================
-
-
 \item For any continuous and differentiable function $f(x)$ with
 first derivative $f'(x) \neq 0$ for all values of $x$, which one of the
 following is ALWAYS TRUE for $a \neq b$?
-
 Here, $a$ and $b$ are finite and real.
-
-
 \hfill  (BM 2025)
-\begin{multicols}{2}
+\begin{multicols}{4}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-\item[(a)] $f(a) > f(b)$
-
-
-\item[(b)] $f(a) = f(b)$
-
-
-\item[(c)] $f(a) \neq f(b)$
-
-\item[(d)] $f(a) < f(b)$
-
+\item $f(a) > f(b)$
+\item $f(a) = f(b)$
+\item $f(a) \neq f(b)$
+\item $f(a) < f(b)$
 \end{enumerate}
 \end{multicols}
-
-
 % =========================================================
 % SOLUTION
 % =========================================================
-
-
 \solution
-
-\noindent We are given that $f(x)$ is continuous and differentiable, and
-
+	From \eqref{eq:rolle},
 \begin{align}
-f'(x) \neq 0 \qquad \text{for all } x.
+f(a) \ne f(b).
 \end{align}
-
-Suppose, for contradiction, that
-
-\begin{align}
-f(a) = f(b).
-\end{align}
-
-\noindent Since $f(x)$ is continuous on $[a,b]$ and differentiable on $(a,b)$,
-\noindent Rolle's theorem can be applied.
-
-From \eqref{rolle's}
-
-But this contradicts the given condition
-
-\begin{align}
-f'(x)\neq0 \qquad \text{for all }x.
-\end{align}
-
-\noindent Therefore, our assumption that $f(a)=f(b)$ is false. Hence,$f(a)\neq f(b)$
-
 % =========================================================
 % QUESTION 6
 % =========================================================
-
 \item The closed loop system shown below
 \underline{\hspace{2cm}}.
 
