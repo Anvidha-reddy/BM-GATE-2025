@@ -36,6 +36,7 @@ codes/bm1.py
 iterative algorithm. The total length of the curve generated after
 ``Iteration $n$'' is
 \hfill (BM 2025)
+
 % =========================================================
 % ITERATION 0
 % =========================================================
@@ -68,6 +69,7 @@ iterative algorithm. The total length of the curve generated after
     \node[below] at (1.5,-0.65) {Length of each segment: 1/3};
 
 \end{tikzpicture}
+
 % =========================================================
 % ITERATION 2
 % =========================================================
@@ -180,158 +182,6 @@ The following code gives whether the triangle is feasible or not by considering 
 \begin{lstlisting}
 Codes/bm3.py
 \end{lstlisting}
-% =========================================================
-% QUESTION 4
-% =========================================================
-\item Which one of the following represents the frequency
-response of a notch filter?
-\hfill  (BM 2025)
-% =========================================================
-% OPTIONS WITH GRAPHS
-% =========================================================
-\begin{multicols}{2}
-\begin{enumerate}
-\setlength{\itemsep}{0pt}
-% ---------------------------------------------------------
-% OPTION A
-% ---------------------------------------------------------
-
-\item[(a)]
-
-\begin{center}
-\begin{tikzpicture}[scale=1.1]
-
-    % Axes
-    \draw[->, thick] (0,0) -- (0,3);
-    \draw[->, thick] (0,0) -- (4.5,0);
-
-    % Labels
-    \node[above] at (0,3) {Gain};
-    \node[below] at (2,0) {Frequency};
-
-    % Band-pass response
-    \draw[thick]
-        (0.1,0.15)
-        .. controls (0.9,1.5) and (1.4,2.5) ..
-        (2.0,2.65)
-        .. controls (2.6,2.5) and (3.0,1.0) ..
-        (3.8,0.1);
-
-\end{tikzpicture}
-\end{center}
-
-% ---------------------------------------------------------
-% OPTION B
-% ---------------------------------------------------------
-
-\item[(b)]
-
-\begin{center}
-\begin{tikzpicture}[scale=1.1]
-
-    % Axes
-    \draw[->, thick] (0,0) -- (0,3);
-    \draw[->, thick] (0,0) -- (4.5,0);
-
-    % Labels
-    \node[above] at (0,3) {Gain};
-    \node[below] at (2,0) {Frequency};
-
-    % High-pass response
-    \draw[thick]
-        (1.4,0.05)
-        .. controls (1.7,0.8) and (2.0,2.2) ..
-        (2.6,2.5)
-        .. controls (3.2,2.65) and (3.7,2.65) ..
-        (4.2,2.65);
-
-\end{tikzpicture}
-\end{center}
-
-% ---------------------------------------------------------
-% OPTION C
-% ---------------------------------------------------------
-
-\item[(c)]
-
-\begin{center}
-\begin{tikzpicture}[scale=1.1]
-
-    % Axes
-    \draw[->, thick] (0,0) -- (0,3);
-    \draw[->, thick] (0,0) -- (4.5,0);
-
-    % Labels
-    \node[above] at (0,3) {Gain};
-    \node[below] at (2,0) {Frequency};
-
-    % Low-pass response
-    \draw[thick]
-        (0.1,2.5)
-        .. controls (0.8,2.5) and (1.3,2.45) ..
-        (1.8,2.2)
-        .. controls (2.3,1.8) and (2.5,0.5) ..
-        (2.8,0.05);
-
-\end{tikzpicture}
-\end{center}
-
-% ---------------------------------------------------------
-% OPTION D
-% ---------------------------------------------------------
-
-\item[(d)]
-
-\begin{center}
-\begin{tikzpicture}[scale=1.1]
-
-    % Axes
-    \draw[->, thick] (0,0) -- (0,3);
-    \draw[->, thick] (0,0) -- (4.5,0);
-
-    % Labels
-    \node[above] at (0,3) {Gain};
-    \node[below] at (2,0) {Frequency};
-
-    % Notch response
-    \draw[thick]
-        (0.1,2.5)
-        .. controls (0.7,2.55) and (1.1,2.5) ..
-        (1.5,2.45)
-        .. controls (1.75,2.35) and (1.8,0.4) ..
-        (2.1,0.05)
-        .. controls (2.3,0.4) and (2.35,2.35) ..
-        (2.7,2.45)
-        .. controls (3.2,2.55) and (3.7,2.55) ..
-        (4.2,2.55);
-
-\end{tikzpicture}
-\end{center}
-
-\end{enumerate}
-\end{multicols}
-
-% =========================================================
-% SOLUTION
-% =========================================================
-
-\solution
-
-A notch filter is a band-stop filter that rejects or strongly
-attenuates a narrow range of frequencies while allowing frequencies
-outside that range to pass.
-
-Therefore, its frequency response has high gain at low and high
-frequencies, with a sharp reduction in gain at a particular frequency.
-
-The response has a deep attenuation around rejected frequency.
-
-From \eqref{freq}
-
-
-Among the given frequency responses, only option (D) shows a sharp
-reduction in gain at a particular frequency while allowing frequencies
-on either side to pass.
 
 % =========================================================
 % QUESTION 5
