@@ -36,15 +36,25 @@ $f(a)=f(b)$, then
 %Contrapositive form: if $f'(x)\neq 0$ for all $x$, then
 %$f(a)\neq f(b)$ for $a\neq b$.
 % =========================================================
-\item Standard Second-Order System / Closed-Loop Transfer Function
-
+\item (Closed-Loop Transfer Function)
 For unity negative feedback with forward transfer function $G(s)$,
-
+  in \figref{fig:unity-feedback},
+the transfer function is given by 
 \begin{align}
-\frac{C(s)}{R(s)}=\frac{G(s)}{1+G(s)}. \label{neg}
+\frac{Y(s)}{X(s)}=\frac{G(s)}{1+G(s)}. 
+\label{eq:neg}
 \end{align}
-
-Comparing the characteristic equation with the standard second-order
+	\begin{figure}[H]
+  \centering
+  \resizebox{0.75\columnwidth}{!}{%
+	  \input{figs/unity_feedback.tex}
+  }
+  \caption{Unity feedback}
+  \label{fig:unity-feedback}
+\end{figure}
+%
+\iffalse
+\item Comparing the characteristic equation with the standard second-order
 form,
 
 \begin{align}
@@ -67,6 +77,7 @@ For $0<\zeta<1$, the impulse response has the form
 c(t)=A\,e^{-\zeta\omega_n t}\sin\!\left(\omega_n\sqrt{1-\zeta^{2}}\;t\right),
 \qquad t\ge 0. \label{inverse}
 \end{align}
+\fi
 
 % =========================================================
 \item Eigenvalues via the Characteristic Equation \label{eigen}

@@ -631,9 +631,15 @@ INPUT EE26BTECH11215/chapters/ce2-2025-formulae.tex
 INPUT ./chapters/bm-2025-formulae.tex
 INPUT ./chapters/bm-2025-formulae.tex
 INPUT chapters/bm-2025-formulae.tex
+INPUT ./figs/unity_feedback.tex
+INPUT ./figs/unity_feedback.tex
+INPUT figs/unity_feedback.tex
 INPUT ./chapters/bm-2025.tex
 INPUT ./chapters/bm-2025.tex
 INPUT chapters/bm-2025.tex
+INPUT ./figs/unity_feedback-second.tex
+INPUT ./figs/unity_feedback-second.tex
+INPUT figs/unity_feedback-second.tex
 INPUT ./figs/bm6.png
 INPUT ./figs/bm6.png
 INPUT ./figs/bm6.png

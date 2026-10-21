@@ -211,95 +211,39 @@ f(a) \ne f(b).
 % QUESTION 6
 % =========================================================
 \item The closed loop system shown below
+  in \figref{fig:unity-feedback-second}
 \underline{\hspace{2cm}}.
-
-\begin{center}
-
-\begin{tikzpicture}[
-    >=stealth,
-    block/.style={
-        draw,
-        rectangle,
-        minimum width=4cm,
-        minimum height=1.5cm
-    },
-    sum/.style={
-        draw,
-        circle,
-        minimum size=0.9cm
-    }
-]
-
-% Summing junction
-\node[sum] (sum) {};
-
-% Plus and minus signs
-\node at ($(sum.center)+(-0.2,0.0)$) [font=\tiny] {$ +$};
-\node at ($ (sum.center)+(0.2,0.0)$)[font=\tiny] {$- $};
-
-% Input arrow
-\draw[->] ($(sum.west)+(-1.2,0)$) -- (sum.west);
-
-% Transfer function block
-\node[block, right=0.8cm of sum] (G)
-{
-    $G(s)=\dfrac{25}{s(s+5)}$
-};
-
-% Forward path
-\draw[->] (sum.east) -- (G.west);
-
-% Output
-\draw[->] (G.east) -- ++(1.2,0)
-    node[right] {};
-
-% Feedback line
-\draw (G.east) -- ++(0.5,0)
-    |- ($(sum.south)+(0,-1.3)$)
-    -- (sum.south);
-
-\end{tikzpicture}
-
-\end{center}
-
+	\begin{figure}[H]
+  \centering
+  \resizebox{0.75\columnwidth}{!}{%
+	  \input{figs/unity_feedback-second.tex}
+  }
+  \caption{Unity feedback system}
+  \label{fig:unity-feedback-second}
+\end{figure}
+%
 \hfill  (BM 2025)
 \begin{multicols}{2}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-\item[(a)] is overdamped
-
-
-\item[(b)] is underdamped
-
-
-\item[(c)] is critically damped
-
-
-\item[(d)] has sustained oscillations
-
+\item is overdamped
+\item is underdamped
+\item is critically damped
+\item has sustained oscillations
 \end{enumerate}
 \end{multicols}
-
-
 % =========================================================
 % SOLUTION TO QUESTION 6
 % =========================================================
-
 \solution
-
-The forward transfer function is:
-\begin{align}
-G(s) = \frac{25}{s(s+5)}
-\end{align}
-
-From \eqref{neg}
+From \eqref{eq:neg}
 
 Substitute $G(s)$:
 \begin{align}
 \frac{C(s)}{R(s)} &= \frac{\frac{25}{s(s+5)}}{1 + \frac{25}{s(s+5)}} \\
 &= \frac{25}{s^2 + 5s + 25}
 \end{align}
-
+\iffalse
 The characteristic equation in the Laplace domain is:
 \begin{align}
 s^2 + 5s + 25 = 0
@@ -314,50 +258,33 @@ Comparing this with the standard second-order system equation $s^2 + 2\zeta\omeg
 \end{align}
 
 Since $0 < \zeta < 1$, From \eqref{compare} the system is underdamped.
-
-To find the impulse response in the time domain, we compute the Inverse Laplace Transform of $C(s)$ (for $R(s) = 1$):
+\fi
+To find the impulse response in the time domain, 
 \begin{align}
-C(s) = \frac{25}{s^2 + 5s + 25}
+	C(s) &= \frac{25}{s^2 + 5s + 25}
+\\
+C(s) &= \frac{10}{\sqrt{3}} \cdot \frac{\frac{5\sqrt{3}}{2}}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2}
 \end{align}
-
-Completing the square in the denominator:
+	From \eqref{eq:EE26BTECH11202-Laplace_3}
+	and
+\eqref{eq:EE26BTECH11202-Laplace_5},
 \begin{align}
-s^2 + 5s + 25 &= \left(s + \frac{5}{2}\right)^2 + \frac{75}{4} \\
-&= (s + 2.5)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2
+c(t) = \frac{10}{\sqrt{3}} e^{-\frac{5}{2}t} \sin\left(\frac{5\sqrt{3}}{2}t\right) u(t) 
 \end{align}
-
-Rewriting $C(s)$:
-\begin{align}
-C(s) &= \frac{25}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2}\\ &= \frac{25}{\frac{5\sqrt{3}}{2}} \cdot \frac{\frac{5\sqrt{3}}{2}}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2}\\
-&= \frac{10}{\sqrt{3}} \cdot \frac{\frac{5\sqrt{3}}{2}}{\left(s + \frac{5}{2}\right)^2 + \left(\frac{5\sqrt{3}}{2}\right)^2}
-\end{align}
-
-From \eqref{inverse}
-Taking the Inverse Laplace Transform $\mathcal{L}^{-1}\{C(s)\}$:
-\begin{align}
-c(t) = \frac{10}{\sqrt{3}} e^{-\frac{5}{2}t} \sin\left(\frac{5\sqrt{3}}{2}t\right) \quad \text{for } t \ge 0
-\end{align}
-
-The presence of the decaying exponential $e^{-\frac{5}{2}t}$ multiplied by the sine term confirms an underdamped oscillatory response.
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\textwidth]{figs/bm6.png}
-    \caption{c(t) vs time}
-    \label{c(t) vs time}
-\end{figure}
-\text{The following code gives the above graph}
+The following code generates
+    \eqref{fig:unity-feedback-second-underdamped}.  It is obvious that the system is underdamped.
 \begin{lstlisting}
 Codes/bm6.py
 \end{lstlisting}
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/bm6.png}
+    \caption{Underdamped system.}
+    \label{fig:unity-feedback-second-underdamped}
+\end{figure}
 % =========================================================
 % QUESTION 7
 % =========================================================
-
-
-
 \item The eigenvalues of the matrix
 \begin{align}
 \begin{pmatrix}
