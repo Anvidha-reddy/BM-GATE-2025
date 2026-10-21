@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Termux) (preloaded format=pdflatex 2026.5.4)  20 OCT 2026 20:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Termux) (preloaded format=pdflatex 2026.5.4)  21 OCT 2026 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2107,7 +2107,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.5.1}
 <to be read again> 
                    \relax 
 l.196 \end{align}
-                 ) (./formulae/formulae.tex
+                 ) (./chapters/bm-2025-formulae.tex
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -2442,7 +2442,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.23.2
 <to be read again> 
                    \relax 
 l.647 \end{align}
-                  [32]) (./chapters/Bm-2025.tex [33]
+                  [32]) (./chapters/bm-2025.tex [33]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.1}
 ) has been already used, duplicate ignored
 <to be read again> 
@@ -3182,8 +3182,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F5EC142E38E9293B3F3B532B67E69085;1092.
  ) 
 Here is how much of TeX's memory you used:
- 54227 strings out of 467349
- 1322515 string characters out of 5401406
+ 54226 strings out of 467349
+ 1322554 string characters out of 5401406
  1943923 words of memory out of 5000000
  81975 multiletter control sequences out of 15000+600000
  669961 words of font info for 131 fonts, out of 8000000 for 9000
