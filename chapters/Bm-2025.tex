@@ -536,133 +536,63 @@ Codes/bm12.py
 % =========================================================
 % QUESTION 13
 % =========================================================
-
 \item Given a function $y(x)$ satisfying the differential equation
 \begin{align}
+\label{eq:EE26BTECH11213-laplace}.
 y'' - 0.25y = 0,
 \end{align}
 with initial conditions $y(0) = 1$; $y'(0) = 1$, what is the value of $y(\log_e 100)$?
-
 Here, $y'$ and $y''$ are the first and second derivatives of $y$, respectively.
 \hfill  (BM 2025)
-
 % =========================================================
 % OPTIONS
 % =========================================================
-\begin{multicols}{2}
+\begin{multicols}{4}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-    \item[(a)] $14.05$
-
-    \item[(b)] $14.25$
-
-    \item[(c)] $14.95$
-
-    \item[(d)] $14.65$
+    \item $14.05$
+    \item $14.25$
+    \item $14.95$
+    \item $14.65$
 \end{enumerate}
 \end{multicols}
-
 % =========================================================
 % SOLUTION
 % =========================================================
-
 \solution
-
-Given the second-order linear differential equation:
-\begin{equation}
-y''(x) - 0.25 y(x) = 0
-\end{equation}
-
-with initial conditions $y(0) = 1$ and $y'(0) = 1$.
-
-
-\text{Take the Laplace Transform on both sides}
-Let $\mathcal{L}\{y(x)\} = Y(s)$. 
-From \eqref{laplace}
-
-Substituting into the differential equation gives:
-
+Taking the Laplace Transform of
+\eqref{eq:EE26BTECH11213-laplace},
+from \eqref{eq:EE26BTECH11202-Laplace_2},
 \begin{align}
-\left[ s^2 Y(s) - s y(0) - y'(0) \right] - 0.25 Y(s) = 0
+	\sbrak{ s^2 Y(s) - s y(0) - y'(0)}  - 0.25 Y(s) = 0
+	\\
+\implies s^2 Y(s) - s - 1 - 0.25 Y(s) = 0
 \end{align}
-
-
-\text{Substitute the initial conditions}
-\
-Substitute $y(0) = 1$ and $y'(0) = 1$:
-
+upon substituting initial conditions,
+yielding
 \begin{align}
-s^2 Y(s) - s - 1 - 0.25 Y(s) = 0
-\end{align}
-
-Group $Y(s)$ terms together as \eqref{partial}
-\begin{align}
-(s^2 - 0.25) Y(s) &= s + 1\\
 Y(s) &= \frac{s + 1}{s^2 - 0.25}\\
-&= \frac{s + 1}{\left(s - \frac{1}{2}\right)\left(s + \frac{1}{2}\right)}
+     &= \frac{1.5}{s - 0.5} - \frac{0.5}{s + 0.5}
+     \\
+     \text{or, }
+y(x) &= 1.5 e^{0.5x} - 0.5 e^{-0.5x}.
+\\
+\therefore
+y\brak{\ln 100} &= 14.95
 \end{align}
-
-
-\text{Apply Partial Fraction Decomposition}
-
-Express $Y(s)$ as:
-\begin{align}
-Y(s) = \frac{A}{s - 0.5} + \frac{B}{s + 0.5}
-\end{align}
-
-Solving for constants $A$ and $B$:
-\begin{align}
-A &= \lim_{s \to 0.5} (s - 0.5) Y(s) \\
-&= \frac{0.5 + 1}{0.5 + 0.5} = 1.5
-\end{align}
-\begin{align}
-B &= \lim_{s \to -0.5} (s + 0.5) Y(s) \\
-&= \frac{-0.5 + 1}{-0.5 - 0.5} = -0.5
-\end{align}
-
-So, the transform is:
-\begin{align}
-Y(s) = \frac{1.5}{s - 0.5} - \frac{0.5}{s + 0.5}
-\end{align}
-
-
-\text{Take the Inverse Laplace Transform}
-
-Using $\mathcal{L}^{-1}\left\{\frac{1}{s - a}\right\} = e^{at}$:
-\begin{align}
-y(x) = 1.5 e^{0.5x} - 0.5 e^{-0.5x}
-\end{align}
-
-
-\text{Evaluate $y(\log_e 100)$}
-
-Substitute $x = \log_e 100 = \ln(100)$:
-\begin{align}
-e^{0.5 \ln(100)} = e^{\ln(100^{0.5})} = \sqrt{100} = 10
-\end{align}
-\begin{align}
-e^{-0.5 \ln(100)} = \frac{1}{\sqrt{100}} = \frac{1}{10} = 0.1
-\end{align}
-
-Now, evaluate $y(\ln 100)$:
-\begin{align}
-y(\ln 100) = 1.5(10) - 0.5(0.1) = 15 - 0.05 = 14.95
-\end{align}
- 
-
+The following code generates 
+    \figref{fig:EE26BTECH11221-euler} where a comparison of 
+    the theoretical solution with the Euler's numerical approach is provided.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figs/13.png}
     \caption{Stem plot of Euler Reccurrence relation}
-    \label{Stem plot of Euler Reccurrence relation}
+    \label{fig:EE26BTECH11221-euler}
 \end{figure}
-
-\text{The following code results the 
-}
+%
 \begin{lstlisting}
 Codes/bm13.py
 \end{lstlisting}
-
 % =========================================================
 % QUESTION 14
 % =========================================================
