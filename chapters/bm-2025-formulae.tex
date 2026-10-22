@@ -54,22 +54,53 @@ the transfer function is given by
 \end{figure}
 %
 % =========================================================
-\item Nyquist Sampling Theorem \label{sampling}
-
-A band-limited signal with maximum frequency component $f_{\max}$
-must be sampled at a rate
-
+% QUESTION 10
+% =========================================================
+\item (Nyquist Sampling Theorem \label{sampling}) A time domain signal is given by
 \begin{align}
-f_s\ge 2f_{\max}
+x(t) = 20\sin(100\pi t) + 36\sin(150\pi t) - 2\sin(300\pi t),
 \end{align}
-
-to allow accurate (aliasing-free) reconstruction. For an angular
-frequency component $\omega$, the corresponding cyclic frequency is
-
+where time $t$ is in seconds. Among the following options, what is the frequency (in $\text{Hz}$) at which $x(t)$ should be sampled for accurate signal reconstruction?
+\hfill  (BM 2025)
+% =========================================================
+% OPTIONS
+% =========================================================
+\begin{multicols}{4}
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+    \item $500$
+    \item $150$
+    \item $200$
+    \item $250$
+\end{enumerate}
+\end{multicols}
+% =========================================================
+% SOLUTION
+% =========================================================
+\solution
+The frequencies of the three sinusoidal components are
 \begin{align}
-f=\frac{\omega}{2\pi}.
+f_1 &= \frac{100\pi}{2\pi} = 50\text{ Hz}
+f_2 &= \frac{150\pi}{2\pi} = 75\text{ Hz}
+f_3 &= \frac{300\pi}{2\pi} = 150\text{ Hz}
 \end{align}
-
+According to the Nyquist theorem, the sampling rate  is
+\begin{align}
+f_s \ge 2 \times f_3  = 300\text{ Hz}.
+    \label{eq:sampling}
+\end{align}
+Among the given options, the only frequency greater than or equal to $300\text{ Hz}$ that guarantees accurate signal reconstruction is $500\text{ Hz}$.
+The following code generates
+    \figref{fig:sampling}.
+\begin{lstlisting}
+Codes/bm10.py
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figs/bm10.png}
+    \caption{Plot of x(t) vs time}
+    \label{fig:sampling}
+\end{figure}
 % =========================================================
 \item Average Power in an AC Circuit
 
