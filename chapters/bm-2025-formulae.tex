@@ -176,29 +176,103 @@ E(X)&=Np\\
 \end{align}
 
 % =========================================================
-\item Solving a Linear ODE via the Laplace Transform
-
-For $y''(x)-k^2y(x)=0$ with initial conditions $y(0)$, $y'(0)$, take
-the Laplace transform using
-
-\begin{align}
-\mathcal{L}\{y''(x)\}=s^{2}Y(s)-s\,y(0)-y'(0). \label{laplace}
-\end{align}
-
-This gives an algebraic equation for $Y(s)$, which is solved by
-partial fractions,
-
-\begin{align}
-Y(s)=\frac{A}{s-a}+\frac{B}{s+a}, \label{partial}
-\end{align}
-
-and inverted using
-
-\begin{align}
-\mathcal{L}^{-1}\left\{\frac{1}{s-a}\right\}=e^{at}.
-\end{align}
-
+% QUESTION 14
 % =========================================================
+\item In the circuit shown  in 
+  \figref{fig:EE26BTECH11221-ckt}
+	below, $V_{\text{in}} = 10\cos(1000t)\text{ volts}$. The magnitude of the input impedance of the circuit is 
+\underline{\hspace{2cm}} $\text{k}\Omega$. 
+\hfill  (BM 2025)
+	\begin{figure}[H]
+  \centering
+  \resizebox{0.75\columnwidth}{!}{%
+	  \input{figs/ckt.tex}
+  }
+  \caption{Steady state analysis.}
+  \label{fig:EE26BTECH11221-ckt}
+\end{figure}
+% =========================================================
+% OPTIONS
+% =========================================================
+\begin{multicols}{4}
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+    \item $5.0$
+    \item $3.5$
+    \item $6.0$
+    \item $4.5$
+\end{enumerate}
+\end{multicols}
+% =========================================================
+% SOLUTION
+% =========================================================
+\solution
+The input impedance can be expressed as
+\begin{align}
+	R_1 + R_2 \parallel \frac{1}{\j \omega C}
+	=
+\end{align}
+where 
+\begin{align}
+R_1 = 3k \ohm,
+\quad R_2 = 1\text{k}\ohm, \quad C = 1\,\mu\text{F}, \quad \omega = 1000\text{ rad/s}.
+\end{align}
+Substituting the above values and simplifying, 
+Given the input voltage $V_{\text{in}} = 10\cos(1000t)\text{ V}$, the circuit parameter values are:
+\begin{align}
+\end{align}
+
+
+Refer to \eqref{impedence deri}
+
+
+Substituting $R_1$, $R_2$, $C$, and $\omega$: 
+
+First calculate the normalized frequency factor:
+\begin{align}
+\omega R_2 C = (1000)(1 \times 10^3)(1 \times 10^{-6}) = 1
+\end{align}
+
+Now, compute real and imaginary components of $Z_p$:
+\begin{align}
+Z_p &= \frac{1 - j(1)}{1 + (1)^2}\\
+&= 0.5 - j0.5\text{ k}\Omega
+\end{align}
+
+Total impedance:
+\begin{align}
+Z_{\text{in}} &= 3 + (0.5 - j0.5)\\
+&= 3.5 - j0.5\text{ k}\Omega
+\end{align}
+
+Evaluating Magnitude $|Z_{\text{in}}|$:
+\begin{align}
+|Z_{\text{in}}| &= \sqrt{(3.5)^2 + (-0.5)^2} \\
+&= \sqrt{12.25 + 0.25} \\
+&= \sqrt{12.5} \\
+&\approx 3.5\text{ k}\Omega
+\end{align}
+
+Evaluating Phase $\angle Z_{\text{in}}$:
+\begin{align}
+\angle Z_{\text{in}}&= \tan^{-1}\left(\frac{-0.5}{3.5}\right)\\
+&= -\tan^{-1}\left(\frac{1}{7}\right)\\
+&\approx -8.13^\circ
+\end{align}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figs/bm14.png}
+    \caption{Impedance Magnitude VS Omega; Phase VS Omega}
+    \label{Impedance Magnitude VS Omega; Phase VS Omega}
+\end{figure}
+
+\text{The following code results the graph}
+\begin{lstlisting}
+Codes/bm14.py
+\end{lstlisting}
+
 \item Impedance of R--C Networks (Phasor Domain) \label{impedence deri}
 
 
