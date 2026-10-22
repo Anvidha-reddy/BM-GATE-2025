@@ -202,7 +202,7 @@ Here, $a$ and $b$ are finite and real.
 % SOLUTION
 % =========================================================
 \solution
-	From \eqref{eq:rolle},
+	From \eqref{eq:EE26BTECH11221-rolle},
 \begin{align}
 f(a) \ne f(b).
 \end{align}
@@ -210,7 +210,7 @@ f(a) \ne f(b).
 % QUESTION 6
 % =========================================================
 \item The closed loop system shown below
-  in \figref{fig:unity-feedback-second}
+  in \figref{fig:EE26BTECH11221-unity-feedback-second}
 \underline{\hspace{1cm}}.
 \hfill  (BM 2025)
 	\begin{figure}[H]
@@ -219,7 +219,7 @@ f(a) \ne f(b).
 	  \input{figs/unity_feedback-second.tex}
   }
   \caption{Unity feedback system}
-  \label{fig:unity-feedback-second}
+  \label{fig:EE26BTECH11221-unity-feedback-second}
 \end{figure}
 %
 \begin{multicols}{2}
@@ -235,7 +235,7 @@ f(a) \ne f(b).
 % SOLUTION TO QUESTION 6
 % =========================================================
 \solution
-From \eqref{eq:neg}
+From \eqref{eq:EE26BTECH11221-neg}
 
 Substitute $G(s)$:
 \begin{align}
@@ -271,7 +271,7 @@ C(s) &= \frac{10}{\sqrt{3}} \cdot \frac{\frac{5\sqrt{3}}{2}}{\left(s + \frac{5}{
 c(t) = \frac{10}{\sqrt{3}} e^{-\frac{5}{2}t} \sin\left(\frac{5\sqrt{3}}{2}t\right) u(t) 
 \end{align}
 The following code generates
-    \eqref{fig:unity-feedback-second-underdamped}.  It is obvious that the system is underdamped.
+    \eqref{fig:EE26BTECH11221-unity-feedback-second-underdamped}.  It is obvious that the system is underdamped.
 \begin{lstlisting}
 Codes/bm6.py
 \end{lstlisting}
@@ -279,7 +279,7 @@ Codes/bm6.py
     \centering
     \includegraphics[width=0.75\textwidth]{figs/bm6.png}
     \caption{Underdamped system.}
-    \label{fig:unity-feedback-second-underdamped}
+    \label{fig:EE26BTECH11221-unity-feedback-second-underdamped}
 \end{figure}
 % =========================================================
 % QUESTION 7
@@ -366,7 +366,7 @@ f'(1)
 \end{align}
 using \eqref{eq:derivative}.
 The following code 
-    generates \figref{fig:derivative}
+    generates \figref{fig:EE26BTECH11221-derivative}
     to verify the result.
 \begin{lstlisting}
 Codes/bm8.py
@@ -375,7 +375,7 @@ Codes/bm8.py
     \centering
     \includegraphics[width=1\textwidth]{figs/bm8a.png}
     \caption{Derivative vs x; function vs x with tangent}
-    \label{fig:derivative}
+    \label{fig:EE26BTECH11221-derivative}
 \end{figure}
 % =========================================================
 % QUESTION 9
@@ -417,34 +417,24 @@ Codes/bm9.py
 % =========================================================
 % QUESTION 11
 % =========================================================
-
-
-
 \item A voltage source $V_s = 5\sin\left(100t + \frac{\pi}{2}\right)\text{ volts}$ is driving a current $I = 10\sin\left(100t + \frac{\pi}{6}\right)\text{ mA}$ through a circuit. The average power dissipated in the circuit is \underline{\hspace{2cm}} $\text{mW}$.
 \hfill  (BM 2025)
-
 % =========================================================
 % OPTIONS
 % =========================================================
-\begin{multicols}{2}
+\begin{multicols}{4}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-    \item[(a)] $0.0$
-
-    \item[(b)] $12.5$
-
-    \item[(c)] $25.0$
-
-    \item[(d)] $50.0$
+    \item $0.0$
+    \item $12.5$
+    \item $25.0$
+    \item $50.0$
 \end{enumerate}
 \end{multicols}
-
 % =========================================================
 % SOLUTION
 % =========================================================
-
 \solution
-
 Given data from the problem:
 \begin{align}
 V_s(t) &= 5 \sin\left(100t + \frac{\pi}{2}\right) \text{ V} \\
@@ -490,83 +480,59 @@ Codes/bm11.py
 % =========================================================
 % QUESTION 12
 % ========================================================
-
 \item $N$ independent trials of a binomial random variable yield an expectation value of $16$ and variance of $12$. What is the value of $N$?
 \hfill  (BM 2025)
-
 % =========================================================
 % OPTIONS
 % =========================================================
-\begin{multicols}{2}
+\begin{multicols}{4}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-    \item[(a)] $80$
-
-    \item[(b)] $60$
-
-    \item[(c)] $45$
-
-    \item[(d)] $64$
+    \item $80$
+    \item $60$
+    \item $45$
+    \item $64$
 \end{enumerate}
 \end{multicols}
-
 % =========================================================
 % SOLUTION
 % =========================================================
-
 \solution
-
-For a Binomial distribution $X \sim \mathcal{B}(N, p)$ with $N$ independent trials and success probability $p$:
-
-The expectation value (mean $\mu$) and variance ($\sigma^2$) are given by:
+From \eqref{eq:EE26BTECH11221-binom-mean}
+and
+\eqref{eq:EE26BTECH11221-binom-variance},
 \begin{align}
-\mu &= E(X) = Np = 16 \\
-\sigma^2 &= \text{Var}(X) = Np(1 - p) = 12
+Np = 16,
+Np(1 - p) = 12
+\\
+\implies 
+p = \frac{1}{4},
+N = 64
 \end{align}
-
-From \eqref{gaussian}
-
-Substituting the given mean $\mu = 16$ and variance $\sigma^2 = 12$:
+\iffalse
+Substituting $\mu = 16, \sigma^2 = 12$ in 
+\eqref{eq:EE26BTECH11221-gaussian},
 \begin{align}
 f_Y(x) = \frac{1}{\sqrt{24\pi}} \exp\left( -\frac{(x - 16)^2}{24} \right)
 \end{align}
-
-To find $N$, divide the variance equation by the mean equation:
-From \eqref{variance}
-\begin{align}
-\frac{Np(1 - p)}{Np} = \frac{12}{16}
-\end{align}
-
-Simplifying:
-\begin{align}
-1 - p = \frac{3}{4} = 0.75
-\end{align}
-
-Solving for $p$:
-\begin{align}
-p = 1 - 0.75 = 0.25 = \frac{1}{4}
-\end{align}
-
-Substituting $p = \frac{1}{4}$ back into the expectation value equation:
-\begin{align}
-N \left(\frac{1}{4}\right) &= 16 \\
-N &= 16 \times 4 \\
-N &= 64
-\end{align}
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\textwidth]{figs/11.png}
-    \caption{Probability vs values}
-    \label{probability vs values}
-\end{figure}
-
-\text{The following code results the graph}
+\fi
+The following code generates 
+\figref{fig:EE26BTECH11221-clt}
+by substituting the above mean and variance 
+in
+\eqref{eq:EE26BTECH11221-gaussian},
+and 
+\eqref{eq:EE26BTECH11213-pmf-bern}.
+It can be seen that the Gaussian pdf acts as an envelope for the Binomaial pmf.  This is an example of the Central Limit Theorem.
 \begin{lstlisting}
 Codes/bm12.py
 \end{lstlisting}
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/11.png}
+    \caption{Binomial and Gaussian converge for larege $N$.}
+\label{fig:EE26BTECH11221-clt}
+\end{figure}
 % =========================================================
 % QUESTION 13
 % =========================================================

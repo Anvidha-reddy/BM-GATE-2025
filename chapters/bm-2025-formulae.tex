@@ -31,18 +31,18 @@ If $f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and
 $f(a)=f(b)$, then
 \begin{align}
 \exists\, c\in(a,b)\ \text{such that}\ f'(c)=0.
-	\label{eq:rolle}
+	\label{eq:EE26BTECH11221-rolle}
 \end{align}
 %Contrapositive form: if $f'(x)\neq 0$ for all $x$, then
 %$f(a)\neq f(b)$ for $a\neq b$.
 % =========================================================
 \item (Closed-Loop Transfer Function)
 For unity negative feedback with forward transfer function $G(s)$,
-  in \figref{fig:unity-feedback},
+  in \figref{fig:EE26BTECH11221-unity-feedback},
 the transfer function is given by 
 \begin{align}
 \frac{Y(s)}{X(s)}=\frac{G(s)}{1+G(s)}. 
-\label{eq:neg}
+\label{eq:EE26BTECH11221-neg}
 \end{align}
 	\begin{figure}[H]
   \centering
@@ -50,7 +50,7 @@ the transfer function is given by
 	  \input{figs/unity_feedback.tex}
   }
   \caption{Unity feedback}
-  \label{fig:unity-feedback}
+  \label{fig:EE26BTECH11221-unity-feedback}
 \end{figure}
 %
 % =========================================================
@@ -87,11 +87,11 @@ f_3 &= \frac{300\pi}{2\pi} = 150\text{ Hz}
 According to the Nyquist theorem, the sampling rate  is
 \begin{align}
 f_s \ge 2 \times f_3  = 300\text{ Hz}.
-    \label{eq:sampling}
+    \label{eq:EE26BTECH11221-sampling}
 \end{align}
 Among the given options, the only frequency greater than or equal to $300\text{ Hz}$ that guarantees accurate signal reconstruction is $500\text{ Hz}$.
 The following code generates
-    \figref{fig:sampling}.
+    \figref{fig:EE26BTECH11221-sampling}.
 \begin{lstlisting}
 Codes/bm10.py
 \end{lstlisting}
@@ -99,11 +99,10 @@ Codes/bm10.py
     \centering
     \includegraphics[width=1\textwidth]{figs/bm10.png}
     \caption{Plot of x(t) vs time}
-    \label{fig:sampling}
+    \label{fig:EE26BTECH11221-sampling}
 \end{figure}
 % =========================================================
 \item Average Power in an AC Circuit
-
 \begin{align}
 P_{\text{avg}}=V_{\text{rms}}I_{\text{rms}}\cos\theta, \label{power}
 \end{align}
@@ -117,10 +116,60 @@ I_{\text{rms}}&=\frac{I_m}{\sqrt2}\\
 \end{align}
 
 % =========================================================
+\item 
+	\begin{align}
+		E\brak{X^n} = \frac{d}{dt^n}\sbrak{M_X\brak{e^{-t}}}_{t=0} 
+\label{eq:EE26BTECH11221-moment-n-mgf_xz}
+\end{align}
+\solution
+From 
+\eqref{eq:EE26BTECH11213-mgf-def},
+%\eqref{eq:EE26BTECH11221-dice_xz},
+	\begin{align}
+		\frac{d}{dt^n}\cbrak{M_X\brak{e^{-t}}} &= 
+		\sum_{k=-\infty}^{\infty}k^np_X\brak{k} e^{kt} 
+\end{align}
+yielding
+\eqref{eq:EE26BTECH11221-moment-n-mgf_xz}.
+	\item For the Binomail distribution $X \sim \bnm{n}{p}$,
+		\begin{align}
+			\label{moment-mean-var}
+			\mu = np, \sigma^2 = npq
+		\end{align}
+		\solution 
+From 
+\eqref{eq:EE26BTECH11221-moment-n-mgf_xz},
+%and 
+%\eqref{eq:mgf-binom},
+\begin{align}
+	E\brak{X}&=\frac{d}{dt}\cbrak{\brak{q+pe^{t}}^n}_{t=0} 
+	\\
+		 &= \lim_{t=0}np\brak{q+pe^{t}}^{n-1}=np
+\label{eq:EE26BTECH11221-binom-mean}
+\end{align}
+and
+\begin{align}
+	M_X^{\prime}\brak{t} &= n\brak{q + p e^t}^{n-1}pe^t
+	\\
+M_X^{\prime \prime}\brak{t}
+&= n\brak{n-1}\brak{1 - p + p e^t}^{n-2}\brak{p e^t}^2 \\
+&\quad + n\brak{1 - p + p e^t}^{n-1}\brak{p e^t}
+\end{align}
+Therefore
+\begin{align}
+	E\brak{X^2}
+&= n\brak{n-1}p^2 + np
+\\
+	\implies \text{var}\brak{X} &= 
+	E\brak{X^2}
+-E\brak{X}^2=
+npq
+\label{eq:EE26BTECH11221-binom-variance}
+\end{align}
+%\end{enumerate}
+%
 \item Mean and Variance of a Binomial Distribution
-
 For $X\sim B(N,p)$,
-
 \begin{align}
 E(X)&=Np\\
 \operatorname{Var}(X)&=Np(1-p). \label{variance}
@@ -505,25 +554,19 @@ constant $\sigma_0$:
 
 
 % =========================================================
-\item Gaussian (Normal) Function
-
-A random variable $X$ is said to be Gaussian (normally distributed)
-with mean $\mu$ and variance $\sigma^{2}$, written
-$X\sim\mathcal{N}(\mu,\sigma^{2})$, if its probability density
-function is
-
-\begin{align} \label{gaussian}
-f(x)=\frac{1}{\sigma\sqrt{2\pi}}\,
+\item [Gaussian (Normal) Function]
+$X\sim\mathcal{N}(\mu,\sigma^{2})$, if 
+\begin{align} 
+	\label{eq:EE26BTECH11221-gaussian}
+p_X(x)=\frac{1}{\sigma\sqrt{2\pi}}\,
 \exp\!\left(-\frac{(x-\mu)^{2}}{2\sigma^{2}}\right),
 \qquad -\infty<x<\infty.
 \end{align}
-
-The \text{standard normal} form, with $\mu=0,\ \sigma=1$, is
-
-\begin{align}
-\phi(z)=\frac{1}{\sqrt{2\pi}}\,e^{-z^{2}/2},
-\qquad z=\frac{x-\mu}{\sigma}.
-\end{align}
+%The \text{standard normal} form, with $\mu=0,\ \sigma=1$, is
+%\begin{align}
+%\phi(z)=\frac{1}{\sqrt{2\pi}}\,e^{-z^{2}/2},
+%\qquad z=\frac{x-\mu}{\sigma}.
+%\end{align}
 
 The function is symmetric about $x=\mu$, and satisfies
 
@@ -603,7 +646,7 @@ For an $n\times n$ matrix $A$ and scalar $k$,
 0 & \omega = \omega_0, \\
 \ne 0 & \text{otherwise} 
 \end{cases}
-\label{eq:notch}
+\label{eq:EE26BTECH11221-notch}
 \end{align}
 % =========================================================
 % QUESTION 4
@@ -733,7 +776,7 @@ response of a notch filter?
 % SOLUTION
 % =========================================================
 \solution
-From \eqref{eq:notch},
+From \eqref{eq:EE26BTECH11221-notch},
 d). 
 \end{enumerate}
 %\end{document}

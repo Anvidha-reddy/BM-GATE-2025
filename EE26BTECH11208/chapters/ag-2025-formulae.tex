@@ -17,7 +17,10 @@
 \item The moment generating function 
 \begin{align}
 \begin{split}
-	M_{X}(z)\triangleq \mean{z^{-X}} &= p_{X}(1)z^{-1} +p_{X}(0)z^{0}\\
+	M_{X}(z)\triangleq \mean{z^{-X}} 
+ &=  \sum_{n=-\infty}^{\infty} p_X\sbrak{n} z^{-n} 
+ \\
+	&= p_{X}(1)z^{-1} +p_{X}(0)z^{0}\\
     				&=pz^{-1}+q
 \end{split}
 \label{eq:EE26BTECH11213-mgf-def}
@@ -30,7 +33,7 @@
 %\label{eq:EE26BTECH11213-mgf-sum}
 	Y \triangleq \sum_{i=1}^{n}X_i, \quad 
 	M_{Y}(z)&=\prod_{i=1}^{n}M_{X_i}(z)        \\
-	&=\brak{pZ^{-1}+q}^n
+	&=\brak{pz^{-1}+q}^n
 \end{split}
 \label{eq:EE26BTECH11213-mgf-prod}
 \end{align}
