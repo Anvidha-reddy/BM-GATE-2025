@@ -382,72 +382,38 @@ Codes/bm8.py
 % =========================================================
 \item The elements of the dataset $\{-5, 1, a, 5, b\}$ are in ascending order. If both mean and median of the dataset are equal to $3$, what is the value of $b$?
 \hfill  (BM 2025)
-
 % =========================================================
 % OPTIONS
 % =========================================================
-\begin{multicols}{2}
+\begin{multicols}{4}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-    \item[(a)] $7$
-
-    \item[(b)] $11$
-
-    \item[(c)] $9$
-
-    \item[(d)] $12$
+    \item $7$
+    \item $11$
+    \item $9$
+    \item $12$
 \end{enumerate}
 \end{multicols}
-
 % =========================================================
 % SOLUTION
 % =========================================================
-
 \solution
-
-The dataset consists of $5$ elements arranged in ascending order:
-
+By definition, the median
 \begin{align}
--5 \le 1 \le a \le 5 \le b
+a = 3
 \end{align}
-From \eqref{median}
-Since the dataset has an odd number of elements ($n=5$), the median is the middle (3rd) element:
-
+and 
+the mean is
 \begin{align}
-\text{Median} = a = 3
+	\frac{-5 + 1 + a + 5 + b}{5} &= 3
+	\\
+\implies b = 11
 \end{align}
-
-The mean of the dataset is given as $3$:
-From \eqref{mean}
-\begin{align}
-\text{Mean} = \frac{-5 + 1 + a + 5 + b}{5} = 3
-\end{align}
-
-Substituting $a = 3$ into equation (9.3):
-
-\begin{align}
-\frac{-5 + 1 + 3 + 5 + b}{5} = 3
-\end{align}
-
-\begin{align}
-\frac{4 + b}{5} = 3
-\end{align}
-
-\begin{align}
-4 + b = 15
-\end{align}
-
-\begin{align}
-b = 11
-\end{align}
-
-
-\text{The following code verifies the solution}
+upon substituting $a = 3$. 
+The following code verifies the solution.
 \begin{lstlisting}
 Codes/bm9.py
 \end{lstlisting}
-
-
 % =========================================================
 % QUESTION 10
 % =========================================================
