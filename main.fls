@@ -672,6 +672,9 @@ INPUT ./figs/bm14.png
 INPUT ./figs/bm14.png
 INPUT ./figs/bm14.png
 INPUT ./figs/bm14.png
+INPUT ./figs/lin.tex
+INPUT ./figs/lin.tex
+INPUT figs/lin.tex
 INPUT ./chapters/bm-2025.tex
 INPUT ./chapters/bm-2025.tex
 INPUT chapters/bm-2025.tex

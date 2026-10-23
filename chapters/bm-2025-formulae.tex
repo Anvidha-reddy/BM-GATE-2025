@@ -237,19 +237,70 @@ Codes/bm14.py
     \label{fig:eq:EE26BTECH11221-impedance}
 \end{figure}
 % =========================================================
-\item Linearity and Causality of a System \label{conditions}
+% QUESTION 16
+% =========================================================
+\item Two systems $U$ and $V$ are defined as shown below
+	in
+  \figref{fig:EE26BTECH11221-lin-cause}.
+	Which of the following statement(s) is/are CORRECT?
+\hfill  (BM 2025)
+	\begin{figure}[H]
+  \centering
+  \resizebox{0.75\columnwidth}{!}{%
+	  \input{figs/lin.tex}
+  }
+  \caption{Linearity and Causality}
+  \label{fig:EE26BTECH11221-lin-cause}
+\end{figure}
+% =========================================================
+% OPTIONS
+% =========================================================
+%\begin{multicols}{2}
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+    \item System $U$ is nonlinear; System $V$ is linear
+    \item System $U$ is causal; System $V$ is noncausal
+    \item System $U$ is noncausal; System $V$ is causal
+    \item System $U$ is nonlinear; System $V$ is nonlinear
+\end{enumerate}
+%\end{multicols}
 
-\text{Linearity} (superposition): a system is linear if, for inputs
-$x_1,x_2$ and scalars $a,b$,
-
+% =========================================================
+% SOLUTION
+% =========================================================
+\solution
+\begin{enumerate}
+	\item System U
+\begin{enumerate}
+	\item Linearity check
 \begin{align}
-T\{a\,x_1(t)+b\,x_2(t)\}=a\,T\{x_1(t)\}+b\,T\{x_2(t)\}.
+T\{a x(t)\} &= [a x(t)]^2 + 1 \\
+&= a^2 x(t)^2 + 1 \\
+&\neq a [x(t)^2 + 1]
 \end{align}
+Hence U is nonlinear.
+\item Causality check: 
+$y(t)$  depends only on  $x(t)$  at time $t$.
+Hence U is causal.
+\end{enumerate}
 
-\text{Causality}: a system is causal if the output at time $t_0$
-depends only on input values for $t\le t_0$; if it depends on future
-input values ($t>t_0$), it is noncausal.
+	\item System V
+\begin{enumerate}
 
+	\item Linearity check
+\begin{align}
+T\{a x_1(t) + b x_2(t)\} &= a x_1(t + 1) + b x_2(t + 1) \\
+&= a y_1(t) + b y_2(t)
+\end{align}
+System V is linear.
+
+\item Causality check
+\begin{align}
+\quad y(0) = x(1)
+\end{align}
+Since $y(0)$ depends on the future input $x(1)$, V is noncausal.
+\end{enumerate}
+\end{enumerate}
 % =========================================================
 \item Linear (Discrete) Convolution
 
