@@ -210,150 +210,32 @@ E(X)&=Np\\
 The input impedance can be expressed as
 \begin{align}
 	R_1 + R_2 \parallel \frac{1}{\j \omega C}
-	=
+	&=
+	R_1+\frac{R_2 \brak{\frac{1}{\j\omega C}}}{R_2 + \frac{1}{\j\omega C}}\\
+	\\
+	&=
+	R_1+\frac{R_2}{\j\omega CR_2 + 1}
+    \label{eq:EE26BTECH11221-impedance}.
+=
+3.5 - j0.5
 \end{align}
-where 
+upon substituting the following values in
+    \eqref{eq:EE26BTECH11221-impedance} and simplifying.
 \begin{align}
 R_1 = 3k \ohm,
 \quad R_2 = 1\text{k}\ohm, \quad C = 1\,\mu\text{F}, \quad \omega = 1000\text{ rad/s}.
 \end{align}
-Substituting the above values and simplifying, 
-Given the input voltage $V_{\text{in}} = 10\cos(1000t)\text{ V}$, the circuit parameter values are:
-\begin{align}
-\end{align}
-
-
-Refer to \eqref{impedence deri}
-
-
-Substituting $R_1$, $R_2$, $C$, and $\omega$: 
-
-First calculate the normalized frequency factor:
-\begin{align}
-\omega R_2 C = (1000)(1 \times 10^3)(1 \times 10^{-6}) = 1
-\end{align}
-
-Now, compute real and imaginary components of $Z_p$:
-\begin{align}
-Z_p &= \frac{1 - j(1)}{1 + (1)^2}\\
-&= 0.5 - j0.5\text{ k}\Omega
-\end{align}
-
-Total impedance:
-\begin{align}
-Z_{\text{in}} &= 3 + (0.5 - j0.5)\\
-&= 3.5 - j0.5\text{ k}\Omega
-\end{align}
-
-Evaluating Magnitude $|Z_{\text{in}}|$:
-\begin{align}
-|Z_{\text{in}}| &= \sqrt{(3.5)^2 + (-0.5)^2} \\
-&= \sqrt{12.25 + 0.25} \\
-&= \sqrt{12.5} \\
-&\approx 3.5\text{ k}\Omega
-\end{align}
-
-Evaluating Phase $\angle Z_{\text{in}}$:
-\begin{align}
-\angle Z_{\text{in}}&= \tan^{-1}\left(\frac{-0.5}{3.5}\right)\\
-&= -\tan^{-1}\left(\frac{1}{7}\right)\\
-&\approx -8.13^\circ
-\end{align}
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figs/bm14.png}
-    \caption{Impedance Magnitude VS Omega; Phase VS Omega}
-    \label{Impedance Magnitude VS Omega; Phase VS Omega}
-\end{figure}
-
-\text{The following code results the graph}
+The following code plots 
+    \figref{fig:eq:EE26BTECH11221-impedance}.
 \begin{lstlisting}
 Codes/bm14.py
 \end{lstlisting}
-
-\item Impedance of R--C Networks (Phasor Domain) \label{impedence deri}
-
-
-
-\text{Symbolic Impedance Derivation}
-
-The impedance of the capacitor in terms of angular frequency $\omega$ is:
-\begin{align}
-Z_C(\omega) = \frac{1}{j\omega C} = -\frac{j}{\omega C}
-\end{align}
-
-The parallel combination of resistor $R_2$ and capacitor $Z_C(\omega)$ gives $Z_p(\omega)$:
-\begin{align}
-Z_p(\omega) &= \frac{R_2 \cdot Z_C(\omega)}{R_2 + Z_C(\omega)}\\
-& = \frac{R_2 \left(-\frac{j}{\omega C}\right)}{R_2 - \frac{j}{\omega C}}\\
-& = \frac{-j R_2}{\omega R_2 C - j}
-\end{align}
-
-Multiplying numerator and denominator by the complex conjugate $(\omega R_2 C + j)$:
-\begin{align}
-Z_p(\omega) &= \frac{-j R_2 (\omega R_2 C + j)}{(\omega R_2 C - j)(\omega R_2 C + j)}\\
-&= \frac{R_2 - j \omega R_2^2 C}{1 + (\omega R_2 C)^2}
-\end{align}
-
-The total input impedance $Z_{\text{in}}(\omega)$ in series with $R_1$ is:
-\begin{align}
-Z_{\text{in}}(\omega) &= R_1 + Z_p(\omega)\\
-&= \left( R_1 + \frac{R_2}{1 + (\omega R_2 C)^2} \right) - j \left( \frac{\omega R_2^2 C}{1 + (\omega R_2 C)^2} \right)
-\end{align}
-
-
-\text{Magnitude and Phase Expressions in terms of $\omega$}
-
-\text{1. Magnitude Spectrum $|Z_{\text{in}}(\omega)|$:}
-\begin{align}
-|Z_{\text{in}}(\omega)| = \sqrt{ \left[ R_1 + \frac{R_2}{1 + (\omega R_2 C)^2} \right]^2 + \left[ \frac{\omega R_2^2 C}{1 + (\omega R_2 C)^2} \right]^2 }
-\end{align}
-
-Simplifying the algebraic expression:
-\begin{align}
-|Z_{\text{in}}(\omega)| = \sqrt{ R_1^2 + \frac{2 R_1 R_2 + R_2^2 + (\omega R_1 R_2 C)^2}{1 + (\omega R_2 C)^2} }
-\end{align}
-
-\text{2. Phase Spectrum $\angle Z_{\text{in}}(\omega)$:}
-\begin{align}
-\angle Z_{\text{in}}(\omega) &= -\tan^{-1}\left( \frac{\frac{\omega R_2^2 C}{1 + (\omega R_2 C)^2}}{R_1 + \frac{R_2}{1 + (\omega R_2 C)^2}} \right)\\
-& = -\tan^{-1}\left( \frac{\omega R_2^2 C}{R_1(1 + (\omega R_2 C)^2) + R_2} \right)
-\end{align}
-
-% =========================================================
-\item Complex Logarithm \label{log}
-
-For real $x$, using Euler's identity for $-1$,
-
-
-\begin{align}
-y = \ln(-e^x)
-\end{align}
-
-Using logarithmic properties, we rewrite the term inside the logarithm:
-
-\begin{align}
--e^x = (-1) \cdot e^x
-\end{align}
-
-Applying Euler's identity, $-1$ can be expressed in complex exponential form as:
-
-\begin{align}
--1 = e^{i(2k+1)\pi}, \quad \text{for } k \in \mathbb{Z}
-\end{align}
-
-By solving:
-
-\begin{align}
--e^x &= e^{x} \cdot e^{i(2k+1)\pi}\\
-&= e^{x + i(2k+1)\pi} \label{e^x}
-\end{align}
-
-
-
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figs/bm14.png}
+    \caption{Magnitude and Phase.}
+    \label{fig:eq:EE26BTECH11221-impedance}
+\end{figure}
 % =========================================================
 \item Linearity and Causality of a System \label{conditions}
 

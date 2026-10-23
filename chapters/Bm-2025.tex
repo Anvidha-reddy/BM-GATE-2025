@@ -596,63 +596,35 @@ Codes/bm13.py
 % =========================================================
 % QUESTION 15
 % =========================================================
-
 \item Which of the following is/are CORRECT about the value of $y = \log_e(-e^x)$, where $x$ is a real number.
 \hfill  (BM 2025)
-
 % =========================================================
 % OPTIONS
 % =========================================================
-\begin{multicols}{2}
+%\begin{multicols}{2}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-    \item[(a)] $y$ is real valued
-
-    \item[(b)] $y$ is complex valued
-
-    \item[(c)] $y = x \pm i n \pi$, where $n$ is an odd integer and $i = \sqrt{-1}$
-
-    \item[(d)] $y = x \pm i n \pi$, where $n$ is an even integer and $i = \sqrt{-1}$
+    \item $y$ is real valued
+    \item $y$ is complex valued
+    \item $y = x \pm i n \pi$, where $n$ is an odd integer and $i = \sqrt{-1}$
+    \item $y = x \pm i n \pi$, where $n$ is an even integer and $i = \sqrt{-1}$
 \end{enumerate}
-\end{multicols}
-
-
+%\end{multicols}
 % =========================================================
 % SOLUTION
 % =========================================================
-
-\solution
-
-Given the expression:
-
+\solution Taking the prinipal argument,
 \begin{align}
-y = \log_e(-e^x) = \ln(-e^x)
+e^{\j \pi} &= -1
+\implies
+e^{\j(2k+1)\pi} &= -1,
+\\
+\text{or, }e^{\pm \j n \pi} &= -1, \text { n odd}
+\\
+\therefore
+y &= \ln \brak{e^{x \pm \j n \pi}} = 
+x \pm j n \pi,
 \end{align}
-
-Using \eqref{log}
-
-Taking the natural logarithm on both sides of \eqref{e^x}
-
-\begin{align}
-y = \ln\left(e^{x + i(2k+1)\pi}\right)
-\end{align}
-
-\begin{align}
-y = x + i(2k+1)\pi, \quad \text{for } k \in \mathbb{Z}
-\end{align}
-
-Let $n = |2k + 1|$. Since $2k+1$ is always an odd integer, $n$ represents an odd integer:
-
-\begin{align}
-y = x \pm i n \pi, \quad \text{where } n \text{ is an odd integer and } i = \sqrt{-1}
-\end{align}
-
-Since $y$ contains an imaginary component $i n \pi$ (with $n \ge 1$), $y$ is a complex-valued function.
-
- Both statements (B) and (C) are correct.
-
-
-                                          
 % =========================================================
 % QUESTION 16
 % =========================================================
