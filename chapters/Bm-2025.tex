@@ -628,91 +628,43 @@ x \pm j n \pi,
 % =========================================================
 % QUESTION 17
 % =========================================================
-
 \item A discrete linear time invariant system has an impulse response function given by
 \begin{align}
 h(n) = \delta(n) + \frac{1}{2}\delta(n-1) + \frac{1}{3}\delta(n-2).
 \end{align}
 For input signal $x(n) = \delta(n) + \delta(n-1)$, which of the following option(s) is/are CORRECT for the output signal $y(n)$?
 \hfill  (BM 2025)
-
 % =========================================================
 % OPTIONS
 % =========================================================
-\begin{multicols}{2}
+\begin{multicols}{4}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-    \item[(a)] $y(2) = 11/6$
-
-    \item[(b)] $y(2) = 5/6$
-
-    \item[(c)] $y(2) = 0$ for all $k \ge 3$
-
-    \item[(d)] $y(2) = 0$ for all $k \ge 4$
+    \item $y(2) = 11/6$
+    \item $y(2) = 5/6$
+    \item $y(2) = 0$ for all $k \ge 3$
+    \item $y(2) = 0$ for all $k \ge 4$
 \end{enumerate}
 \end{multicols}
-
 % =========================================================
 % SOLUTION
 % =========================================================
-
 \solution
-
-
-\text{Express sequences in vector form}
-
-The impulse response sequence $h(n)$ of length $M = 3$ is:
-
 \begin{align}
-	\vec{h(n)}=\myvec{1 & 1/2 & 1/3}
+\because	\vec{h}&=\myvec{1 \\ 1/2 \\ 1/3}\\
+	\vec{x}&=\myvec{1 \\ 1}
 \end{align}
-
-The input signal sequence $x(n)$ of length $N = 2$ is:
-
+and the Toeplitz matrix 
 \begin{align}
-	\vec{x(n)}=\myvec{1 & 1}
-\end{align}
-The linear convolution $y(n) = h(n) * x(n)$ has a total length of $4$ points (spanning $n = 0, 1, 2, 3$). (From \eqref{convolution})
-
-\text{Construct the Convolution (Toeplitz) Matrix}
-Linear convolution can be represented as a matrix-vector product $\vec{y}$ = $\vec{H}$ $\vec{x}$, where $\vec{H}$ is a (M+N-1)*N=8 lower-triangular Toeplitz matrix formed by shifting $h(n)$ downwards:
-\begin{align}
- \vec{H}=\myvec{ 
-   h(0) & 0 \\ 
-   h(1) & h(0) \\ 
-   h(2) & h(1) \\ 
-   0 & h(2) 
-   }
-\end{align} 
-\begin{align}
-  =\myvec{ 
+\vec{T}_\vec{h}&=\myvec{ 
     1 & 0 \\ 
     1/2 & 1 \\
     1/3 & 1/2 \\
     0 & 1/3 
-    }
-    \end{align}
-The input vector $\vec{x}$ is:
-\begin{align}
- \vec{x}=\myvec{
-          x(0) \\
-          x(1)
-          }
-          =\myvec{
-          1\\
-          1
-          }
-\end{align}
-
-\text{Matrix-Vector Multiplication}
-\begin{align}
-	\myvec{
-	y(0) \\
-	y(1) \\
-	y(2) \\
-	y(3)
-	}=
-	\myvec{
+    },
+    \\
+    \vec{y} &= \vec{x}*\vec{h}=\vec{T}_\vec{h}\vec{x}
+	    &=	\myvec{
 	1 & 0 \\
 	1/2 & 1 \\
 	1/3 & 1/2 \\
@@ -722,15 +674,14 @@ The input vector $\vec{x}$ is:
 	1 \\
 	1
 	}
+	\\
+&=\myvec{ 1\\
+ \frac{3}{2}\\
+ \frac{5}{6}\\
+ \frac{1}{3}
+}
 \end{align}
-
-Computing each element:
-\begin{align}
-y(0) = 1(1) + 0(1) = 1\\
-y(1) = \frac{1}{2}(1) + 1(1) = \frac{3}{2}\\
-y(2) = \frac{1}{3}(1) + \frac{1}{2}(1) = \frac{5}{6}\\
-y(3) = 0(1) + \frac{1}{3}(1) = \frac{1}{3}
-\end{align}
+\iffalse
 For $k \ge 4$, $y(k) = 0$ since the signal duration ends at $n = 3$.
 
 \text{Verify the Options}
@@ -740,20 +691,18 @@ For $k \ge 4$, $y(k) = 0$ since the signal duration ends at $n = 3$.
   \item \text{Option (c):} $y(k) = 0$ for all $k \ge 3$ \quad (\text{Incorrect, since } $y(3) = \frac{1}{3} \neq 0$)
   \item \text{Option (d):} $y(k) = 0$ for all $k \ge 4$ \quad (\text{Correct})
 \end{itemize}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{figs/bm17a.png}
-    \caption{x[n],h[n],y[n] vs n}
-    \label{signals vs n}
-\end{figure}
-
-\text{The following code results the graph}
+\fi
+The following code generates
+	\figref{eq:EE26BTECH11221-conv}.
 \begin{lstlisting}
 Codes/bm17a.py
 \end{lstlisting}
-
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figs/bm17a.png}
+    \caption{Convolution}
+	\label{eq:EE26BTECH11221-conv}
+\end{figure}
 % =========================================================
 % QUESTION 18
 % =========================================================
