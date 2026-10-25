@@ -675,6 +675,11 @@ INPUT ./figs/bm14.png
 INPUT ./figs/lin.tex
 INPUT ./figs/lin.tex
 INPUT figs/lin.tex
+INPUT ./figs/bm17a.png
+INPUT ./figs/bm17a.png
+INPUT ./figs/bm17a.png
+INPUT ./figs/bm17a.png
+INPUT ./figs/bm17a.png
 INPUT ./chapters/bm-2025.tex
 INPUT ./chapters/bm-2025.tex
 INPUT chapters/bm-2025.tex
@@ -716,11 +721,6 @@ INPUT ./figs/13.png
 INPUT ./figs/13.png
 INPUT ./figs/13.png
 INPUT ./figs/13.png
-INPUT ./figs/bm17a.png
-INPUT ./figs/bm17a.png
-INPUT ./figs/bm17a.png
-INPUT ./figs/bm17a.png
-INPUT ./figs/bm17a.png
 INPUT ./figs/imp.png
 INPUT ./figs/imp.png
 INPUT ./figs/imp.png

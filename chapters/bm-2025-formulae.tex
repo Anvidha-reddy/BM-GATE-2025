@@ -302,7 +302,72 @@ Since $y(0)$ depends on the future input $x(1)$, V is noncausal.
 \end{enumerate}
 \end{enumerate}
 % =========================================================
-\item Linear (Discrete) Convolution
+% QUESTION 17
+% =========================================================
+\item (Convolution using matrices) A discrete linear time invariant system has an impulse response function given by
+\begin{align}
+h(n) = \delta(n) + \frac{1}{2}\delta(n-1) + \frac{1}{3}\delta(n-2).
+\end{align}
+For input signal $x(n) = \delta(n) + \delta(n-1)$, which of the following option(s) is/are CORRECT for the output signal $y(n)$?
+\hfill  (BM 2025)
+% =========================================================
+% OPTIONS
+% =========================================================
+\begin{multicols}{4}
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+    \item $y(2) = 11/6$
+    \item $y(2) = 5/6$
+    \item $y(2) = 0$ for all $k \ge 3$
+    \item $y(2) = 0$ for all $k \ge 4$
+\end{enumerate}
+\end{multicols}
+% =========================================================
+% SOLUTION
+% =========================================================
+\solution
+\begin{align}
+\because	\vec{h}&=\myvec{1 \\ 1/2 \\ 1/3},
+	\vec{x}=\myvec{1 \\ 1}
+\end{align}
+and the Toeplitz matrix 
+\begin{align}
+\vec{T}_\vec{h}&=\myvec{ 
+    1 & 0 \\ 
+    1/2 & 1 \\
+    1/3 & 1/2 \\
+    0 & 1/3 
+    },
+    \\
+    \vec{y} &= \vec{x}*\vec{h}=\vec{T}_\vec{h}\vec{x}
+	    =	\myvec{
+	1 & 0 \\
+	1/2 & 1 \\
+	1/3 & 1/2 \\
+	0 & 1/3 
+	}
+	\myvec{
+	1 \\
+	1
+	}
+	=\myvec{ 1\\[1ex]
+ \frac{3}{2}\\[1ex]
+ \frac{5}{6}\\[1ex]
+ \frac{1}{3}
+}
+\end{align}
+The following code generates
+	\figref{eq:EE26BTECH11221-conv}.
+\begin{lstlisting}
+Codes/bm17a.py
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figs/bm17a.png}
+    \caption{Convolution}
+	\label{eq:EE26BTECH11221-conv}
+\end{figure}
+\iffalse
 
 For an LTI system with impulse response $h(n)$ of length $M$ and
 input $x(n)$ of length $N$,
@@ -325,7 +390,7 @@ $h(n)$:
 \begin{align}
 \vec{y}=\vec{H},\vec{x}.
 \end{align}
-
+\fi
 % =========================================================
 \item $n$-bit DAC Output
 
