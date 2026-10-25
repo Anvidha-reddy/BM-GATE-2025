@@ -651,8 +651,8 @@ For input signal $x(n) = \delta(n) + \delta(n-1)$, which of the following option
 % =========================================================
 \solution
 \begin{align}
-\because	\vec{h}&=\myvec{1 \\ 1/2 \\ 1/3}\\
-	\vec{x}&=\myvec{1 \\ 1}
+\because	\vec{h}&=\myvec{1 \\ 1/2 \\ 1/3},
+	\vec{x}=\myvec{1 \\ 1}
 \end{align}
 and the Toeplitz matrix 
 \begin{align}
@@ -664,7 +664,7 @@ and the Toeplitz matrix
     },
     \\
     \vec{y} &= \vec{x}*\vec{h}=\vec{T}_\vec{h}\vec{x}
-	    &=	\myvec{
+	    =	\myvec{
 	1 & 0 \\
 	1/2 & 1 \\
 	1/3 & 1/2 \\
@@ -674,24 +674,12 @@ and the Toeplitz matrix
 	1 \\
 	1
 	}
-	\\
-&=\myvec{ 1\\
- \frac{3}{2}\\
- \frac{5}{6}\\
+	=\myvec{ 1\\[1ex]
+ \frac{3}{2}\\[1ex]
+ \frac{5}{6}\\[1ex]
  \frac{1}{3}
 }
 \end{align}
-\iffalse
-For $k \ge 4$, $y(k) = 0$ since the signal duration ends at $n = 3$.
-
-\text{Verify the Options}
-\begin{itemize}
-  \item \text{Option (a):} $y(2) = \frac{11}{6}$ \quad (\text{Incorrect})
-  \item \text{Option (b):} $y(2) = \frac{5}{6}$ \quad (\text{Correct})
-  \item \text{Option (c):} $y(k) = 0$ for all $k \ge 3$ \quad (\text{Incorrect, since } $y(3) = \frac{1}{3} \neq 0$)
-  \item \text{Option (d):} $y(k) = 0$ for all $k \ge 4$ \quad (\text{Correct})
-\end{itemize}
-\fi
 The following code generates
 	\figref{eq:EE26BTECH11221-conv}.
 \begin{lstlisting}
