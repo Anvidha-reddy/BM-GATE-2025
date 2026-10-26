@@ -341,16 +341,13 @@ $
 $
 is \underline{\hspace{2cm}}.
 \hfill  (BM 2025)
-\begin{multicols}{2}
+\begin{multicols}{4}
 \begin{enumerate}
 \setlength{\itemsep}{0pt}
-    \item[(a)] $0$
-    
-    \item[(b)] $\dfrac{1}{2}$
-    
-    \item[(c)] $1$
-    
-    \item[(d)] $2$
+    \item $0$
+    \item $\dfrac{1}{2}$
+    \item $1$
+    \item $2$
 \end{enumerate}
 \end{multicols}
 %==============================================
@@ -538,7 +535,7 @@ Codes/bm12.py
 % =========================================================
 \item Given a function $y(x)$ satisfying the differential equation
 \begin{align}
-\label{eq:EE26BTECH11213-laplace}.
+\label{eq:EE26BTECH11213-laplace}
 y'' - 0.25y = 0,
 \end{align}
 with initial conditions $y(0) = 1$; $y'(0) = 1$, what is the value of $y(\log_e 100)$?
@@ -626,54 +623,6 @@ y &= \ln \brak{e^{x \pm \j n \pi}} =
 x \pm j n \pi,
 \end{align}
 % =========================================================
-% QUESTION 18
-% =========================================================
-
-\item For an 8-bit Digital to Analog Converter (DAC), the binary input 0000 0000 results in $0\text{ V}$, and 1111 1111 results in $5\text{ V}$. The output of the DAC for an input of 1011 0111 is \underline{\hspace{2cm}} (in volts, rounded off to two decimal places).
-\hfill  (BM 2025)
-
-% =========================================================
-% SOLUTION
-% =========================================================
-
-\solution
-
-First, convert the binary input $(10110111)_2$ into its equivalent decimal value $D$:
-
-\begin{align}
-D = 1 \cdot 2^7 + 0 \cdot 2^6 + 1 \cdot 2^5 + 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0
-\end{align}
-
-\begin{align}
-D = 128 + 0 + 32 + 16 + 0 + 4 + 2 + 1 = 183
-\end{align}
-
-For an 8-bit DAC:
-\begin{itemize}
-    \item Minimum digital value $(00000000)_2 = 0$ corresponds to $0\text{ V}$.
-    \item Maximum digital value $(11111111)_2 = 255$ corresponds to Full-Scale Voltage $V_{\text{FS}} = 5\text{ V}$.
-\end{itemize}
-
-From \eqref{output}
-where $n = 8$ bits, so $2^8 - 1 = 255$.
-
-Substituting $D = 183$ and $V_{\text{FS}} = 5\text{ V}$:
-
-\begin{align}
-V_{\text{out}} = 5 \times \left( \frac{183}{255} \right)
-\end{align}
-
-\begin{align}
-V_{\text{out}} = \frac{915}{255} \approx 3.5882\text{ V}
-\end{align}
-
-Rounding off to two decimal places gives: 3.59
-
-\text{The following code verifies the answer}
-\begin{lstlisting}
-Codes/bm18.py
-\end{lstlisting}
-
 
 % =========================================================
 % QUESTION 19

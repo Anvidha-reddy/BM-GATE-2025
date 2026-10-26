@@ -392,15 +392,41 @@ $h(n)$:
 \end{align}
 \fi
 % =========================================================
-\item $n$-bit DAC Output
+% QUESTION 18
+% =========================================================
 
-For an $n$-bit DAC with full-scale output voltage $V_{\text{FS}}$ and
-digital input equivalent decimal value $D$,
-
+\item 
+	($n$-bit DAC Output)
+	For an 8-bit Digital to Analog Converter (DAC), the binary input 0000 0000 results in $0\text{ V}$, and 1111 1111 results in $5\text{ V}$. The output of the DAC for an input of 1011 0111 is \underline{\hspace{2cm}} (in volts, rounded off to two decimal places).
+\hfill  (BM 2025)
+% =========================================================
+% SOLUTION
+% =========================================================
+\solution
+For an 8-bit DAC
+\begin{itemize}
+    \item Minimum digital value $(00000000)_2 = 0$ corresponds to $0\text{ V}$.
+    \item Maximum digital value $(11111111)_2 = 255$ corresponds to Full-Scale Voltage $V_{\text{FS}} = 5\text{ V}$.
+    \item The number of bits
+$n = 8$, so the number of possible voltage levels in the DAC output is $2^8 - 1 = 255$.
+\end{itemize}
+The decimal equivalent of $(10110111)_2$ is
+\begin{align}
+D= 183,
+\end{align}
+so the voltage level corresponding to $D$ is 
+\begin{align}
+V_{\text{out}} = 5 \times \left( \frac{183}{255} \right)
+ \approx 3.5882\text{ V}
+\end{align}
+\text{The following code verifies the answer}
+\begin{lstlisting}
+Codes/bm18.py
+\end{lstlisting}
+In general,
 \begin{align}
 V_{\text{out}}=V_{\text{FS}}\left(\frac{D}{2^{n}-1}\right). \label{output}
 \end{align}
-
 % =========================================================
 \item Inverting Summing Amplifier
 
