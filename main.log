@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Termux) (preloaded format=pdflatex 2026.5.4)  26 OCT 2026 15:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Termux) (preloaded format=pdflatex 2026.5.4)  26 OCT 2026 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2475,39 +2475,39 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.7.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.366 \end{align}
+l.363 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.7.2}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.366 \end{align}
+l.363 \end{align}
                  
 <figs/bm8a.png, id=799, 722.7pt x 722.7pt>
 File: figs/bm8a.png Graphic file (type png)
 <use figs/bm8a.png>
-Package pdftex.def Info: figs/bm8a.png  used on input line 376.
+Package pdftex.def Info: figs/bm8a.png  used on input line 373.
 (pdftex.def)             Requested size: 364.1953pt x 364.1942pt.
 [40 <./figs/bm8a.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.404 \end{align}
+l.401 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8.2}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.411 \end{align}
+l.408 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.8.3}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.411 \end{align}
+l.408 \end{align}
                  
-Underfull \hbox (badness 1874) in paragraph at lines 420--426
+Underfull \hbox (badness 1874) in paragraph at lines 417--423
 []\OT1/ptm/m/n/10 A volt-age source $\OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 = 5 [
 ] [] []$ \OT1/ptm/m/n/10 is driv-ing a cur-rent $\OML/cmm/m/it/10 I \OT1/cmr/m/
 n/10 =
@@ -2518,306 +2518,306 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.9.1}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.442 \end{align}
+l.439 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9.2}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.442 \end{align}
+l.439 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9.3}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.449 \end{align}
+l.446 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9.4}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.449 \end{align}
+l.446 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9.5}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.449 \end{align}
+l.446 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.9.6}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.449 \end{align}
+l.446 \end{align}
                   [41]
-<figs/bm11.png, id=828, 650.43pt x 361.35pt>
+<figs/bm11.png, id=832, 650.43pt x 361.35pt>
 File: figs/bm11.png Graphic file (type png)
 <use figs/bm11.png>
-Package pdftex.def Info: figs/bm11.png  used on input line 468.
+Package pdftex.def Info: figs/bm11.png  used on input line 465.
 (pdftex.def)             Requested size: 273.14647pt x 151.74942pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.469     \caption{Power vs time}
+l.466     \caption{Power vs time}
                                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.511 \end{align}
+l.508 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.511 \end{align}
+l.508 \end{align}
                  
-<figs/11.png, id=834, 1284.8pt x 900.36375pt>
+<figs/11.png, id=838, 1284.8pt x 900.36375pt>
 File: figs/11.png Graphic file (type png)
 <use figs/11.png>
-Package pdftex.def Info: figs/11.png  used on input line 532.
+Package pdftex.def Info: figs/11.png  used on input line 529.
 (pdftex.def)             Requested size: 273.14647pt x 191.4175pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10.1})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.533 ...al and Gaussian converge for larege $N$.}
+l.530 ...al and Gaussian converge for larege $N$.}
                                                    [42 <./figs/bm11.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.543 \end{align}
+l.540 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.570 \end{align}
+l.567 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.570 \end{align}
+l.567 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.11.4
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.582 \end{align}
+l.579 \end{align}
                  
-<figs/13.png, id=854, 1284.8pt x 713.66624pt>
+<figs/13.png, id=859, 1284.8pt x 713.66624pt>
 File: figs/13.png Graphic file (type png)
 <use figs/13.png>
-Package pdftex.def Info: figs/13.png  used on input line 588.
+Package pdftex.def Info: figs/13.png  used on input line 585.
 (pdftex.def)             Requested size: 364.1953pt x 202.29713pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11.1})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.589 ...{Stem plot of Euler Reccurrence relation}
+l.586 ...{Stem plot of Euler Reccurrence relation}
                                                    [43 <./figs/11.png>]
 
-LaTeX Warning: Command \j invalid in math mode on input line 627.
+LaTeX Warning: Command \j invalid in math mode on input line 624.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 627.
+LaTeX Warning: Command \j invalid in math mode on input line 624.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 627.
+LaTeX Warning: Command \j invalid in math mode on input line 624.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 627.
+LaTeX Warning: Command \j invalid in math mode on input line 624.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 627.
+LaTeX Warning: Command \j invalid in math mode on input line 624.
 
 
-LaTeX Warning: Command \j invalid in math mode on input line 627.
+LaTeX Warning: Command \j invalid in math mode on input line 624.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.12.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.627 \end{align}
+l.624 \end{align}
                  
 
-LaTeX Warning: Command \j invalid in math mode on input line 627.
+LaTeX Warning: Command \j invalid in math mode on input line 624.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.12.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.627 \end{align}
+l.624 \end{align}
                  
 
-LaTeX Warning: Command \j invalid in math mode on input line 627.
+LaTeX Warning: Command \j invalid in math mode on input line 624.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.12.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.627 \end{align}
+l.624 \end{align}
                   [44 <./figs/13.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.13.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.732 \end{align}
+l.729 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.13.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.736 \end{align}
+l.733 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.13.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.740 \end{align}
+l.737 \end{align}
                   [45]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.14.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.863 \end{align}
+l.860 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.14.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.867 \end{align}
+l.864 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.14.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.873 \end{align}
+l.870 \end{align}
                   [46]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.942 \end{align}
+l.939 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.942 \end{align}
+l.939 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.942 \end{align}
+l.939 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15.4
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.946 \end{align}
+l.943 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.15.5
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.958 \end{align}
+l.955 \end{align}
                  
-<figs/imp.png, id=896, 849.1725pt x 963.6pt>
+<figs/imp.png, id=900, 849.1725pt x 963.6pt>
 File: figs/imp.png Graphic file (type png)
 <use figs/imp.png>
-Package pdftex.def Info: figs/imp.png  used on input line 962.
+Package pdftex.def Info: figs/imp.png  used on input line 959.
 (pdftex.def)             Requested size: 364.1953pt x 413.26659pt.
 [47] [48 <./figs/imp.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.16.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.991 \end{align}
+l.988 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.16.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.996 \end{align}
+l.993 \end{align}
                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.16.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1007 \end{align}
+l.1004 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.16.6
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1019 \end{align}
+l.1016 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.16.7
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1024 \end{align}
+l.1021 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.16.8
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1035 \end{align}
+l.1032 \end{align}
                   
-<figs/bm22.png, id=910, 722.7pt x 433.62pt>
+<figs/bm22.png, id=914, 722.7pt x 433.62pt>
 File: figs/bm22.png Graphic file (type png)
 <use figs/bm22.png>
-Package pdftex.def Info: figs/bm22.png  used on input line 1041.
+Package pdftex.def Info: figs/bm22.png  used on input line 1038.
 (pdftex.def)             Requested size: 364.1953pt x 218.51653pt.
 [49]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.17.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1058 \end{align}
+l.1055 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.17.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1071 \end{align}
+l.1068 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.17.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1080 \end{align}
+l.1077 \end{align}
                    [50 <./figs/bm22.png>]
-<figs/bm23.png, id=933, 578.16pt x 361.35pt>
+<figs/bm23.png, id=937, 578.16pt x 361.35pt>
 File: figs/bm23.png Graphic file (type png)
 <use figs/bm23.png>
-Package pdftex.def Info: figs/bm23.png  used on input line 1096.
+Package pdftex.def Info: figs/bm23.png  used on input line 1093.
 (pdftex.def)             Requested size: 273.14647pt x 170.71672pt.
 [51 <./figs/bm23.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.18.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1161 \end{align}
+l.1158 \end{align}
                    [52]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.18.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1210 \end{align}
+l.1207 \end{align}
                   
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1210--1212
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1207--1209
 [] 
  []
 
@@ -2826,43 +2826,43 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.19.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1264 \end{align}
+l.1261 \end{align}
                    [53]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.20.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1324 \end{align}
+l.1321 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.20.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1327 \end{align}
+l.1324 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.20.3
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1332 \end{align}
+l.1329 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.20.4
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1337 \end{align}
+l.1334 \end{align}
                    [54]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.21.1
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1387     \end{align}
+l.1384     \end{align}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.21.2
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1390     \end{align}
+l.1387     \end{align}
                       ) [55] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -2875,8 +2875,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F5EC142E38E9293B3F3B532B67E69085;1092.
  ) 
 Here is how much of TeX's memory you used:
- 54240 strings out of 467349
- 1322838 string characters out of 5401406
+ 54244 strings out of 467349
+ 1322870 string characters out of 5401406
  1942804 words of memory out of 5000000
  81985 multiletter control sequences out of 15000+600000
  672593 words of font info for 141 fonts, out of 8000000 for 9000
@@ -2911,10 +2911,10 @@ live/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></data/data
 ist/fonts/type1/urw/times/utmb8a.pfb></data/data/com.termux/files/usr/share/tex
 live/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></data/data/com.termux/fi
 les/usr/share/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (55 pages, 2157459 bytes).
+Output written on main.pdf (55 pages, 2157761 bytes).
 PDF statistics:
- 1182 PDF objects out of 1200 (max. 8388607)
- 1002 compressed objects within 11 object streams
- 527 named destinations out of 1000 (max. 500000)
+ 1187 PDF objects out of 1200 (max. 8388607)
+ 1007 compressed objects within 11 object streams
+ 531 named destinations out of 1000 (max. 500000)
  271 words of extra memory for PDF output out of 10000 (max. 10000000)
 
