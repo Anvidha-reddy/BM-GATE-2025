@@ -432,18 +432,65 @@ Codes/bm9.py
 % SOLUTION
 % =========================================================
 \solution
-Given data from the problem:
+
+
+From the problem parameters:
 \begin{align}
-V_s(t) &= 5 \sin\left(100t + \frac{\pi}{2}\right) \text{ V} \\
-I(t) &= 10 \sin\left(100t + \frac{\pi}{6}\right) \text{ mA}
+v(t) &= V_s(t) = 5 \sin\left(100t + \frac{\pi}{2}\right) \text{ V} \\
+i(t) &= I(t) = 10 \sin\left(100t + \frac{\pi}{6}\right) \text{ mA}
 \end{align}
 
-Extracting the peak values and phase angles:
+The angular frequency is $\omega = 100 \text{ rad/s}$, giving the time period:
 \begin{align}
-V_0 &= 5 \text{ V}\\ I_0 &= 10 \text{ mA}\\
-\phi_v &= \frac{\pi}{2} \text{ rad} \\
-\phi_i &= \frac{\pi}{6} \text{ rad}
+T &= \frac{2\pi}{\omega} = \frac{2\pi}{100} = \frac{\pi}{50} \text{ s}
 \end{align}
+
+
+\text{ Instantaneous Power Expression } p(t) = v(t)i(t)
+
+Multiplying the instantaneous voltage and current:
+\begin{align}
+p(t) &= v(t) \cdot i(t) \\
+&= \left[ 5 \sin\left(100t + \frac{\pi}{2}\right) \text{ V} \right] \cdot \left[ 10 \sin\left(100t + \frac{\pi}{6}\right) \text{ mA} \right] \\
+&= 50 \sin\left(100t + \frac{\pi}{2}\right) \sin\left(100t + \frac{\pi}{6}\right) \text{ mW}
+\end{align}
+
+Using the trigonometric identity $\sin A \sin B = \frac{1}{2} \left[ \cos(A - B) - \cos(A + B) \right]$:
+\begin{align}
+A - B &= \left(100t + \frac{\pi}{2}\right) - \left(100t + \frac{\pi}{6}\right) = \frac{\pi}{3} \\
+A + B &= \left(100t + \frac{\pi}{2}\right) + \left(100t + \frac{\pi}{6}\right) = 200t + \frac{2\pi}{3}
+\end{align}
+
+Substituting these into $p(t)$:
+\begin{align}
+p(t) &= 50 \cdot \frac{1}{2} \left[ \cos\left(\frac{\pi}{3}\right) - \cos\left(200t + \frac{2\pi}{3}\right) \right] \text{ mW} \\
+&= 25 \left[ \frac{1}{2} - \cos\left(200t + \frac{2\pi}{3}\right) \right] \text{ mW} \\
+&= 12.5 - 25 \cos\left(200t + \frac{2\pi}{3}\right) \text{ mW}
+\end{align}
+
+
+\text{ Average Power as Normalized Area Over One Period}
+
+The average power $P_{\text{avg}}$ is defined as the normalized area under the instantaneous power curve $p(t)$ over a period $T$:
+\begin{align}
+P_{\text{avg}} &= \frac{1}{T} \int_0^T p(t) \, dt \\
+&= \frac{1}{T} \int_0^T \left[ 12.5 - 25 \cos\left(200t + \frac{2\pi}{3}\right) \right] dt \\
+&= \frac{12.5}{T} \int_0^T dt - \frac{25}{T} \int_0^T \cos\left(200t + \frac{2\pi}{3}\right) dt
+\end{align}
+
+Since the integral of a sinusoidal function over its full period $T = \frac{2\pi}{100}$ is zero:
+\begin{align}
+\int_0^T \cos\left(200t + \frac{2\pi}{3}\right) dt &= 0
+\end{align}
+
+Evaluating the constant term integral:
+\begin{align}
+P_{\text{avg}} &= \frac{12.5}{T} \cdot T - 0 \\
+&= 12.5 \text{ mW}
+\end{align}
+
+
+
 
 Calculate the phase difference $\theta$:
 \begin{align}
@@ -453,11 +500,6 @@ Calculate the phase difference $\theta$:
 \end{align}
 From \eqref{power}
 
-Substituting these values into the average power formula:
-\begin{align}
-P_{\text{avg}} &= \frac{1}{2} \times 5 \times 10 \times \cos\left(\frac{\pi}{3}\right) \text{ mW} \\
-P_{\text{avg}} &= 12.5 \text{ mW}
-\end{align}
 
 
 \begin{figure}[H]
@@ -711,32 +753,70 @@ x \pm j n \pi,
 
 \solution
 
-The given operational amplifier circuit is an inverting summing amplifier. 
+Derivation of Output Voltage
 
-\text Given:
-\begin{itemize}
-    \item $R_f = 10\text{ k}\Omega$
-    \item $R_1 = 5\text{ k}\Omega, \quad V_1 = 2\text{ V}$
-    \item $R_2 = 4\text{ k}\Omega, \quad V_2 = 2\text{ V}$
-    \item $R_3 = 2\text{ k}\Omega, \quad V_3 = 1\text{ V}$
-    \item Power supply saturation limits: $\pm V_{\text{sat}} = \pm 15\text{ V}$
-\end{itemize}
 
-Substitute the given component values into \eqref{amplifier}
+\text{1.Finite Gain Analysis}
 
+
+Let $A$ be the open-loop differential gain of the operational amplifier. 
+From the given circuit diagram:
 \begin{align}
-V_{\text{out}} = -\left( \frac{10}{5}(2) + \frac{10}{4}(2) + \frac{10}{2}(1) \right)
+V_+ &= 0 \text{ V} \\
+V_{\text{out}} &= A(V_+ - V_-) = -A V_- \implies V_- = -\frac{V_{\text{out}}}{A}
 \end{align}
 
+Applying Kirchhoff's Current Law (KCL) at the inverting node $V_-$:
 \begin{align}
-V_{\text{out}} = -\left( 2(2) + 2.5(2) + 5(1) \right)
+\frac{V_1 - V_-}{R_1} + \frac{V_2 - V_-}{R_2} + \frac{V_3 - V_-}{R_3} + \frac{V_{\text{out}} - V_-}{R_f} &= 0
 \end{align}
 
+Rearranging terms and grouping $V_-$:
 \begin{align}
-V_{\text{out}} = -(4 + 5 + 5) = -14\text{ V}
+\left( \frac{V_1}{R_1} + \frac{V_2}{R_2} + \frac{V_3}{R_3} \right) + \frac{V_{\text{out}}}{R_f} &= V_- \left( \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_f} \right)
 \end{align}
 
-Since the calculated voltage ($-14\text{ V}$) lies within the saturation limits ($-15\text{ V}$ to $+15\text{ V}$), the op-amp stays in its linear region.
+Substituting $V_- = -\frac{V_{\text{out}}}{A}$:
+\begin{align}
+\left( \frac{V_1}{R_1} + \frac{V_2}{R_2} + \frac{V_3}{R_3} \right) + \frac{V_{\text{out}}}{R_f} &= -\frac{V_{\text{out}}}{A} \left( \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_f} \right) \\
+\left( \frac{V_1}{R_1} + \frac{V_2}{R_2} + \frac{V_3}{R_3} \right) &= -V_{\text{out}} \left[ \frac{1}{R_f} + \frac{1}{A} \left( \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_f} \right) \right]
+\end{align}
+
+Solving explicitly for $V_{\text{out}}$:
+\begin{align}
+V_{\text{out}} &= \frac{-\left( \frac{V_1}{R_1} + \frac{V_2}{R_2} + \frac{V_3}{R_3} \right)}{\frac{1}{R_f} + \frac{1}{A} \left( \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_f} \right)}
+\end{align}
+
+
+\text{2.Ideal Op-amp Limit}
+Taking the limit as gain $A \to \infty$:
+\begin{align}
+\lim_{A \to \infty} \left[ \frac{1}{A} \left( \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \frac{1}{R_f} \right) \right] &= 0 \\
+V_{\text{out}} &= \frac{-\left( \frac{V_1}{R_1} + \frac{V_2}{R_2} + \frac{V_3}{R_3} \right)}{\frac{1}{R_f}} \\
+V_{\text{out}} &= -R_f \left( \frac{V_1}{R_1} + \frac{V_2}{R_2} + \frac{V_3}{R_3} \right)
+\end{align}
+
+
+\text{3. Numerical Substitution and Calculation}
+
+Given component values:
+\begin{align}
+R_f &= 10\text{ k}\Omega \\
+R_1 &= 5\text{ k}\Omega, \quad V_1 = 2\text{ V} \\
+R_2 &= 4\text{ k}\Omega, \quad V_2 = 2\text{ V} \\
+R_3 &= 2\text{ k}\Omega, \quad V_3 = 1\text{ V} \\
+V_{\text{sat}} &= \pm 15\text{ V}
+V_{\text{out}} &= -10 \left( \frac{2}{5} + \frac{2}{4} + \frac{1}{2} \right) \\
+&= -10 \left( 0.4 + 0.5 + 0.5 \right) \\
+&= -10 \times 1.4 \\
+&= -14\text{ V}
+\end{align}
+
+Check saturation condition:
+\begin{align}
+-15\text{ V} \le -14\text{ V} \le +15\text{ V} \quad \text{(Op-amp remains linear)}
+\end{align}
+
 
 
 % =========================================================
