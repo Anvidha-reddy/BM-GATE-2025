@@ -1,0 +1,476 @@
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi]
+	\item 
+How many 3-digit numbers can be formed using three distinct single digit prime numbers?
+\hfill (AE~2026)
+\begin{enumerate}
+	\begin{multicols}{4}
+    \item $64$
+    \item $24$
+    \item $12$
+    \item $4$
+\end{multicols}
+\end{enumerate} 
+\solution
+There are 4 single digit prime numbers: 2,3,5 and 7. The desired numbers are given by
+ \begin{align}
+	 \perm{4}{3} = \frac{4!}{1!} = 24
+ \end{align}
+\item
+In a group of students, 10 students like Mathematics, 12 students like English, 4 students like both Mathematics and English, and 6 students like neither Mathematics nor English. The number of students in the group is \underline{\hspace{1cm}}.
+\hfill (AE~2026)
+\begin{enumerate}
+	\begin{multicols}{4}
+    \item $18$
+    \item $20$
+    \item $24$
+    \item $32$
+	\end{multicols}
+\end{enumerate} 
+\solution 
+Let $N$ be the total number of students in the group and
+\begin{itemize}
+    \item $M$: The event that the student likes Mathematics.
+    \item $E$: The event that the student likes English.
+\end{itemize}
+The respective probabilities are expressed as
+\begin{align}
+\pr{M} = \frac{10}{N}, \quad \pr{E} = \frac{12}{N},
+\pr{ME} = \frac{4}{N},
+\pr{\brak{M+E}^{\prime}} = \frac{6}{N} 
+\label{eq:EE26BTECH11202-Prob_2-1}
+\end{align}
+From \eqref{eq:EE26BTECH11202-Prob_2}
+\begin{align}
+\pr{M + E} + \pr{\brak{M+E}^{\prime}} = 1
+\end{align}
+From \eqref{eq:EE26BTECH11202-addition_theorem_probability}
+\begin{align}
+\pr{M} + \pr{E} - \pr{ME} + \pr{\brak{M+E}^{\prime}} = 1
+\end{align}
+Substituting from 
+\eqref{eq:EE26BTECH11202-Prob_2-1}
+in 
+the above, 
+\begin{align}
+	\frac{10}{N} + \frac{12}{N} - \frac{4}{N} + \frac{6}{N} &= 1
+\\
+	\implies N &= 24
+\end{align}
+\item 
+Given a square of side $s=4\text{cm}$ and two circles, one with known radius $r_1=1\text{cm}$ and another with unknown radius $r_2$, such that both of them touch each other externally and also the square, find the value of $r_2$. Also describe how the figure in the problem can be constructed. \hfill (AE~2026)
+\begin{figure}[H]
+	\centering
+\input{figs/Circle.tex}
+\caption{}
+    \label{fig:EE26BTECH11202-2}
+\end{figure}
+\solution
+   In \figref{fig:EE26BTECH11202-2}, using
+			\eqref{eq:EE26BTECH11202-2D-basis} and
+			\eqref{eq:EE26BTECH11202-2D-one},
+\begin{align}
+\vec{W} = \vec{0}, \vec{X} = s\vec{e}_1, \vec{Y} = s\vec{1},\vec{V} = s\vec{e}_2,
+\vec{O}_1 = r_1\vec{1},
+\vec{O}_2 = \brak{s-r_2}\vec{1}
+			\label{eq:EE26BTECH11202-vecs}
+\end{align}
+Upon substituting from 
+			\eqref{eq:EE26BTECH11202-vecs}
+			\begin{align}
+				\norm{\vec{O}_2-\vec{O}_1} = \brak{s-r_1-r_2}\vec{1}=r_1+r_2  
+				\\
+				\implies \sqrt{2}\brak{s-r_1-r_2} = r_1+r_2  
+				\\
+     \implies r_2 = \frac{\sqrt{2}s - \brak{\sqrt{2} + 1}r_1}{\sqrt{2} + 1}.
+     \end{align}  
+     Substituting the values of $s$ and $r_1$, 
+     \begin{align}
+	     r_2 = \brak{7-4\sqrt{2}}\text{cm} 
+     \end{align}
+The following code 
+    generates \figref{fig:EE26BTECH11202-3}.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Circle.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figs/Circle.png}
+    \caption{Square with Tangent Circles}
+    \label{fig:EE26BTECH11202-3}
+\end{figure}
+\item Consider the contour $C$ shown in the figure below. For the vector $\vec{F} = \brak{x + 2y}\hat{e}_x + \brak{2x + 4y}\hat{e}_y$, the integral $\oint_{C} \vec{F} \cdot d\vec{l} = \underline{\hspace{2cm}}$.
+Here $d\vec{l}$ represents an infinitesimal length along the contour $C$.\hfill (AE~2026)
+\begin{enumerate}
+	\begin{multicols}{4}
+    \item $0$
+    \item $2$
+    \item $4$
+    \item $6$
+    \end{multicols}
+\end{enumerate} 
+
+\begin{figure}[H]
+\begin{center}
+\input{figs/Line_Integral.tex}
+   \caption{Contour C}
+    \label{fig:EE26BTECH11202-4}
+\end{center}
+\end{figure}
+\solution
+\begin{align}
+\because \vec{F}^{\top} d\vec{l} 
+%= \myvec{x + 2y \\ 2x + 4y}^{\top} \myvec{dx \\ dy} = \myvec{x + 2y & 2x + 4y} \myvec{dx \\ dy}
+&=(x + 2y)dx + (2x + 4y)dy,
+\\
+\int \vec{F} \cdot d\vec{l} 
+&=\int x\,dx  + 2\int \brak{x\,dy+y\,dx}+ \int 4y\,dy
+\\
+&=\frac{x^2}{2}  + 2\int d\brak{xy}+ 2y^2
+\\
+&=\frac{x^2}{2}  + 2\brak{xy}+ 2y^2
+\\
+\therefore 
+\int^{\brak{1,1}}_{\brak{0,0}} \vec{F} \cdot d\vec{l} 
+&=\sbrak{\frac{x^2}{2}}^{1}_{0}  + 2\sbrak{xy}^{\brak{1,1}}_{\brak{0,0}}+ \sbrak{2y^2}^{1}_{0} = \frac{9}{2}
+\\
+\int^{\brak{0,2}}_{\brak{1,1}} \vec{F} \cdot d\vec{l} 
+&=\sbrak{\frac{x^2}{2}}^{0}_{1}  + 2\sbrak{xy}^{\brak{0,2}}_{\brak{1,1}}+ \sbrak{2y^2}^{2}_{1}= \frac{7}{2}
+\\
+\int^{\brak{-1,1}}_{\brak{0,2}} \vec{F} \cdot d\vec{l} 
+&=\sbrak{\frac{x^2}{2}}^{-1}_{0}  + 2\sbrak{xy}^{\brak{-1,1}}_{\brak{0,2}}+ \sbrak{2y^2}^{1}_{2}= -\frac{15}{2}
+\\
+\int^{\brak{0,0}}_{\brak{-1,1}} \vec{F} \cdot d\vec{l} 
+&=\sbrak{\frac{x^2}{2}}^{0}_{-1}  + 2\sbrak{xy}^{\brak{0,0}}_{\brak{-1,1}}+ \sbrak{2y^2}^{0}_{1}= -\frac{1}{2}
+\\
+\therefore, \oint_{C} \vec{F} \cdot d\vec{l} = 0
+\end{align}
+upon summing up the above integrals.
+The following code simulates the result.
+    in \figref{fig:EE26BTECH11202-5}.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Line\_Integral.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figs/Line_Integral.png}
+    \caption{}
+    \label{fig:EE26BTECH11202-5}
+\end{figure}
+\item The Fourier series representation of a square wave is shown in the figure below. The fluctuations seen near $x = \pm 1$ are named after which one of the following scientists? \hfill(AE~2026)
+\begin{enumerate}
+	\begin{multicols}{4}
+    \item Cauchy
+    \item Fourier
+    \item Gibbs
+    \item Laplace
+    \end{multicols}
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+	\input{figs/Fourier.tex}
+    \caption{Gibbs phenomenon}
+    \label{fig:EE26BTECH11202-6}
+\end{figure}
+\solution
+\figref{fig:EE26BTECH11202-6}
+can  be expressed as a periodic function with parameters
+\begin{align}
+	x_0(t) = \rect\brak{t-\frac{1}{2}}, T_0 = 2
+\end{align}
+From \eqref{eq:EE26BTECH11202-Fourier-shift-time} and 
+\eqref{eq:EE26BTECH11202-square-c}, substituting $t_0 =\frac{1}{2}$, 
+\begin{align}
+c_n =\frac{\sin\brak{\frac{\pi k}{2} }}{\pi k}e^{-\j \pi n }
+\label{eq:EE26BTECH11202-square-c-shift}
+\end{align}
+The Gibbs phenomenon is explained in 
+\figref{fig:EE26BTECH11202-7}.
+\item If a matrix can be written as $\vec{A} = \vec{uv^{\top}}$, where both $u$ and $v$ are $n$-dimensional real-valued non-zero column vectors, then the rank of the matrix $\vec{A}$ is? 
+\hfill (AE~2026)
+\solution 
+	From		\eqref{eq:EE26BTECH11202-rank-one}, the rank is 1.
+\item
+An $n \times n$ square matrix $\vec{A}$ satisfies $\vec{A^{\top}} = \vec{A^{-1}}$. The determinant of this matrix may take which of the following value(s)? \hfill (AE~2026)
+\begin{enumerate}
+	\begin{multicols}{4}
+	\item $1$
+	\item $-1$
+	\item $n$
+	\item $0$
+	\end{multicols}
+\end{enumerate}
+\solution 
+From the given information,
+\begin{align}
+	\mydet{\vec{A}^{\top}} &= \mydet{\vec{A}^{-1}} \label{eq:EE26BTECH11202-transpose}
+	\\
+	\implies \mydet{\vec{A}} &= \frac{1}{\mydet{\vec{A}}}
+	\\
+	\therefore \mydet{\vec{A}} &= \pm 1
+\end{align}
+substituting \eqref{eq:EE26BTECH11202-Matrices_1} and \eqref{eq:EE26BTECH11202-Matrices_inverse} in \eqref{eq:EE26BTECH11202-transpose}
+\item
+	For the matrix $\vec{A} = \myvec{ a & b \\ c & d }$, if the relation $a + b = c + d$ holds and $a, b, c, d \neq 0$, then which one of the following statements about $\vec{A}$ is FALSE? \hfill (AE~2026)
+\begin{enumerate}
+	\begin{multicols}{2}
+    \item $\myvec{ 1 \\ 1 }$ is an eigenvector
+    \item $\lambda = a + b$ is an eigenvalue
+    \item $\lambda = d - b$ is an eigenvalue
+    \item $\lambda = d + b$ is an eigenvalue
+    \end{multicols}
+\end{enumerate}
+\solution 
+Let 
+\begin{align}
+a + b = c + d = k \label{eq:EE26BTECH11202-matrices_relation}
+\end{align}
+Then, 
+\begin{align}
+\begin{split}
+\myvec{ a & b } \myvec{ 1 \\ 1 } &= k 
+\\
+ \myvec{ c & d } \myvec{ 1 \\ 1 }&= k  
+\end{split}
+\end{align}
+yielding
+\begin{align}
+\myvec{ a & b \\ c & d } \myvec{ 1 \\ 1 } &= k \myvec{ 1 \\ 1 }
+\end{align}
+$\therefore \myvec{ 1 \\ 1 }$ is an eigenvector and $a + b$ is an eigenvalue from 
+\eqref{eq:EE26BTECH11202-eig-def}
+.
+From \eqref{eq:EE26BTECH11202-matrices_relation}, 
+\begin{align}
+a - c = d - b = -\brak{b - d} = l
+\end{align}
+Then, 
+\begin{align}
+\myvec{ a & c \\ b & d } \myvec{ 1 \\ -1 } =  l \myvec{ 1 \\ -1 }
+\end{align}
+Thus,  $\myvec{ 1 \\ -1 }$ is an eigenvector and $d - b$ is the $2^{\text{nd}}$ eigenvalue. 
+\iffalse
+The following code simulates the result by plotting the eigenvectors.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Eigenvectors.py}@*)
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.60\linewidth]{figs/Eigenvectors.png}
+    \label{fig:EE26BTECH11202-9}
+\end{figure}
+\fi
+\item 
+Consider the differential equation:
+\begin{align}
+	\frac{d^2 y}{dx^2} + 2\frac{dy}{dx} + y = 0 \label{eq:EE26BTECH11202-DE}
+\end{align}
+with initial conditions $\left.y\right|_{x=0} = 0$ and $\left.\frac{dy}{dx}\right|_{x=0} = 1$. Find the value of the slope $\frac{dy}{dx}$ at $x = \ln\brak{2}$ rounded off to three decimal places.
+\hfill (AE~2026) 
+
+\solution
+\begin{enumerate}
+\item  
+Taking the Laplace transform of \eqref{eq:EE26BTECH11202-DE},
+from \eqref{eq:EE26BTECH11202-Laplace_1} and \eqref{eq:EE26BTECH11202-Laplace_2},
+\begin{align}
+\sbrak{s^2 Y(s) - s y\brak{0} - y'\brak{0}} + 2\sbrak{s Y(s) - y\brak{0}} + Y(s) = 0
+\end{align}
+Substituting 
+$y\brak{0} = 0 , y^{\prime}\brak{0} = 1$ in the above, 
+\begin{align}
+	\brak{s^2 Y(s) - 1} + 2s Y(s) + Y(s) &= 0
+	\\
+	\implies Y(s) &= \frac{1}{(s+1)^2}
+\end{align}
+Taking the inverse Laplace transform, from \eqref{eq:EE26BTECH11202-Laplace_3} and \eqref{eq:EE26BTECH11202-Laplace_4}, 
+\begin{align}
+\label{eq:EE26BTECH11202-DE-theory}
+y\brak{x} &= x e^{-x}  x \ge 0
+\\
+\implies
+y^{\prime}\brak{x}\frac{dy}{dx} &=  \brak{1 - x}e^{-x}
+\\
+\text{or, }
+y'\brak{\ln\brak{2}}&= \brak{1 - \ln\brak{2}} e^{-\ln\brak{2}}
+{2} \approx 0.153
+\end{align}
+\item From \eqref{eq:EE26BTECH11202-ED_1} and \eqref{eq:EE26BTECH11202-ED_2},  \eqref{eq:EE26BTECH11202-DE} can be expressed as
+\begin{align}
+\frac{y_{n+2} - 2y_{n+1} + y_n}{h^2} + 2 \left( \frac{y_{n+1} - y_n}{h} \right) + y_n = 0
+\\
+\implies
+y_{n+2} = 2(1 - h)y_{n+1} - (1 - h)^2 y_n
+\label{eq:EE26BTECH11202-DE-euler}
+\end{align}
+For $h=0.01$,
+\begin{align}
+	y_1=y_0+h\cbrak{y^{\prime}\brak{0}}
+	=0.01
+\end{align}
+The following code computes 
+\eqref{eq:EE26BTECH11202-DE-euler}
+and generates
+    \figref{fig:EE26BTECH11202-13}.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Euler.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.60\linewidth]{figs/Euler.png}
+    \caption{
+\eqref{eq:EE26BTECH11202-DE-theory}
+vs
+\eqref{eq:EE26BTECH11202-DE-euler}}
+    \label{fig:EE26BTECH11202-13}
+\end{figure}
+\end{enumerate}
+\item 
+Find the minimum value of the function $f\brak{x} = \abs{x} + \abs{2x+3}$ for real $x$. \hfill (AE~2026)
+
+\solution 
+The following code plots the given function in 
+    \figref{fig:EE26BTECH11202-10} and also finds the minimum values.  
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Modulus\_function.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{figs/Modulus_function.png}
+    \caption{Plot of the function}
+    \label{fig:EE26BTECH11202-10}
+\end{figure}
+
+\item
+	Consider the system 
+	in
+\figref{fig:EE26BTECH11202-11}.
+For the following parameters,
+\begin{itemize}
+    \item Bar: $E = 200\text{ GPa}$, $A = 100\text{ mm}^2$, $L = 100\text{ mm}$
+    \item Spring Stiffness: $k = 200\text{ kN/mm}$
+    \item Mass: $M = 100\text{ kg}$
+\end{itemize}
+find the natural frequency of free vibration of the system. 
+\hfill (AE~2026)
+\\
+\solution 
+From 
+\eqref{fig:EE26BTECH11202-11-stiffness},  
+\begin{align}
+k_{b} = \frac{10^{-4} \times 200 \times 10^9}{0.1} = 2 \times 10^8 \text{ N/m}
+\end{align}
+\begin{align}
+k = 200 \text{ kN/mm} = 2 \times 10^8 \text{ N/m}
+\end{align}
+Substituting the above  in \eqref{eq:EE26BTECH11202-springs_series}, 
+\begin{align}
+k_t = \frac{\brak{2 \times 10^8}\brak{2 \times 10^8}}{2 \times 10^8 + 2 \times 10^8} = 10^8 \text{ N/m}
+\end{align}
+From 
+	\eqref{eq:EE26BTECH11202-vertical_shm}
+and
+\eqref{eq:EE26BTECH11202-Laplace_7}, 
+\begin{align}
+	x\brak{t}=\beta \cos\brak{\sqrt{\frac{k_t}{m}} t} + \frac{\gamma}{\sqrt{\frac{k_t}{m}}}\sin\brak{\sqrt{\frac{k_t}{m}} t} 
+\end{align}
+$\therefore$ the natural frequency of free vibration is
+\begin{align}
+ \sqrt{\frac{k_{\text{eq}}}{M}} =  1000\, rad/s
+\end{align}
+upon substituting numerical values.
+\iffalse
+Now, to find the position of the system as a function of time, from \eqref{eq:EE26BTECH11202-vertical_shm}, we have:
+\begin{align}
+\frac{d^2 x}{d t^2} = \frac{-k}{M}x = -w_n^2x
+\end{align}
+Let the initial displacement of the system be $x_0$ and inital velocity be $v_0$. From result \eqref{eq:EE26BTECH11202-Laplace_7}, we get:
+
+\begin{align}
+x(t) &= x_0 \cos(w_nt) + \frac{v_0}{w_n} \sin(w_nt)
+\end{align}
+Substituting the value of $w_n$, 
+\begin{align}
+x(t) &= x_0 \cos(1000t) + \frac{v_0}{1000} \sin(1000t)
+\end{align}
+Differentiating to get velocity:
+\begin{align}
+v(t) &= -1000x_0 \sin(1000t) + v_0 \cos(1000t)
+\end{align}
+Differentiating again to get the accelaration:
+\begin{align}
+   a(t) &= -10^6x_0 \cos(1000t) - 1000v_0 \sin(1000t)
+\end{align}
+\fi
+The following code 
+    generates \figref{fig:EE26BTECH11202-12}.
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Spring.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{figs/Spring.png}
+    \caption{Accelaration, Velocity and Position of the System}
+    \label{fig:EE26BTECH11202-12}
+\end{figure}
+\item
+	An earth satellite has the instantaneous position vector $\vec{r}$ and velocity vector $\vec{v}$ as given below. Here $\vec{p}$ and $\vec{q}$ denote the unit vectors along the x and y axes of the perifocal frame, respectively. Assume that the value of gravitational parameter is 398600 $km^3/s^2$. Which one of the following trajectories does the satellite follow?
+\hfill (AE 2026) 
+    \begin{align}
+	    \vec{r}=\brak{8000\vec{p} + 9000\vec{q}}, \,km \, \vec{v}= \brak{-6 \vec{p}+ 6\vec{q}} \,km/s
+\end{align}
+%Given the velocity and position vectors of a satellite along with its gravitational parameter $\mu=GM$, determine the trajectory of the satellite. 
+\begin{enumerate}
+	\begin{multicols}{4}
+    \item Circle
+    \item Hyperbola
+    \item Parabola
+    \item Straight Line
+    \end{multicols}
+\end{enumerate} 
+\iffalse
+Position vector: 
+    \begin{align}
+    \vec{r} = 8000\hat{p} + 9000\hat{q} \text{ km}
+    \end{align}
+Velocity vector:
+    \begin{align}
+    \vec{v} = -6\hat{p} + 6\hat{q} \text{ km/s}
+    \end{align}
+Gravitational parameter: 
+    \begin{align}
+    \mu = 398600 \text{ km}^3/\text{s}^2
+    \end{align}
+\solution 
+We are given :
+\begin{align}
+	\vec{r}=\myvec{8000\\9000}, \vec{v}=\myvec{-6\\6}
+\end{align}
+From \eqref{eq:EE26BTECH11202-Gravitation_1}, Specific Angular Momentum $h_0$
+\begin{align}
+= |8000\brak{6} - 9000\brak{-6}| = 102000 \text{ km}^2/\text{s}
+\end{align}
+
+From \eqref{eq:EE26BTECH11202-Gravitation_2}, eccentricity squared $e^2$
+\begin{align}
+= 1 + \frac{2\brak{2.898}\brak{102000}^2}{\brak{398600}^2} \approx 1 + 0.3795 = 1.3795
+\end{align}
+From \eqref{eq:EE26BTECH11202-Gravitation_3}, we have:
+\begin{align}
+\mydet{\vec{V}}=1-1.3795=-0.3795
+\end{align}
+From \ref{item:Hyperbola}, we can conclude that the trajectory of the satellite is a Hyperbola. The following code simulates the result.
+
+\begin{lstlisting}[frame=single, basicstyle=\rmfamily, escapeinside={(*@}{@*)}]
+(*@\makebox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax][c]{codes/Satellite.py}@*)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figs/Satellite.png}
+    \caption{Trajectory of the Satellite}
+    \label{fig:EE26BTECH11202-8}
+\end{figure}
+\fi
+
+\end{enumerate}
+

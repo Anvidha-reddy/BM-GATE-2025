@@ -1,0 +1,860 @@
+% ============================================================
+% ce2-2025-problems.tex — Problems and Solutions
+% Corrected formatting and numbering version (1.2.xx)
+% ============================================================
+
+\begin{enumerate}[label=\thesubsection.\arabic*, ref=\thesubsection.\theenumi,itemsep=0pt]
+
+\item
+An electricity utility company charges \rupee 7 per kWh
+(kilo watt-hour). If a 40-watt desk light is left on for 10 hours
+ each night for 180 days, what would be the cost of energy
+consumption? If the desk light is on for 2 more hours each night
+for the 180 days, what would be the percentage-increase in the
+cost of energy consumption?
+\hfill (CE2~2025)
+%
+\begin{multicols}{4}\begin{enumerate}
+    \item \rupee 604.8; 10\%
+    \item \rupee 504; 20\%
+    \item \rupee 604.8; 12\%
+    \item \rupee 720; 15\%
+\end{enumerate}\end{multicols}
+\solution
+The following code generates the result.
+\CodeRef{codes/ce2q3/ce2q3.py}
+\item
+A bag contains Violet ($V$), Yellow ($Y$), Red ($R$), and Green
+($G$) balls. On counting them, the following results are obtained:
+%
+\begin{enumerate}
+    \item The sum of Yellow balls and twice the number of Violet
+          balls is 50.
+    \item The sum of Violet and Green balls is 50.
+    \item The sum of Yellow and Red balls is 50.
+    \item The sum of Violet and twice the number of Red balls is 50.
+\end{enumerate}
+%
+Which one of the following correctly represents the balls in the bag?
+\hfill (CE2~2025)
+%
+\begin{enumerate}
+    \item $V=10\%$, $R=20\%$, $Y=30\%$, $G=40\%$
+    \item $V=40\%$, $R=10\%$, $Y=20\%$, $G=30\%$
+    \item $V=30\%$, $R=40\%$, $Y=10\%$, $G=10\%$
+    \item $V=20\%$, $R=30\%$, $Y=40\%$, $G=10\%$
+\end{enumerate}
+%
+\solution
+Let the numbers of Violet, Yellow, Red, and Green balls be represented by
+\(V,Y,R,G\), respectively. The four conditions give
+\begin{align}
+\vec{A}\vec{x}=\vec{b},
+\end{align}
+where
+\begin{align}
+\vec{x}&=\myvec{V\\Y\\R\\G}, &
+\vec{A}&=\myvec{2&1&0&0\\1&0&0&1\\0&1&1&0\\1&0&2&0}, &
+\vec{b}&=\myvec{50\\50\\50\\50}.
+\end{align}
+Using row operations,
+%The augmented matrix is reduced using elementary row operations. The
+%operations are written directly on the transformation arrows:
+\begin{align*}
+%\resizebox{0.90\linewidth}{!}{$\renewcommand{\arraystretch}{1.12}
+\myvec{
+2&1&0&0&50\\
+1&0&0&1&50\\
+0&1&1&0&50\\
+1&0&2&0&50
+}
+\xrightarrow{\;R_1\leftrightarrow R_2\;}
+\myvec{
+1&0&0&1&50\\
+2&1&0&0&50\\
+0&1&1&0&50\\
+1&0&2&0&50
+}
+\\
+\xrightarrow{\substack{R_2\leftarrow R_2-2R_1\\R_4\leftarrow R_4-R_1}}
+\myvec{
+1&0&0&1&50\\
+0&1&0&-2&-50\\
+0&1&1&0&50\\
+0&0&2&-1&0
+}
+\xrightarrow{\;R_3\leftarrow R_3-R_2\;}
+\myvec{
+1&0&0&1&50\\
+0&1&0&-2&-50\\
+0&0&1&2&100\\
+0&0&2&-1&0
+}
+\\
+\xrightarrow{\;R_4\leftarrow R_4-2R_3\;}
+\myvec{
+1&0&0&1&50\\
+0&1&0&-2&-50\\
+0&0&1&2&100\\
+0&0&0&-5&-200
+}
+\xrightarrow{\substack{R_4\leftarrow-\frac15R_4\\R_1\leftarrow R_1-R_4\\R_2\leftarrow R_2+2R_4\\R_3\leftarrow R_3-2R_4}}
+\myvec{
+1&0&0&0&10\\
+0&1&0&0&30\\
+0&0&1&0&20\\
+0&0&0&1&40
+}.
+\end{align*}
+%
+Hence,
+\begin{align}
+V&=10, & Y&=30, & R&=20, & G&=40.
+\end{align}
+%
+The following code generates
+    \figref{fig:ce2q5_pie}.
+\CodeRef{codes/ce2q5/ce2q5.py}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{figs/piechart.png}
+    \caption{Pie chart representing ball distribution.}
+    \label{fig:ce2q5_pie}
+\end{figure}
+\item
+Consider a five-digit number PQRST that has distinct digits
+$P$, $Q$, $R$, $S$, and $T$, and satisfies the following conditions:
+$P<Q$, $S>P>T$, and $R<T$. If integers 1 through 5 are used to
+construct such a number, the value of $P$ is:
+\hfill (CE2~2025)
+%
+\begin{multicols}{4}\begin{enumerate}
+    \item 1
+    \item 2
+    \item 3
+    \item 4
+\end{enumerate}\end{multicols}
+
+\solution
+Using the following code, $P=3$.
+\CodeRef{codes/ce2q8/ce2q8.c}
+%
+\item
+A business person buys potatoes of two different varieties $P$ and
+$Q$, mixes them in a certain ratio and sells them at \rupee 192 per kg.
+The cost of variety $P$ is \rupee 800 for $5$ kg. The cost of variety
+$Q$ is \rupee 800 for $4$ kg. If the person gets $8\%$ profit, what is
+the $P:Q$ ratio (by weight)?
+\hfill (CE2~2025)
+%
+\begin{multicols}{4}\begin{enumerate}
+    \item $5:4$
+    \item $3:4$
+    \item $3:2$
+    \item $1:1$
+\end{enumerate}\end{multicols}
+%
+\solution
+From the following code, the required ratio is $5:4$.
+\CodeRef{codes/ce2q9/ce2q9.c}
+%
+\item
+Three villages $P$, $Q$, and $R$ are located in such a way that the
+distance $PQ=13$ km, $QR=14$ km, and $RP=15$ km. A straight road
+joins $Q$ and $R$. It is proposed to connect $P$ to this road $QR$
+by constructing another road. What is the minimum possible length
+(in km) of this connecting road?
+\hfill (CE2~2025)
+%
+\begin{multicols}{4}\begin{enumerate}
+    \item 10.5
+    \item 11.0
+    \item 12.0
+    \item 12.5
+\end{enumerate}\end{multicols}
+%
+\solution
+The following code
+\CodeRef{codes/ce2q10/ce2q10.py}
+generates
+    \figref{fig:ce2q10}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{figs/village_triangle.png}
+    \caption{Triangle $PQR$ geometry and altitude from $P$ to $QR$.}
+    \label{fig:ce2q10}
+\end{figure}
+\item
+For the matrix $\vec{A}$ given below, the transpose is
+\begin{align}
+    \vec{A}
+    =\myvec{
+        2 & 3 & 4 \\
+        1 & 4 & 5 \\
+        4 & 3 & 2
+    }
+\end{align}
+\hfill (CE2~2025)
+%
+\begin{multicols}{4}\begin{enumerate}
+    \item $\myvec{2&1&4\\3&4&3\\4&5&2}$
+    \item $\myvec{4&3&2\\5&4&1\\2&3&4}$
+    \item $\myvec{4&2&3\\5&1&4\\2&4&3}$
+    \item $\myvec{2&3&4\\1&4&5\\4&3&2}$
+\end{enumerate}\end{multicols}
+%
+\solution
+Using the following code,
+\begin{align}
+    \vec{A}^{\top}
+    = \myvec{
+        2 & 1 & 4 \\
+        3 & 4 & 3 \\
+        4 & 5 & 2
+    }.
+\end{align}
+\CodeRef{codes/ce2q11/ce2q11.py}
+%
+\item
+Integration of $\ln\brak{x}$ with respect to $x$, i.e.,
+$\int\ln\brak{x}\,dx=$\underline{\hspace{3cm}}
+\hfill (CE2~2025)
+
+\begin{multicols}{2}\begin{enumerate}
+    \item $x\ln\brak{x}-x+C$
+    \item $x-\ln\brak{x}+C$
+    \item $x\ln\brak{x}+x+C$
+    \item $\ln\brak{x}-x+C$
+\end{enumerate}\end{multicols}
+%
+\solution
+From \eqref{eq:integration_by_parts},
+letting
+\begin{align}
+	u&=\ln\brak{x}, dv=dx,
+\\
+	du &= \frac{1}{x}, v = x
+\\
+\implies
+    \int\ln\brak{x}\,dx
+    &=x\ln\brak{x} -\int1\,dx \\
+    &=x\ln\brak{x}-x+C.
+\end{align}
+\iffalse
+See
+%\CodeRef{codes/ce2q12/ce2q12.py}
+%
+\item
+Consider the pin-jointed truss shown in the figure. Influence line is drawn for
+the axial force in the member $G-I$, when a unit load travels on the bottom
+chord of the truss. Identify the CORRECT influence line from the following
+options.
+\hfill (CE2~2025)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.99\columnwidth]{figs/ce2q14.png}
+    \caption{Pin-jointed truss for Q14.}
+    \label{fig:ce2q14}
+\end{figure}
+
+\solution
+The unit load can act at the bottom-chord joints
+$A,D,G,I,L,O,$ and $P$. The section-cut analysis gives the following
+influence ordinates:
+
+\noindent Consider a pin-jointed truss of total span $L$, divided into $n$ equal panels of width $d$, with a total truss height $h$. Let $x$ be the variable position of a unit vertical load measured from the left support $A$.
+
+\subsection*{1. Support Reaction Formulation}
+Taking moments about the left support $A$ to determine the right support reaction $R_P$:
+$$\sum M_A = 0 \implies R_P \cdot L - 1 \cdot x = 0 \implies R_P = \frac{x}{L}$$
+
+Similarly, the left support reaction $R_A$ is expressed as:
+$$R_A = 1 - \frac{x}{L}$$
+
+\subsection*{2. Section-Cut and Moment Equilibrium}
+Member $G-I$ is a bottom-chord member situated between joint $G$ (at coordinate $x_G$) and joint $I$ (at coordinate $x_I$). A vertical section is passed through member $G-I$, and moment equilibrium is considered about the opposing top-chord joint $H$ (located at coordinate $x_H$).
+
+\begin{enumerate}
+    \item \textbf{When the unit load acts to the right of the section ($x \ge x_H$):}\\
+    Isolating the portion of the truss to the right of the section and taking moments about joint $H$:
+    $$\sum M_H = 0 \implies F_{GI} \cdot h - R_P \cdot \brak{L - x_H} = 0$$
+    $$\implies F_{GI} = \brak{\frac{L - x_H}{h}} R_P = \brak{\frac{L - x_H}{h \cdot L}} x$$
+
+    \item \textbf{When the unit load acts to the left of the section ($x \le x_G$):}\\
+    Isolating the portion of the truss to the left of the section and taking moments about joint $H$:
+    $$\sum M_H = 0 \implies R_A \cdot x_H - 1 \cdot \brak{x_H - x} - F_{GI} \cdot h = 0$$
+    $$\implies F_{GI} = \frac{R_A \cdot x_H - \brak{x_H - x}}{h}$$
+\end{enumerate}
+
+\subsection*{3. General Expression for Joint Positions}
+For each bottom-chord joint located at position $x_i$ ($i \in \{A, D, G, I, L, O, P\}$), substitute $x = x_i$ into the respective segment's algebraic equation above to obtain the analytical expression for the influence ordinate.
+\setcounter{table}{-1}
+\begin{table}[H]
+	\centering
+	\input{tables/ce2q14/ce2q14.tex}
+	\caption{Tensile values at joints}
+	\label{tab:tensileValuesAtLoad}
+\end{table}
+
+\CodeRef{tables/ce2q14/ce2q14.tex}
+
+For the member $G-I$, the influence ordinates are positive and vary linearly
+between consecutive panel points. The maximum ordinate occurs at joint $G$,
+while the end-support ordinates are zero.
+
+Therefore, the correct influence line is the positive piecewise-linear line
+with its peak at $G$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{figs/influence_line_graph.png}
+    \caption{Influence line graph}
+    \label{fig:ce2q14_influence}
+\end{figure}
+
+
+Hence, the correct option is (B).
+
+\CodeRef{codes/ce2q14/ce2q14.py}
+
+\vspace{2cm}
+
+\fi
+\item
+Consider a velocity vector $\vec{V}$ in $\brak{x,y,z}$ coordinates given by
+$\vec{V}=u\vec{x}+v\vec{y}$. Pick one or more CORRECT statement(s)
+from the choices given below.
+\hfill (CE2~2025)
+
+\begin{enumerate}
+%\begin{enumerate}[itemsep=1ex]
+    \item $z$-component of Curl of velocity:
+          $\nabla\times\vec{V}
+          =\brak{\frac{\partial v}{\partial x}
+          -\frac{\partial u}{\partial y}}\vec{z}$
+    \item $z$-component of Curl of velocity:
+          $\nabla\times\vec{V}
+          =\brak{\frac{\partial u}{\partial x}
+          -\frac{\partial v}{\partial y}}\vec{z}$
+    \item Divergence of velocity:
+          $\nabla\cdot\vec{V}
+          =\frac{\partial u}{\partial x}
+          +\frac{\partial v}{\partial y}$
+    \item Divergence of velocity:
+          $\nabla\cdot\vec{V}
+          =\frac{\partial u}{\partial y}
+          +\frac{\partial v}{\partial x}$
+\end{enumerate}
+%
+\solution
+See
+	\eqref{eq:curl}
+	and
+	\eqref{eq:div}.
+%
+\item
+Given that $A$ and $B$ are not null sets, which of the following
+statements regarding probability is/are CORRECT?
+\hfill (CE2~2025)
+%
+\begin{enumerate}
+    \item $\Pr(A\cap B)=\Pr(A)\Pr(B)$ if $A$ and $B$ are mutually exclusive.
+    \item Conditional probability, $\Pr(A\mid B)=1$ if $B\subset A$.
+    \item $\Pr(A\cup B)=\Pr(A)+\Pr(B)$, if $A$ and $B$ are mutually exclusive.
+    \item $\Pr(A\cap B)=0$, if $A$ and $B$ are independent.
+\end{enumerate}
+%
+\solution
+\begin{enumerate}
+	\item Since $B\subset A$, from 
+		Definition
+	\eqref{eq:subset}
+and
+	\eqref{eq:cond-prob},
+\begin{align}
+    AB &= B, \\
+    \Pr(A\mid B)
+    &=\frac{\Pr(A B)}{\Pr(B)}
+     =\frac{\Pr(B)}{\Pr(B)}=1.
+\end{align}
+%
+\item 
+	From \eqref{eq:EE26BTECH11202-Prob_3},
+\begin{align}
+    \Pr(A+B)=\Pr(A)+\Pr(B).
+\end{align}
+%Therefore, the correct statements are (B) and (C).
+\end{enumerate}
+Other statements are incorrect.
+
+%\CodeRef{codes/ce2q22/ce2q22.py}
+\item
+Pick the CORRECT solution for the following differential equation
+\hfill (CE2~2025)
+\begin{align}
+\frac{dy}{dx}=e^{x-y}.
+\end{align}
+%
+\begin{multicols}{2}\begin{enumerate}
+    \item $y=\ln\brak{e^x+\text{Constant}}$
+    \item $\ln(y)=x+\text{Constant}$
+    \item $\ln(y)=\ln\brak{e^x}+\text{Constant}$
+    \item $y=x+\text{Constant}$
+\end{enumerate}\end{multicols}
+%
+\solution
+Substituting $u=e^y$ and simplifying,
+\begin{align}
+\frac{du}{dx}&=e^x
+\\
+\implies e^y&=e^x+C,
+\\
+\text{or, }y&=\ln\brak{e^x+C}.
+\end{align}
+%
+\iffalse
+Hence, the correct solution is
+\begin{align}
+y=\ln\brak{e^x+\text{Constant}}.
+\end{align}
+
+Therefore, the correct option is (A).
+
+\CodeRef{codes/ce2q36/ce2q36.py}
+
+\item
+The figure shows a propped cantilever with uniform flexural rigidity $EI$
+(in N.m$^2$) and subjected to a moment $M$ (in N.m). Consider forces and
+displacements in the upward direction as positive. Find the upward reaction
+at the propped support $B$ (in N) when this support settles by $(-\Delta)$,
+given in metres.
+\hfill (CE2~2025)
+
+\begin{multicols}{4}\begin{enumerate}
+    \item $\dfrac{3M}{2L}-\dfrac{6EI\Delta}{L^3}$
+    \item $\dfrac{8M}{3L}-\dfrac{2EI\Delta}{L^3}$
+    \item $\dfrac{3M}{2L}-\dfrac{3EI\Delta}{L^3}$
+    \item $\dfrac{M}{L}-\dfrac{8EI\Delta}{L^3}$
+\end{enumerate}\end{multicols}
+
+\solution
+Treat the reaction at the prop $B$ as the redundant $R_B$.
+The compatibility equations are
+\begin{align}
+\delta_B&=-\Delta,\\
+\delta_M&=-\frac{ML^2}{2EI},\\
+\delta_R&=\frac{R_BL^3}{3EI},\\
+\delta_M+\delta_R&=-\Delta.
+\end{align}
+
+Therefore,
+\begin{align}
+-\frac{ML^2}{2EI}+\frac{R_BL^3}{3EI}
+&=-\Delta,\\
+-\frac{3M}{2L}+R_B
+&=-\frac{3EI\Delta}{L^3},\\
+R_B
+&=\frac{3M}{2L}-\frac{3EI\Delta}{L^3}.
+\end{align}
+
+Thus, the upward reaction at support $B$ is
+\begin{align}
+R_B=\frac{3M}{2L}-\frac{3EI\Delta}{L^3}.
+\end{align}
+
+Hence, the correct option is (C).
+
+\CodeRef{codes/ce2q38/ce2q38.py}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figs/cantilever_deflection.png}
+    \caption{Propped cantilever and support settlement.}
+    \label{fig:ce2q38}
+\end{figure}
+\fi
+%
+\item
+Consider the function given below and pick one or more CORRECT statement(s)
+from the following choices.
+\hfill (CE2~2025)
+\begin{align}
+f\brak{x}=x^3-\frac{15}{2}x^2+18x+20.
+\end{align}
+%
+\begin{enumerate}
+    \item $f\brak{x}$ has a local minimum at $x=3$.
+    \item $f\brak{x}$ has a local maximum at $x=3$.
+    \item $f\brak{x}$ has a local minimum at $x=2$.
+    \item $f\brak{x}$ has a local maximum at $x=2$.
+\end{enumerate}
+%
+\solution
+\begin{align}
+f'\brak{x}
+&=3x^2-15x+18\\
+&=3(x-2)(x-3).
+\\
+	f''\brak{x}&=6x-15.
+	\\
+f''(2)&=12-15=-3<0,
+\\
+f''(3)&=18-15=3>0,
+\end{align}
+So $x=2$ is a local maximum.
+and $x=3$ is a local minimum.
+The following code verifies the result and generates
+    \figref{fig:cubic}.
+\CodeRef{codes/ce2q44/ce2q44.py}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.86\columnwidth]{figs/cubic.png}
+    \caption{Graph of the cubic function.}
+    \label{fig:cubic}
+\end{figure}
+%
+\item
+Pick the CORRECT eigen value(s) of the matrix $\vec{A}$ from the following choices.
+\hfill (CE2~2025)
+\begin{align}
+\vec{A}=
+\myvec{
+6&8\\
+4&2
+}.
+\end{align}
+%
+\begin{multicols}{4}\begin{enumerate}
+    \item $10$
+    \item $4$
+    \item $-2$
+    \item $-10$
+\end{enumerate}\end{multicols}
+%
+\solution
+From 
+	\eqref{eq:EE26BTECH11213-char_poly_det},
+\begin{align}
+\det
+\myvec{
+6-\lambda&8\\
+4&2-\lambda
+}
+&=0\\
+\implies
+\brak{\lambda-10}\brak{\lambda+2}&=0.
+\end{align}
+Hence, the eigenvalues are 
+\begin{align}
+\lambda=10,-2.
+\end{align}
+See
+\CodeRef{codes/ce2q45/ce2q45.py}
+%
+\iffalse
+\item
+In the pin-jointed truss shown in the figure, the members that carry zero force are
+identified. Which of the following options is/are zero-force members?
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{figs/ce2q46.png}
+    \caption{Truss diagram for identifying zero-force members in Q46.}
+    \label{fig:ce2q46}
+\end{figure}
+\hfill (CE2~2025)
+
+\begin{multicols}{4}\begin{enumerate}
+    \item \(BC\)
+    \item \(EG\)
+    \item \(FI\)
+    \item \(JK\)
+\end{enumerate}\end{multicols}
+
+\solution
+We apply the standard zero-force member rules for pin-jointed trusses:
+
+\begin{enumerate}
+    \item \textbf{At Joint C:} The bottom chord members $AC$ and $CE$ are collinear, and no external load acts at joint $C$. Therefore, member $BC$ carries zero force:
+    \begin{align}
+    BC &= 0
+    \end{align}
+    
+    \item \textbf{At Joint J:} The horizontal chord members meeting at joint $J$ are collinear, and no external load or support reaction is applied at joint $J$. Hence, member $JK$ carries zero force:
+    \begin{align}
+    JK &= 0
+    \end{align}
+\end{enumerate}
+
+Thus, among the choices provided, both $BC$ and $JK$ are zero-force members.
+
+Therefore, the correct options are (A) and (D).
+
+\CodeRef{codes/ce2q46/ce2q46.py}
+
+\item
+A compound has a general formula \(C_aH_bO_cN_d\) and molecular weight 187.
+A \(935\) mg/l solution of the compound is prepared in distilled deionized water.
+The Total Organic Carbon (TOC) is measured as \(360\) mg/l (as C). The Chemical
+Oxygen Demand (COD) and the Total Kjeldahl Nitrogen (TKN) are determined as
+\(600\) mg/l (as \(O_2\)) and \(140\) mg/l (as N), respectively.
+
+As per the reaction
+\begin{align}
+C_aH_bO_cN_d+
+\brak{\frac{4a+b-2c-3d}{4}}O_2
+\rightarrow
+aCO_2+\frac{b-3d}{2}H_2O+dNH_3,
+\end{align}
+which of the following options is/are CORRECT?
+
+Atomic weights: $C=12$, $H=1$, $O=16$, $N=14$
+\setcounter{table}{0}
+\begin{table}[H]
+	\centering
+	\input{tables/ce2q49/ce2q49.tex}
+	\caption{Given Values}
+	\label{tab:Given_values}
+\end{table}
+
+\CodeRef{tables/ce2q49/ce2q49.tex}
+\hfill (CE2~2025)
+
+\begin{multicols}{4}\begin{enumerate}
+    \item \(a=6\)
+    \item \(b=7\)
+    \item \(c=5\)
+    \item \(d=3\)
+\end{enumerate}\end{multicols}
+
+\solution
+The concentration of the compound is
+\begin{align}
+C_{\mathrm{soln}}
+&=935\ \text{mg/l}=0.935\ \text{g/l},
+\end{align}
+so the molar concentration is
+\begin{align}
+C_m
+&=\frac{0.935}{187}=5\times10^{-3}\ \text{mol/l}.
+\end{align}
+
+From the TOC data,
+\begin{align}
+\brak{5\times10^{-3}}\brak{12a}&=360\times10^{-3},\\
+0.06a&=0.36,\\
+a&=6.
+\end{align}
+
+From the TKN data,
+\begin{align}
+\brak{5\times10^{-3}}\brak{14d}&=140\times10^{-3},\\
+0.07d&=0.14,\\
+d&=2.
+\end{align}
+
+Hence, option (D) is false.
+
+Using the molecular weight,
+\begin{align}
+12a+b+16c+14d&=187,\\
+72+b+16c+28&=187,\\
+b+16c&=87.
+\end{align}
+
+From the COD data,
+\begin{align}
+C_{\mathrm{O_2}}
+&=600\ \text{mg/l}=0.6\ \text{g/l},
+\end{align}
+and the oxygen consumed per mole of compound is
+\begin{align}
+\frac{0.6}{5\times10^{-3}}
+&=120\ \text{g/mol of }O_2,\\
+n_{O_2}
+&=\frac{120}{32}=3.75.
+\end{align}
+
+Therefore,
+\begin{align}
+\frac{4a+b-2c-3d}{4}&=3.75,\\
+18+b-2c&=15,\\
+b-2c&=-3.
+\end{align}
+
+Thus,
+\begin{align}
+\myvec{
+1&16\\
+1&-2
+}
+\myvec{
+b\\c
+}
+=
+\myvec{
+87\\-3
+}.
+\end{align}
+
+Row reduction gives
+\begin{align}
+b&=7, & c&=5,\\
+a&=6, & d&=2.
+\end{align}
+
+Hence,
+\begin{align}
+C_aH_bO_cN_d=C_6H_7O_5N_2.
+\end{align}
+
+Therefore, the correct options are (A), (B), and (C).
+
+\CodeRef{codes/ce2q49/ce2q49.py}
+
+\fi
+
+\item
+Consider a discrete random variable $X$ whose probabilities are given below.
+The standard deviation of the random variable is \underline{\hspace{2cm}}
+.
+\hfill (CE2~2025)
+%\setcounter{table}{1}
+\begin{table}[H]
+	\centering
+	\input{tables/ce2q51/ce2q51.tex}
+	\caption{Probability table}
+	\label{tab:Probability_table}
+\end{table}
+
+%\CodeRef{tables/ce2q51/ce2q51.tex}
+%
+\solution
+		From \eqref{eq:discrete_mean},
+\begin{align}
+	\mean{X}&=1(0.3)+2(0.1)+4(0.3)+8(0.3)=4.1.
+	\\
+\mean{X^2}
+&=1^2(0.3)+2^2(0.1)+4^2(0.3)+8^2(0.3)=24.7.
+\end{align}
+Hence, from 
+	\eqref{eq:discrete_variance},
+\begin{align}
+\sigma^2
+24.7-(4.1)^2=7.89,
+\implies 
+\sigma
+&=\sqrt{7.89}\approx2.8.
+\end{align}
+The following code verifies the result.
+\CodeRef{codes/ce2q51/ce2q51.py}
+%
+\item
+The figure shows a network diagram for a construction project. The activities
+$A$, $B$, $C$, $D$, $E$, and $F$ are represented by arrows and their durations
+are shown in the figure.
+
+The total float available for the activity $E$ in day(s) is equal to
+\underline{\hspace{2cm}} (round off to the nearest integer).
+\hfill (CE2~2025)
+
+\solution
+Let $x_i$ denote the occurrence time of event $i$ and define
+\begin{align}
+\vec{x}
+=
+\myvec{
+x_1&x_2&x_3&x_4&x_5
+}^{\top}.
+\end{align}
+
+For an activity from event $i$ to event $j$ with duration $d_{ij}$,
+the precedence constraint is
+\begin{align}
+x_j-x_i\ge d_{ij}.
+\end{align}
+
+For the given network,
+\begin{align}
+x_2-x_1&\ge3, &
+x_3-x_1&\ge5,\\
+x_4-x_2&\ge5, &
+x_4-x_3&\ge2,\\
+x_5-x_4&\ge4, &
+x_5-x_3&\ge8.
+\end{align}
+
+These constraints can be written in the matrix form
+\begin{align}
+\vec{B}\vec{x}\ge\vec{d},
+\end{align}
+where
+\begin{align}
+\vec{B}
+=
+\myvec{
+-1&1&0&0&0\\
+-1&0&1&0&0\\
+0&-1&0&1&0\\
+0&0&-1&1&0\\
+0&0&0&-1&1\\
+0&0&-1&0&1
+},
+\qquad
+\vec{d}
+=
+\myvec{
+3&5&5&2&4&8
+}^{\top}.
+\end{align}
+
+The project starts at event 1, hence $x_1=0$.
+
+The forward-time optimization problem is therefore
+\begin{align}
+\begin{aligned}
+\underset{\vec{x}}{\operatorname{minimize}}\quad
+&x_5\\
+\text{subject to}\quad
+&\vec{B}\vec{x}\ge\vec{d},\\
+&x_1=0.
+\end{aligned}
+\end{align}
+
+The optimal solution is
+\begin{align}
+\vec{x}^{\,E}
+=
+\myvec{
+0&3&5&8&13
+}^{\top},
+\end{align}
+so that $E_4=8$ and $T=E_5=13$ days.
+
+For the backward pass, the latest feasible occurrence time of event 4 is
+\begin{align}
+x_4^{\,L}=9.
+\end{align}
+
+For activity $E:4\rightarrow5$, with duration $d_E=4$ days,
+the latest start time is
+\begin{align}
+LST_E=L_5-d_E=13-4=9.
+\end{align}
+
+Therefore, the total float is
+\begin{align}
+TF_E
+&=LST_E-EST_E=9-8=1\text{ day}.
+\end{align}
+
+Hence, the total float available for activity $E$ is
+\begin{align}
+\boxed{1}.
+\end{align}
+
+\CodeRef{codes/ce2q53/ce2q53.py}
+
+\end{enumerate}
+

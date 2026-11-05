@@ -1,0 +1,155 @@
+\begin{enumerate}[label=\thesubsection.\arabic*,ref=\thesubsection.\theenumi]
+\item
+Z transform:\label{eq:ztransform}\\
+\begin{align}
+	M_{Y_1}\brak{Z}=E\brak{Z^{-Y_1}}=\sum\, P_{Y_1}\brak{k}\,Z^{-k}\label{eq:ztransformdef}
+\end{align}
+If y1,y2..yn are independent events:
+\begin{align}
+M_Y\brak{Z}=M_{Y_1}\brak{Z}\,\, M_{Y_2}\brak{Z}\,.......\,M_{Y_n}\brak{Z}\label{eq:ztransformindep}
+\end{align}
+
+\item
+Laplace transforms of some common functions:\label{eq:laplacecommon}
+
+\item
+\begin{align}
+\cos\brak{at}\system{L}\frac{s}{s^2+a^2}\label{eq:laplacecos}
+\end{align}
+
+Proof:
+\begin{align}
+    \cos(at)&\system{L}\int_{0}^{\infty}\cos\brak{at}\,e^{-st}\,dt=I\\
+                          I&=\int_{0}^{\infty}\frac{d\brak{\sin\brak{at}}}{a}\,e^{-st}\\
+                           &=\frac{\sin\brak{at}}{a}\,e^{-st}\Bigg|_0^\infty-\frac{1}{a}\int_{0}^{\infty}\sin(at)e^{-st}\brak{-s}dt\\
+                           &=0+\frac{s}{a}\int_0^\infty \frac{d\brak{-\cos\brak{at}}}{a}\,e^{-st}\\
+                           &=-\brak{\frac{s}{a^2}}\left\{\cos\brak{at}\,e^{-st}\,\,\Bigg|_0^\infty-\int_0^\infty\cos\brak{at}\,e^{-st}\,\brak{-s}\right\}\\
+                           &=-\brak{\frac{s}{a^2}}\left\{\brak{0-1}-\brak{-s}I\right\}\\
+                           &=-\brak{\frac{s}{a^2}}\left\{-1+sI\right\}\\
+                          I&=\frac{s}{a^2}-\frac{s^2}{a^2}\brak{I}\\
+       \brak{\frac{a^2+s^2}{a^2}}I&=\frac{s}{a^2}\\
+                          I&=\frac{s}{s^2+a^2}
+\end{align}
+\item
+\begin{align}
+\sin\brak{at}&\system{L}\frac{a}{s^2+a^2}\label{eq:laplacesin}
+\end{align}
+Proof:
+\begin{align}
+    \sin\brak{at}&\system{L}\int_{0}^{\infty}\sin\brak{at}\,e^{-st}\,dt=I\\
+                          I&=\int_{0}^{\infty}\frac{d\brak{-\cos\brak{at}}}{a}\,e^{-st}\\
+                           &=\frac{-\cos\brak{at}}{a}\,e^{-st}\Bigg|_0^\infty-\frac{1}{a}\int_{0}^{\infty}-\cos(at)e^{-st}(-s)dt\\
+                           &=\frac{1}{a}-\frac{s}{a}\int_0^\infty \frac{d\brak{\sin\brak{at}}}{a}\,e^{-st}\\
+                           &=\frac{1}{a}-(\frac{s}{a^2})\left\{\sin(at)\,e^{-st}\,\,\Bigg|_0^\infty-\int_0^\infty\sin\brak{at}\,e^{-st}\,\brak{-s}\right\}\\
+                           &=-\brak{\frac{s}{a^2}}\left\{\brak{0-0}-\brak{-s}I\right\}\\
+                           &=-\brak{\frac{s}{a^2}}\left\{0+sI\right\}\\
+                          I&=\frac{a}{a^2}-\frac{s^2}{a^2}\brak{I}\\
+       \brak{\frac{a^2+s^2}{a^2}}I&=\frac{a}{a^2}\\
+                          I&=\frac{a}{s^2+a^2}
+\end{align}
+\item
+\begin{align}
+\sinh\brak{at}\system{L}\frac{a}{s^2-a^2}\label{eq:laplacesinh}
+\end{align}
+Proof:
+\begin{align}
+\sinh\brak{at}&\system{L}\int_0^\infty \frac{e^{at}-e^{-at}}{2}\,e^{-st} dt\\
+                            &=\frac{1}{2}\int_0^\infty e^{\brak{a-s}\brak{t}} dt -\frac{1}{2}\int_0^\infty e^{\brak{-a-s}\brak{t}}dt\\
+                            &=\frac{1}{2}\left\{\frac{e^{\brak{a-s}\brak{t}}}{a-s}\right\}\Bigg|_0^\infty-\frac{1}{2}\left\{\frac{e^{\brak{-a-s}\brak{t}}}{-a-s}\right\}\Bigg|_0^\infty\tag{assume s$>$a for integral to be finite}\\
+                            &=\frac{1}{2}\brak{\frac{1}{s-a}-\frac{1}{s+a}}\\
+                            &=\frac{1}{2}\brak{\frac{2a}{s^2-a^2}}\\
+                           I&=\frac{a}{s^2-a^2}
+\end{align}
+\item
+\begin{align}
+\cosh\brak{at}\system{L}\frac{s}{s^2-a^2}\label{eq:laplacecosh}
+\end{align}
+Proof:
+\begin{align}
+\cosh\brak{at}&\system{L}\int_0^\infty \frac{e^{at}+e^{-at}}{2}\,e^{-st} dt\\
+                            &=\frac{1}{2}\int_0^\infty e^{\brak{a-s}\brak{t}} dt +\frac{1}{2}\int_0^\infty e^{\brak{-a-s}\brak{t}}dt\\
+                            &=\frac{1}{2}\left\{\frac{e^{\brak{a-s}\brak{t}}}{a-s}\right\}\Bigg|_0^\infty+\frac{1}{2}\left\{\frac{e^{\brak{-a-s}\brak{t}}}{-a-s}\right\}\Bigg|_0^\infty\tag{assume s$>$a for integral to be finite}\\
+                            &=\frac{1}{2}\brak{\frac{1}{s-a}+\frac{1}{s+a}}\\
+                            &=\frac{1}{2}\brak{\frac{2s}{s^2-a^2}}\\
+                           I&=\frac{s}{s^2-a^2}
+\end{align}
+
+\item
+Sum of n terms of a gp\\
+\begin{align}
+	\sum_{i=1}^{n}q^i=q\frac{q^n-1}{q-1}\label{eq:sumofgp}
+\end{align}
+\item
+Expansions:\label{eq:expansions}\\
+\begin{align}
+	\sin\brak{x}=\sum_{i=1}^{n}-1^{i+1}\frac{x^{2i-1}}{\brak{2i-1}!}\\
+	\cos\brak{x}=\sum_{i=1}^{n}-1^{i+1}\frac{x^{i-1}}{{i-1}!}
+\end{align}
+\item
+Euler's Theorem for homogeneous functions:\\
+It states that if a function $f(x,y)$is homogeneous of degree n,then the following condition holds:\\
+\begin{align}
+    x\frac{\partial u}{\partial x}+y\frac{\partial u}{\partial y}&=nf\label{eq:eulerhomo}
+\end{align}
+\item
+\begin{equation}
+	f'\brak{x}\system{L}sG\brak{s}-f\brak{0}\label{eq:laplace1d}
+\end{equation}
+Proof\\
+Let G(s) be the laplace transform of y=f(x):\\
+\begin{align}
+    y\system{L}G\brak{s}
+\end{align}
+By definition of laplace transform,\\
+\begin{align}
+	G\brak{s}=\int_{0}^{\infty}f(x)e^{-sx}dx
+\end{align}
+integrating by parts,
+\begin{align}
+	G\brak{s}&=\int_0^{\infty}f\brak{x}d\brak{\frac{e^{-sx}}{-s}}\\
+			 &=f\brak{x}\,\frac{e^{-sx}}{-s}\Bigg|_0^{\infty}+\int_0^{\infty}f'\brak{x}\,\frac{e^{-sx}}{s}\\
+			 &=\brak{\frac{f\brak{\infty}e^{-\infty}-f\brak{0}}{-s}}+\frac{1}{s}\,\mathcal{L}\{f'\brak{x}\}\\
+			 sG\brak{s}&=f\brak{0}+\mathcal{L}\{f'(x)\}\\
+			 f'\brak{x}&\system{L}sG\brak{s}-f\brak{0}			 		
+\end{align}
+\item
+The laplace transform is a linear function\label{eq:linearlaplace}
+%\begin{align}
+%af\brak{x}+bg\brak{x}\}=a\mathcal{L}\{f\brak{x}\}+b\mathcal{L}\{g\brak{x}\}\label{eq:linearlaplace}
+%\end{align} 
+\item 
+The inverse laplace transform is a linear function\label{eq:linearinverselaplace}
+%\begin{align}
+%\mathcal{L}^{-1}\{af\brak{x}+bg\brak{x}\}=a\mathcal{L}\{f\brak{x}\}+b\mathcal{L}\{g\brak{x}\}\label{eq:linearinverselaplace}
+%\end{align} 
+\item
+laplace transform of $e^{ax}$
+\begin{align}
+	e^{ax}&\system{L}\frac{1}{s-a}\label{eq:laplacee^ax}
+\end{align}
+Proof:
+\begin{align}	
+    e^{ax}&\system{L}\int_{0}^{\infty}e^{at}\,e^{-st} dt\\
+                      &=\int_{0}^{\infty}e^{\brak{a-s}\brak{t}} dt\\
+                      &=\frac{1}{a-s}\,\,(e^{\brak{a-s}\brak{t}}\big|_{0}^{\infty})\\
+                      &=\frac{1}{a-s}(0-1)\tag{Assuming that s$>$1}\\
+                      &=\frac{1}{s-a}
+\end{align}
+\item
+Euler's forward difference method: The output of f(x) at $x=x_0$ is $y_0$, then,\\
+$y_1=y_0+hf'\brak{x_0,y_0}\label{eq:fwdeuler}$\\
+where $y_1$ is the value of the function at $x=x_0+h$\\
+\item 
+Newton Raphson method:The improved guess of the root of $f(x)$ is given by:\\
+$x_1=x_0-\frac{f(x_0)}{f'(x_0)}\label{eq:raph}$\\ 
+Where $x_0$ is the old guess and $x_1$ is the improved guess.
+
+
+
+
+
+
+
+\end{enumerate}
+
+

@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}AE 2026}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Formulae}{4}{subsection.1.1}%
+\contentsline {section}{\numberline {2}BT 2025}{16}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Formulae}{16}{subsection.2.1}%
+\contentsline {section}{\numberline {3}AG 2025}{21}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Formulae}{21}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Solved Questions}{22}{subsection.3.2}%
